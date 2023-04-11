@@ -1,0 +1,1195 @@
+{
+  "contractName": "ProjectStorage",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint8",
+          "name": "_maxAntePerc",
+          "type": "uint8"
+        }
+      ],
+      "name": "__ProjectStorage_init",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "exPostToExAnteToken",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "isTokenClawbackEnabled",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "isTokenMintable",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "maxAntePercentage",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "projectId",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "retirementMapping",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "retireeAddress",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "vintageTokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "retiree",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "customUri",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "comment",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "serializationToTokenIdMapping",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "vintageMapping",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "serialization",
+          "type": "string"
+        },
+        {
+          "internalType": "bool",
+          "name": "verified",
+          "type": "bool"
+        },
+        {
+          "internalType": "enum TokenType",
+          "name": "tokenType",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint8\",\"name\":\"_maxAntePerc\",\"type\":\"uint8\"}],\"name\":\"__ProjectStorage_init\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"exPostToExAnteToken\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"isTokenClawbackEnabled\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"isTokenMintable\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"maxAntePercentage\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"projectId\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"retirementMapping\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"retireeAddress\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"vintageTokenId\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"retiree\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"customUri\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"comment\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"name\":\"serializationToTokenIdMapping\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"vintageMapping\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"serialization\",\"type\":\"string\"},{\"internalType\":\"bool\",\"name\":\"verified\",\"type\":\"bool\"},{\"internalType\":\"enum TokenType\",\"name\":\"tokenType\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ProjectStorage.sol\":\"ProjectStorage\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x037c334add4b033ad3493038c25be1682d78c00992e1acb0e2795caff3925271\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8a313cf42389440e2706837c91370323b85971c06afd6d056d21e2bc86459618\",\"dweb:/ipfs/QmT8XUrUvQ9aZaPKrqgRU2JVGWnaxBcUYJA7Q7K5KcLBSZ\"]},\"@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x2edcb41c121abc510932e8d83ff8b82cf9cdde35e7c297622f5c29ef0af25183\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://72460c66cd1c3b1c11b863e0d8df0a1c56f37743019e468dc312c754f43e3b06\",\"dweb:/ipfs/QmPExYKiNb9PUsgktQBupPaM33kzDHxaYoVeJdLhv8s879\"]},\"project:/contracts/ProjectStorage.sol\":{\"keccak256\":\"0x610472c63cfa5bc0bca5f26e519c6ff87cbcbbd0ad551114d44b4f2a1a921eb1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://b341e73a4388453abcdbbb21764b14772ac9db1a3e79e2e38ac23e96285ad174\",\"dweb:/ipfs/Qme83zcpLDM4yyJaZBU3EwgG6ZaWvVjnGts9s2VmAy9kDG\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\nimport \"@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol\";\n\nenum TokenType {\n    NotSet, // 0\n    ExPost, // 1\n    ExAnte, // 2\n    RetirementNft // 3\n}\n\nstruct VintageData {\n    string serialization;\n    bool verified;\n    TokenType tokenType;\n}\n\nstruct RetirementData {\n    address retireeAddress;\n    uint256 amount;\n    uint256 vintageTokenId;\n    string retiree;\n    string customUri;\n    string comment;\n}\n\nabstract contract ProjectStorageV1 is Initializable {\n    string public projectId;\n    uint8 public maxAntePercentage;\n    mapping(uint256 => VintageData) public vintageMapping;\n    mapping(string => uint256) public serializationToTokenIdMapping;\n    mapping(uint256 => uint256) public exPostToExAnteToken;\n    mapping(uint256 => bool) public isTokenMintable;\n    mapping(uint256 => bool) public isTokenClawbackEnabled;\n    mapping(uint256 => RetirementData) public retirementMapping;\n\n    function __ProjectStorage_init(uint8 _maxAntePerc) public initializer {\n        maxAntePercentage = _maxAntePerc;\n    }\n\n    // /**\n    //  * @dev This empty reserved space is put in place to allow future versions to add new\n    //  * variables without shifting down storage in the inheritance chain.\n    //  * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps\n    //  */\n    uint256[42] private __gap;\n}\n\nabstract contract ProjectStorage is ProjectStorageV1 {}\n",
+  "sourcePath": "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/ProjectStorage.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/ProjectStorage.sol",
+    "exportedSymbols": {
+      "AddressUpgradeable": [
+        4049
+      ],
+      "Initializable": [
+        1098
+      ],
+      "ProjectStorage": [
+        7167
+      ],
+      "ProjectStorageV1": [
+        7164
+      ],
+      "RetirementData": [
+        7115
+      ],
+      "TokenType": [
+        7094
+      ],
+      "VintageData": [
+        7102
+      ]
+    },
+    "id": 7168,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7088,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:40"
+      },
+      {
+        "absolutePath": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "id": 7089,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 7168,
+        "sourceUnit": 1099,
+        "src": "66:75:40",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "canonicalName": "TokenType",
+        "id": 7094,
+        "members": [
+          {
+            "id": 7090,
+            "name": "NotSet",
+            "nameLocation": "164:6:40",
+            "nodeType": "EnumValue",
+            "src": "164:6:40"
+          },
+          {
+            "id": 7091,
+            "name": "ExPost",
+            "nameLocation": "181:6:40",
+            "nodeType": "EnumValue",
+            "src": "181:6:40"
+          },
+          {
+            "id": 7092,
+            "name": "ExAnte",
+            "nameLocation": "198:6:40",
+            "nodeType": "EnumValue",
+            "src": "198:6:40"
+          },
+          {
+            "id": 7093,
+            "name": "RetirementNft",
+            "nameLocation": "215:13:40",
+            "nodeType": "EnumValue",
+            "src": "215:13:40"
+          }
+        ],
+        "name": "TokenType",
+        "nameLocation": "148:9:40",
+        "nodeType": "EnumDefinition",
+        "src": "143:92:40"
+      },
+      {
+        "canonicalName": "VintageData",
+        "id": 7102,
+        "members": [
+          {
+            "constant": false,
+            "id": 7096,
+            "mutability": "mutable",
+            "name": "serialization",
+            "nameLocation": "269:13:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7102,
+            "src": "262:20:40",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 7095,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "262:6:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7098,
+            "mutability": "mutable",
+            "name": "verified",
+            "nameLocation": "293:8:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7102,
+            "src": "288:13:40",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 7097,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "288:4:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7101,
+            "mutability": "mutable",
+            "name": "tokenType",
+            "nameLocation": "317:9:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7102,
+            "src": "307:19:40",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_enum$_TokenType_$7094",
+              "typeString": "enum TokenType"
+            },
+            "typeName": {
+              "id": 7100,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 7099,
+                "name": "TokenType",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 7094,
+                "src": "307:9:40"
+              },
+              "referencedDeclaration": 7094,
+              "src": "307:9:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_enum$_TokenType_$7094",
+                "typeString": "enum TokenType"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "VintageData",
+        "nameLocation": "244:11:40",
+        "nodeType": "StructDefinition",
+        "scope": 7168,
+        "src": "237:92:40",
+        "visibility": "public"
+      },
+      {
+        "canonicalName": "RetirementData",
+        "id": 7115,
+        "members": [
+          {
+            "constant": false,
+            "id": 7104,
+            "mutability": "mutable",
+            "name": "retireeAddress",
+            "nameLocation": "367:14:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7115,
+            "src": "359:22:40",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 7103,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "359:7:40",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7106,
+            "mutability": "mutable",
+            "name": "amount",
+            "nameLocation": "395:6:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7115,
+            "src": "387:14:40",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7105,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "387:7:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7108,
+            "mutability": "mutable",
+            "name": "vintageTokenId",
+            "nameLocation": "415:14:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7115,
+            "src": "407:22:40",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 7107,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "407:7:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7110,
+            "mutability": "mutable",
+            "name": "retiree",
+            "nameLocation": "442:7:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7115,
+            "src": "435:14:40",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 7109,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "435:6:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7112,
+            "mutability": "mutable",
+            "name": "customUri",
+            "nameLocation": "462:9:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7115,
+            "src": "455:16:40",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 7111,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "455:6:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 7114,
+            "mutability": "mutable",
+            "name": "comment",
+            "nameLocation": "484:7:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7115,
+            "src": "477:14:40",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 7113,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "477:6:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "RetirementData",
+        "nameLocation": "338:14:40",
+        "nodeType": "StructDefinition",
+        "scope": 7168,
+        "src": "331:163:40",
+        "visibility": "public"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 7116,
+              "name": "Initializable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 1098,
+              "src": "534:13:40"
+            },
+            "id": 7117,
+            "nodeType": "InheritanceSpecifier",
+            "src": "534:13:40"
+          }
+        ],
+        "canonicalName": "ProjectStorageV1",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 7164,
+        "linearizedBaseContracts": [
+          7164,
+          1098
+        ],
+        "name": "ProjectStorageV1",
+        "nameLocation": "514:16:40",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "3fafa127",
+            "id": 7119,
+            "mutability": "mutable",
+            "name": "projectId",
+            "nameLocation": "568:9:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7164,
+            "src": "554:23:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 7118,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "554:6:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "610e7012",
+            "id": 7121,
+            "mutability": "mutable",
+            "name": "maxAntePercentage",
+            "nameLocation": "596:17:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7164,
+            "src": "583:30:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 7120,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "583:5:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "1cd555c4",
+            "id": 7126,
+            "mutability": "mutable",
+            "name": "vintageMapping",
+            "nameLocation": "658:14:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7164,
+            "src": "619:53:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$7102_storage_$",
+              "typeString": "mapping(uint256 => struct VintageData)"
+            },
+            "typeName": {
+              "id": 7125,
+              "keyType": {
+                "id": 7122,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "627:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "619:31:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$7102_storage_$",
+                "typeString": "mapping(uint256 => struct VintageData)"
+              },
+              "valueType": {
+                "id": 7124,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 7123,
+                  "name": "VintageData",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7102,
+                  "src": "638:11:40"
+                },
+                "referencedDeclaration": 7102,
+                "src": "638:11:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_VintageData_$7102_storage_ptr",
+                  "typeString": "struct VintageData"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "2c8babd4",
+            "id": 7130,
+            "mutability": "mutable",
+            "name": "serializationToTokenIdMapping",
+            "nameLocation": "712:29:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7164,
+            "src": "678:63:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_uint256_$",
+              "typeString": "mapping(string => uint256)"
+            },
+            "typeName": {
+              "id": 7129,
+              "keyType": {
+                "id": 7127,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "686:6:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "678:26:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_uint256_$",
+                "typeString": "mapping(string => uint256)"
+              },
+              "valueType": {
+                "id": 7128,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "696:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "323f411d",
+            "id": 7134,
+            "mutability": "mutable",
+            "name": "exPostToExAnteToken",
+            "nameLocation": "782:19:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7164,
+            "src": "747:54:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
+              "typeString": "mapping(uint256 => uint256)"
+            },
+            "typeName": {
+              "id": 7133,
+              "keyType": {
+                "id": 7131,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "755:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "747:27:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_uint256_$",
+                "typeString": "mapping(uint256 => uint256)"
+              },
+              "valueType": {
+                "id": 7132,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "766:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "516bad81",
+            "id": 7138,
+            "mutability": "mutable",
+            "name": "isTokenMintable",
+            "nameLocation": "839:15:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7164,
+            "src": "807:47:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_bool_$",
+              "typeString": "mapping(uint256 => bool)"
+            },
+            "typeName": {
+              "id": 7137,
+              "keyType": {
+                "id": 7135,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "815:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "807:24:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_bool_$",
+                "typeString": "mapping(uint256 => bool)"
+              },
+              "valueType": {
+                "id": 7136,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "826:4:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "4aa9637f",
+            "id": 7142,
+            "mutability": "mutable",
+            "name": "isTokenClawbackEnabled",
+            "nameLocation": "892:22:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7164,
+            "src": "860:54:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_bool_$",
+              "typeString": "mapping(uint256 => bool)"
+            },
+            "typeName": {
+              "id": 7141,
+              "keyType": {
+                "id": 7139,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "868:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "860:24:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_bool_$",
+                "typeString": "mapping(uint256 => bool)"
+              },
+              "valueType": {
+                "id": 7140,
+                "name": "bool",
+                "nodeType": "ElementaryTypeName",
+                "src": "879:4:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "6929a19c",
+            "id": 7147,
+            "mutability": "mutable",
+            "name": "retirementMapping",
+            "nameLocation": "962:17:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7164,
+            "src": "920:59:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RetirementData_$7115_storage_$",
+              "typeString": "mapping(uint256 => struct RetirementData)"
+            },
+            "typeName": {
+              "id": 7146,
+              "keyType": {
+                "id": 7143,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "928:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "920:34:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RetirementData_$7115_storage_$",
+                "typeString": "mapping(uint256 => struct RetirementData)"
+              },
+              "valueType": {
+                "id": 7145,
+                "nodeType": "UserDefinedTypeName",
+                "pathNode": {
+                  "id": 7144,
+                  "name": "RetirementData",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7115,
+                  "src": "939:14:40"
+                },
+                "referencedDeclaration": 7115,
+                "src": "939:14:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_RetirementData_$7115_storage_ptr",
+                  "typeString": "struct RetirementData"
+                }
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 7158,
+              "nodeType": "Block",
+              "src": "1056:49:40",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 7156,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 7154,
+                      "name": "maxAntePercentage",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7121,
+                      "src": "1066:17:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 7155,
+                      "name": "_maxAntePerc",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7149,
+                      "src": "1086:12:40",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint8",
+                        "typeString": "uint8"
+                      }
+                    },
+                    "src": "1066:32:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "id": 7157,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1066:32:40"
+                }
+              ]
+            },
+            "functionSelector": "9ccffe24",
+            "id": 7159,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 7152,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 7151,
+                  "name": "initializer",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 1000,
+                  "src": "1044:11:40"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1044:11:40"
+              }
+            ],
+            "name": "__ProjectStorage_init",
+            "nameLocation": "995:21:40",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 7150,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7149,
+                  "mutability": "mutable",
+                  "name": "_maxAntePerc",
+                  "nameLocation": "1023:12:40",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 7159,
+                  "src": "1017:18:40",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 7148,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1017:5:40",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1016:20:40"
+            },
+            "returnParameters": {
+              "id": 7153,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1056:0:40"
+            },
+            "scope": 7164,
+            "src": "986:119:40",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 7163,
+            "mutability": "mutable",
+            "name": "__gap",
+            "nameLocation": "1405:5:40",
+            "nodeType": "VariableDeclaration",
+            "scope": 7164,
+            "src": "1385:25:40",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$42_storage",
+              "typeString": "uint256[42]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 7160,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1385:7:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 7162,
+              "length": {
+                "hexValue": "3432",
+                "id": 7161,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "1393:2:40",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_42_by_1",
+                  "typeString": "int_const 42"
+                },
+                "value": "42"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "1385:11:40",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$42_storage_ptr",
+                "typeString": "uint256[42]"
+              }
+            },
+            "visibility": "private"
+          }
+        ],
+        "scope": 7168,
+        "src": "496:917:40",
+        "usedErrors": []
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 7165,
+              "name": "ProjectStorageV1",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 7164,
+              "src": "1451:16:40"
+            },
+            "id": 7166,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1451:16:40"
+          }
+        ],
+        "canonicalName": "ProjectStorage",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 7167,
+        "linearizedBaseContracts": [
+          7167,
+          7164,
+          1098
+        ],
+        "name": "ProjectStorage",
+        "nameLocation": "1433:14:40",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 7168,
+        "src": "1415:55:40",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1439:40"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.13",
+  "updatedAt": "2023-04-11T21:31:48.480Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
