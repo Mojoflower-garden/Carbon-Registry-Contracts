@@ -11,11 +11,10 @@ abstract contract ProjectStorageV1 is Initializable {
     string public projectName;
     uint8 public maxAntePercentage;
     address public contractRegistry;
-    mapping(uint256 => VintageData) public vintageMapping;
-    mapping(string => uint256) public serializationToTokenIdMapping;
+    mapping(uint256 => VintageData) public exPostVintageMapping;
+    mapping(uint256 => uint256) public exAnteToExPostTokenId;
     mapping(uint256 => uint256) public exPostToExAnteTokenId;
-    mapping(uint256 => bool) public isTokenMintable;
-    mapping(uint256 => bool) public isTokenClawbackEnabled;
+    mapping(string => uint256) public serializationToExPostTokenIdMapping;
     mapping(uint256 => RetirementData) public retirementMapping;
 
     function __ProjectStorage_init(
@@ -35,7 +34,7 @@ abstract contract ProjectStorageV1 is Initializable {
     //  * variables without shifting down storage in the inheritance chain.
     //  * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
     //  */
-    uint256[39] private __gap;
+    uint256[40] private __gap;
 }
 
 abstract contract ProjectStorage is ProjectStorageV1 {}

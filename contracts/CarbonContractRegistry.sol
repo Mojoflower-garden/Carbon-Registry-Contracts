@@ -99,9 +99,10 @@ contract CarbonContractRegistry is
         string calldata _projectName
     ) internal returns (address) {
         /// @dev generate payload for initialize function
-        string memory signature = "initialize(address,uint256,string)";
+        string memory signature = "initialize(address,address,uint256,string)";
         bytes memory payload = abi.encodeWithSignature(
             signature,
+            address(this),
             msg.sender,
             _projectId,
             _projectName

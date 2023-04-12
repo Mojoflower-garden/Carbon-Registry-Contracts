@@ -116,7 +116,7 @@
         2515
       ],
       "IERC165Upgradeable": [
-        3535
+        3957
       ]
     },
     "id": 2516,
@@ -141,7 +141,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 2516,
-        "sourceUnit": 3536,
+        "sourceUnit": 3958,
         "src": "143:58:9",
         "symbolAliases": [],
         "unitAlias": ""
@@ -154,7 +154,7 @@
               "id": 2479,
               "name": "IERC165Upgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 3535,
+              "referencedDeclaration": 3957,
               "src": "284:18:9"
             },
             "id": 2480,
@@ -175,7 +175,7 @@
         "id": 2515,
         "linearizedBaseContracts": [
           2515,
-          3535
+          3957
         ],
         "name": "IERC1155ReceiverUpgradeable",
         "nameLocation": "253:27:9",
@@ -611,7 +611,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-04-12T10:03:29.073Z",
+  "updatedAt": "2023-04-12T21:05:51.321Z",
   "devdoc": {
     "details": "_Available since v3.1._",
     "kind": "dev",

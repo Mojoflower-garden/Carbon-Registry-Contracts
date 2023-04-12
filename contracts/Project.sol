@@ -10,6 +10,7 @@ import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
 import "./ProjectStorage.sol";
 import "./interfaces/ICarbonContractRegistry.sol";
+import "./utils/CustomSignaturesUpgradeable.sol";
 
 contract Project is
     Initializable,
@@ -18,6 +19,7 @@ contract Project is
     PausableUpgradeable,
     ERC1155SupplyUpgradeable,
     UUPSUpgradeable,
+    CustomSignaturesUpgradeable,
     ProjectStorage
 {
     bytes32 public constant URI_SETTER_ROLE = keccak256("URI_SETTER_ROLE");
@@ -32,26 +34,31 @@ contract Project is
     bytes32 public constant VERIFIER_ROLE = keccak256("VERIFIER_ROLE");
     bytes32 public constant CLAWBACK_ROLE = keccak256("CLAWBACK_ROLE");
 
-    event ExPostMinted(
-        address indexed account,
+    event ExPostCreated(
         uint256 indexed tokenId,
-        uint256 amount,
+        uint256 estimatedAmount,
         string indexed serialization
     );
 
-    event SupplyChanged(
+    event VintageMitigationEstimateChanged(
         uint256 indexed tokenId,
-        uint256 amount,
-        AdminActionReason indexed reason,
-        bytes data
+        uint256 newEstimate,
+        uint256 oldEstimate,
+        AdminActionReason indexed reason
     );
 
-    event ExPostVerified(
+    event ExPostVerifiedAndMinted(
         uint256 indexed tokenId,
         uint256 amount,
-        string indexed serialization,
         string monitoringReport,
-        bool isVerified
+        bool isVintageFullyVerified
+    );
+
+    event AdminBurn(
+        address indexed from,
+        uint256 indexed tokenId,
+        uint256 amount,
+        AdminActionReason indexed reason
     );
 
     event AdminClawback(
@@ -59,8 +66,33 @@ contract Project is
         address to,
         uint256 indexed tokenId,
         uint256 amount,
-        AdminActionReason indexed reason,
-        bytes data
+        AdminActionReason indexed reason
+    );
+
+    event ExchangeAnteForPost(
+        address indexed account,
+        uint256 indexed exPostTokenId,
+        uint256 exPostAmountReceived,
+        uint256 exAnteAmountBurned
+    );
+
+    event RetiredVintage(
+        address indexed account,
+        uint256 indexed tokenId,
+        uint256 amount
+    );
+
+    event SignedTransfer(
+        address indexed from,
+        address indexed to,
+        uint256 indexed tokenId,
+        uint256 amount
+    );
+
+    event SignedRetire(
+        address indexed from,
+        uint256 indexed tokenId,
+        uint256 amount
     );
 
     /// @custom:oz-upgrades-unsafe-allow constructor
@@ -79,6 +111,7 @@ contract Project is
         __Pausable_init();
         __ERC1155Supply_init();
         __UUPSUpgradeable_init();
+        __CustomSignatures_init(_projectName, "0.0.1");
 
         // Our Inits
         __ProjectStorage_init(_contractRegistry, 50, _projectId, _projectName);
@@ -102,6 +135,22 @@ contract Project is
         _;
     }
 
+    modifier onlyExPostTokens(uint256[] memory tokenIds) {
+        for (uint256 i = 0; i < tokenIds.length; i++) {
+            require(isExPostToken(tokenIds[i]), "Project: Token is not ExPost");
+        }
+        _;
+    }
+
+    modifier onlyExPostToken(uint256 tokenId) {
+        require(isExPostToken(tokenId), "Project: Token is not ExPost");
+        _;
+    }
+
+    function isExPostToken(uint256 tokenId) public view returns (bool) {
+        return bytes(exPostVintageMapping[tokenId].serialization).length > 0;
+    }
+
     // Disallow sending tokens to other addresses that are ExPost and non-verified
     modifier isTransferAllowed(
         address from,
@@ -115,49 +164,72 @@ contract Project is
         }
         for (uint256 i = 0; i < tokenIds.length; i++) {
             require(
-                vintageMapping[tokenIds[i]].verified ||
-                    vintageMapping[tokenIds[i]].tokenType != TokenType.ExPost,
+                exPostVintageMapping[tokenIds[i]].verified ||
+                    !isExPostToken(tokenIds[i]),
                 "Project: Token is non-verified"
             );
         }
         _;
     }
 
-    function setTokenMintable(
-        uint256 tokenId,
-        bool isMintable
-    ) public onlyRole(DEFAULT_ADMIN_ROLE) {
-        isTokenMintable[tokenId] = isMintable;
-    }
-
-    function setTokenClawbackEnabled(
-        uint256 tokenId,
-        bool isClawbackEnabled
-    ) public onlyRole(DEFAULT_ADMIN_ROLE) {
-        isTokenClawbackEnabled[tokenId] = isClawbackEnabled;
+    modifier onlyVerifiedStatus(bool isVerified, uint256 tokenId) {
+        require(
+            exPostVintageMapping[tokenId].verified == isVerified,
+            "Project: Token is already verified"
+        );
+        _;
     }
 
     // ----------------------------------
     //         Minting Functions
     // ----------------------------------
 
+    function createExPostVintage(
+        uint256 estAmount,
+        string memory serialization
+    ) public onlyRole(POST_MINTER_ROLE) {
+        uint256 newTokenId = nextTokenId();
+        ICarbonContractRegistry(contractRegistry).registerSerialization(
+            serialization
+        );
+        serializationToExPostTokenIdMapping[serialization] = newTokenId;
+        exPostVintageMapping[newTokenId] = VintageData(
+            serialization,
+            estAmount,
+            false
+        );
+        emit ExPostCreated(newTokenId, estAmount, serialization);
+    }
+
+    function createExPostVintageBatch(
+        uint256[] memory estAmounts,
+        string[] memory serializations
+    ) public onlyRole(POST_MINTER_ROLE) {
+        require(
+            estAmounts.length == serializations.length,
+            "Project: Amounts and serializations must be same length"
+        );
+        for (uint256 i = 0; i < estAmounts.length; i++) {
+            createExPostVintage(estAmounts[i], serializations[i]);
+        }
+    }
+
     function mintExAnte(
         address account,
         uint256 exPostTokenId,
         uint256 amount,
         bytes memory data
-    ) public onlyRole(ANTE_MINTER_ROLE) {
-        require(
-            vintageMapping[exPostTokenId].tokenType == TokenType.ExPost,
-            "Project: Token is not exPost"
-        );
+    ) public onlyRole(ANTE_MINTER_ROLE) onlyExPostToken(exPostTokenId) {
         uint256 exAnteTokenId = exPostToExAnteTokenId[exPostTokenId];
         if (exAnteTokenId == 0) {
             exAnteTokenId = nextTokenId();
             exPostToExAnteTokenId[exPostTokenId] = exAnteTokenId;
         }
-        uint256 exPostSupply = totalSupply(exPostTokenId);
-        uint256 maxExAnteSupply = (exPostSupply * (maxAntePercentage)) / (100);
+
+        uint256 exPostEstimatedSupply = exPostVintageMapping[exPostTokenId]
+            .estMitigations;
+        uint256 maxExAnteSupply = (exPostEstimatedSupply *
+            (maxAntePercentage)) / (100);
         uint256 exAnteSupply = totalSupply(exAnteTokenId);
 
         require(
@@ -165,123 +237,73 @@ contract Project is
             "Maximum exAnte supply exceeded"
         );
 
-        isTokenMintable[exAnteTokenId] = true;
-        isTokenClawbackEnabled[exAnteTokenId] = true;
-        vintageMapping[exAnteTokenId] = VintageData(
-            vintageMapping[exPostTokenId].serialization,
-            false,
-            TokenType.ExAnte
-        );
-
+        exAnteToExPostTokenId[exAnteTokenId] = exPostTokenId;
         _mint(account, exAnteTokenId, amount, data);
     }
 
-    function mintExPost(
-        uint256 amount,
-        string memory serialization,
-        bytes memory data
-    ) public onlyRole(POST_MINTER_ROLE) {
-        uint256 newTokenId = nextTokenId();
-        ICarbonContractRegistry(contractRegistry).registerSerialization(
-            serialization
-        );
-        serializationToTokenIdMapping[serialization] = newTokenId;
-        isTokenMintable[newTokenId] = true;
-        isTokenClawbackEnabled[newTokenId] = true;
-        vintageMapping[newTokenId] = VintageData(
-            serialization,
-            false,
-            TokenType.ExPost
-        );
-        _mint(address(this), newTokenId, amount, data);
-        emit ExPostMinted(address(this), newTokenId, amount, serialization);
-    }
-
-    function mintExPostBatch(
-        uint256[] memory amounts,
-        string[] memory serializations,
-        bytes memory data
-    ) public onlyRole(POST_MINTER_ROLE) {
-        require(
-            amounts.length == serializations.length,
-            "Project: Amounts and serializations must be same length"
-        );
-        for (uint256 i = 0; i < amounts.length; i++) {
-            mintExPost(amounts[i], serializations[i], data);
-        }
-    }
-
-    function increaseExPostSupply(
+    function changeVintageMitigationEstimate(
         uint256 tokenId,
-        uint256 amount,
-        AdminActionReason reason,
-        bytes memory data
-    ) public onlyRole(MINTER_ROLE) {
-        require(
-            vintageMapping[tokenId].tokenType == TokenType.ExPost,
-            "Project: Token is not exPost"
+        uint256 newEstAmount,
+        AdminActionReason reason
+    )
+        public
+        onlyRole(DEFAULT_ADMIN_ROLE)
+        onlyExPostToken(tokenId)
+        onlyVerifiedStatus(false, tokenId)
+    {
+        emit VintageMitigationEstimateChanged(
+            tokenId,
+            newEstAmount,
+            exPostVintageMapping[tokenId].estMitigations,
+            reason
         );
-        _mint(address(this), tokenId, amount, data);
-        emit SupplyChanged(tokenId, amount, reason, data);
+        exPostVintageMapping[tokenId].estMitigations = newEstAmount;
     }
 
-    function verifyExPost(
+    function verifyAndMintExPost(
         address verificationVault,
         uint256 tokenId,
-        uint256 amount,
-        uint256 decreaseAmount,
-        uint256 increaseAmount,
+        uint256 amountVerified,
+        uint256 amountToAnteHolders,
         bool isVintageVerificationComplete,
         string memory monitoringReport
-    ) public onlyRole(VERIFIER_ROLE) {
+    )
+        public
+        onlyRole(VERIFIER_ROLE)
+        onlyExPostToken(tokenId)
+        onlyVerifiedStatus(false, tokenId)
+    {
         require(
-            vintageMapping[tokenId].tokenType == TokenType.ExPost,
-            "Project: Token is not exPost"
-        );
-        require(
-            !vintageMapping[tokenId].verified,
-            "Project: Token is verified"
-        );
-        require(
-            !(decreaseAmount > 0 && increaseAmount > 0),
-            "Project: Invalid supply change"
+            amountVerified >= amountToAnteHolders,
+            "Project: Invalid amount"
         );
 
-        if (decreaseAmount > 0) {
-            _burn(address(this), tokenId, amount);
+        uint256 exAnteTokenId = exPostToExAnteTokenId[tokenId];
+        if (exAnteTokenId == 0) {
+            // If exAnteTokenId is zero then there are no ante holders
+            require(amountToAnteHolders == 0, "Project: Invalid amount");
         }
 
-        if (increaseAmount > 0) {
-            _mint(address(this), tokenId, amount, "");
-            emit SupplyChanged(
+        exPostVintageMapping[tokenId].verified = isVintageVerificationComplete;
+
+        if (amountVerified - amountToAnteHolders > 0) {
+            // Mint To Verification Vault
+            _mint(
+                verificationVault,
                 tokenId,
-                amount,
-                AdminActionReason.OverEstimated,
+                amountVerified - amountToAnteHolders,
                 ""
             );
         }
 
-        // uint256 exAnteTokenId = exPostToExAnteTokenId[tokenId];
-        // uint256 exPostSupply = totalSupply(tokenId);
-        // uint256 exAnteSupply = totalSupply(exAnteTokenId);
-        // require(
-        //     exPostSupply - exAnteSupply >= amount,
-        //     "Project: Token amount is incorrect"
-        // );
+        if (amountToAnteHolders > 0) {
+            // Mint to this address, where ante holders will claim
+            _mint(address(this), tokenId, amountToAnteHolders, "");
+        }
 
-        vintageMapping[tokenId].verified = isVintageVerificationComplete;
-        _safeTransferFrom(
-            address(this),
-            verificationVault,
+        emit ExPostVerifiedAndMinted(
             tokenId,
-            amount,
-            ""
-        );
-
-        emit ExPostVerified(
-            tokenId,
-            amount,
-            vintageMapping[tokenId].serialization,
+            amountVerified,
             monitoringReport,
             isVintageVerificationComplete
         );
@@ -290,9 +312,11 @@ contract Project is
     function adminBurn(
         address from,
         uint256 tokenId,
-        uint256 amount
+        uint256 amount,
+        AdminActionReason reason
     ) public onlyRole(BURNER_ROLE) {
         _burn(from, tokenId, amount);
+        emit AdminBurn(from, tokenId, amount, reason);
     }
 
     function adminClawback(
@@ -302,48 +326,127 @@ contract Project is
         uint256 amount,
         AdminActionReason reason
     ) public onlyRole(CLAWBACK_ROLE) {
-        require(
-            isTokenClawbackEnabled[tokenId],
-            "Project: Clawback is not enabled"
-        );
         _safeTransferFrom(from, to, tokenId, amount, "");
-        _burn(from, tokenId, amount);
+        emit AdminClawback(from, to, tokenId, amount, reason);
     }
 
-    function exchangeExAnteForExPost(
+    function exchangeAnteForPostEvenSteven(
+        address[] memory accounts,
         uint256 exPostTokenId,
-        address[] memory exAnteHolders
-    ) public {
-        require(
-            vintageMapping[exPostTokenId].tokenType == TokenType.ExPost &&
-                vintageMapping[exPostTokenId].verified,
-            "Project: Token is not verified "
-        );
+        bytes memory data
+    )
+        external
+        onlyExPostToken(exPostTokenId)
+        onlyVerifiedStatus(true, exPostTokenId)
+    {
         uint256 exAnteTokenId = exPostToExAnteTokenId[exPostTokenId];
+        require(exAnteTokenId != 0, "Project: No ante holders");
         uint256 currentExAnteSupply = totalSupply(exAnteTokenId);
         uint256 currentExPostSupplyInContract = balanceOf(
             address(this),
             exPostTokenId
         );
-        for (uint i = 0; i < exAnteHolders.length; i++) {
-            uint256 balance = balanceOf(exAnteHolders[i], exAnteTokenId);
-            uint256 exPostAmount = (balance * currentExPostSupplyInContract) /
-                currentExAnteSupply;
-            if (balance > 0) {
-                _safeTransferFrom(
-                    address(this),
-                    exAnteHolders[i],
-                    exPostTokenId,
-                    exPostAmount,
-                    ""
-                );
-                _burn(exAnteHolders[i], exAnteTokenId, balance);
+
+        for (uint256 i = 0; i < accounts.length; i++) {
+            uint256 amountExAnte = balanceOf(accounts[i], exAnteTokenId);
+            uint256 amountExPost = (amountExAnte *
+                currentExPostSupplyInContract) / currentExAnteSupply;
+            uint256 exAnteBurnAmount = amountExAnte;
+            if (amountExAnte > amountExPost) {
+                exAnteBurnAmount = amountExPost;
             }
+            _burn(accounts[i], exAnteTokenId, exAnteBurnAmount);
+            _safeTransferFrom(
+                address(this),
+                accounts[i],
+                exPostTokenId,
+                amountExPost,
+                data
+            );
+            emit ExchangeAnteForPost(
+                accounts[i],
+                exPostTokenId,
+                amountExPost,
+                exAnteBurnAmount
+            );
         }
-        require(
-            totalSupply(exAnteTokenId) == 0,
-            "Project: ExAnte token supply is not zero"
+    }
+
+    function getExPostVintageData(
+        uint256 exAnteTokenId
+    ) public view returns (VintageData memory) {
+        uint256 exPostTokenId = exPostToExAnteTokenId[exAnteTokenId];
+        return exPostVintageMapping[exPostTokenId];
+    }
+
+    // ----------------------------------
+    //              Actions
+    // ----------------------------------
+
+    function transferFromSignature(
+        bytes calldata signature,
+        signatureTransferPayload calldata payload,
+        bytes memory data
+    ) public payable onlyValidSignatureTransfer(signature, payload) {
+        _safeTransferFrom(
+            payload.signer,
+            payload.to,
+            payload.tokenId,
+            payload.amount,
+            data
         );
+        emit SignedTransfer(
+            payload.signer,
+            payload.to,
+            payload.tokenId,
+            payload.amount
+        );
+    }
+
+    function retire(
+        uint256 tokenId,
+        uint256 amount,
+        bytes memory data
+    ) public onlyExPostToken(tokenId) onlyVerifiedStatus(true, tokenId) {
+        _burn(msg.sender, tokenId, amount);
+        mintRetirementCertificate(msg.sender, tokenId, amount);
+        emit RetiredVintage(msg.sender, tokenId, amount);
+    }
+
+    function retireFromSignature(
+        bytes calldata signature,
+        signatureTransferPayload calldata payload
+    )
+        public
+        payable
+        onlyExPostToken(payload.tokenId)
+        onlyVerifiedStatus(true, payload.tokenId)
+        onlyValidSignatureTransfer(signature, payload)
+    {
+        _burn(payload.signer, payload.tokenId, payload.amount);
+        mintRetirementCertificate(
+            payload.signer,
+            payload.tokenId,
+            payload.amount
+        );
+        emit SignedRetire(payload.signer, payload.tokenId, payload.amount);
+    }
+
+    function mintRetirementCertificate(
+        address account,
+        uint256 tokenId,
+        uint256 amount
+    ) internal {
+        uint256 nftTokenId = nextTokenId();
+        retirementMapping[nftTokenId] = RetirementData(
+            account,
+            amount,
+            tokenId,
+            "",
+            "",
+            ""
+        );
+        _mint(account, nftTokenId, 1, "");
     }
 
     // ----------------------------------

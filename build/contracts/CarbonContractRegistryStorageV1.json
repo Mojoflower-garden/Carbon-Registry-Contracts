@@ -1,0 +1,406 @@
+{
+  "contractName": "CarbonContractRegistryStorageV1",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"CarbonContractRegistryStorage is used for separation of data and logic\",\"kind\":\"dev\",\"methods\":{},\"stateVariables\":{\"__gap\":{\"details\":\"This empty reserved space is put in place to allow future versions to add new variables without shifting down storage in the inheritance chain. See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/CarbonContractRegistryStorage.sol\":\"CarbonContractRegistryStorageV1\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/CarbonContractRegistryStorage.sol\":{\"keccak256\":\"0x837e6fb892a152e2f8014dff8a6c8823a742a413bd235bd0057c126d413629fb\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://400ad744d90a8fc9931f2b0e84466265db96191532825cf9b7f6676a19e3b22d\",\"dweb:/ipfs/QmV34XoPxXwoi2HiNRq2TzXEAnNPjKKJLYDD4RTjgUyZrs\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-FileCopyrightText: 2023 Mojoflower\n//\n// SPDX-License-Identifier: UNLICENSED\n\n// If you encounter a vulnerability or an issue, please contact <security@mojoflower.io> or visit security.mojoflower.io\npragma solidity ^0.8.13;\n\n/// @dev  CarbonContractRegistryStorage is used for separation of data and logic\nabstract contract CarbonContractRegistryStorageV1 {\n    address internal _nonVerifiedVaultAddress;\n    address internal _verifiedVaultAddress;\n    address internal _projectBeaconAddress;\n\n    mapping(string => address) internal _serializationAddressMapping;\n    mapping(uint256 => address) internal _projectIdToAddressMapping;\n    mapping(address => uint256) internal _addressToProjectIdMapping;\n\n    /**\n     * @dev This empty reserved space is put in place to allow future versions to add new\n     * variables without shifting down storage in the inheritance chain.\n     * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps\n     */\n    uint256[44] private __gap;\n}\n\nabstract contract CarbonContractRegistryStorage is\n    CarbonContractRegistryStorageV1\n{}\n",
+  "sourcePath": "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/CarbonContractRegistryStorage.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/CarbonContractRegistryStorage.sol",
+    "exportedSymbols": {
+      "CarbonContractRegistryStorage": [
+        6208
+      ],
+      "CarbonContractRegistryStorageV1": [
+        6205
+      ]
+    },
+    "id": 6209,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6180,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "207:24:31"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "CarbonContractRegistryStorageV1",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 6181,
+          "nodeType": "StructuredDocumentation",
+          "src": "233:81:31",
+          "text": "@dev  CarbonContractRegistryStorage is used for separation of data and logic"
+        },
+        "fullyImplemented": true,
+        "id": 6205,
+        "linearizedBaseContracts": [
+          6205
+        ],
+        "name": "CarbonContractRegistryStorageV1",
+        "nameLocation": "332:31:31",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 6183,
+            "mutability": "mutable",
+            "name": "_nonVerifiedVaultAddress",
+            "nameLocation": "387:24:31",
+            "nodeType": "VariableDeclaration",
+            "scope": 6205,
+            "src": "370:41:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6182,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "370:7:31",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6185,
+            "mutability": "mutable",
+            "name": "_verifiedVaultAddress",
+            "nameLocation": "434:21:31",
+            "nodeType": "VariableDeclaration",
+            "scope": 6205,
+            "src": "417:38:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6184,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "417:7:31",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6187,
+            "mutability": "mutable",
+            "name": "_projectBeaconAddress",
+            "nameLocation": "478:21:31",
+            "nodeType": "VariableDeclaration",
+            "scope": 6205,
+            "src": "461:38:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 6186,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "461:7:31",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6191,
+            "mutability": "mutable",
+            "name": "_serializationAddressMapping",
+            "nameLocation": "542:28:31",
+            "nodeType": "VariableDeclaration",
+            "scope": 6205,
+            "src": "506:64:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_address_$",
+              "typeString": "mapping(string => address)"
+            },
+            "typeName": {
+              "id": 6190,
+              "keyType": {
+                "id": 6188,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "514:6:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "506:26:31",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_address_$",
+                "typeString": "mapping(string => address)"
+              },
+              "valueType": {
+                "id": 6189,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "524:7:31",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6195,
+            "mutability": "mutable",
+            "name": "_projectIdToAddressMapping",
+            "nameLocation": "613:26:31",
+            "nodeType": "VariableDeclaration",
+            "scope": 6205,
+            "src": "576:63:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+              "typeString": "mapping(uint256 => address)"
+            },
+            "typeName": {
+              "id": 6194,
+              "keyType": {
+                "id": 6192,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "584:7:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "576:27:31",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
+                "typeString": "mapping(uint256 => address)"
+              },
+              "valueType": {
+                "id": 6193,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "595:7:31",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 6199,
+            "mutability": "mutable",
+            "name": "_addressToProjectIdMapping",
+            "nameLocation": "682:26:31",
+            "nodeType": "VariableDeclaration",
+            "scope": 6205,
+            "src": "645:63:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 6198,
+              "keyType": {
+                "id": 6196,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "653:7:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "645:27:31",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                "typeString": "mapping(address => uint256)"
+              },
+              "valueType": {
+                "id": 6197,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "664:7:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "documentation": {
+              "id": 6200,
+              "nodeType": "StructuredDocumentation",
+              "src": "715:254:31",
+              "text": " @dev This empty reserved space is put in place to allow future versions to add new\n variables without shifting down storage in the inheritance chain.\n See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps"
+            },
+            "id": 6204,
+            "mutability": "mutable",
+            "name": "__gap",
+            "nameLocation": "994:5:31",
+            "nodeType": "VariableDeclaration",
+            "scope": 6205,
+            "src": "974:25:31",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$44_storage",
+              "typeString": "uint256[44]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 6201,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "974:7:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 6203,
+              "length": {
+                "hexValue": "3434",
+                "id": 6202,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "982:2:31",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_44_by_1",
+                  "typeString": "int_const 44"
+                },
+                "value": "44"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "974:11:31",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$44_storage_ptr",
+                "typeString": "uint256[44]"
+              }
+            },
+            "visibility": "private"
+          }
+        ],
+        "scope": 6209,
+        "src": "314:688:31",
+        "usedErrors": []
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 6206,
+              "name": "CarbonContractRegistryStorageV1",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 6205,
+              "src": "1059:31:31"
+            },
+            "id": 6207,
+            "nodeType": "InheritanceSpecifier",
+            "src": "1059:31:31"
+          }
+        ],
+        "canonicalName": "CarbonContractRegistryStorage",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 6208,
+        "linearizedBaseContracts": [
+          6208,
+          6205
+        ],
+        "name": "CarbonContractRegistryStorage",
+        "nameLocation": "1022:29:31",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 6209,
+        "src": "1004:89:31",
+        "usedErrors": []
+      }
+    ],
+    "src": "207:887:31"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.13",
+  "updatedAt": "2023-04-12T21:05:51.353Z",
+  "devdoc": {
+    "details": "CarbonContractRegistryStorage is used for separation of data and logic",
+    "kind": "dev",
+    "methods": {},
+    "stateVariables": {
+      "__gap": {
+        "details": "This empty reserved space is put in place to allow future versions to add new variables without shifting down storage in the inheritance chain. See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

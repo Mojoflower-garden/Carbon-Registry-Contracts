@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: UNLICENSED
 
 // If you encounter a vulnerability or an issue, please contact <security@mojoflower.io> or visit security.mojoflower.io
-pragma solidity 0.8.14;
+pragma solidity ^0.8.13;
 
 /// @dev  CarbonContractRegistryStorage is used for separation of data and logic
 abstract contract CarbonContractRegistryStorageV1 {

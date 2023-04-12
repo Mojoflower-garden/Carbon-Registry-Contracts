@@ -312,7 +312,7 @@
         2637
       ],
       "IERC165Upgradeable": [
-        3535
+        3957
       ]
     },
     "id": 2638,
@@ -337,7 +337,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 2638,
-        "sourceUnit": 3536,
+        "sourceUnit": 3958,
         "src": "135:58:10",
         "symbolAliases": [],
         "unitAlias": ""
@@ -350,7 +350,7 @@
               "id": 2520,
               "name": "IERC165Upgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 3535,
+              "referencedDeclaration": 3957,
               "src": "394:18:10"
             },
             "id": 2521,
@@ -371,7 +371,7 @@
         "id": 2637,
         "linearizedBaseContracts": [
           2637,
-          3535
+          3957
         ],
         "name": "IERC1155Upgradeable",
         "nameLocation": "371:19:10",
@@ -1753,7 +1753,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-04-12T10:03:29.074Z",
+  "updatedAt": "2023-04-12T21:05:51.322Z",
   "devdoc": {
     "details": "Required interface of an ERC1155 compliant contract, as defined in the https://eips.ethereum.org/EIPS/eip-1155[EIP]. _Available since v3.1._",
     "events": {
