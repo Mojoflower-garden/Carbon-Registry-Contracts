@@ -1,33 +1,16 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.22 <0.9.0;
+pragma solidity ^0.8.13;
 
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-
-enum TokenType {
-    NotSet, // 0
-    ExPost, // 1
-    ExAnte, // 2
-    RetirementNft // 3
-}
-
-struct VintageData {
-    string serialization;
-    bool verified;
-    TokenType tokenType;
-}
-
-struct RetirementData {
-    address retireeAddress;
-    uint256 amount;
-    uint256 vintageTokenId;
-    string retiree;
-    string customUri;
-    string comment;
-}
+import "./types/ProjectTypes.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
 
 abstract contract ProjectStorageV1 is Initializable {
-    string public projectId;
+    uint256 internal tokenId;
+    uint256 public projectId;
+    string public projectName;
     uint8 public maxAntePercentage;
+    address public contractRegistry;
     mapping(uint256 => VintageData) public vintageMapping;
     mapping(string => uint256) public serializationToTokenIdMapping;
     mapping(uint256 => uint256) public exPostToExAnteToken;
@@ -35,8 +18,16 @@ abstract contract ProjectStorageV1 is Initializable {
     mapping(uint256 => bool) public isTokenClawbackEnabled;
     mapping(uint256 => RetirementData) public retirementMapping;
 
-    function __ProjectStorage_init(uint8 _maxAntePerc) public initializer {
+    function __ProjectStorage_init(
+        address _contractRegistry,
+        uint8 _maxAntePerc,
+        uint256 _projectId,
+        string memory _projectName
+    ) public initializer {
         maxAntePercentage = _maxAntePerc;
+        projectId = _projectId;
+        projectName = _projectName;
+        contractRegistry = _contractRegistry;
     }
 
     // /**
@@ -44,7 +35,7 @@ abstract contract ProjectStorageV1 is Initializable {
     //  * variables without shifting down storage in the inheritance chain.
     //  * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
     //  */
-    uint256[42] private __gap;
+    uint256[39] private __gap;
 }
 
 abstract contract ProjectStorage is ProjectStorageV1 {}

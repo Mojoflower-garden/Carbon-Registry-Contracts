@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.22 <0.9.0;
+pragma solidity ^0.8.13;
 
 import "@openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155Upgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
@@ -8,10 +8,9 @@ import "@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155Burn
 import "@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155SupplyUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
-import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-import "@openzeppelin/contracts/utils/Counters.sol";
 
 import "./ProjectStorage.sol";
+import "./interfaces/ICarbonContractRegistry.sol";
 
 contract Project is
     Initializable,
@@ -28,17 +27,20 @@ contract Project is
     bytes32 public constant ANTE_MINTER_ROLE = keccak256("ANTE_MINTER_ROLE");
     bytes32 public constant POST_MINTER_ROLE = keccak256("POST_MINTER_ROLE");
     bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
-
-    using Counters for Counters.Counter;
-    using SafeMath for uint256;
-    Counters.Counter internal tokenCounter;
+    bytes32 public constant BLACKLISTED = keccak256("BLACKLISTED");
+    bytes32 public constant BLACKLISTER_ROLE = keccak256("BLACKLISTER_ROLE");
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
         _disableInitializers();
     }
 
-    function initialize(address owner) public initializer {
+    function initialize(
+        address _contractRegistry,
+        address _owner,
+        uint256 _projectId,
+        string memory _projectName
+    ) public initializer {
         __ERC1155_init("");
         __AccessControl_init();
         __Pausable_init();
@@ -47,14 +49,17 @@ contract Project is
         __UUPSUpgradeable_init();
 
         // Our Inits
-        __ProjectStorage_init(50);
+        __ProjectStorage_init(_contractRegistry, 50, _projectId, _projectName);
 
-        _grantRole(DEFAULT_ADMIN_ROLE, owner);
-        _grantRole(URI_SETTER_ROLE, owner);
-        _grantRole(PAUSER_ROLE, owner);
-        _grantRole(ANTE_MINTER_ROLE, owner);
-        _grantRole(POST_MINTER_ROLE, owner);
-        _grantRole(UPGRADER_ROLE, owner);
+        _grantRole(DEFAULT_ADMIN_ROLE, _owner);
+        _grantRole(URI_SETTER_ROLE, _owner);
+        _grantRole(PAUSER_ROLE, _owner);
+        _grantRole(ANTE_MINTER_ROLE, _owner);
+        _grantRole(POST_MINTER_ROLE, _owner);
+        _grantRole(UPGRADER_ROLE, _owner);
+        _grantRole(BLACKLISTER_ROLE, _owner);
+
+        _grantRole(POST_MINTER_ROLE, msg.sender); // Just so projectFactory can mint exPost on creation of the project
     }
 
     event ExPostMinted(
@@ -74,18 +79,6 @@ contract Project is
         _;
     }
 
-    function setURI(string memory newuri) public onlyRole(URI_SETTER_ROLE) {
-        _setURI(newuri);
-    }
-
-    function pause() public onlyRole(PAUSER_ROLE) {
-        _pause();
-    }
-
-    function unpause() public onlyRole(PAUSER_ROLE) {
-        _unpause();
-    }
-
     function mintExPost(
         address account,
         uint256 amount,
@@ -97,10 +90,9 @@ contract Project is
         onlySerializationNotRegistered(serialization)
     {
         uint256 newTokenId = nextTokenId();
-        // IContractRegistry(contractRegistry).registerSerialization(
-        //     serialization,
-        //     address(this)
-        // );
+        ICarbonContractRegistry(contractRegistry).registerSerialization(
+            serialization
+        );
         serializationToTokenIdMapping[serialization] = newTokenId;
         isTokenMintable[newTokenId] = true;
         isTokenClawbackEnabled[newTokenId] = true;
@@ -141,9 +133,23 @@ contract Project is
         super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
     }
 
+    function setURI(string memory newuri) public onlyRole(URI_SETTER_ROLE) {
+        _setURI(newuri);
+    }
+
+    function pause() public onlyRole(PAUSER_ROLE) {
+        _pause();
+    }
+
+    function unpause() public onlyRole(PAUSER_ROLE) {
+        _unpause();
+    }
+
     function nextTokenId() internal returns (uint256) {
-        tokenCounter.increment();
-        return tokenCounter.current();
+        unchecked {
+            tokenId += 1;
+        }
+        return tokenId;
     }
 
     function _authorizeUpgrade(
