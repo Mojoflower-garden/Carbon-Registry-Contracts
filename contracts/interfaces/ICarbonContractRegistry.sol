@@ -14,13 +14,6 @@ interface ICarbonContractRegistry {
 
     function registerSerialization(string calldata serialization) external;
 
-    function setProjectIdAddress(
-        uint256 projectId,
-        address projectAddress
-    ) external;
-
-    function setProjectFactoryAddress(address projectFactoryAddress) external;
-
     function setBeaconAddress(address beaconAddress) external;
 
     // ----------------------------------
@@ -35,10 +28,6 @@ interface ICarbonContractRegistry {
         string calldata serialization
     ) external view returns (address);
 
-    function checkSerializationAddress(
-        string calldata serialization
-    ) external view returns (bool);
-
     function getProjectAddressFromId(
         uint256 projectId
     ) external view returns (address);
@@ -46,8 +35,6 @@ interface ICarbonContractRegistry {
     function getProjectIdFromAddress(
         address projectAddress
     ) external view returns (uint256);
-
-    function getProjectFactoryAddress() external view returns (address);
 
     function getBeaconAddress() external view returns (address);
 }

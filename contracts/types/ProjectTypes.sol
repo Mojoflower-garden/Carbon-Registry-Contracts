@@ -23,4 +23,12 @@ struct RetirementData {
     string comment;
 }
 
+enum AdminActionReason {
+    NoReason,
+    OverEstimated,
+    UnderEstimated,
+    CreditsLost,
+    CreditsGained
+}
+
 abstract contract ProjectTypes {}

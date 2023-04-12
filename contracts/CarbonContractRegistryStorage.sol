@@ -9,8 +9,7 @@ pragma solidity 0.8.14;
 abstract contract CarbonContractRegistryStorageV1 {
     address internal _nonVerifiedVaultAddress;
     address internal _verifiedVaultAddress;
-    address internal _projectFactoryAddress;
-    address internal _beaconAddress;
+    address internal _projectBeaconAddress;
 
     mapping(string => address) internal _serializationAddressMapping;
     mapping(uint256 => address) internal _projectIdToAddressMapping;
@@ -21,7 +20,7 @@ abstract contract CarbonContractRegistryStorageV1 {
      * variables without shifting down storage in the inheritance chain.
      * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
      */
-    uint256[43] private __gap;
+    uint256[44] private __gap;
 }
 
 abstract contract CarbonContractRegistryStorage is

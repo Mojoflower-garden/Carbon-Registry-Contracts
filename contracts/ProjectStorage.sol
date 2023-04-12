@@ -13,7 +13,7 @@ abstract contract ProjectStorageV1 is Initializable {
     address public contractRegistry;
     mapping(uint256 => VintageData) public vintageMapping;
     mapping(string => uint256) public serializationToTokenIdMapping;
-    mapping(uint256 => uint256) public exPostToExAnteToken;
+    mapping(uint256 => uint256) public exPostToExAnteTokenId;
     mapping(uint256 => bool) public isTokenMintable;
     mapping(uint256 => bool) public isTokenClawbackEnabled;
     mapping(uint256 => RetirementData) public retirementMapping;

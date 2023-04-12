@@ -4,6 +4,7 @@ pragma solidity ^0.8.13;
 import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
+import "@openzeppelin/contracts/proxy/beacon/BeaconProxy.sol";
 import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
 
 import "./CarbonContractRegistryStorage.sol";
@@ -32,10 +33,6 @@ contract CarbonContractRegistry is
         string indexed serialization,
         address indexed serializationProjectContractAddress
     );
-    event ProjectIdAddressSet(
-        uint256 indexed projectId,
-        address indexed projectAddress
-    );
     event ProjectFactoryAddressSet(
         address indexed projectFactoryAddress,
         address indexed oldProjectFactoryAddress
@@ -43,6 +40,11 @@ contract CarbonContractRegistry is
     event BeaconSet(
         address indexed beaconAddress,
         address indexed oldBeaconAddress
+    );
+    event ProjectCreated(
+        uint256 indexed projectId,
+        address indexed projectAddress,
+        string projectName
     );
 
     /// @custom:oz-upgrades-unsafe-allow constructor
@@ -59,7 +61,7 @@ contract CarbonContractRegistry is
         _grantRole(UPGRADER_ROLE, msg.sender);
         _grantRole(PAUSER_ROLE, msg.sender);
 
-        _beaconAddress = beaconAddress;
+        _projectBeaconAddress = beaconAddress;
     }
 
     modifier onlyCarbonRegistryProjects() {
@@ -71,16 +73,44 @@ contract CarbonContractRegistry is
         _;
     }
 
-    function _authorizeUpgrade(
-        address newImplementation
-    ) internal override onlyRole(UPGRADER_ROLE) {}
+    function createProject(
+        uint256 _projectId,
+        string calldata _projectName
+    ) external whenNotPaused onlyRole(DEFAULT_ADMIN_ROLE) {
+        require(_projectId != 0, "ProjectId cannot be 0");
+        require(
+            _projectIdToAddressMapping[_projectId] == address(0),
+            "ProjectId already exists"
+        );
 
-    function pause() public onlyRole(PAUSER_ROLE) {
-        _pause();
+        address projectAddress = _createProject(_projectId, _projectName);
+
+        require(
+            _addressToProjectIdMapping[projectAddress] == 0,
+            "ProjectAddress already exists"
+        );
+        _projectIdToAddressMapping[_projectId] = projectAddress;
+        _addressToProjectIdMapping[projectAddress] = _projectId;
+        emit ProjectCreated(_projectId, projectAddress, _projectName);
     }
 
-    function unpause() public onlyRole(PAUSER_ROLE) {
-        _unpause();
+    function _createProject(
+        uint256 _projectId,
+        string calldata _projectName
+    ) internal returns (address) {
+        /// @dev generate payload for initialize function
+        string memory signature = "initialize(address,uint256,string)";
+        bytes memory payload = abi.encodeWithSignature(
+            signature,
+            msg.sender,
+            _projectId,
+            _projectName
+        );
+
+        address projectAddress = address(
+            new BeaconProxy(_projectBeaconAddress, payload)
+        );
+        return projectAddress;
     }
 
     // ----------------------------------
@@ -118,62 +148,11 @@ contract CarbonContractRegistry is
         emit SerializationAddressSet(serialization, msg.sender);
     }
 
-    function createProject(
-        uint256 _projectId,
-        string calldata _projectName
-    ) external override whenNotPaused onlyRole(DEFAULT_ADMIN_ROLE) {
-        require(_projectId != 0, "ProjectId cannot be 0");
-        require(
-            _projectIdToAddressMapping[_projectId] == address(0),
-            "ProjectId already exists"
-        );
-
-        require(
-            _addressToProjectIdMapping[projectAddress] == 0,
-            "ProjectAddress already exists"
-        );
-        _projectIdToAddressMapping[projectId] = projectAddress;
-        _addressToProjectIdMapping[projectAddress] = projectId;
-        emit ProjectIdAddressSet(projectId, projectAddress);
-    }
-
-    function _createProject(
-        uint256 _projectId,
-        string calldata _projectName
-    ) internal returns (address) {
-        /// @dev generate payload for initialize function
-        string memory signature = "initialize(address,uint256,string)";
-        bytes memory payload = abi.encodeWithSignature(
-            signature,
-            owner(),
-            _projectId,
-            _projectName
-        );
-
-        address projectAddress = address(
-            new BeaconProxy(_beaconAddress, payload)
-        );
-        emit ProjectCreated(projectAddress, _projectId, _projectName);
-        return projectAddress;
-    }
-
-    function setProjectFactoryAddress(
-        address projectFactoryAddress
-    ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
-        _revokeRole(PROJECT_FACTORY_ROLE, _projectFactoryAddress);
-        _projectFactoryAddress = projectFactoryAddress;
-        _grantRole(PROJECT_FACTORY_ROLE, _projectFactoryAddress);
-        emit ProjectFactoryAddressSet(
-            _projectFactoryAddress,
-            projectFactoryAddress
-        );
-    }
-
     function setBeaconAddress(
         address beaconAddress
     ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
-        _beaconAddress = beaconAddress;
-        emit BeaconSet(beaconAddress, _beaconAddress);
+        _projectBeaconAddress = beaconAddress;
+        emit BeaconSet(beaconAddress, _projectBeaconAddress);
     }
 
     // ----------------------------------
@@ -204,12 +183,6 @@ contract CarbonContractRegistry is
         return _serializationAddressMapping[serialization];
     }
 
-    function checkSerializationAddress(
-        string calldata serialization
-    ) external view override returns (bool) {
-        return _serializationAddressMapping[serialization] != address(0);
-    }
-
     function getProjectAddressFromId(
         uint256 projectId
     ) external view override returns (address) {
@@ -222,16 +195,19 @@ contract CarbonContractRegistry is
         return _addressToProjectIdMapping[projectAddress];
     }
 
-    function getProjectFactoryAddress()
-        external
-        view
-        override
-        returns (address)
-    {
-        return _projectFactoryAddress;
+    function getBeaconAddress() external view override returns (address) {
+        return _projectBeaconAddress;
     }
 
-    function getBeaconAddress() external view override returns (address) {
-        return _beaconAddress;
+    function _authorizeUpgrade(
+        address newImplementation
+    ) internal override onlyRole(UPGRADER_ROLE) {}
+
+    function pause() public onlyRole(PAUSER_ROLE) {
+        _pause();
+    }
+
+    function unpause() public onlyRole(PAUSER_ROLE) {
+        _unpause();
     }
 }
