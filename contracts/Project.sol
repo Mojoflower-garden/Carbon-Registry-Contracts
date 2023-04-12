@@ -47,9 +47,16 @@ contract Project is
         AdminActionReason indexed reason
     );
 
+    event ExAnteMinted(
+        address indexed account,
+        uint256 indexed tokenId,
+        uint256 amount
+    );
+
     event ExPostVerifiedAndMinted(
         uint256 indexed tokenId,
         uint256 amount,
+        uint256 amountToAnteHolders,
         string monitoringReport,
         bool isVintageFullyVerified
     );
@@ -151,27 +158,6 @@ contract Project is
         return bytes(exPostVintageMapping[tokenId].serialization).length > 0;
     }
 
-    // Disallow sending tokens to other addresses that are ExPost and non-verified
-    modifier isTransferAllowed(
-        address from,
-        address to,
-        uint256[] memory tokenIds
-    ) {
-        bool isSupplyDecrease = from == address(this) && to == address(0);
-        if (isSupplyDecrease || to == address(this)) {
-            _;
-            return;
-        }
-        for (uint256 i = 0; i < tokenIds.length; i++) {
-            require(
-                exPostVintageMapping[tokenIds[i]].verified ||
-                    !isExPostToken(tokenIds[i]),
-                "Project: Token is non-verified"
-            );
-        }
-        _;
-    }
-
     modifier onlyVerifiedStatus(bool isVerified, uint256 tokenId) {
         require(
             exPostVintageMapping[tokenId].verified == isVerified,
@@ -239,6 +225,7 @@ contract Project is
 
         exAnteToExPostTokenId[exAnteTokenId] = exPostTokenId;
         _mint(account, exAnteTokenId, amount, data);
+        emit ExAnteMinted(account, exAnteTokenId, amount);
     }
 
     function changeVintageMitigationEstimate(
@@ -304,6 +291,7 @@ contract Project is
         emit ExPostVerifiedAndMinted(
             tokenId,
             amountVerified,
+            amountToAnteHolders,
             monitoringReport,
             isVintageVerificationComplete
         );
@@ -375,7 +363,7 @@ contract Project is
     function getExPostVintageData(
         uint256 exAnteTokenId
     ) public view returns (VintageData memory) {
-        uint256 exPostTokenId = exPostToExAnteTokenId[exAnteTokenId];
+        uint256 exPostTokenId = exAnteToExPostTokenId[exAnteTokenId];
         return exPostVintageMapping[exPostTokenId];
     }
 
@@ -464,7 +452,6 @@ contract Project is
         internal
         override(ERC1155Upgradeable, ERC1155SupplyUpgradeable)
         whenNotPaused
-        isTransferAllowed(from, to, ids)
         notBlacklisted(from)
         notBlacklisted(to)
     {
