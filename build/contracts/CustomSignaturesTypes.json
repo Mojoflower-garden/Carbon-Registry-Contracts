@@ -1,0 +1,405 @@
+{
+  "contractName": "CustomSignaturesTypes",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/utils/CustomSignaturesTypes.sol\":\"CustomSignaturesTypes\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/utils/CustomSignaturesTypes.sol\":{\"keccak256\":\"0xb67da48bd20169efa7b11f2fad5ffa6fb8567ba17b48981cb1a6878f044e7851\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://51fa9bc00d124ea42ffeb72bf12bac6fece78c2ad9d1203a8b5a212a12845b7e\",\"dweb:/ipfs/QmTTvmz7d3taUQd2q2s4bpgFDgEWXLf5SzRhSwckbF3zbx\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-FileCopyrightText: 2023 Mojoflower\n//\n// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.8.13;\n\nstruct signatureTransferPayload {\n    uint256 deadline;\n    string description;\n    address signer;\n    address to;\n    uint256 tokenId;\n    uint256 amount;\n    uint256 nonce;\n}\n\nstruct signatureGenericPayload {\n    uint256 deadline;\n    string description;\n    address signer;\n    uint256 nonce;\n}\n\nabstract contract CustomSignaturesTypes {}\n",
+  "sourcePath": "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/utils/CustomSignaturesTypes.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/utils/CustomSignaturesTypes.sol",
+    "exportedSymbols": {
+      "CustomSignaturesTypes": [
+        8139
+      ],
+      "signatureGenericPayload": [
+        8138
+      ],
+      "signatureTransferPayload": [
+        8129
+      ]
+    },
+    "id": 8140,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8114,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "85:24:43"
+      },
+      {
+        "canonicalName": "signatureTransferPayload",
+        "id": 8129,
+        "members": [
+          {
+            "constant": false,
+            "id": 8116,
+            "mutability": "mutable",
+            "name": "deadline",
+            "nameLocation": "157:8:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8129,
+            "src": "149:16:43",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 8115,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "149:7:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8118,
+            "mutability": "mutable",
+            "name": "description",
+            "nameLocation": "178:11:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8129,
+            "src": "171:18:43",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 8117,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "171:6:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8120,
+            "mutability": "mutable",
+            "name": "signer",
+            "nameLocation": "203:6:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8129,
+            "src": "195:14:43",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 8119,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "195:7:43",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8122,
+            "mutability": "mutable",
+            "name": "to",
+            "nameLocation": "223:2:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8129,
+            "src": "215:10:43",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 8121,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "215:7:43",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8124,
+            "mutability": "mutable",
+            "name": "tokenId",
+            "nameLocation": "239:7:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8129,
+            "src": "231:15:43",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 8123,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "231:7:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8126,
+            "mutability": "mutable",
+            "name": "amount",
+            "nameLocation": "260:6:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8129,
+            "src": "252:14:43",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 8125,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "252:7:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8128,
+            "mutability": "mutable",
+            "name": "nonce",
+            "nameLocation": "280:5:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8129,
+            "src": "272:13:43",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 8127,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "272:7:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "signatureTransferPayload",
+        "nameLocation": "118:24:43",
+        "nodeType": "StructDefinition",
+        "scope": 8140,
+        "src": "111:177:43",
+        "visibility": "public"
+      },
+      {
+        "canonicalName": "signatureGenericPayload",
+        "id": 8138,
+        "members": [
+          {
+            "constant": false,
+            "id": 8131,
+            "mutability": "mutable",
+            "name": "deadline",
+            "nameLocation": "335:8:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8138,
+            "src": "327:16:43",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 8130,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "327:7:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8133,
+            "mutability": "mutable",
+            "name": "description",
+            "nameLocation": "356:11:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8138,
+            "src": "349:18:43",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage_ptr",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 8132,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "349:6:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8135,
+            "mutability": "mutable",
+            "name": "signer",
+            "nameLocation": "381:6:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8138,
+            "src": "373:14:43",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 8134,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "373:7:43",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 8137,
+            "mutability": "mutable",
+            "name": "nonce",
+            "nameLocation": "401:5:43",
+            "nodeType": "VariableDeclaration",
+            "scope": 8138,
+            "src": "393:13:43",
+            "stateVariable": false,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 8136,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "393:7:43",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "name": "signatureGenericPayload",
+        "nameLocation": "297:23:43",
+        "nodeType": "StructDefinition",
+        "scope": 8140,
+        "src": "290:119:43",
+        "visibility": "public"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "CustomSignaturesTypes",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 8139,
+        "linearizedBaseContracts": [
+          8139
+        ],
+        "name": "CustomSignaturesTypes",
+        "nameLocation": "429:21:43",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 8140,
+        "src": "411:42:43",
+        "usedErrors": []
+      }
+    ],
+    "src": "85:369:43"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.13",
+  "updatedAt": "2023-04-17T16:25:40.894Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

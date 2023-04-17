@@ -4,7 +4,9 @@ pragma solidity ^0.8.13;
 struct VintageData {
     string serialization;
     uint256 estMitigations;
-    bool verified;
+    uint256 verificationPeriodStart; // timestamp seconds since Unix
+    uint256 verificationPeriodEnd;
+    uint256 lastVerificationTimestamp;
 }
 
 struct RetirementData {

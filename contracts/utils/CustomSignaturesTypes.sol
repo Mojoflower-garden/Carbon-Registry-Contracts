@@ -19,3 +19,5 @@ struct signatureGenericPayload {
     address signer;
     uint256 nonce;
 }
+
+abstract contract CustomSignaturesTypes {}

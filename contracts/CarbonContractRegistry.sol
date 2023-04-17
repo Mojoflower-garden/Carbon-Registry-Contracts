@@ -1,214 +1,219 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
-import "@openzeppelin/contracts/proxy/beacon/BeaconProxy.sol";
-import "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol";
+import '@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol';
+import '@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol';
+import '@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol';
+import '@openzeppelin/contracts/proxy/beacon/BeaconProxy.sol';
+import '@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol';
 
-import "./CarbonContractRegistryStorage.sol";
-import "./interfaces/ICarbonContractRegistry.sol";
+import './CarbonContractRegistryStorage.sol';
+import './interfaces/ICarbonContractRegistry.sol';
 
 contract CarbonContractRegistry is
-    Initializable,
-    PausableUpgradeable,
-    AccessControlUpgradeable,
-    UUPSUpgradeable,
-    ICarbonContractRegistry,
-    CarbonContractRegistryStorage
+	Initializable,
+	PausableUpgradeable,
+	AccessControlUpgradeable,
+	UUPSUpgradeable,
+	ICarbonContractRegistry,
+	CarbonContractRegistryStorage
 {
-    bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
-    bytes32 public constant UPGRADER_ROLE = keccak256("UPGRADER_ROLE");
+	bytes32 public constant PAUSER_ROLE = keccak256('PAUSER_ROLE');
+	bytes32 public constant UPGRADER_ROLE = keccak256('UPGRADER_ROLE');
 
-    event NonVerifiedVaultAddressSet(
-        address indexed nonVerifiedVaultAddress,
-        address indexed oldNonVerifiedVaultAddress
-    );
-    event VerifiedVaultAddressSet(
-        address indexed verifiedVaultAddress,
-        address indexed oldVerifiedVaultAddress
-    );
-    event SerializationAddressSet(
-        string indexed serialization,
-        address indexed serializationProjectContractAddress
-    );
-    event ProjectFactoryAddressSet(
-        address indexed projectFactoryAddress,
-        address indexed oldProjectFactoryAddress
-    );
-    event BeaconSet(
-        address indexed beaconAddress,
-        address indexed oldBeaconAddress
-    );
-    event ProjectCreated(
-        uint256 indexed projectId,
-        address indexed projectAddress,
-        string projectName
-    );
+	event VerifiedVaultAddressSet(
+		address indexed verifiedVaultAddress,
+		address indexed oldVerifiedVaultAddress,
+		uint256 indexed id
+	);
+	event SerializationAddressSet(
+		string serialization,
+		address indexed serializationProjectContractAddress
+	);
+	event ProjectFactoryAddressSet(
+		address indexed projectFactoryAddress,
+		address indexed oldProjectFactoryAddress
+	);
+	event BeaconSet(
+		address indexed beaconAddress,
+		address indexed oldBeaconAddress
+	);
+	event TokenVaultBeaconSet(
+		address indexed tokenVaultBeaconAddress,
+		address indexed oldTokenVaultBeaconAddress
+	);
+	event ProjectCreated(
+		uint256 indexed projectId,
+		address indexed projectAddress,
+		string projectName
+	);
 
-    /// @custom:oz-upgrades-unsafe-allow constructor
-    constructor() {
-        _disableInitializers();
-    }
+	/// @custom:oz-upgrades-unsafe-allow constructor
+	constructor() {
+		_disableInitializers();
+	}
 
-    function initialize(address beaconAddress) public initializer {
-        __Pausable_init();
-        __AccessControl_init();
-        __UUPSUpgradeable_init();
+	function initialize(address beaconAddress) public initializer {
+		__Pausable_init();
+		__AccessControl_init();
+		__UUPSUpgradeable_init();
 
-        _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
-        _grantRole(UPGRADER_ROLE, msg.sender);
-        _grantRole(PAUSER_ROLE, msg.sender);
+		_grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
+		_grantRole(UPGRADER_ROLE, msg.sender);
+		_grantRole(PAUSER_ROLE, msg.sender);
 
-        _projectBeaconAddress = beaconAddress;
-    }
+		_projectBeaconAddress = beaconAddress;
+	}
 
-    modifier onlyCarbonRegistryProjects() {
-        require(
-            _addressToProjectIdMapping[msg.sender] != 0 ||
-                hasRole(DEFAULT_ADMIN_ROLE, msg.sender),
-            "Only CarbonRegistryProject can call this function"
-        );
-        _;
-    }
+	modifier onlyCarbonRegistryProjects() {
+		require(
+			_addressToProjectIdMapping[msg.sender] != 0 ||
+				hasRole(DEFAULT_ADMIN_ROLE, msg.sender),
+			'Only CarbonRegistryProject can call this function'
+		);
+		_;
+	}
 
-    function createProject(
-        uint256 _projectId,
-        string calldata _projectName
-    ) external whenNotPaused onlyRole(DEFAULT_ADMIN_ROLE) {
-        require(_projectId != 0, "ProjectId cannot be 0");
-        require(
-            _projectIdToAddressMapping[_projectId] == address(0),
-            "ProjectId already exists"
-        );
+	function createProject(
+		uint256 _projectId,
+		string calldata _projectName
+	) external whenNotPaused onlyRole(DEFAULT_ADMIN_ROLE) {
+		require(_projectId != 0, 'ProjectId cannot be 0');
+		require(
+			_projectIdToAddressMapping[_projectId] == address(0),
+			'ProjectId already exists'
+		);
 
-        address projectAddress = _createProject(_projectId, _projectName);
+		address projectAddress = _createProject(_projectId, _projectName);
 
-        require(
-            _addressToProjectIdMapping[projectAddress] == 0,
-            "ProjectAddress already exists"
-        );
-        _projectIdToAddressMapping[_projectId] = projectAddress;
-        _addressToProjectIdMapping[projectAddress] = _projectId;
-        emit ProjectCreated(_projectId, projectAddress, _projectName);
-    }
+		require(
+			_addressToProjectIdMapping[projectAddress] == 0,
+			'ProjectAddress already exists'
+		);
+		_projectIdToAddressMapping[_projectId] = projectAddress;
+		_addressToProjectIdMapping[projectAddress] = _projectId;
+		emit ProjectCreated(_projectId, projectAddress, _projectName);
+	}
 
-    function _createProject(
-        uint256 _projectId,
-        string calldata _projectName
-    ) internal returns (address) {
-        /// @dev generate payload for initialize function
-        string memory signature = "initialize(address,address,uint256,string)";
-        bytes memory payload = abi.encodeWithSignature(
-            signature,
-            address(this),
-            msg.sender,
-            _projectId,
-            _projectName
-        );
+	function _createProject(
+		uint256 _projectId,
+		string calldata _projectName
+	) internal returns (address) {
+		/// @dev generate payload for initialize function
+		string memory signature = 'initialize(address,address,uint256,string)';
+		bytes memory payload = abi.encodeWithSignature(
+			signature,
+			address(this),
+			msg.sender,
+			_projectId,
+			_projectName
+		);
 
-        address projectAddress = address(
-            new BeaconProxy(_projectBeaconAddress, payload)
-        );
-        return projectAddress;
-    }
+		address projectAddress = address(
+			new BeaconProxy(_projectBeaconAddress, payload)
+		);
+		return projectAddress;
+	}
 
-    // ----------------------------------
-    //              SETTERS
-    // ----------------------------------
+	// ----------------------------------
+	//              SETTERS
+	// ----------------------------------
 
-    function setNonVerifiedVaultAddress(
-        address nonVerifiedVaultAddress
-    ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
-        emit NonVerifiedVaultAddressSet(
-            nonVerifiedVaultAddress,
-            _nonVerifiedVaultAddress
-        );
-        _nonVerifiedVaultAddress = nonVerifiedVaultAddress;
-    }
+	function createNewVerifiedVault() external override onlyRole(DEFAULT_ADMIN_ROLE) {
+				/// @dev generate payload for initialize function
+		string memory signature = 'initialize(address)';
+		bytes memory payload = abi.encodeWithSignature(
+			signature,
+			msg.sender
+		);
 
-    function setVerifiedVaultAddress(
-        address verifiedVaultAddress
-    ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
-        emit VerifiedVaultAddressSet(
-            verifiedVaultAddress,
-            _verifiedVaultAddress
-        );
-        _verifiedVaultAddress = verifiedVaultAddress;
-    }
+		address verifiedVaultAddress = address(
+			new BeaconProxy(_tokenVaultBeaconAddress, payload)
+		);
 
-    function registerSerialization(
-        string calldata serialization
-    ) external override whenNotPaused onlyCarbonRegistryProjects {
-        require(
-            _serializationAddressMapping[serialization] == address(0),
-            "Serialization already exists"
-        );
-        _serializationAddressMapping[serialization] = msg.sender;
-        emit SerializationAddressSet(serialization, msg.sender);
-    }
+		unchecked {
+			_verifiedVaultCounter += 1;
+		}
+		_verifiedVaultMapping[_verifiedVaultCounter] = verifiedVaultAddress;
+				emit VerifiedVaultAddressSet(
+			verifiedVaultAddress,
+			_verifiedVaultMapping[_verifiedVaultCounter - 1],
+			_verifiedVaultCounter
+		);
+		_verifiedVaultAddress = verifiedVaultAddress;
+	}
 
-    function setBeaconAddress(
-        address beaconAddress
-    ) external override onlyRole(DEFAULT_ADMIN_ROLE) {
-        _projectBeaconAddress = beaconAddress;
-        emit BeaconSet(beaconAddress, _projectBeaconAddress);
-    }
+	function registerSerialization(
+		string calldata serialization
+	) external override whenNotPaused onlyCarbonRegistryProjects {
+		require(
+			_serializationAddressMapping[serialization] == address(0),
+			'Serialization already exists'
+		);
+		_serializationAddressMapping[serialization] = msg.sender;
+		emit SerializationAddressSet(serialization, msg.sender);
+	}
 
-    // ----------------------------------
-    //              GETTERS
-    // ----------------------------------
+	function setBeaconAddress(
+		address beaconAddress
+	) external override onlyRole(DEFAULT_ADMIN_ROLE) {
+		_projectBeaconAddress = beaconAddress;
+		emit BeaconSet(beaconAddress, _projectBeaconAddress);
+	}
 
-    function getNonVerifiedVaultAddress()
-        external
-        view
-        override
-        returns (address)
-    {
-        return _nonVerifiedVaultAddress;
-    }
+	    function setTokenVaultBeaconAddress(address tokenVaultBeaconAddress) external override onlyRole(DEFAULT_ADMIN_ROLE) {
+		_tokenVaultBeaconAddress = tokenVaultBeaconAddress;
+		emit TokenVaultBeaconSet(tokenVaultBeaconAddress, _tokenVaultBeaconAddress);
+		}
 
-    function getVerifiedVaultAddress()
-        external
-        view
-        override
-        returns (address)
-    {
-        return _verifiedVaultAddress;
-    }
 
-    function getSerializationAddress(
-        string calldata serialization
-    ) external view override returns (address) {
-        return _serializationAddressMapping[serialization];
-    }
+	// ----------------------------------
+	//              GETTERS
+	// ----------------------------------
 
-    function getProjectAddressFromId(
-        uint256 projectId
-    ) external view override returns (address) {
-        return _projectIdToAddressMapping[projectId];
-    }
+function getTokenVaultBeaconAddress() external view override returns (address) {
+		return _tokenVaultBeaconAddress;
+	}
+	function getVerifiedVaultAddress(uint256 id)
+		external
+		view
+		override
+		returns (address)
+	{
+		return _verifiedVaultMapping[id];
+	}
 
-    function getProjectIdFromAddress(
-        address projectAddress
-    ) external view override returns (uint256) {
-        return _addressToProjectIdMapping[projectAddress];
-    }
+	function getSerializationAddress(
+		string calldata serialization
+	) external view override returns (address) {
+		return _serializationAddressMapping[serialization];
+	}
 
-    function getBeaconAddress() external view override returns (address) {
-        return _projectBeaconAddress;
-    }
+	function getProjectAddressFromId(
+		uint256 projectId
+	) external view override returns (address) {
+		return _projectIdToAddressMapping[projectId];
+	}
 
-    function _authorizeUpgrade(
-        address newImplementation
-    ) internal override onlyRole(UPGRADER_ROLE) {}
+	function getProjectIdFromAddress(
+		address projectAddress
+	) external view override returns (uint256) {
+		return _addressToProjectIdMapping[projectAddress];
+	}
 
-    function pause() public onlyRole(PAUSER_ROLE) {
-        _pause();
-    }
+	function getBeaconAddress() external view override returns (address) {
+		return _projectBeaconAddress;
+	}
 
-    function unpause() public onlyRole(PAUSER_ROLE) {
-        _unpause();
-    }
+	function _authorizeUpgrade(
+		address newImplementation
+	) internal override onlyRole(UPGRADER_ROLE) {}
+
+	function pause() public onlyRole(PAUSER_ROLE) {
+		_pause();
+	}
+
+	function unpause() public onlyRole(PAUSER_ROLE) {
+		_unpause();
+	}
 }

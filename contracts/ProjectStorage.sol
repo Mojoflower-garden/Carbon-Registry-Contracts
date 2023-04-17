@@ -6,10 +6,10 @@ import "./types/ProjectTypes.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
 abstract contract ProjectStorageV1 is Initializable {
-    uint256 internal tokenId;
+    uint256 public topTokenId;
     uint256 public projectId;
-    string public projectName;
     uint8 public maxAntePercentage;
+    string public projectName;
     address public contractRegistry;
     mapping(uint256 => VintageData) public exPostVintageMapping;
     mapping(uint256 => uint256) public exAnteToExPostTokenId;

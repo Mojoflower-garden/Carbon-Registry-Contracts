@@ -10,10 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.2",
-    "@openzeppelin/contracts-upgradeable": "^4.8.2"
+    "@openzeppelin/contracts-upgradeable": "^4.8.2",
+    "dotenv": "^16.0.3"
   },
   "devDependencies": {
-
-    "@openzeppelin/truffle-upgrades": "^1.17.1"
+    "@openzeppelin/truffle-upgrades": "^1.17.1",
+    "truffle-plugin-verify": "^0.6.2"
   }
 }

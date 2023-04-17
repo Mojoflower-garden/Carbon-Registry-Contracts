@@ -1,28 +1,26 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity 0.8.13;
+pragma solidity ^0.8.13;
 
 interface ICarbonContractRegistry {
     // ----------------------------------
     //              SETTERS
     // ----------------------------------
 
-    function setNonVerifiedVaultAddress(
-        address nonVerifiedVaultAddress
-    ) external;
-
-    function setVerifiedVaultAddress(address verifiedVaultAddress) external;
+    function createNewVerifiedVault() external;
 
     function registerSerialization(string calldata serialization) external;
 
     function setBeaconAddress(address beaconAddress) external;
 
+    function setTokenVaultBeaconAddress(address tokenVaultBeaconAddress) external;
+
     // ----------------------------------
     //              GETTERS
     // ----------------------------------
 
-    function getNonVerifiedVaultAddress() external view returns (address);
+    function getTokenVaultBeaconAddress() external view returns (address);
 
-    function getVerifiedVaultAddress() external view returns (address);
+    function getVerifiedVaultAddress(uint256 id) external view returns (address);
 
     function getSerializationAddress(
         string calldata serialization

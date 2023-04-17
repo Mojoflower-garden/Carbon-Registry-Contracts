@@ -2,27 +2,8 @@
   "contractName": "ICarbonContractRegistry",
   "abi": [
     {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "nonVerifiedVaultAddress",
-          "type": "address"
-        }
-      ],
-      "name": "setNonVerifiedVaultAddress",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "verifiedVaultAddress",
-          "type": "address"
-        }
-      ],
-      "name": "setVerifiedVaultAddress",
+      "inputs": [],
+      "name": "createNewVerifiedVault",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -54,8 +35,21 @@
       "type": "function"
     },
     {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "tokenVaultBeaconAddress",
+          "type": "address"
+        }
+      ],
+      "name": "setTokenVaultBeaconAddress",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
       "inputs": [],
-      "name": "getNonVerifiedVaultAddress",
+      "name": "getTokenVaultBeaconAddress",
       "outputs": [
         {
           "internalType": "address",
@@ -67,7 +61,13 @@
       "type": "function"
     },
     {
-      "inputs": [],
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
       "name": "getVerifiedVaultAddress",
       "outputs": [
         {
@@ -150,7 +150,7 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"getBeaconAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getNonVerifiedVaultAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"projectId\",\"type\":\"uint256\"}],\"name\":\"getProjectAddressFromId\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"projectAddress\",\"type\":\"address\"}],\"name\":\"getProjectIdFromAddress\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"serialization\",\"type\":\"string\"}],\"name\":\"getSerializationAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getVerifiedVaultAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"serialization\",\"type\":\"string\"}],\"name\":\"registerSerialization\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beaconAddress\",\"type\":\"address\"}],\"name\":\"setBeaconAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"nonVerifiedVaultAddress\",\"type\":\"address\"}],\"name\":\"setNonVerifiedVaultAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"verifiedVaultAddress\",\"type\":\"address\"}],\"name\":\"setVerifiedVaultAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ICarbonContractRegistry.sol\":\"ICarbonContractRegistry\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ICarbonContractRegistry.sol\":{\"keccak256\":\"0x76130128af69d01eedd5563286e3731a4d30f976e9adfce05751221d1369e653\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://d3f3fec2929537614572429da422375e9544386cf65e7841336aa5c9feaa54b6\",\"dweb:/ipfs/QmRYUMCVibntNQEjkRzMzZiFtcxFLDh9ihP5sGNCe9LNdv\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"createNewVerifiedVault\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBeaconAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"projectId\",\"type\":\"uint256\"}],\"name\":\"getProjectAddressFromId\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"projectAddress\",\"type\":\"address\"}],\"name\":\"getProjectIdFromAddress\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"serialization\",\"type\":\"string\"}],\"name\":\"getSerializationAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTokenVaultBeaconAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"id\",\"type\":\"uint256\"}],\"name\":\"getVerifiedVaultAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"serialization\",\"type\":\"string\"}],\"name\":\"registerSerialization\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"beaconAddress\",\"type\":\"address\"}],\"name\":\"setBeaconAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"tokenVaultBeaconAddress\",\"type\":\"address\"}],\"name\":\"setTokenVaultBeaconAddress\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interfaces/ICarbonContractRegistry.sol\":\"ICarbonContractRegistry\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/interfaces/ICarbonContractRegistry.sol\":{\"keccak256\":\"0x6ac054c780b257b4b4b672de824e1176c20eb31e49b1b66795200121bb796118\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3ba0acac5d6c90575eff17e806f59b643370672569908cd2e46d22d73ecd57e5\",\"dweb:/ipfs/Qmcmx6J8QjLqZHHiHc2nDhg2bX43qJ4tFS8FQNKsmZ7gLM\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -158,28 +158,29 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: UNLICENSED\npragma solidity 0.8.13;\n\ninterface ICarbonContractRegistry {\n    // ----------------------------------\n    //              SETTERS\n    // ----------------------------------\n\n    function setNonVerifiedVaultAddress(\n        address nonVerifiedVaultAddress\n    ) external;\n\n    function setVerifiedVaultAddress(address verifiedVaultAddress) external;\n\n    function registerSerialization(string calldata serialization) external;\n\n    function setBeaconAddress(address beaconAddress) external;\n\n    // ----------------------------------\n    //              GETTERS\n    // ----------------------------------\n\n    function getNonVerifiedVaultAddress() external view returns (address);\n\n    function getVerifiedVaultAddress() external view returns (address);\n\n    function getSerializationAddress(\n        string calldata serialization\n    ) external view returns (address);\n\n    function getProjectAddressFromId(\n        uint256 projectId\n    ) external view returns (address);\n\n    function getProjectIdFromAddress(\n        address projectAddress\n    ) external view returns (uint256);\n\n    function getBeaconAddress() external view returns (address);\n}\n",
+  "source": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.8.13;\n\ninterface ICarbonContractRegistry {\n    // ----------------------------------\n    //              SETTERS\n    // ----------------------------------\n\n    function createNewVerifiedVault() external;\n\n    function registerSerialization(string calldata serialization) external;\n\n    function setBeaconAddress(address beaconAddress) external;\n\n    function setTokenVaultBeaconAddress(address tokenVaultBeaconAddress) external;\n\n    // ----------------------------------\n    //              GETTERS\n    // ----------------------------------\n\n    function getTokenVaultBeaconAddress() external view returns (address);\n\n    function getVerifiedVaultAddress(uint256 id) external view returns (address);\n\n    function getSerializationAddress(\n        string calldata serialization\n    ) external view returns (address);\n\n    function getProjectAddressFromId(\n        uint256 projectId\n    ) external view returns (address);\n\n    function getProjectIdFromAddress(\n        address projectAddress\n    ) external view returns (uint256);\n\n    function getBeaconAddress() external view returns (address);\n}\n",
   "sourcePath": "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/interfaces/ICarbonContractRegistry.sol",
   "ast": {
     "absolutePath": "project:/contracts/interfaces/ICarbonContractRegistry.sol",
     "exportedSymbols": {
       "ICarbonContractRegistry": [
-        7617
+        8079
       ]
     },
-    "id": 7618,
+    "id": 8080,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 7560,
+        "id": 8022,
         "literals": [
           "solidity",
+          "^",
           "0.8",
           ".13"
         ],
         "nodeType": "PragmaDirective",
-        "src": "39:23:35"
+        "src": "39:24:41"
       },
       {
         "abstract": false,
@@ -188,148 +189,63 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": false,
-        "id": 7617,
+        "id": 8079,
         "linearizedBaseContracts": [
-          7617
+          8079
         ],
         "name": "ICarbonContractRegistry",
-        "nameLocation": "74:23:35",
+        "nameLocation": "75:23:41",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
-            "functionSelector": "4b2ca13a",
-            "id": 7565,
+            "functionSelector": "a8b58484",
+            "id": 8025,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
-            "name": "setNonVerifiedVaultAddress",
-            "nameLocation": "226:26:35",
+            "name": "createNewVerifiedVault",
+            "nameLocation": "227:22:41",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7563,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 7562,
-                  "mutability": "mutable",
-                  "name": "nonVerifiedVaultAddress",
-                  "nameLocation": "270:23:35",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 7565,
-                  "src": "262:31:35",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 7561,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "262:7:35",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "252:47:35"
-            },
-            "returnParameters": {
-              "id": 7564,
+              "id": 8023,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "308:0:35"
-            },
-            "scope": 7617,
-            "src": "217:92:35",
-            "stateMutability": "nonpayable",
-            "virtual": false,
-            "visibility": "external"
-          },
-          {
-            "functionSelector": "fc402daf",
-            "id": 7570,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "setVerifiedVaultAddress",
-            "nameLocation": "324:23:35",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 7568,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 7567,
-                  "mutability": "mutable",
-                  "name": "verifiedVaultAddress",
-                  "nameLocation": "356:20:35",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 7570,
-                  "src": "348:28:35",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 7566,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "348:7:35",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "visibility": "internal"
-                }
-              ],
-              "src": "347:30:35"
+              "src": "249:2:41"
             },
             "returnParameters": {
-              "id": 7569,
+              "id": 8024,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "386:0:35"
+              "src": "260:0:41"
             },
-            "scope": 7617,
-            "src": "315:72:35",
+            "scope": 8079,
+            "src": "218:43:41",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "44d9d59b",
-            "id": 7575,
+            "id": 8030,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "registerSerialization",
-            "nameLocation": "402:21:35",
+            "nameLocation": "276:21:41",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7573,
+              "id": 8028,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7572,
+                  "id": 8027,
                   "mutability": "mutable",
                   "name": "serialization",
-                  "nameLocation": "440:13:35",
+                  "nameLocation": "314:13:41",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7575,
-                  "src": "424:29:35",
+                  "scope": 8030,
+                  "src": "298:29:41",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -337,10 +253,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 7571,
+                    "id": 8026,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "424:6:35",
+                    "src": "298:6:41",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -349,42 +265,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "423:31:35"
+              "src": "297:31:41"
             },
             "returnParameters": {
-              "id": 7574,
+              "id": 8029,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "463:0:35"
+              "src": "337:0:41"
             },
-            "scope": 7617,
-            "src": "393:71:35",
+            "scope": 8079,
+            "src": "267:71:41",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "92130344",
-            "id": 7580,
+            "id": 8035,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "setBeaconAddress",
-            "nameLocation": "479:16:35",
+            "nameLocation": "353:16:41",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7578,
+              "id": 8033,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7577,
+                  "id": 8032,
                   "mutability": "mutable",
                   "name": "beaconAddress",
-                  "nameLocation": "504:13:35",
+                  "nameLocation": "378:13:41",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7580,
-                  "src": "496:21:35",
+                  "scope": 8035,
+                  "src": "370:21:41",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -392,10 +308,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7576,
+                    "id": 8031,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "496:7:35",
+                    "src": "370:7:41",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -405,48 +321,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "495:23:35"
+              "src": "369:23:41"
             },
             "returnParameters": {
-              "id": 7579,
+              "id": 8034,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "527:0:35"
+              "src": "401:0:41"
             },
-            "scope": 7617,
-            "src": "470:58:35",
+            "scope": 8079,
+            "src": "344:58:41",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "functionSelector": "93d8e884",
-            "id": 7585,
+            "functionSelector": "45e23098",
+            "id": 8040,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
-            "name": "getNonVerifiedVaultAddress",
-            "nameLocation": "656:26:35",
+            "name": "setTokenVaultBeaconAddress",
+            "nameLocation": "417:26:41",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7581,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "682:2:35"
-            },
-            "returnParameters": {
-              "id": 7584,
+              "id": 8038,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7583,
+                  "id": 8037,
                   "mutability": "mutable",
-                  "name": "",
-                  "nameLocation": "-1:-1:-1",
+                  "name": "tokenVaultBeaconAddress",
+                  "nameLocation": "452:23:41",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7585,
-                  "src": "708:7:35",
+                  "scope": 8040,
+                  "src": "444:31:41",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -454,10 +364,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7582,
+                    "id": 8036,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "708:7:35",
+                    "src": "444:7:41",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -467,42 +377,132 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "707:9:35"
+              "src": "443:33:41"
             },
-            "scope": 7617,
-            "src": "647:70:35",
+            "returnParameters": {
+              "id": 8039,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "485:0:41"
+            },
+            "scope": 8079,
+            "src": "408:78:41",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "functionSelector": "5d72115c",
+            "id": 8045,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getTokenVaultBeaconAddress",
+            "nameLocation": "614:26:41",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 8041,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "640:2:41"
+            },
+            "returnParameters": {
+              "id": 8044,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8043,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8045,
+                  "src": "666:7:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 8042,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "666:7:41",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "665:9:41"
+            },
+            "scope": 8079,
+            "src": "605:70:41",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
-            "functionSelector": "8f80a11e",
-            "id": 7590,
+            "functionSelector": "683adef9",
+            "id": 8052,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getVerifiedVaultAddress",
-            "nameLocation": "732:23:35",
+            "nameLocation": "690:23:41",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7586,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "755:2:35"
-            },
-            "returnParameters": {
-              "id": 7589,
+              "id": 8048,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7588,
+                  "id": 8047,
+                  "mutability": "mutable",
+                  "name": "id",
+                  "nameLocation": "722:2:41",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 8052,
+                  "src": "714:10:41",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 8046,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "714:7:41",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "713:12:41"
+            },
+            "returnParameters": {
+              "id": 8051,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 8050,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7590,
-                  "src": "781:7:35",
+                  "scope": 8052,
+                  "src": "749:7:41",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -510,10 +510,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7587,
+                    "id": 8049,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "781:7:35",
+                    "src": "749:7:41",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -523,36 +523,36 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "780:9:35"
+              "src": "748:9:41"
             },
-            "scope": 7617,
-            "src": "723:67:35",
+            "scope": 8079,
+            "src": "681:77:41",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "144e3b13",
-            "id": 7597,
+            "id": 8059,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getSerializationAddress",
-            "nameLocation": "805:23:35",
+            "nameLocation": "773:23:41",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7593,
+              "id": 8055,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7592,
+                  "id": 8054,
                   "mutability": "mutable",
                   "name": "serialization",
-                  "nameLocation": "854:13:35",
+                  "nameLocation": "822:13:41",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7597,
-                  "src": "838:29:35",
+                  "scope": 8059,
+                  "src": "806:29:41",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -560,10 +560,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 7591,
+                    "id": 8053,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "838:6:35",
+                    "src": "806:6:41",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -572,21 +572,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "828:45:35"
+              "src": "796:45:41"
             },
             "returnParameters": {
-              "id": 7596,
+              "id": 8058,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7595,
+                  "id": 8057,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7597,
-                  "src": "897:7:35",
+                  "scope": 8059,
+                  "src": "865:7:41",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -594,10 +594,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7594,
+                    "id": 8056,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "897:7:35",
+                    "src": "865:7:41",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -607,36 +607,36 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "896:9:35"
+              "src": "864:9:41"
             },
-            "scope": 7617,
-            "src": "796:110:35",
+            "scope": 8079,
+            "src": "764:110:41",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "4fcb7ea6",
-            "id": 7604,
+            "id": 8066,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getProjectAddressFromId",
-            "nameLocation": "921:23:35",
+            "nameLocation": "889:23:41",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7600,
+              "id": 8062,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7599,
+                  "id": 8061,
                   "mutability": "mutable",
                   "name": "projectId",
-                  "nameLocation": "962:9:35",
+                  "nameLocation": "930:9:41",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7604,
-                  "src": "954:17:35",
+                  "scope": 8066,
+                  "src": "922:17:41",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -644,10 +644,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 7598,
+                    "id": 8060,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "954:7:35",
+                    "src": "922:7:41",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -656,21 +656,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "944:33:35"
+              "src": "912:33:41"
             },
             "returnParameters": {
-              "id": 7603,
+              "id": 8065,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7602,
+                  "id": 8064,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7604,
-                  "src": "1001:7:35",
+                  "scope": 8066,
+                  "src": "969:7:41",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -678,10 +678,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7601,
+                    "id": 8063,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1001:7:35",
+                    "src": "969:7:41",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -691,36 +691,36 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1000:9:35"
+              "src": "968:9:41"
             },
-            "scope": 7617,
-            "src": "912:98:35",
+            "scope": 8079,
+            "src": "880:98:41",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "1a654ace",
-            "id": 7611,
+            "id": 8073,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getProjectIdFromAddress",
-            "nameLocation": "1025:23:35",
+            "nameLocation": "993:23:41",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7607,
+              "id": 8069,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7606,
+                  "id": 8068,
                   "mutability": "mutable",
                   "name": "projectAddress",
-                  "nameLocation": "1066:14:35",
+                  "nameLocation": "1034:14:41",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7611,
-                  "src": "1058:22:35",
+                  "scope": 8073,
+                  "src": "1026:22:41",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -728,10 +728,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7605,
+                    "id": 8067,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1058:7:35",
+                    "src": "1026:7:41",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -741,21 +741,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1048:38:35"
+              "src": "1016:38:41"
             },
             "returnParameters": {
-              "id": 7610,
+              "id": 8072,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7609,
+                  "id": 8071,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7611,
-                  "src": "1110:7:35",
+                  "scope": 8073,
+                  "src": "1078:7:41",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -763,10 +763,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 7608,
+                    "id": 8070,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1110:7:35",
+                    "src": "1078:7:41",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -775,42 +775,42 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1109:9:35"
+              "src": "1077:9:41"
             },
-            "scope": 7617,
-            "src": "1016:103:35",
+            "scope": 8079,
+            "src": "984:103:41",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           },
           {
             "functionSelector": "009d4d7a",
-            "id": 7616,
+            "id": 8078,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getBeaconAddress",
-            "nameLocation": "1134:16:35",
+            "nameLocation": "1102:16:41",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 7612,
+              "id": 8074,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1150:2:35"
+              "src": "1118:2:41"
             },
             "returnParameters": {
-              "id": 7615,
+              "id": 8077,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 7614,
+                  "id": 8076,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 7616,
-                  "src": "1176:7:35",
+                  "scope": 8078,
+                  "src": "1144:7:41",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -818,10 +818,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 7613,
+                    "id": 8075,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1176:7:35",
+                    "src": "1144:7:41",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -831,21 +831,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1175:9:35"
+              "src": "1143:9:41"
             },
-            "scope": 7617,
-            "src": "1125:60:35",
+            "scope": 8079,
+            "src": "1093:60:41",
             "stateMutability": "view",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 7618,
-        "src": "64:1123:35",
+        "scope": 8080,
+        "src": "65:1090:41",
         "usedErrors": []
       }
     ],
-    "src": "39:1149:35"
+    "src": "39:1117:41"
   },
   "compiler": {
     "name": "solc",
@@ -853,7 +853,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-04-12T21:05:51.374Z",
+  "updatedAt": "2023-04-17T16:25:40.892Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
