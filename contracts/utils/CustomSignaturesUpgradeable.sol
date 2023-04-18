@@ -31,8 +31,8 @@ contract CustomSignaturesUpgradeable is EIP712Upgradeable {
                     payload.deadline,
                     keccak256(abi.encodePacked(payload.description)), // https://ethereum.stackexchange.com/questions/131282/ethers-eip712-wont-work-with-strings
                     payload.signer,
-                    payload.tokenId,
                     payload.to,
+                    payload.tokenId,
                     payload.amount,
                     signatureNonces[payload.signer]
                 )
