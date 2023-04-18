@@ -111,6 +111,8 @@ contract Project is
 		_disableInitializers();
 	}
 
+
+
 	function initialize(
 		address _contractRegistry,
 		address _owner,
@@ -122,7 +124,7 @@ contract Project is
 		__Pausable_init();
 		__ERC1155Supply_init();
 		__UUPSUpgradeable_init();
-		__CustomSignatures_init(_projectName, '0.0.1');
+		__CustomSignatures_init("Carbon Registry", '0.0.1');
 
 		// Our Inits
 		__ProjectStorage_init(_contractRegistry, 50, _projectId, _projectName);
