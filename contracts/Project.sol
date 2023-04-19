@@ -370,7 +370,6 @@ contract Project is
 	)
 		external
 		onlyExPostToken(exPostTokenId)
-		onlyVerifiedStatus(true, exPostTokenId)
 	{
 		uint256 exAnteTokenId = exPostToExAnteTokenId[exPostTokenId];
 		require(exAnteTokenId != 0, 'Project: No ante holders');
@@ -379,6 +378,7 @@ contract Project is
 			address(this),
 			exPostTokenId
 		);
+		require(currentExPostSupplyInContract > 0, 'Project: No post supply');
 
 		for (uint256 i = 0; i < accounts.length; i++) {
 			uint256 amountExAnte = balanceOf(accounts[i], exAnteTokenId);
@@ -440,7 +440,7 @@ contract Project is
 		uint256 tokenId,
 		uint256 amount,
 		bytes memory data
-	) public onlyExPostToken(tokenId) onlyVerifiedStatus(true, tokenId) {
+	) public onlyExPostToken(tokenId) {
 		_burn(msg.sender, tokenId, amount);
 		mintRetirementCertificate(msg.sender, tokenId, amount);
 		emit RetiredVintage(msg.sender, tokenId, amount, data);
@@ -453,7 +453,6 @@ contract Project is
 		public
 		payable
 		onlyExPostToken(payload.tokenId)
-		onlyVerifiedStatus(true, payload.tokenId)
 		onlyValidSignatureTransfer(signature, payload)
 		returns (uint256 nftTokenId)
 	{

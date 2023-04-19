@@ -13,7 +13,4 @@ module.exports = async function (deployer) {
   console.log("Beacon address", beaconAddress);
   await upgradeBeacon(beaconAddress, ProjectBeacon, { deployer });
   console.log("Beacon upgraded", beaconAddress);
-
-  const instance = await ProjectBeacon.at(existing.address);
-console.log("Instance upgraded", instance.address);
 };
