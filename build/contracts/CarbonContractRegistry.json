@@ -302,7 +302,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -315,7 +316,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -328,7 +330,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -347,7 +350,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -389,7 +393,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -402,7 +407,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -415,7 +421,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -470,7 +477,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -501,7 +509,8 @@
       "name": "upgradeToAndCall",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [
@@ -591,7 +600,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -610,7 +620,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -629,7 +640,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -648,7 +660,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -667,7 +680,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -680,7 +694,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -11854,7 +11869,7 @@
         797
       ],
       "ICarbonContractRegistry": [
-        8073
+        8061
       ],
       "IERC165Upgradeable": [
         4082
@@ -11984,7 +11999,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 6484,
-        "sourceUnit": 8074,
+        "sourceUnit": 8062,
         "src": "483:50:34",
         "symbolAliases": [],
         "unitAlias": ""
@@ -12045,7 +12060,7 @@
               "id": 6019,
               "name": "ICarbonContractRegistry",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 8073,
+              "referencedDeclaration": 8061,
               "src": "654:23:34"
             },
             "id": 6020,
@@ -12077,7 +12092,7 @@
           6522,
           6512,
           6503,
-          8073,
+          8061,
           1102,
           787,
           418,
@@ -15024,7 +15039,7 @@
           },
           {
             "baseFunctions": [
-              8019
+              8007
             ],
             "body": {
               "id": 6307,
@@ -15751,7 +15766,7 @@
           },
           {
             "baseFunctions": [
-              8024
+              8012
             ],
             "body": {
               "id": 6343,
@@ -16193,7 +16208,7 @@
           },
           {
             "baseFunctions": [
-              8029
+              8017
             ],
             "body": {
               "id": 6362,
@@ -16405,7 +16420,7 @@
           },
           {
             "baseFunctions": [
-              8034
+              8022
             ],
             "body": {
               "id": 6381,
@@ -16617,7 +16632,7 @@
           },
           {
             "baseFunctions": [
-              8039
+              8027
             ],
             "body": {
               "id": 6390,
@@ -16707,7 +16722,7 @@
           },
           {
             "baseFunctions": [
-              8046
+              8034
             ],
             "body": {
               "id": 6403,
@@ -16850,7 +16865,7 @@
           },
           {
             "baseFunctions": [
-              8053
+              8041
             ],
             "body": {
               "id": 6416,
@@ -16993,7 +17008,7 @@
           },
           {
             "baseFunctions": [
-              8060
+              8048
             ],
             "body": {
               "id": 6429,
@@ -17136,7 +17151,7 @@
           },
           {
             "baseFunctions": [
-              8067
+              8055
             ],
             "body": {
               "id": 6442,
@@ -17279,7 +17294,7 @@
           },
           {
             "baseFunctions": [
-              8072
+              8060
             ],
             "body": {
               "id": 6451,
@@ -17961,12 +17976,13 @@
         }
       },
       "links": {},
-      "address": "0xe486b4Cc2C33d50203CeF302Be4d639F2E5b8094",
-      "transactionHash": "0xd669f53e45f2c795e1794200a2d699a6c93c814e0f7796dfb99e74adb6e46c16"
+      "address": "0x825CcCB05D82fcD0381E523116A03b9301E91C61",
+      "transactionHash": "0x3734b92ba42b3d76b419e7a3f590c756ae2c57b52634fa355932e4efb2297dad"
     }
   },
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-04-19T12:44:10.279Z",
+  "updatedAt": "2023-04-19T21:37:05.835Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {

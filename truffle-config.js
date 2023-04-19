@@ -1,4 +1,8 @@
 require('dotenv').config();
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+
+const mnemonicPhrase = process.env.MOJO_MNEMONIC;
+
 module.exports = {
   networks: {
     dashboard: {
@@ -12,6 +16,18 @@ module.exports = {
     },
     polygonMumbai: {
 			network_id: '80001',
+      provider: () => new HDWalletProvider({
+        mnemonic: {
+          phrase: mnemonicPhrase
+        },
+        providerOrUrl: `https://polygon-mumbai.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
+        numberOfAddresses: 1,
+        shareNonce: true,
+        derivationPath: "m/44'/60'/0'/0",
+        pollingInterval: 8000,
+      }),
+
+      disableConfirmationListener: true,
 		},
   },
   api_keys: {

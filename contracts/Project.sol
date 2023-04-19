@@ -50,8 +50,9 @@ contract Project is
 	);
 
 	event ExAnteMinted(
-		address account,
-		uint256 indexed tokenId,
+		uint256 indexed exAnteTokenId,
+		uint256 indexed exPostTokenId,
+		address indexed account,
 		uint256 amount
 	);
 
@@ -90,20 +91,8 @@ contract Project is
 		address indexed account,
 		uint256 indexed tokenId,
 		uint256 amount,
+		uint256 nftTokenId,
 		bytes data
-	);
-
-	event SignedTransfer(
-		address indexed from,
-		address indexed to,
-		uint256 indexed tokenId,
-		uint256 amount
-	);
-
-	event SignedRetire(
-		address indexed from,
-		uint256 indexed tokenId,
-		uint256 amount
 	);
 
 	/// @custom:oz-upgrades-unsafe-allow constructor
@@ -137,6 +126,7 @@ contract Project is
 		_grantRole(UPGRADER_ROLE, _owner);
 		_grantRole(BLACKLISTER_ROLE, _owner);
 		_grantRole(VERIFIER_ROLE, _owner);
+		_grantRole(CLAWBACK_ROLE, _owner);
 
 		_grantRole(POST_MINTER_ROLE, msg.sender); // Just so projectFactory can mint exPost on creation of the project
 	}
@@ -187,6 +177,7 @@ contract Project is
 		uint256 verificationPeriodEnd,
 		string memory serialization
 	) public onlyRole(POST_MINTER_ROLE) {
+		
 		require(
 			verificationPeriodEnd > verificationPeriodStart,
 			'Project: Invalid verification period'
@@ -236,11 +227,13 @@ contract Project is
 		onlyExPostToken(exPostTokenId)
 		onlyVerifiedStatus(false, exPostTokenId)
 	{
+
 		uint256 exAnteTokenId = exPostToExAnteTokenId[exPostTokenId];
 		if (exAnteTokenId == 0) {
 			exAnteTokenId = nextTokenId();
 			exPostToExAnteTokenId[exPostTokenId] = exAnteTokenId;
 		}
+
 
 		uint256 exPostEstimatedSupply = exPostVintageMapping[exPostTokenId]
 			.estMitigations;
@@ -257,8 +250,11 @@ contract Project is
 		);
 
 		exAnteToExPostTokenId[exAnteTokenId] = exPostTokenId;
+
+		emit ExAnteMinted(exAnteTokenId, exPostTokenId, account,  amount);
+
 		_mint(account, exAnteTokenId, amount, data);
-		emit ExAnteMinted(account, exAnteTokenId, amount);
+
 	}
 
 	function changeVintageMitigationEstimate(
@@ -294,6 +290,7 @@ contract Project is
 		onlyExPostToken(tokenId)
 		onlyVerifiedStatus(false, tokenId)
 	{
+			
 		require(
 			amountVerified >= amountToAnteHolders,
 			'Project: Invalid amount'
@@ -315,6 +312,15 @@ contract Project is
 			require(amountToAnteHolders == 0, 'Project: Invalid amount');
 		}
 
+			emit ExPostVerifiedAndMinted(
+			tokenId,
+			amountVerified,
+			amountToAnteHolders,
+			verificationPeriodStart,
+			verificationPeriodEnd,
+			monitoringReport
+		);
+
 		if (amountVerified - amountToAnteHolders > 0) {
 			// Mint To Verification Vault
 			_mint(
@@ -332,14 +338,7 @@ contract Project is
 			_mint(address(this), tokenId, amountToAnteHolders, '');
 		}
 
-		emit ExPostVerifiedAndMinted(
-			tokenId,
-			amountVerified,
-			amountToAnteHolders,
-			verificationPeriodStart,
-			verificationPeriodEnd,
-			monitoringReport
-		);
+
 	}
 
 	function adminBurn(
@@ -348,8 +347,8 @@ contract Project is
 		uint256 amount,
 		AdminActionReason reason
 	) public onlyRole(BURNER_ROLE) {
-		_burn(from, tokenId, amount);
 		emit AdminBurn(from, tokenId, amount, reason);
+		_burn(from, tokenId, amount);
 	}
 
 	function adminClawback(
@@ -359,8 +358,8 @@ contract Project is
 		uint256 amount,
 		AdminActionReason reason
 	) public onlyRole(CLAWBACK_ROLE) {
-		_safeTransferFrom(from, to, tokenId, amount, '');
 		emit AdminClawback(from, to, tokenId, amount, reason);
+		_safeTransferFrom(from, to, tokenId, amount, '');
 	}
 
 	function exchangeAnteForPostEvenSteven(
@@ -381,6 +380,7 @@ contract Project is
 		require(currentExPostSupplyInContract > 0, 'Project: No post supply');
 
 		for (uint256 i = 0; i < accounts.length; i++) {
+			
 			uint256 amountExAnte = balanceOf(accounts[i], exAnteTokenId);
 			uint256 amountExPost = (amountExAnte *
 				currentExPostSupplyInContract) / currentExAnteSupply;
@@ -388,6 +388,12 @@ contract Project is
 			if (amountExAnte > amountExPost) {
 				exAnteBurnAmount = amountExPost;
 			}
+						emit ExchangeAnteForPost(
+				accounts[i],
+				exPostTokenId,
+				amountExPost,
+				exAnteBurnAmount
+			);
 			_burn(accounts[i], exAnteTokenId, exAnteBurnAmount);
 			_safeTransferFrom(
 				address(this),
@@ -396,12 +402,7 @@ contract Project is
 				amountExPost,
 				data
 			);
-			emit ExchangeAnteForPost(
-				accounts[i],
-				exPostTokenId,
-				amountExPost,
-				exAnteBurnAmount
-			);
+
 		}
 	}
 
@@ -428,27 +429,25 @@ contract Project is
 			payload.amount,
 			data
 		);
-		emit SignedTransfer(
-			payload.signer,
-			payload.to,
-			payload.tokenId,
-			payload.amount
-		);
 	}
 
 	function retire(
 		uint256 tokenId,
 		uint256 amount,
 		bytes memory data
-	) public onlyExPostToken(tokenId) {
-		_burn(msg.sender, tokenId, amount);
-		mintRetirementCertificate(msg.sender, tokenId, amount);
-		emit RetiredVintage(msg.sender, tokenId, amount, data);
+	) public onlyExPostToken(tokenId) returns (uint256 nftTokenId) {
+		return _retire(
+			msg.sender,
+			tokenId,
+			amount,
+			data
+		);
 	}
 
 	function retireFromSignature(
 		bytes calldata signature,
-		signatureTransferPayload calldata payload
+		signatureTransferPayload calldata payload,
+		bytes memory data
 	)
 		public
 		payable
@@ -456,13 +455,24 @@ contract Project is
 		onlyValidSignatureTransfer(signature, payload)
 		returns (uint256 nftTokenId)
 	{
-		_burn(payload.signer, payload.tokenId, payload.amount);
-		nftTokenId = mintRetirementCertificate(
+		return _retire(
 			payload.signer,
 			payload.tokenId,
-			payload.amount
+			payload.amount,
+			data
 		);
-		emit SignedRetire(payload.signer, payload.tokenId, payload.amount);
+	}
+
+	function _retire(
+		address retiree,
+		uint256 tokenId,
+		uint256 amount,
+		bytes memory data
+	) internal returns(uint256 nftTokenId) {
+		_burn(retiree, tokenId, amount);
+		nftTokenId = mintRetirementCertificate(retiree, tokenId, amount);
+				emit RetiredVintage(retiree, tokenId, amount, nftTokenId, data);
+
 	}
 
 	function mintRetirementCertificate(

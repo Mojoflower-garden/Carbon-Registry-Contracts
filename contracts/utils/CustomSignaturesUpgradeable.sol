@@ -11,6 +11,9 @@ import "./CustomSignaturesTypes.sol";
 contract CustomSignaturesUpgradeable is EIP712Upgradeable {
     mapping(address => uint32) public signatureNonces;
 
+    event TransferSignatureValid(bytes signature, signatureTransferPayload payload);
+    event GenericSignatureValid(bytes signature, signatureGenericPayload payload);
+
     function __CustomSignatures_init(
         string memory signatureName,
         string memory version
@@ -22,6 +25,7 @@ contract CustomSignaturesUpgradeable is EIP712Upgradeable {
         bytes calldata signature,
         signatureTransferPayload calldata payload
     ) {
+        emit TransferSignatureValid(signature, payload);
         bytes32 digest = _hashTypedDataV4(
             keccak256(
                 abi.encode(
@@ -47,6 +51,7 @@ contract CustomSignaturesUpgradeable is EIP712Upgradeable {
         bytes calldata signature,
         signatureGenericPayload calldata payload
     ) {
+        emit GenericSignatureValid(signature, payload);
         bytes32 digest = _hashTypedDataV4(
             keccak256(
                 abi.encode(
