@@ -302,8 +302,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -316,8 +315,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -330,8 +328,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -350,8 +347,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -393,8 +389,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -407,8 +402,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -421,8 +415,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -477,8 +470,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -509,8 +501,7 @@
       "name": "upgradeToAndCall",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function",
-      "payable": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -600,8 +591,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -620,8 +610,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -640,8 +629,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -660,8 +648,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [
@@ -680,8 +667,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -694,8 +680,7 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     },
     {
       "inputs": [],
@@ -11869,7 +11854,7 @@
         797
       ],
       "ICarbonContractRegistry": [
-        8061
+        8065
       ],
       "IERC165Upgradeable": [
         4082
@@ -11999,7 +11984,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 6484,
-        "sourceUnit": 8062,
+        "sourceUnit": 8066,
         "src": "483:50:34",
         "symbolAliases": [],
         "unitAlias": ""
@@ -12060,7 +12045,7 @@
               "id": 6019,
               "name": "ICarbonContractRegistry",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 8061,
+              "referencedDeclaration": 8065,
               "src": "654:23:34"
             },
             "id": 6020,
@@ -12092,7 +12077,7 @@
           6522,
           6512,
           6503,
-          8061,
+          8065,
           1102,
           787,
           418,
@@ -15039,7 +15024,7 @@
           },
           {
             "baseFunctions": [
-              8007
+              8011
             ],
             "body": {
               "id": 6307,
@@ -15766,7 +15751,7 @@
           },
           {
             "baseFunctions": [
-              8012
+              8016
             ],
             "body": {
               "id": 6343,
@@ -16208,7 +16193,7 @@
           },
           {
             "baseFunctions": [
-              8017
+              8021
             ],
             "body": {
               "id": 6362,
@@ -16420,7 +16405,7 @@
           },
           {
             "baseFunctions": [
-              8022
+              8026
             ],
             "body": {
               "id": 6381,
@@ -16632,7 +16617,7 @@
           },
           {
             "baseFunctions": [
-              8027
+              8031
             ],
             "body": {
               "id": 6390,
@@ -16722,7 +16707,7 @@
           },
           {
             "baseFunctions": [
-              8034
+              8038
             ],
             "body": {
               "id": 6403,
@@ -16865,7 +16850,7 @@
           },
           {
             "baseFunctions": [
-              8041
+              8045
             ],
             "body": {
               "id": 6416,
@@ -17008,7 +16993,7 @@
           },
           {
             "baseFunctions": [
-              8048
+              8052
             ],
             "body": {
               "id": 6429,
@@ -17151,7 +17136,7 @@
           },
           {
             "baseFunctions": [
-              8055
+              8059
             ],
             "body": {
               "id": 6442,
@@ -17294,7 +17279,7 @@
           },
           {
             "baseFunctions": [
-              8060
+              8064
             ],
             "body": {
               "id": 6451,
@@ -17981,8 +17966,7 @@
     }
   },
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-04-19T21:37:05.835Z",
-  "networkType": "ethereum",
+  "updatedAt": "2023-04-20T16:48:35.999Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
