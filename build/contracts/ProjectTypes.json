@@ -1,7 +1,7 @@
 {
   "contractName": "ProjectTypes",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/types/ProjectTypes.sol\":\"ProjectTypes\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/types/ProjectTypes.sol\":{\"keccak256\":\"0xd5e6e40a326ac32a6db0e886fefba6a92d6d2932f8b0cfc93d1eb0a8b47b31f2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://3db860579efd4bbdf3b0a0f7083e765022568875c3b0cb256b3749d4ab52adc1\",\"dweb:/ipfs/QmPjNW7Xi1iQDavhRftVtYgS8pvPEwWYR6A2mbuVq3cv62\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/types/ProjectTypes.sol\":\"ProjectTypes\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":100},\"remappings\":[]},\"sources\":{\"project:/contracts/types/ProjectTypes.sol\":{\"keccak256\":\"0x1e010b755344172f892417f658fe7d5fbc1860b196a76b62872f73b489ec2f60\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dc2306dc25c5b62278022a84a80e34e4f12dfec1d276b391876a6eef0a441b92\",\"dweb:/ipfs/QmSxhGEdZAQPfo8XTaHD6enSR2QqGsTguLo3WVtefo1xLQ\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -9,30 +9,30 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.13;\n\nstruct VintageData {\n    string serialization;\n    uint256 estMitigations;\n    uint256 verificationPeriodStart; // timestamp seconds since Unix\n    uint256 verificationPeriodEnd;\n    uint256 lastVerificationTimestamp;\n}\n\nstruct RetirementData {\n    address retireeAddress;\n    uint256 amount;\n    uint256 vintageTokenId;\n    string retiree;\n    string customUri;\n    string comment;\n}\n\nenum AdminActionReason {\n    NoReason,\n    OverEstimated,\n    UnderEstimated,\n    CreditsLost,\n    CreditsGained\n}\n\nabstract contract ProjectTypes {}\n",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.13;\n\nstruct VintageData {\n    string serialization;\n    uint256 estMitigations;\n    uint256 verificationPeriodStart; // timestamp seconds since Unix\n    uint256 verificationPeriodEnd;\n    uint256 lastVerificationTimestamp;\n}\n\nstruct RetirementData {\n    address retiree;\n    uint256 amount;\n    uint256 vintageTokenId;\n    string retireeName;\n    string customUri;\n    string comment;\n}\n\nenum AdminActionReason {\n    NoReason,\n    OverEstimated,\n    UnderEstimated,\n    CreditsLost,\n    CreditsGained\n}\n\nabstract contract ProjectTypes {}\n",
   "sourcePath": "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/types/ProjectTypes.sol",
   "ast": {
     "absolutePath": "project:/contracts/types/ProjectTypes.sol",
     "exportedSymbols": {
       "AdminActionReason": [
-        8097
+        8255
       ],
       "ProjectTypes": [
-        8098
+        8256
       ],
       "RetirementData": [
-        8091
+        8249
       ],
       "VintageData": [
-        8078
+        8236
       ]
     },
-    "id": 8099,
+    "id": 8257,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 8067,
+        "id": 8225,
         "literals": [
           "solidity",
           "^",
@@ -44,16 +44,16 @@
       },
       {
         "canonicalName": "VintageData",
-        "id": 8078,
+        "id": 8236,
         "members": [
           {
             "constant": false,
-            "id": 8069,
+            "id": 8227,
             "mutability": "mutable",
             "name": "serialization",
             "nameLocation": "90:13:42",
             "nodeType": "VariableDeclaration",
-            "scope": 8078,
+            "scope": 8236,
             "src": "83:20:42",
             "stateVariable": false,
             "storageLocation": "default",
@@ -62,7 +62,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 8068,
+              "id": 8226,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "83:6:42",
@@ -75,12 +75,12 @@
           },
           {
             "constant": false,
-            "id": 8071,
+            "id": 8229,
             "mutability": "mutable",
             "name": "estMitigations",
             "nameLocation": "117:14:42",
             "nodeType": "VariableDeclaration",
-            "scope": 8078,
+            "scope": 8236,
             "src": "109:22:42",
             "stateVariable": false,
             "storageLocation": "default",
@@ -89,7 +89,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8070,
+              "id": 8228,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "109:7:42",
@@ -102,12 +102,12 @@
           },
           {
             "constant": false,
-            "id": 8073,
+            "id": 8231,
             "mutability": "mutable",
             "name": "verificationPeriodStart",
             "nameLocation": "145:23:42",
             "nodeType": "VariableDeclaration",
-            "scope": 8078,
+            "scope": 8236,
             "src": "137:31:42",
             "stateVariable": false,
             "storageLocation": "default",
@@ -116,7 +116,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8072,
+              "id": 8230,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "137:7:42",
@@ -129,12 +129,12 @@
           },
           {
             "constant": false,
-            "id": 8075,
+            "id": 8233,
             "mutability": "mutable",
             "name": "verificationPeriodEnd",
             "nameLocation": "214:21:42",
             "nodeType": "VariableDeclaration",
-            "scope": 8078,
+            "scope": 8236,
             "src": "206:29:42",
             "stateVariable": false,
             "storageLocation": "default",
@@ -143,7 +143,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8074,
+              "id": 8232,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "206:7:42",
@@ -156,12 +156,12 @@
           },
           {
             "constant": false,
-            "id": 8077,
+            "id": 8235,
             "mutability": "mutable",
             "name": "lastVerificationTimestamp",
             "nameLocation": "249:25:42",
             "nodeType": "VariableDeclaration",
-            "scope": 8078,
+            "scope": 8236,
             "src": "241:33:42",
             "stateVariable": false,
             "storageLocation": "default",
@@ -170,7 +170,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8076,
+              "id": 8234,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "241:7:42",
@@ -185,23 +185,23 @@
         "name": "VintageData",
         "nameLocation": "65:11:42",
         "nodeType": "StructDefinition",
-        "scope": 8099,
+        "scope": 8257,
         "src": "58:219:42",
         "visibility": "public"
       },
       {
         "canonicalName": "RetirementData",
-        "id": 8091,
+        "id": 8249,
         "members": [
           {
             "constant": false,
-            "id": 8080,
+            "id": 8238,
             "mutability": "mutable",
-            "name": "retireeAddress",
-            "nameLocation": "315:14:42",
+            "name": "retiree",
+            "nameLocation": "315:7:42",
             "nodeType": "VariableDeclaration",
-            "scope": 8091,
-            "src": "307:22:42",
+            "scope": 8249,
+            "src": "307:15:42",
             "stateVariable": false,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -209,7 +209,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 8079,
+              "id": 8237,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "307:7:42",
@@ -223,13 +223,13 @@
           },
           {
             "constant": false,
-            "id": 8082,
+            "id": 8240,
             "mutability": "mutable",
             "name": "amount",
-            "nameLocation": "343:6:42",
+            "nameLocation": "336:6:42",
             "nodeType": "VariableDeclaration",
-            "scope": 8091,
-            "src": "335:14:42",
+            "scope": 8249,
+            "src": "328:14:42",
             "stateVariable": false,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -237,10 +237,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8081,
+              "id": 8239,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "335:7:42",
+              "src": "328:7:42",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -250,13 +250,13 @@
           },
           {
             "constant": false,
-            "id": 8084,
+            "id": 8242,
             "mutability": "mutable",
             "name": "vintageTokenId",
-            "nameLocation": "363:14:42",
+            "nameLocation": "356:14:42",
             "nodeType": "VariableDeclaration",
-            "scope": 8091,
-            "src": "355:22:42",
+            "scope": 8249,
+            "src": "348:22:42",
             "stateVariable": false,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -264,10 +264,10 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8083,
+              "id": 8241,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "355:7:42",
+              "src": "348:7:42",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -277,13 +277,13 @@
           },
           {
             "constant": false,
-            "id": 8086,
+            "id": 8244,
             "mutability": "mutable",
-            "name": "retiree",
-            "nameLocation": "390:7:42",
+            "name": "retireeName",
+            "nameLocation": "383:11:42",
             "nodeType": "VariableDeclaration",
-            "scope": 8091,
-            "src": "383:14:42",
+            "scope": 8249,
+            "src": "376:18:42",
             "stateVariable": false,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -291,10 +291,10 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 8085,
+              "id": 8243,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "383:6:42",
+              "src": "376:6:42",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -304,13 +304,13 @@
           },
           {
             "constant": false,
-            "id": 8088,
+            "id": 8246,
             "mutability": "mutable",
             "name": "customUri",
-            "nameLocation": "410:9:42",
+            "nameLocation": "407:9:42",
             "nodeType": "VariableDeclaration",
-            "scope": 8091,
-            "src": "403:16:42",
+            "scope": 8249,
+            "src": "400:16:42",
             "stateVariable": false,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -318,10 +318,10 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 8087,
+              "id": 8245,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "403:6:42",
+              "src": "400:6:42",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -331,13 +331,13 @@
           },
           {
             "constant": false,
-            "id": 8090,
+            "id": 8248,
             "mutability": "mutable",
             "name": "comment",
-            "nameLocation": "432:7:42",
+            "nameLocation": "429:7:42",
             "nodeType": "VariableDeclaration",
-            "scope": 8091,
-            "src": "425:14:42",
+            "scope": 8249,
+            "src": "422:14:42",
             "stateVariable": false,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -345,10 +345,10 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 8089,
+              "id": 8247,
               "name": "string",
               "nodeType": "ElementaryTypeName",
-              "src": "425:6:42",
+              "src": "422:6:42",
               "typeDescriptions": {
                 "typeIdentifier": "t_string_storage_ptr",
                 "typeString": "string"
@@ -360,54 +360,54 @@
         "name": "RetirementData",
         "nameLocation": "286:14:42",
         "nodeType": "StructDefinition",
-        "scope": 8099,
-        "src": "279:163:42",
+        "scope": 8257,
+        "src": "279:160:42",
         "visibility": "public"
       },
       {
         "canonicalName": "AdminActionReason",
-        "id": 8097,
+        "id": 8255,
         "members": [
           {
-            "id": 8092,
+            "id": 8250,
             "name": "NoReason",
-            "nameLocation": "473:8:42",
+            "nameLocation": "470:8:42",
             "nodeType": "EnumValue",
-            "src": "473:8:42"
+            "src": "470:8:42"
           },
           {
-            "id": 8093,
+            "id": 8251,
             "name": "OverEstimated",
-            "nameLocation": "487:13:42",
+            "nameLocation": "484:13:42",
             "nodeType": "EnumValue",
-            "src": "487:13:42"
+            "src": "484:13:42"
           },
           {
-            "id": 8094,
+            "id": 8252,
             "name": "UnderEstimated",
-            "nameLocation": "506:14:42",
+            "nameLocation": "503:14:42",
             "nodeType": "EnumValue",
-            "src": "506:14:42"
+            "src": "503:14:42"
           },
           {
-            "id": 8095,
+            "id": 8253,
             "name": "CreditsLost",
-            "nameLocation": "526:11:42",
+            "nameLocation": "523:11:42",
             "nodeType": "EnumValue",
-            "src": "526:11:42"
+            "src": "523:11:42"
           },
           {
-            "id": 8096,
+            "id": 8254,
             "name": "CreditsGained",
-            "nameLocation": "543:13:42",
+            "nameLocation": "540:13:42",
             "nodeType": "EnumValue",
-            "src": "543:13:42"
+            "src": "540:13:42"
           }
         ],
         "name": "AdminActionReason",
-        "nameLocation": "449:17:42",
+        "nameLocation": "446:17:42",
         "nodeType": "EnumDefinition",
-        "src": "444:114:42"
+        "src": "441:114:42"
       },
       {
         "abstract": true,
@@ -416,20 +416,20 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 8098,
+        "id": 8256,
         "linearizedBaseContracts": [
-          8098
+          8256
         ],
         "name": "ProjectTypes",
-        "nameLocation": "578:12:42",
+        "nameLocation": "575:12:42",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 8099,
-        "src": "560:33:42",
+        "scope": 8257,
+        "src": "557:33:42",
         "usedErrors": []
       }
     ],
-    "src": "32:562:42"
+    "src": "32:559:42"
   },
   "compiler": {
     "name": "solc",
@@ -437,7 +437,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-04-20T16:48:36.036Z",
+  "updatedAt": "2023-04-23T09:41:46.814Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

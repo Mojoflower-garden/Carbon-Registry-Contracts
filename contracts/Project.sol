@@ -22,8 +22,9 @@ contract Project is
 	ERC1155SupplyUpgradeable,
 	UUPSUpgradeable,
 	CustomSignaturesUpgradeable,
-		ERC1155HolderUpgradeable,
-	ProjectStorage
+		ProjectStorage,
+	ERC1155HolderUpgradeable
+
 
 {
 	bytes32 public constant URI_SETTER_ROLE = keccak256('URI_SETTER_ROLE');
@@ -169,6 +170,10 @@ contract Project is
 				: 'Project: Token is verified'
 		);
 		_;
+	}
+
+	function testUpgrade() external pure returns(string memory) {
+		return "Upgrade worked 0.0.1";
 	}
 
 	// ----------------------------------
@@ -421,6 +426,70 @@ contract Project is
 	//              Actions
 	// ----------------------------------
 
+	function transferAndRetireFromSignature(
+		bytes calldata signature,
+		signatureTransferPayload calldata payload,
+		string memory retireeName,
+		string memory customUri,
+		string memory comment,
+		bytes memory data
+	) public onlyExPostToken(payload.tokenId)
+		onlyValidSignatureTransfer(signature, payload) returns (uint256 nftTokenId) {
+		return _transferAndRetire(
+			payload.signer,
+			payload.to,
+			payload.tokenId,
+			payload.amount,
+			retireeName,
+			customUri,
+			comment,
+			data
+		);
+	}
+
+	function transferAndRetire(
+		address to,
+		uint256 tokenId,
+		uint256 amount,
+		string memory retireeName,
+		string memory customUri,
+		string memory comment,
+		bytes memory data
+	) public onlyExPostToken(tokenId) returns (uint256 nftTokenId) {
+		return _transferAndRetire(
+			msg.sender,
+			to,
+			tokenId,
+			amount,
+			retireeName,
+			customUri,
+			comment,
+			data
+		);
+	}
+
+	function _transferAndRetire(
+		address from,
+		address to,
+		uint256 tokenId,
+		uint256 amount,
+		string memory retireeName,
+		string memory customUri,
+		string memory comment,
+		bytes memory data
+	) internal returns (uint256 nftTokenId) {
+		_safeTransferFrom(from, to, tokenId, amount, data);
+		return _retire(
+			to,
+			tokenId,
+			amount,
+			retireeName,
+			customUri,
+			comment,
+			data
+		);
+	}
+
 	function transferFromSignature(
 		bytes calldata signature,
 		signatureTransferPayload calldata payload,
@@ -438,12 +507,18 @@ contract Project is
 	function retire(
 		uint256 tokenId,
 		uint256 amount,
+		string memory retireeName,
+		string memory customUri,
+		string memory comment,
 		bytes memory data
 	) public onlyExPostToken(tokenId) returns (uint256 nftTokenId) {
 		return _retire(
 			msg.sender,
 			tokenId,
 			amount,
+			retireeName,
+			customUri,
+			comment,
 			data
 		);
 	}
@@ -451,6 +526,9 @@ contract Project is
 	function retireFromSignature(
 		bytes calldata signature,
 		signatureTransferPayload calldata payload,
+		string memory retireeName,
+		string memory customUri,
+		string memory comment,
 		bytes memory data
 	)
 		public
@@ -463,6 +541,9 @@ contract Project is
 			payload.signer,
 			payload.tokenId,
 			payload.amount,
+			retireeName,
+			customUri,
+			comment,
 			data
 		);
 	}
@@ -471,27 +552,32 @@ contract Project is
 		address retiree,
 		uint256 tokenId,
 		uint256 amount,
+		string memory retireeName,
+		string memory customUri,
+		string memory comment,
 		bytes memory data
 	) internal returns(uint256 nftTokenId) {
 		_burn(retiree, tokenId, amount);
-		nftTokenId = mintRetirementCertificate(retiree, tokenId, amount);
-				emit RetiredVintage(retiree, tokenId, amount, nftTokenId, data);
-
+		nftTokenId = mintRetirementCertificate(retiree, tokenId, amount, retireeName, customUri, comment);
+		emit RetiredVintage(retiree, tokenId, amount, nftTokenId, data);
 	}
 
 	function mintRetirementCertificate(
 		address account,
 		uint256 tokenId,
-		uint256 amount
+		uint256 amount,
+		string memory retireeName,
+		string memory customUri,
+		string memory comment
 	) internal returns (uint256) {
 		uint256 nftTokenId = nextTokenId();
 		retirementMapping[nftTokenId] = RetirementData(
 			account,
 			amount,
 			tokenId,
-			'',
-			'',
-			''
+			retireeName,
+			customUri,
+			comment
 		);
 		_mint(account, nftTokenId, 1, '');
 		return nftTokenId;

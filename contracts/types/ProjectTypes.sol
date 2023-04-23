@@ -10,10 +10,10 @@ struct VintageData {
 }
 
 struct RetirementData {
-    address retireeAddress;
+    address retiree;
     uint256 amount;
     uint256 vintageTokenId;
-    string retiree;
+    string retireeName;
     string customUri;
     string comment;
 }
