@@ -22,10 +22,8 @@ contract Project is
 	ERC1155SupplyUpgradeable,
 	UUPSUpgradeable,
 	CustomSignaturesUpgradeable,
-		ProjectStorage,
-	ERC1155HolderUpgradeable
-
-
+		ERC1155HolderUpgradeable,
+	ProjectStorage
 {
 	bytes32 public constant URI_SETTER_ROLE = keccak256('URI_SETTER_ROLE');
 	bytes32 public constant PAUSER_ROLE = keccak256('PAUSER_ROLE');
