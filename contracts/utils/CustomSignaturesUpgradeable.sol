@@ -10,9 +10,7 @@ import "./CustomSignaturesTypes.sol";
 
 contract CustomSignaturesUpgradeable is EIP712Upgradeable {
     mapping(address => uint32) public signatureNonces;
-
     event TransferSignatureValid(bytes signature, signatureTransferPayload payload);
-    event GenericSignatureValid(bytes signature, signatureGenericPayload payload);
 
     function __CustomSignatures_init(
         string memory signatureName,
@@ -47,29 +45,6 @@ contract CustomSignaturesUpgradeable is EIP712Upgradeable {
         _;
     }
 
-    modifier onlyValidSignatureGeneric(
-        bytes calldata signature,
-        signatureGenericPayload calldata payload
-    ) {
-        emit GenericSignatureValid(signature, payload);
-        bytes32 digest = _hashTypedDataV4(
-            keccak256(
-                abi.encode(
-                    keccak256(
-                        "signatureGenericPayload(uint256 deadline,string description,address signer,uint256 nonce)"
-                    ),
-                    payload.deadline,
-                    keccak256(abi.encodePacked(payload.description)), // https://ethereum.stackexchange.com/questions/131282/ethers-eip712-wont-work-with-strings
-                    payload.signer,
-                    signatureNonces[payload.signer]
-                )
-            )
-        );
-        checkBaseSignature(digest, signature, payload.signer, payload.deadline);
-        signatureNonces[payload.signer]++;
-        _;
-    }
-
     function checkBaseSignature(
         bytes32 digest,
         bytes memory signature,
@@ -77,8 +52,7 @@ contract CustomSignaturesUpgradeable is EIP712Upgradeable {
         uint256 payloadDeadline
     ) internal view returns (address signer) {
         signer = ECDSAUpgradeable.recover(digest, signature);
-        require(signer == payloadSigner, "Invalid signature - 401");
-        require(signer != address(0), "Invalid signature - 401");
+        require(signer == payloadSigner && signer != address(0), "Invalid signature");
         require(block.timestamp < payloadDeadline, "Signature expired");
     }
 
