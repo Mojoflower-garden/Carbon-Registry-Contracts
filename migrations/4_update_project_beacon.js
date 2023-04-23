@@ -11,5 +11,4 @@ module.exports = async function (deployer) {
   console.log("Beacon address", beaconAddress);
   await upgradeBeacon(beaconAddress, ProjectBeacon, { deployer, unsafeSkipStorageCheck: true });
   console.log("Beacon upgraded", beaconAddress);
-
 };

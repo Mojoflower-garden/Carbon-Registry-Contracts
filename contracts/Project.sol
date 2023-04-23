@@ -13,8 +13,10 @@ import "@openzeppelin/contracts-upgradeable/token/ERC1155/utils/ERC1155HolderUpg
 import './ProjectStorage.sol';
 import './interfaces/ICarbonContractRegistry.sol';
 import './utils/CustomSignaturesUpgradeable.sol';
+import './interfaces/IProject.sol';
 
 contract Project is
+	IProject,
 	Initializable,
 	ERC1155Upgradeable,
 	AccessControlUpgradeable,
@@ -22,8 +24,8 @@ contract Project is
 	ERC1155SupplyUpgradeable,
 	UUPSUpgradeable,
 	CustomSignaturesUpgradeable,
-		ERC1155HolderUpgradeable,
-	ProjectStorage
+	ProjectStorage,
+	ERC1155HolderUpgradeable
 {
 	bytes32 public constant URI_SETTER_ROLE = keccak256('URI_SETTER_ROLE');
 	bytes32 public constant PAUSER_ROLE = keccak256('PAUSER_ROLE');
@@ -37,73 +39,10 @@ contract Project is
 	bytes32 public constant VERIFIER_ROLE = keccak256('VERIFIER_ROLE');
 	bytes32 public constant CLAWBACK_ROLE = keccak256('CLAWBACK_ROLE');
 
-	event ExPostCreated(
-		uint256 indexed tokenId,
-		uint256 estimatedAmount,
-		uint256 verificationPeriodStart,
-		uint256 verificationPeriodEnd,
-		string serialization
-	);
-
-	event VintageMitigationEstimateChanged(
-		uint256 indexed tokenId,
-		uint256 newEstimate,
-		uint256 oldEstimate,
-		AdminActionReason indexed reason
-	);
-
-	event ExAnteMinted(
-		uint256 indexed exAnteTokenId,
-		uint256 indexed exPostTokenId,
-		address indexed account,
-		uint256 amount
-	);
-
-	event ExPostVerifiedAndMinted(
-		uint256 indexed tokenId,
-		uint256 amount,
-		uint256 amountToAnteHolders,
-		uint256 verificationPeriodStart,
-		uint256 verificationPeriodEnd,
-		string monitoringReport
-	);
-
-	event AdminBurn(
-		address indexed from,
-		uint256 indexed tokenId,
-		uint256 amount,
-		AdminActionReason indexed reason
-	);
-
-	event AdminClawback(
-		address indexed from,
-		address to,
-		uint256 indexed tokenId,
-		uint256 amount,
-		AdminActionReason indexed reason
-	);
-
-	event ExchangeAnteForPost(
-		address indexed account,
-		uint256 indexed exPostTokenId,
-		uint256 exPostAmountReceived,
-		uint256 exAnteAmountBurned
-	);
-
-	event RetiredVintage(
-		address indexed account,
-		uint256 indexed tokenId,
-		uint256 amount,
-		uint256 nftTokenId,
-		bytes data
-	);
-
-	/// @custom:oz-upgrades-unsafe-allow constructor
+/// @custom:oz-upgrades-unsafe-allow constructor
 	constructor() {
 		_disableInitializers();
 	}
-
-
 
 	function initialize(
 		address _contractRegistry,
@@ -137,25 +76,21 @@ contract Project is
 	modifier notBlacklisted(address account) {
 		require(
 			!hasRole(BLACKLISTED, account),
-			'Project: Account is blacklisted'
+			'blacklisted'
 		);
 		_;
 	}
 
 	modifier onlyExPostTokens(uint256[] memory tokenIds) {
 		for (uint256 i = 0; i < tokenIds.length; i++) {
-			require(isExPostToken(tokenIds[i]), 'Project: Token is not ExPost');
+			require(isExPostToken(tokenIds[i]), 'not ExPost');
 		}
 		_;
 	}
 
 	modifier onlyExPostToken(uint256 tokenId) {
-		require(isExPostToken(tokenId), 'Project: Token is not ExPost');
+		require(isExPostToken(tokenId), 'not ExPost');
 		_;
-	}
-
-	function isExPostToken(uint256 tokenId) public view returns (bool) {
-		return bytes(exPostVintageMapping[tokenId].serialization).length > 0;
 	}
 
 	modifier onlyVerifiedStatus(bool isVerified, uint256 tokenId) {
@@ -164,14 +99,18 @@ contract Project is
 				exPostVintageMapping[tokenId].verificationPeriodEnd) ==
 				isVerified,
 			isVerified
-				? 'Project: Token is unverified'
-				: 'Project: Token is verified'
+				? 'credit unverified'
+				: 'credit verified'
 		);
 		_;
 	}
 
+	function isExPostToken(uint256 tokenId) public view returns (bool) {
+		return bytes(exPostVintageMapping[tokenId].serialization).length > 0;
+	}
+
 	function testUpgrade() external pure returns(string memory) {
-		return "Upgrade worked 0.0.1";
+		return "0.0.2";
 	}
 
 	// ----------------------------------
@@ -187,7 +126,7 @@ contract Project is
 		
 		require(
 			verificationPeriodEnd > verificationPeriodStart,
-			'Project: Invalid verification period'
+			'Invalid verification period'
 		);
 		uint256 newTokenId = nextTokenId();
 		ICarbonContractRegistry(contractRegistry).registerSerialization(
@@ -241,7 +180,6 @@ contract Project is
 			exPostToExAnteTokenId[exPostTokenId] = exAnteTokenId;
 		}
 
-
 		uint256 exPostEstimatedSupply = exPostVintageMapping[exPostTokenId]
 			.estMitigations;
 		uint256 exPostVerifiedSupply = totalSupply(exPostTokenId);
@@ -253,7 +191,7 @@ contract Project is
 
 		require(
 			exAnteSupply + amount <= maxExAnteSupply,
-			'Maximum exAnte supply exceeded'
+			'Maximum supply'
 		);
 
 		exAnteToExPostTokenId[exAnteTokenId] = exPostTokenId;
@@ -300,23 +238,23 @@ contract Project is
 			
 		require(
 			amountVerified >= amountToAnteHolders,
-			'Project: Invalid amount'
+			'Invalid amount'
 		);
 		require(
 			verificationPeriodEnd >=
 				exPostVintageMapping[tokenId].verificationPeriodStart,
-			'Verification timestamp is before verification period start'
+			'Period end < Vintage start'
 		);
 		require(
 			verificationPeriodEnd >
 				exPostVintageMapping[tokenId].lastVerificationTimestamp,
-			'Verification timestamp is before last verification timestamp'
+			'Period end < last verification'
 		);
 
 		uint256 exAnteTokenId = exPostToExAnteTokenId[tokenId];
 		if (exAnteTokenId == 0) {
 			// If exAnteTokenId is zero then there are no ante holders
-			require(amountToAnteHolders == 0, 'Project: Invalid amount');
+			require(amountToAnteHolders == 0, 'Invalid amount');
 		}
 
 			emit ExPostVerifiedAndMinted(
@@ -378,13 +316,13 @@ contract Project is
 		onlyExPostToken(exPostTokenId)
 	{
 		uint256 exAnteTokenId = exPostToExAnteTokenId[exPostTokenId];
-		require(exAnteTokenId != 0, 'Project: No ante holders');
+		require(exAnteTokenId != 0, 'No holders');
 		uint256 currentExAnteSupply = totalSupply(exAnteTokenId);
 		uint256 currentExPostSupplyInContract = balanceOf(
 			address(this),
 			exPostTokenId
 		);
-		require(currentExPostSupplyInContract > 0, 'Project: No post supply');
+		require(currentExPostSupplyInContract > 0, 'No post supply');
 
 		for (uint256 i = 0; i < accounts.length; i++) {
 			
@@ -409,7 +347,6 @@ contract Project is
 				amountExPost,
 				data
 			);
-
 		}
 	}
 
@@ -445,26 +382,26 @@ contract Project is
 		);
 	}
 
-	function transferAndRetire(
-		address to,
-		uint256 tokenId,
-		uint256 amount,
-		string memory retireeName,
-		string memory customUri,
-		string memory comment,
-		bytes memory data
-	) public onlyExPostToken(tokenId) returns (uint256 nftTokenId) {
-		return _transferAndRetire(
-			msg.sender,
-			to,
-			tokenId,
-			amount,
-			retireeName,
-			customUri,
-			comment,
-			data
-		);
-	}
+	// function transferAndRetire(
+	// 	address to,
+	// 	uint256 tokenId,
+	// 	uint256 amount,
+	// 	string memory retireeName,
+	// 	string memory customUri,
+	// 	string memory comment,
+	// 	bytes memory data
+	// ) public onlyExPostToken(tokenId) returns (uint256 nftTokenId) {
+	// 	return _transferAndRetire(
+	// 		msg.sender,
+	// 		to,
+	// 		tokenId,
+	// 		amount,
+	// 		retireeName,
+	// 		customUri,
+	// 		comment,
+	// 		data
+	// 	);
+	// }
 
 	function _transferAndRetire(
 		address from,
@@ -530,7 +467,6 @@ contract Project is
 		bytes memory data
 	)
 		public
-		payable
 		onlyExPostToken(payload.tokenId)
 		onlyValidSignatureTransfer(signature, payload)
 		returns (uint256 nftTokenId)
@@ -579,6 +515,21 @@ contract Project is
 		);
 		_mint(account, nftTokenId, 1, '');
 		return nftTokenId;
+	}
+
+
+	function cancelCreditsFromSignature(
+		bytes calldata signature,
+		signatureTransferPayload calldata payload,
+		string memory comment,
+		bytes memory data
+	)
+		public
+		onlyExPostToken(payload.tokenId)
+		onlyValidSignatureTransfer(signature, payload)
+	{
+		emit CancelledCredits(payload.signer, payload.tokenId, payload.amount,comment, data);
+		_burn(payload.signer, payload.tokenId, payload.amount);
 	}
 
 	// ----------------------------------
