@@ -1,5 +1,5 @@
 verify-project:
-	truffle run verify Project@0x4A76A0AA9b950c0C323f0E0A8A1E8a0D7a5a5236 --network polygonMumbai
+	truffle run verify Project@0x87BB484caD7C3E0963a9794530B6ba515De715BE --network polygonMumbai
 verify-registry:
 	truffle run verify CarbonContractRegistry@0x396B1dD497Ae312d2A3F6bB0a3aB694182605e3F --network polygonMumbai
 verify-migrations:
