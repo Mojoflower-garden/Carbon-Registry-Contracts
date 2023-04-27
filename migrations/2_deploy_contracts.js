@@ -23,6 +23,4 @@ module.exports = async function (deployer) {
     0,
     "Test Beacon"])
     console.log("Beacon Proxy deployed", beaconProxy.address)
-
-
 };

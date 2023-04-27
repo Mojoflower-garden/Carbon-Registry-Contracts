@@ -14,6 +14,36 @@ module.exports = {
       network_id: "*", // Match any network id
       gas: 30000000
     },
+    arbitrum:{
+      network_id: '42161',
+      provider: () => new HDWalletProvider({
+        mnemonic: {
+          phrase: mnemonicPhrase
+        },
+        providerOrUrl: `https://arb-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
+        numberOfAddresses: 1,
+        shareNonce: true,
+        derivationPath: "m/44'/60'/0'/0",
+        pollingInterval: 8000,
+      }),
+      disableConfirmationListener: true,
+      gasPrice: 100000000,
+    },
+    polygon: {
+      network_id: '137',
+      provider: () => new HDWalletProvider({
+        mnemonic: {
+          phrase: mnemonicPhrase
+        },
+        providerOrUrl: `https://polygon-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
+        numberOfAddresses: 1,
+        shareNonce: true,
+        derivationPath: "m/44'/60'/0'/0",
+        pollingInterval: 8000,
+      }),
+      disableConfirmationListener: true,
+      gasPrice: 400000000000,
+    },
     polygonMumbai: {
 			network_id: '80001',
       provider: () => new HDWalletProvider({
