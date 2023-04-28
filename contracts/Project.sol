@@ -39,6 +39,7 @@ contract Project is
 	bytes32 public constant VERIFIER_ROLE = keccak256('VERIFIER_ROLE');
 	bytes32 public constant CLAWBACK_ROLE = keccak256('CLAWBACK_ROLE');
 
+
 /// @custom:oz-upgrades-unsafe-allow constructor
 	constructor() {
 		_disableInitializers();
@@ -76,20 +77,20 @@ contract Project is
 	modifier notBlacklisted(address account) {
 		require(
 			!hasRole(BLACKLISTED, account),
-			'blacklisted'
+		"0"
 		);
 		_;
 	}
 
 	modifier onlyExPostTokens(uint256[] memory tokenIds) {
 		for (uint256 i = 0; i < tokenIds.length; i++) {
-			require(isExPostToken(tokenIds[i]), 'not ExPost');
+			require(isExPostToken(tokenIds[i]), "1");
 		}
 		_;
 	}
 
 	modifier onlyExPostToken(uint256 tokenId) {
-		require(isExPostToken(tokenId), 'not ExPost');
+		require(isExPostToken(tokenId), "1");
 		_;
 	}
 
@@ -99,8 +100,8 @@ contract Project is
 				exPostVintageMapping[tokenId].verificationPeriodEnd) ==
 				isVerified,
 			isVerified
-				? 'credit unverified'
-				: 'credit verified'
+				? "2"
+				: "3"
 		);
 		_;
 	}
@@ -126,7 +127,7 @@ contract Project is
 		
 		require(
 			verificationPeriodEnd > verificationPeriodStart,
-			'Invalid verification period'
+			"4"
 		);
 		uint256 newTokenId = nextTokenId();
 		ICarbonContractRegistry(contractRegistry).registerSerialization(
@@ -191,7 +192,7 @@ contract Project is
 
 		require(
 			exAnteSupply + amount <= maxExAnteSupply,
-			'Maximum supply'
+			"5"
 		);
 
 		exAnteToExPostTokenId[exAnteTokenId] = exPostTokenId;
@@ -238,23 +239,23 @@ contract Project is
 			
 		require(
 			amountVerified >= amountToAnteHolders,
-			'Invalid amount'
+			"6"
 		);
 		require(
 			verificationPeriodEnd >=
 				exPostVintageMapping[tokenId].verificationPeriodStart,
-			'Period end < Vintage start'
+			"7"
 		);
 		require(
 			verificationPeriodEnd >
 				exPostVintageMapping[tokenId].lastVerificationTimestamp,
-			'Period end < last verification'
+			"8"
 		);
 
 		uint256 exAnteTokenId = exPostToExAnteTokenId[tokenId];
 		if (exAnteTokenId == 0) {
 			// If exAnteTokenId is zero then there are no ante holders
-			require(amountToAnteHolders == 0, 'Invalid amount');
+			require(amountToAnteHolders == 0, "9");
 		}
 
 			emit ExPostVerifiedAndMinted(
@@ -316,13 +317,13 @@ contract Project is
 		onlyExPostToken(exPostTokenId)
 	{
 		uint256 exAnteTokenId = exPostToExAnteTokenId[exPostTokenId];
-		require(exAnteTokenId != 0, 'No holders');
+		require(exAnteTokenId != 0, "9");
 		uint256 currentExAnteSupply = totalSupply(exAnteTokenId);
 		uint256 currentExPostSupplyInContract = balanceOf(
 			address(this),
 			exPostTokenId
 		);
-		require(currentExPostSupplyInContract > 0, 'No post supply');
+		require(currentExPostSupplyInContract > 0, "10");
 
 		for (uint256 i = 0; i < accounts.length; i++) {
 			
@@ -551,7 +552,7 @@ contract Project is
 		notBlacklisted(to)
 	{
 		for(uint256 i = 0; i < ids.length; i++) {
-			require(retirementMapping[ids[i]].amount == 0);
+			require((retirementMapping[ids[i]].amount == 0) || (from == address(0) || to == address(0)), "11");
 		}
 		super._beforeTokenTransfer(operator, from, to, ids, amounts, data);
 	}

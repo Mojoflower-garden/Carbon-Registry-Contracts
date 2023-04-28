@@ -44,7 +44,7 @@ module.exports = {
       disableConfirmationListener: true,
       gasPrice: 400000000000,
     },
-    polygonMumbai: {
+    mumbai: {
 			network_id: '80001',
       provider: () => new HDWalletProvider({
         mnemonic: {
