@@ -111,7 +111,7 @@ contract Project is
 	}
 
 	function testUpgrade() external pure returns(string memory) {
-		return "0.0.2";
+		return "0.0.3";
 	}
 
 	// ----------------------------------
@@ -574,6 +574,13 @@ contract Project is
 			topTokenId += 1;
 		}
 		return topTokenId;
+	}
+
+	function updateMaxAntePercentage(uint8 newMaxAntePercentage)
+		public
+		onlyRole(DEFAULT_ADMIN_ROLE)
+	{
+		maxAntePercentage = newMaxAntePercentage;
 	}
 
 	function _authorizeUpgrade(

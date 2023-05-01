@@ -15,18 +15,18 @@
     "absolutePath": "project:/contracts/TokenVaultStorage.sol",
     "exportedSymbols": {
       "TokenVaultStorage": [
-        8121
+        8134
       ],
       "TokenVaultStorageV1": [
-        8118
+        8131
       ]
     },
-    "id": 8122,
+    "id": 8135,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 8113,
+        "id": 8126,
         "literals": [
           "solidity",
           "^",
@@ -43,9 +43,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 8118,
+        "id": 8131,
         "linearizedBaseContracts": [
-          8118
+          8131
         ],
         "name": "TokenVaultStorageV1",
         "nameLocation": "77:19:40",
@@ -53,12 +53,12 @@
         "nodes": [
           {
             "constant": false,
-            "id": 8117,
+            "id": 8130,
             "mutability": "mutable",
             "name": "__gap",
             "nameLocation": "397:5:40",
             "nodeType": "VariableDeclaration",
-            "scope": 8118,
+            "scope": 8131,
             "src": "377:25:40",
             "stateVariable": true,
             "storageLocation": "default",
@@ -68,7 +68,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 8114,
+                "id": 8127,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "377:7:40",
@@ -77,10 +77,10 @@
                   "typeString": "uint256"
                 }
               },
-              "id": 8116,
+              "id": 8129,
               "length": {
                 "hexValue": "3530",
-                "id": 8115,
+                "id": 8128,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -104,7 +104,7 @@
             "visibility": "private"
           }
         ],
-        "scope": 8122,
+        "scope": 8135,
         "src": "59:346:40",
         "usedErrors": []
       },
@@ -113,13 +113,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 8119,
+              "id": 8132,
               "name": "TokenVaultStorageV1",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 8118,
+              "referencedDeclaration": 8131,
               "src": "446:19:40"
             },
-            "id": 8120,
+            "id": 8133,
             "nodeType": "InheritanceSpecifier",
             "src": "446:19:40"
           }
@@ -128,16 +128,16 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 8121,
+        "id": 8134,
         "linearizedBaseContracts": [
-          8121,
-          8118
+          8134,
+          8131
         ],
         "name": "TokenVaultStorage",
         "nameLocation": "425:17:40",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 8122,
+        "scope": 8135,
         "src": "407:61:40",
         "usedErrors": []
       }
@@ -150,7 +150,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-04-28T15:10:06.616Z",
+  "updatedAt": "2023-05-01T17:40:00.367Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
