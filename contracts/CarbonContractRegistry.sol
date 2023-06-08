@@ -74,6 +74,21 @@ contract CarbonContractRegistry is
 		_;
 	}
 
+	function createMarketplace(string _marketplaceName) external whenNotPauser onlyRole(DEFAULT_ADMIN_ROLE){
+				/// @dev generate payload for initialize function
+		string memory signature = 'initialize(address)';
+		bytes memory payload = abi.encodeWithSignature(
+			signature,
+			address(this),
+			_marketplaceName
+		);
+
+		address marketplaceAddress = address(
+			new BeaconProxy(_marketplaceBeaconAddress, payload)
+		);
+		return marketplaceAddress;
+	}
+
 	function createProject(
 		uint256 _projectId,
 		string calldata _projectName
