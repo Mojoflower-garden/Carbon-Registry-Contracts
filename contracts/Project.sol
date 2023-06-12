@@ -443,13 +443,14 @@ contract Project is
 	function retire(
 		uint256 tokenId,
 		uint256 amount,
+		address retiree,
 		string memory retireeName,
 		string memory customUri,
 		string memory comment,
 		bytes memory data
 	) public onlyExPostToken(tokenId) returns (uint256 nftTokenId) {
 		return _retire(
-			msg.sender,
+			retiree,
 			tokenId,
 			amount,
 			retireeName,

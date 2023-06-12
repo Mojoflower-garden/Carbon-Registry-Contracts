@@ -1,0 +1,206 @@
+{
+  "contractName": "MarketplaceVaultStorageV1",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/marketplaces/MarketplaceVaultStorage.sol\":\"MarketplaceVaultStorageV1\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/marketplaces/MarketplaceVaultStorage.sol\":{\"keccak256\":\"0xdc321af83962dabb138c571b6e9d2b3ada8215f1d2f59943c3bc9b1f034633d9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ee259490f14bccc678726be93d14deb05a747c0a1fa4d5ffbd83bc400d101b1b\",\"dweb:/ipfs/QmThGL4n31gj6hd6YUnevpr772o7yJBAxN27iuYSYTFiwx\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.13;\n\n\nabstract contract MarketplaceVaultStorageV1 {\n\n    string public name;\n    // /**\n    //  * @dev This empty reserved space is put in place to allow future versions to add new\n    //  * variables without shifting down storage in the inheritance chain.\n    //  * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps\n    //  */\n    uint256[49] private __gap;\n}\n\nabstract contract MarketplaceVaultStorage is MarketplaceVaultStorageV1 {}\n",
+  "sourcePath": "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/marketplaces/MarketplaceVaultStorage.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/marketplaces/MarketplaceVaultStorage.sol",
+    "exportedSymbols": {
+      "MarketplaceVaultStorage": [
+        8712
+      ],
+      "MarketplaceVaultStorageV1": [
+        8709
+      ]
+    },
+    "id": 8713,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 8702,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".13"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:46"
+      },
+      {
+        "abstract": true,
+        "baseContracts": [],
+        "canonicalName": "MarketplaceVaultStorageV1",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 8709,
+        "linearizedBaseContracts": [
+          8709
+        ],
+        "name": "MarketplaceVaultStorageV1",
+        "nameLocation": "77:25:46",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "06fdde03",
+            "id": 8704,
+            "mutability": "mutable",
+            "name": "name",
+            "nameLocation": "124:4:46",
+            "nodeType": "VariableDeclaration",
+            "scope": 8709,
+            "src": "110:18:46",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 8703,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "110:6:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 8708,
+            "mutability": "mutable",
+            "name": "__gap",
+            "nameLocation": "428:5:46",
+            "nodeType": "VariableDeclaration",
+            "scope": 8709,
+            "src": "408:25:46",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$49_storage",
+              "typeString": "uint256[49]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 8705,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "408:7:46",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 8707,
+              "length": {
+                "hexValue": "3439",
+                "id": 8706,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "416:2:46",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_49_by_1",
+                  "typeString": "int_const 49"
+                },
+                "value": "49"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "408:11:46",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$49_storage_ptr",
+                "typeString": "uint256[49]"
+              }
+            },
+            "visibility": "private"
+          }
+        ],
+        "scope": 8713,
+        "src": "59:377:46",
+        "usedErrors": []
+      },
+      {
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 8710,
+              "name": "MarketplaceVaultStorageV1",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 8709,
+              "src": "483:25:46"
+            },
+            "id": 8711,
+            "nodeType": "InheritanceSpecifier",
+            "src": "483:25:46"
+          }
+        ],
+        "canonicalName": "MarketplaceVaultStorage",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 8712,
+        "linearizedBaseContracts": [
+          8712,
+          8709
+        ],
+        "name": "MarketplaceVaultStorage",
+        "nameLocation": "456:23:46",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 8713,
+        "src": "438:73:46",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:480:46"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.13+commit.abaa5c0e.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.13",
+  "updatedAt": "2023-06-12T20:20:09.035Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

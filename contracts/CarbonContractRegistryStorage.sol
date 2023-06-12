@@ -20,20 +20,14 @@ abstract contract CarbonContractRegistryStorageV2 {
     mapping(uint256 => address) internal _verifiedVaultMapping;
 }
 
-abstract contract CarbonContractRegistryStorageV3 {
-    address internal _marketplaceBeaconAddress;
-    mapping(uint256 => address) internal _verifiedMarketplaceMapping;
-}
-
 abstract contract CarbonContractRegistryStorage is
     CarbonContractRegistryStorageV1,
-    CarbonContractRegistryStorageV2,
-    CarbonContractRegistryStorageV3
+    CarbonContractRegistryStorageV2
 {
         /**
      * @dev This empty reserved space is put in place to allow future versions to add new
      * variables without shifting down storage in the inheritance chain.
      * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
      */
-    uint256[40] private __gap;
+    uint256[42] private __gap;
 }

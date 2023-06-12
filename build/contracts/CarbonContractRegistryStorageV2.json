@@ -1,7 +1,7 @@
 {
   "contractName": "CarbonContractRegistryStorageV2",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/CarbonContractRegistryStorage.sol\":\"CarbonContractRegistryStorageV2\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/CarbonContractRegistryStorage.sol\":{\"keccak256\":\"0x2ed08f0066faef723ecb6fc5fd9e4257059165077fa18b156f41d2b8f2d78acf\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://60a0fa1c86fab298f4951f0de5c92262f69cc8fd8e8f0629da68a368aa6a4b69\",\"dweb:/ipfs/Qmd3gCsrcoMtUiB4cGK2DupU8u9wkE3nMhvMipPkM5yfeV\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/CarbonContractRegistryStorage.sol\":\"CarbonContractRegistryStorageV2\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/CarbonContractRegistryStorage.sol\":{\"keccak256\":\"0xf4b3764fb21c514fc87c384017965a9e9fafafb94a793c270db2c4600133d87b\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://e45a9badb23f69d5d13e10a65911f9d4b493ef70eaa3f9a4560c88f7f75d6567\",\"dweb:/ipfs/QmZaKvQyjX4MWWSKu42nKvZg7nWwmKCiscSBGAqGe2aMPK\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -9,7 +9,7 @@
   "deployedGeneratedSources": [],
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-FileCopyrightText: 2023 Mojoflower\n//\n// SPDX-License-Identifier: UNLICENSED\n\n// If you encounter a vulnerability or an issue, please contact <security@mojoflower.io> or visit security.mojoflower.io\npragma solidity ^0.8.13;\n\n/// @dev  CarbonContractRegistryStorage is used for separation of data and logic\nabstract contract CarbonContractRegistryStorageV1 {\n    address internal _verifiedVaultAddress;\n    address internal _projectBeaconAddress;\n\n    mapping(string => address) internal _serializationAddressMapping;\n    mapping(uint256 => address) internal _projectIdToAddressMapping;\n    mapping(address => uint256) internal _addressToProjectIdMapping;\n}\n\nabstract contract CarbonContractRegistryStorageV2 {\n    uint256 internal _verifiedVaultCounter;\n    address internal _tokenVaultBeaconAddress;\n    mapping(uint256 => address) internal _verifiedVaultMapping;\n}\n\nabstract contract CarbonContractRegistryStorage is\n    CarbonContractRegistryStorageV1,\n    CarbonContractRegistryStorageV2\n{\n        /**\n     * @dev This empty reserved space is put in place to allow future versions to add new\n     * variables without shifting down storage in the inheritance chain.\n     * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps\n     */\n    uint256[42] private __gap;\n}\n",
+  "source": "// SPDX-FileCopyrightText: 2023 Mojoflower\n//\n// SPDX-License-Identifier: UNLICENSED\n\npragma solidity ^0.8.13;\n\n/// @dev  CarbonContractRegistryStorage is used for separation of data and logic\nabstract contract CarbonContractRegistryStorageV1 {\n    address internal _verifiedVaultAddress;\n    address internal _projectBeaconAddress;\n\n    mapping(string => address) internal _serializationAddressMapping;\n    mapping(uint256 => address) internal _projectIdToAddressMapping;\n    mapping(address => uint256) internal _addressToProjectIdMapping;\n}\n\nabstract contract CarbonContractRegistryStorageV2 {\n    uint256 internal _verifiedVaultCounter;\n    address internal _tokenVaultBeaconAddress;\n    mapping(uint256 => address) internal _verifiedVaultMapping;\n}\n\nabstract contract CarbonContractRegistryStorage is\n    CarbonContractRegistryStorageV1,\n    CarbonContractRegistryStorageV2\n{\n        /**\n     * @dev This empty reserved space is put in place to allow future versions to add new\n     * variables without shifting down storage in the inheritance chain.\n     * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps\n     */\n    uint256[42] private __gap;\n}\n",
   "sourcePath": "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/CarbonContractRegistryStorage.sol",
   "ast": {
     "absolutePath": "project:/contracts/CarbonContractRegistryStorage.sol",
@@ -37,7 +37,7 @@
           ".13"
         ],
         "nodeType": "PragmaDirective",
-        "src": "207:24:35"
+        "src": "86:24:35"
       },
       {
         "abstract": true,
@@ -48,7 +48,7 @@
         "documentation": {
           "id": 6486,
           "nodeType": "StructuredDocumentation",
-          "src": "233:81:35",
+          "src": "112:81:35",
           "text": "@dev  CarbonContractRegistryStorage is used for separation of data and logic"
         },
         "fullyImplemented": true,
@@ -57,7 +57,7 @@
           6503
         ],
         "name": "CarbonContractRegistryStorageV1",
-        "nameLocation": "332:31:35",
+        "nameLocation": "211:31:35",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -65,10 +65,10 @@
             "id": 6488,
             "mutability": "mutable",
             "name": "_verifiedVaultAddress",
-            "nameLocation": "387:21:35",
+            "nameLocation": "266:21:35",
             "nodeType": "VariableDeclaration",
             "scope": 6503,
-            "src": "370:38:35",
+            "src": "249:38:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -79,7 +79,7 @@
               "id": 6487,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "370:7:35",
+              "src": "249:7:35",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -93,10 +93,10 @@
             "id": 6490,
             "mutability": "mutable",
             "name": "_projectBeaconAddress",
-            "nameLocation": "431:21:35",
+            "nameLocation": "310:21:35",
             "nodeType": "VariableDeclaration",
             "scope": 6503,
-            "src": "414:38:35",
+            "src": "293:38:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -107,7 +107,7 @@
               "id": 6489,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "414:7:35",
+              "src": "293:7:35",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -121,10 +121,10 @@
             "id": 6494,
             "mutability": "mutable",
             "name": "_serializationAddressMapping",
-            "nameLocation": "495:28:35",
+            "nameLocation": "374:28:35",
             "nodeType": "VariableDeclaration",
             "scope": 6503,
-            "src": "459:64:35",
+            "src": "338:64:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -137,14 +137,14 @@
                 "id": 6491,
                 "name": "string",
                 "nodeType": "ElementaryTypeName",
-                "src": "467:6:35",
+                "src": "346:6:35",
                 "typeDescriptions": {
                   "typeIdentifier": "t_string_storage_ptr",
                   "typeString": "string"
                 }
               },
               "nodeType": "Mapping",
-              "src": "459:26:35",
+              "src": "338:26:35",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_address_$",
                 "typeString": "mapping(string => address)"
@@ -153,7 +153,7 @@
                 "id": 6492,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "477:7:35",
+                "src": "356:7:35",
                 "stateMutability": "nonpayable",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
@@ -168,10 +168,10 @@
             "id": 6498,
             "mutability": "mutable",
             "name": "_projectIdToAddressMapping",
-            "nameLocation": "566:26:35",
+            "nameLocation": "445:26:35",
             "nodeType": "VariableDeclaration",
             "scope": 6503,
-            "src": "529:63:35",
+            "src": "408:63:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -184,14 +184,14 @@
                 "id": 6495,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
-                "src": "537:7:35",
+                "src": "416:7:35",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "529:27:35",
+              "src": "408:27:35",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
                 "typeString": "mapping(uint256 => address)"
@@ -200,7 +200,7 @@
                 "id": 6496,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "548:7:35",
+                "src": "427:7:35",
                 "stateMutability": "nonpayable",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
@@ -215,10 +215,10 @@
             "id": 6502,
             "mutability": "mutable",
             "name": "_addressToProjectIdMapping",
-            "nameLocation": "635:26:35",
+            "nameLocation": "514:26:35",
             "nodeType": "VariableDeclaration",
             "scope": 6503,
-            "src": "598:63:35",
+            "src": "477:63:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -231,14 +231,14 @@
                 "id": 6499,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "606:7:35",
+                "src": "485:7:35",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
                   "typeString": "address"
                 }
               },
               "nodeType": "Mapping",
-              "src": "598:27:35",
+              "src": "477:27:35",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                 "typeString": "mapping(address => uint256)"
@@ -247,7 +247,7 @@
                 "id": 6500,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
-                "src": "617:7:35",
+                "src": "496:7:35",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
@@ -258,7 +258,7 @@
           }
         ],
         "scope": 6523,
-        "src": "314:350:35",
+        "src": "193:350:35",
         "usedErrors": []
       },
       {
@@ -273,7 +273,7 @@
           6512
         ],
         "name": "CarbonContractRegistryStorageV2",
-        "nameLocation": "684:31:35",
+        "nameLocation": "563:31:35",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -281,10 +281,10 @@
             "id": 6505,
             "mutability": "mutable",
             "name": "_verifiedVaultCounter",
-            "nameLocation": "739:21:35",
+            "nameLocation": "618:21:35",
             "nodeType": "VariableDeclaration",
             "scope": 6512,
-            "src": "722:38:35",
+            "src": "601:38:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -295,7 +295,7 @@
               "id": 6504,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "722:7:35",
+              "src": "601:7:35",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -308,10 +308,10 @@
             "id": 6507,
             "mutability": "mutable",
             "name": "_tokenVaultBeaconAddress",
-            "nameLocation": "783:24:35",
+            "nameLocation": "662:24:35",
             "nodeType": "VariableDeclaration",
             "scope": 6512,
-            "src": "766:41:35",
+            "src": "645:41:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -322,7 +322,7 @@
               "id": 6506,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "766:7:35",
+              "src": "645:7:35",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
@@ -336,10 +336,10 @@
             "id": 6511,
             "mutability": "mutable",
             "name": "_verifiedVaultMapping",
-            "nameLocation": "850:21:35",
+            "nameLocation": "729:21:35",
             "nodeType": "VariableDeclaration",
             "scope": 6512,
-            "src": "813:58:35",
+            "src": "692:58:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -352,14 +352,14 @@
                 "id": 6508,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
-                "src": "821:7:35",
+                "src": "700:7:35",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
                 }
               },
               "nodeType": "Mapping",
-              "src": "813:27:35",
+              "src": "692:27:35",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_uint256_$_t_address_$",
                 "typeString": "mapping(uint256 => address)"
@@ -368,7 +368,7 @@
                 "id": 6509,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
-                "src": "832:7:35",
+                "src": "711:7:35",
                 "stateMutability": "nonpayable",
                 "typeDescriptions": {
                   "typeIdentifier": "t_address",
@@ -380,7 +380,7 @@
           }
         ],
         "scope": 6523,
-        "src": "666:208:35",
+        "src": "545:208:35",
         "usedErrors": []
       },
       {
@@ -392,11 +392,11 @@
               "name": "CarbonContractRegistryStorageV1",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 6503,
-              "src": "931:31:35"
+              "src": "810:31:35"
             },
             "id": 6514,
             "nodeType": "InheritanceSpecifier",
-            "src": "931:31:35"
+            "src": "810:31:35"
           },
           {
             "baseName": {
@@ -404,11 +404,11 @@
               "name": "CarbonContractRegistryStorageV2",
               "nodeType": "IdentifierPath",
               "referencedDeclaration": 6512,
-              "src": "968:31:35"
+              "src": "847:31:35"
             },
             "id": 6516,
             "nodeType": "InheritanceSpecifier",
-            "src": "968:31:35"
+            "src": "847:31:35"
           }
         ],
         "canonicalName": "CarbonContractRegistryStorage",
@@ -422,7 +422,7 @@
           6503
         ],
         "name": "CarbonContractRegistryStorage",
-        "nameLocation": "894:29:35",
+        "nameLocation": "773:29:35",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
@@ -430,16 +430,16 @@
             "documentation": {
               "id": 6517,
               "nodeType": "StructuredDocumentation",
-              "src": "1010:254:35",
+              "src": "889:254:35",
               "text": " @dev This empty reserved space is put in place to allow future versions to add new\n variables without shifting down storage in the inheritance chain.\n See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps"
             },
             "id": 6521,
             "mutability": "mutable",
             "name": "__gap",
-            "nameLocation": "1289:5:35",
+            "nameLocation": "1168:5:35",
             "nodeType": "VariableDeclaration",
             "scope": 6522,
-            "src": "1269:25:35",
+            "src": "1148:25:35",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -451,7 +451,7 @@
                 "id": 6518,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
-                "src": "1269:7:35",
+                "src": "1148:7:35",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
@@ -467,7 +467,7 @@
                 "kind": "number",
                 "lValueRequested": false,
                 "nodeType": "Literal",
-                "src": "1277:2:35",
+                "src": "1156:2:35",
                 "typeDescriptions": {
                   "typeIdentifier": "t_rational_42_by_1",
                   "typeString": "int_const 42"
@@ -475,7 +475,7 @@
                 "value": "42"
               },
               "nodeType": "ArrayTypeName",
-              "src": "1269:11:35",
+              "src": "1148:11:35",
               "typeDescriptions": {
                 "typeIdentifier": "t_array$_t_uint256_$42_storage_ptr",
                 "typeString": "uint256[42]"
@@ -485,11 +485,11 @@
           }
         ],
         "scope": 6523,
-        "src": "876:421:35",
+        "src": "755:421:35",
         "usedErrors": []
       }
     ],
-    "src": "207:1091:35"
+    "src": "86:1091:35"
   },
   "compiler": {
     "name": "solc",
@@ -497,7 +497,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-05-01T17:40:00.333Z",
+  "updatedAt": "2023-06-12T20:20:08.989Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

@@ -6,6 +6,10 @@ verify-migrations-mumbai:
 	truffle run verify Migrations@0x8DB55bFcbF2ACBB089256ab65e12b83468599b4b --network mumbai
 verify-vault-mumbai:
 	truffle run verify TokenVault@0xAB6d4fE2A7FE6d87AA46bD151D0196F91E0B8e94 --network mumbai
+verify-marketplace-mumbai:
+	truffle run verify MarketplaceVault@0x4849bD71893060d503475b2Fc606fB0816BBb02d --network mumbai
+verify-marketplace-factory-mumbai:
+	truffle run verify MarketplaceFactory@0x1Ba40563d1E018dD915309BED03a16A9C6588dAA --network mumbai
 
 verify-project-poly:
 	truffle run verify Project@0xb9998d26b61d8cDFfD3fe6d96efB7CA11FCD8065 --network polygon

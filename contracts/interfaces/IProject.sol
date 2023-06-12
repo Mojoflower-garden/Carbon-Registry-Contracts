@@ -72,4 +72,14 @@ interface IProject {
 		string reason,
 		bytes data
 		);
+
+	function retire(
+		uint256 tokenId,
+		uint256 amount,
+		address retiree,
+		string memory retireeName,
+		string memory customUri,
+		string memory comment,
+		bytes memory data
+	) external returns (uint256 nftTokenId) ;
 }

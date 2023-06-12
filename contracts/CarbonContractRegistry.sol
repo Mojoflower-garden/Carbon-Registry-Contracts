@@ -42,6 +42,7 @@ contract CarbonContractRegistry is
 		address indexed tokenVaultBeaconAddress,
 		address indexed oldTokenVaultBeaconAddress
 	);
+
 	event ProjectCreated(
 		uint256 indexed projectId,
 		address indexed projectAddress,
@@ -72,21 +73,6 @@ contract CarbonContractRegistry is
 			'Only CarbonRegistryProject can call this function'
 		);
 		_;
-	}
-
-	function createMarketplace(string _marketplaceName) external whenNotPauser onlyRole(DEFAULT_ADMIN_ROLE){
-				/// @dev generate payload for initialize function
-		string memory signature = 'initialize(address)';
-		bytes memory payload = abi.encodeWithSignature(
-			signature,
-			address(this),
-			_marketplaceName
-		);
-
-		address marketplaceAddress = address(
-			new BeaconProxy(_marketplaceBeaconAddress, payload)
-		);
-		return marketplaceAddress;
 	}
 
 	function createProject(
@@ -135,7 +121,7 @@ contract CarbonContractRegistry is
 	// ----------------------------------
 
 	function createNewVerifiedVault() external override onlyRole(DEFAULT_ADMIN_ROLE) {
-				/// @dev generate payload for initialize function
+		/// @dev generate payload for initialize function
 		string memory signature = 'initialize(address)';
 		bytes memory payload = abi.encodeWithSignature(
 			signature,
