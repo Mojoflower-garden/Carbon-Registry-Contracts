@@ -1,6 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+struct ProjectData {
+    string name;
+    uint256 id;
+    string uri;
+    string methodology; // The id of the methodology
+}
+
 struct VintageData {
     string serialization;
     uint256 estMitigations;

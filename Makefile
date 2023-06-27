@@ -9,7 +9,7 @@ verify-vault-mumbai:
 verify-marketplace-mumbai:
 	truffle run verify MarketplaceVault@0x4849bD71893060d503475b2Fc606fB0816BBb02d --network mumbai
 verify-marketplace-factory-mumbai:
-	truffle run verify MarketplaceFactory@0x1Ba40563d1E018dD915309BED03a16A9C6588dAA --network mumbai
+	truffle run verify MarketplaceFactory@0xbd5bd90eFc642F19B1398d433c4854cdE947A9cE --network mumbai
 
 verify-project-poly:
 	truffle run verify Project@0xb9998d26b61d8cDFfD3fe6d96efB7CA11FCD8065 --network polygon

@@ -43,6 +43,10 @@ contract MarketplaceFactory is
 		_marketplaceBeaconAddress = beaconAddress;
 	}
 
+	function testUpgrade() external pure returns(string memory) {
+		return "0.0.1";
+	}
+
     function createMarketplace(address _owner,string memory _marketplaceName) external whenNotPaused onlyRole(DEFAULT_ADMIN_ROLE) returns(address){
 				/// @dev generate payload for initialize function
 		string memory signature = 'initialize(address,string)';

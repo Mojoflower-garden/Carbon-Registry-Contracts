@@ -76,7 +76,7 @@ interface IProject {
 	function retire(
 		uint256 tokenId,
 		uint256 amount,
-		address retiree,
+		address beneficiary,
 		string memory retireeName,
 		string memory customUri,
 		string memory comment,

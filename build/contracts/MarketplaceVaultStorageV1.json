@@ -29,18 +29,18 @@
     "absolutePath": "project:/contracts/marketplaces/MarketplaceVaultStorage.sol",
     "exportedSymbols": {
       "MarketplaceVaultStorage": [
-        8712
+        8684
       ],
       "MarketplaceVaultStorageV1": [
-        8709
+        8681
       ]
     },
-    "id": 8713,
+    "id": 8685,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 8702,
+        "id": 8674,
         "literals": [
           "solidity",
           "^",
@@ -57,9 +57,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 8709,
+        "id": 8681,
         "linearizedBaseContracts": [
-          8709
+          8681
         ],
         "name": "MarketplaceVaultStorageV1",
         "nameLocation": "77:25:46",
@@ -68,12 +68,12 @@
           {
             "constant": false,
             "functionSelector": "06fdde03",
-            "id": 8704,
+            "id": 8676,
             "mutability": "mutable",
             "name": "name",
             "nameLocation": "124:4:46",
             "nodeType": "VariableDeclaration",
-            "scope": 8709,
+            "scope": 8681,
             "src": "110:18:46",
             "stateVariable": true,
             "storageLocation": "default",
@@ -82,7 +82,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 8703,
+              "id": 8675,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "110:6:46",
@@ -95,12 +95,12 @@
           },
           {
             "constant": false,
-            "id": 8708,
+            "id": 8680,
             "mutability": "mutable",
             "name": "__gap",
             "nameLocation": "428:5:46",
             "nodeType": "VariableDeclaration",
-            "scope": 8709,
+            "scope": 8681,
             "src": "408:25:46",
             "stateVariable": true,
             "storageLocation": "default",
@@ -110,7 +110,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 8705,
+                "id": 8677,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "408:7:46",
@@ -119,10 +119,10 @@
                   "typeString": "uint256"
                 }
               },
-              "id": 8707,
+              "id": 8679,
               "length": {
                 "hexValue": "3439",
-                "id": 8706,
+                "id": 8678,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -146,7 +146,7 @@
             "visibility": "private"
           }
         ],
-        "scope": 8713,
+        "scope": 8685,
         "src": "59:377:46",
         "usedErrors": []
       },
@@ -155,13 +155,13 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 8710,
+              "id": 8682,
               "name": "MarketplaceVaultStorageV1",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 8709,
+              "referencedDeclaration": 8681,
               "src": "483:25:46"
             },
-            "id": 8711,
+            "id": 8683,
             "nodeType": "InheritanceSpecifier",
             "src": "483:25:46"
           }
@@ -170,16 +170,16 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 8712,
+        "id": 8684,
         "linearizedBaseContracts": [
-          8712,
-          8709
+          8684,
+          8681
         ],
         "name": "MarketplaceVaultStorage",
         "nameLocation": "456:23:46",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 8713,
+        "scope": 8685,
         "src": "438:73:46",
         "usedErrors": []
       }
@@ -192,7 +192,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-06-12T20:20:09.035Z",
+  "updatedAt": "2023-06-27T13:56:04.293Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},
