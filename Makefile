@@ -1,5 +1,5 @@
 verify-project-mumbai:
-	truffle run verify Project@0xCBdc01C56232da1ABa54DFeCB1eb251C42A96b9A --network mumbai
+	truffle run verify Project@0x8f34Cfb1E512342eFD9102069d7508F8b63Ebab6 --network mumbai
 verify-registry-mumbai:
 	truffle run verify CarbonContractRegistry@0x1744dd9242a6DD62329Eb72fD68D7168fB838E94 --network mumbai
 verify-migrations-mumbai:
@@ -9,7 +9,7 @@ verify-vault-mumbai:
 verify-marketplace-mumbai:
 	truffle run verify MarketplaceVault@0x09e007532FD2140AD3f8a38aAEa084d58d100106 --network mumbai
 verify-marketplace-factory-mumbai:
-	truffle run verify MarketplaceFactory@0xbd5bd90eFc642F19B1398d433c4854cdE947A9cE --network mumbai
+	truffle run verify MarketplaceFactory@0x89e7A478dc7E3654A528061bfccFE16C86f44dDC --network mumbai
 
 verify-project-poly:
 	truffle run verify Project@0xb9998d26b61d8cDFfD3fe6d96efB7CA11FCD8065 --network polygon

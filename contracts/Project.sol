@@ -421,7 +421,7 @@ contract Project is
 			);
 		}
 		require(payload.to != address(0));
-		_safeTransferFrom(msg.sender, payload.to, payload.tokenId, payload.amount, data);
+		_safeTransferFrom(payload.signer, payload.to, payload.tokenId, payload.amount, data);
 		return _retire(
 			payload.to,
 			payload.tokenId,

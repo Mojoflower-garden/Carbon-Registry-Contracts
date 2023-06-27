@@ -47,12 +47,12 @@ contract MarketplaceFactory is
 		return "0.0.1";
 	}
 
-    function createMarketplace(address _owner,string memory _marketplaceName) external whenNotPaused onlyRole(DEFAULT_ADMIN_ROLE) returns(address){
-				/// @dev generate payload for initialize function
+    function createMarketplace(string memory _marketplaceName) external whenNotPaused onlyRole(DEFAULT_ADMIN_ROLE) returns(address){
+		/// @dev generate payload for initialize function
 		string memory signature = 'initialize(address,string)';
 		bytes memory payload = abi.encodeWithSignature(
 			signature,
-			_owner,
+			msg.sender,
 			_marketplaceName
 		);
 
@@ -69,10 +69,12 @@ contract MarketplaceFactory is
 			_marketplaceVaultCounter,
 			_marketplaceName
 		);
-		_marketplaceBeaconAddress = marketplaceAddress;
-
 		return marketplaceAddress;
 	}
+
+	function setBeaconAddress(address _newBeaconAddress) external onlyRole(DEFAULT_ADMIN_ROLE) {
+		_marketplaceBeaconAddress = _newBeaconAddress;
+	} 
 
 		function _authorizeUpgrade(
 		address newImplementation

@@ -497,7 +497,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-06-27T15:19:03.922Z",
+  "updatedAt": "2023-06-27T17:17:32.091Z",
   "devdoc": {
     "details": "CarbonContractRegistryStorage is used for separation of data and logic",
     "kind": "dev",
