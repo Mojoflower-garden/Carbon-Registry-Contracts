@@ -7,7 +7,7 @@ verify-migrations-mumbai:
 verify-vault-mumbai:
 	truffle run verify TokenVault@0xAB6d4fE2A7FE6d87AA46bD151D0196F91E0B8e94 --network mumbai
 verify-marketplace-mumbai:
-	truffle run verify MarketplaceVault@0x09e007532FD2140AD3f8a38aAEa084d58d100106 --network mumbai
+	truffle run verify MarketplaceVault@0x1eA0879512484e270F783E005bE513D7B7453b5f --network mumbai
 verify-marketplace-factory-mumbai:
 	truffle run verify MarketplaceFactory@0x89e7A478dc7E3654A528061bfccFE16C86f44dDC --network mumbai
 

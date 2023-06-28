@@ -9811,7 +9811,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8771_calldata_ptrt_string_memory_ptrt_bytes_memory_ptr",
+            "name": "abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8955_calldata_ptrt_string_memory_ptrt_bytes_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -14930,7 +14930,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_uint256t_uint256t_enum$_AdminActionReason_$8753",
+            "name": "abi_decode_tuple_t_uint256t_uint256t_enum$_AdminActionReason_$8937",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -17696,7 +17696,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_array$_t_struct$_VintageData_$8734_memory_ptr_$dyn_memory_ptr",
+            "name": "abi_decode_tuple_t_array$_t_struct$_VintageData_$8918_memory_ptr_$dyn_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -19971,7 +19971,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8771_calldata_ptrt_string_memory_ptrt_string_memory_ptrt_string_memory_ptrt_bytes_memory_ptr",
+            "name": "abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8955_calldata_ptrt_string_memory_ptrt_string_memory_ptrt_string_memory_ptrt_bytes_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -21338,7 +21338,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_addresst_addresst_uint256t_uint256t_enum$_AdminActionReason_$8753",
+            "name": "abi_decode_tuple_t_addresst_addresst_uint256t_uint256t_enum$_AdminActionReason_$8937",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -22011,7 +22011,7 @@
                 }
               ]
             },
-            "name": "abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8771_calldata_ptrt_bytes_memory_ptr",
+            "name": "abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8955_calldata_ptrt_bytes_memory_ptr",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -26806,7 +26806,7 @@
                 }
               ]
             },
-            "name": "abi_encode_tuple_t_bytes_calldata_ptr_t_struct$_signatureTransferPayload_$8771_calldata_ptr__to_t_bytes_memory_ptr_t_struct$_signatureTransferPayload_$8771_memory_ptr__fromStack_reversed",
+            "name": "abi_encode_tuple_t_bytes_calldata_ptr_t_struct$_signatureTransferPayload_$8955_calldata_ptr__to_t_bytes_memory_ptr_t_struct$_signatureTransferPayload_$8955_memory_ptr__fromStack_reversed",
             "nodeType": "YulFunctionDefinition",
             "parameters": [
               {
@@ -40533,7 +40533,7 @@
           }
         ]
       },
-      "contents": "{\n    { }\n    function abi_decode_address(offset) -> value\n    {\n        value := calldataload(offset)\n        if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }\n    }\n    function abi_decode_tuple_t_addresst_uint256(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := calldataload(add(headStart, 32))\n    }\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n    function panic_error_0x41()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n    function finalize_allocation_6658(memPtr)\n    {\n        let newFreePtr := add(memPtr, 0xa0)\n        if or(gt(newFreePtr, sub(shl(64, 1), 1)), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n    function finalize_allocation(memPtr, size)\n    {\n        let newFreePtr := add(memPtr, and(add(size, 31), not(31)))\n        if or(gt(newFreePtr, sub(shl(64, 1), 1)), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n    function abi_decode_string(offset, end) -> array\n    {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let _1 := calldataload(offset)\n        if gt(_1, sub(shl(64, 1), 1)) { panic_error_0x41() }\n        let memPtr := mload(64)\n        finalize_allocation(memPtr, add(and(add(_1, 0x1f), not(31)), 0x20))\n        mstore(memPtr, _1)\n        if gt(add(add(offset, _1), 0x20), end) { revert(0, 0) }\n        calldatacopy(add(memPtr, 0x20), add(offset, 0x20), _1)\n        mstore(add(add(memPtr, _1), 0x20), 0)\n        array := memPtr\n    }\n    function abi_decode_tuple_t_addresst_addresst_uint256t_string_memory_ptrt_string_memory_ptrt_string_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4, value5\n    {\n        if slt(sub(dataEnd, headStart), 192) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        let offset := calldataload(add(headStart, 96))\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset), dataEnd)\n        let offset_1 := calldataload(add(headStart, 128))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 160))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value5 := abi_decode_string(add(headStart, offset_2), dataEnd)\n    }\n    function validator_revert_bytes4(value)\n    {\n        if iszero(eq(value, and(value, shl(224, 0xffffffff)))) { revert(0, 0) }\n    }\n    function abi_decode_tuple_t_bytes4(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := calldataload(headStart)\n        validator_revert_bytes4(value)\n        value0 := value\n    }\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, iszero(iszero(value0)))\n    }\n    function abi_decode_tuple_t_string_memory_ptr(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value0 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function array_allocation_size_array_address_dyn(length) -> size\n    {\n        if gt(length, sub(shl(64, 1), 1)) { panic_error_0x41() }\n        size := add(shl(5, length), 0x20)\n    }\n    function abi_decode_array_address_dyn(offset, end) -> array\n    {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let _1 := calldataload(offset)\n        let _2 := 0x20\n        let _3 := array_allocation_size_array_address_dyn(_1)\n        let memPtr := mload(64)\n        finalize_allocation(memPtr, _3)\n        let dst := memPtr\n        mstore(memPtr, _1)\n        dst := add(memPtr, _2)\n        let srcEnd := add(add(offset, shl(5, _1)), _2)\n        if gt(srcEnd, end) { revert(0, 0) }\n        let src := add(offset, _2)\n        for { } lt(src, srcEnd) { src := add(src, _2) }\n        {\n            mstore(dst, abi_decode_address(src))\n            dst := add(dst, _2)\n        }\n        array := memPtr\n    }\n    function abi_decode_tuple_t_array$_t_address_$dyn_memory_ptrt_uint256t_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2\n    {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value0 := abi_decode_array_address_dyn(add(headStart, offset), dataEnd)\n        value1 := calldataload(add(headStart, 32))\n        let offset_1 := calldataload(add(headStart, 64))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value2 := abi_decode_string(add(headStart, offset_1), dataEnd)\n    }\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := calldataload(headStart)\n    }\n    function copy_memory_to_memory(src, dst, length)\n    {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length) { mstore(add(dst, length), 0) }\n    }\n    function abi_encode_string(value, pos) -> end\n    {\n        let length := mload(value)\n        mstore(pos, length)\n        copy_memory_to_memory(add(value, 0x20), add(pos, 0x20), length)\n        end := add(add(pos, and(add(length, 31), not(31))), 0x20)\n    }\n    function abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed(headStart, value0) -> tail\n    {\n        mstore(headStart, 32)\n        tail := abi_encode_string(value0, add(headStart, 32))\n    }\n    function abi_decode_tuple_t_addresst_uint256t_uint256t_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3\n    {\n        if slt(sub(dataEnd, headStart), 128) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := calldataload(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        let offset := calldataload(add(headStart, 96))\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function abi_encode_tuple_t_string_memory_ptr_t_uint256_t_string_memory_ptr_t_string_memory_ptr__to_t_string_memory_ptr_t_uint256_t_string_memory_ptr_t_string_memory_ptr__fromStack_reversed(headStart, value3, value2, value1, value0) -> tail\n    {\n        mstore(headStart, 128)\n        let tail_1 := abi_encode_string(value0, add(headStart, 128))\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), sub(tail_1, headStart))\n        let tail_2 := abi_encode_string(value2, tail_1)\n        mstore(add(headStart, 96), sub(tail_2, headStart))\n        tail := abi_encode_string(value3, tail_2)\n    }\n    function abi_decode_bytes_calldata(offset, end) -> arrayPos, length\n    {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        length := calldataload(offset)\n        if gt(length, sub(shl(64, 1), 1)) { revert(0, 0) }\n        arrayPos := add(offset, 0x20)\n        if gt(add(add(offset, length), 0x20), end) { revert(0, 0) }\n    }\n    function abi_decode_struct_signatureTransferPayload_calldata(offset, end) -> value\n    {\n        if slt(sub(end, offset), 224) { revert(0, 0) }\n        value := offset\n    }\n    function abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8771_calldata_ptrt_string_memory_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4\n    {\n        if slt(sub(dataEnd, headStart), 128) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        let value0_1, value1_1 := abi_decode_bytes_calldata(add(headStart, offset), dataEnd)\n        value0 := value0_1\n        value1 := value1_1\n        let offset_1 := calldataload(add(headStart, 32))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value2 := abi_decode_struct_signatureTransferPayload_calldata(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 64))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset_2), dataEnd)\n        let offset_3 := calldataload(add(headStart, 96))\n        if gt(offset_3, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_3), dataEnd)\n    }\n    function abi_decode_tuple_t_bytes32(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := calldataload(headStart)\n    }\n    function abi_encode_tuple_t_bytes32__to_t_bytes32__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n    function abi_decode_tuple_t_uint256t_uint256t_addresst_string_memory_ptrt_string_memory_ptrt_string_memory_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4, value5, value6\n    {\n        if slt(sub(dataEnd, headStart), 224) { revert(0, 0) }\n        value0 := calldataload(headStart)\n        value1 := calldataload(add(headStart, 32))\n        value2 := abi_decode_address(add(headStart, 64))\n        let offset := calldataload(add(headStart, 96))\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset), dataEnd)\n        let offset_1 := calldataload(add(headStart, 128))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 160))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value5 := abi_decode_string(add(headStart, offset_2), dataEnd)\n        let offset_3 := calldataload(add(headStart, 192))\n        if gt(offset_3, _1) { revert(0, 0) }\n        value6 := abi_decode_string(add(headStart, offset_3), dataEnd)\n    }\n    function abi_decode_array_uint256_dyn(offset, end) -> array\n    {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let _1 := calldataload(offset)\n        let _2 := 0x20\n        let _3 := array_allocation_size_array_address_dyn(_1)\n        let memPtr := mload(64)\n        finalize_allocation(memPtr, _3)\n        let dst := memPtr\n        mstore(memPtr, _1)\n        dst := add(memPtr, _2)\n        let srcEnd := add(add(offset, shl(5, _1)), _2)\n        if gt(srcEnd, end) { revert(0, 0) }\n        let src := add(offset, _2)\n        for { } lt(src, srcEnd) { src := add(src, _2) }\n        {\n            mstore(dst, calldataload(src))\n            dst := add(dst, _2)\n        }\n        array := memPtr\n    }\n    function abi_decode_tuple_t_addresst_addresst_array$_t_uint256_$dyn_memory_ptrt_array$_t_uint256_$dyn_memory_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4\n    {\n        if slt(sub(dataEnd, headStart), 160) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n        let offset := calldataload(add(headStart, 64))\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value2 := abi_decode_array_uint256_dyn(add(headStart, offset), dataEnd)\n        let offset_1 := calldataload(add(headStart, 96))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value3 := abi_decode_array_uint256_dyn(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 128))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_2), dataEnd)\n    }\n    function abi_decode_tuple_t_bytes32t_address(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := calldataload(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n    }\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n    }\n    function abi_decode_tuple_t_addresst_uint256t_uint256t_uint256t_uint256t_uint256t_string_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4, value5, value6\n    {\n        if slt(sub(dataEnd, headStart), 224) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := calldataload(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        value3 := calldataload(add(headStart, 96))\n        value4 := calldataload(add(headStart, 128))\n        value5 := calldataload(add(headStart, 160))\n        let offset := calldataload(add(headStart, 192))\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value6 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function abi_decode_tuple_t_array$_t_address_$dyn_memory_ptrt_array$_t_uint256_$dyn_memory_ptr(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value0 := abi_decode_array_address_dyn(add(headStart, offset), dataEnd)\n        let offset_1 := calldataload(add(headStart, 32))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value1 := abi_decode_array_uint256_dyn(add(headStart, offset_1), dataEnd)\n    }\n    function abi_encode_array_uint256_dyn(value, pos) -> end\n    {\n        let length := mload(value)\n        mstore(pos, length)\n        let _1 := 0x20\n        pos := add(pos, _1)\n        let srcPtr := add(value, _1)\n        let i := 0\n        for { } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, mload(srcPtr))\n            pos := add(pos, _1)\n            srcPtr := add(srcPtr, _1)\n        }\n        end := pos\n    }\n    function abi_encode_tuple_t_array$_t_uint256_$dyn_memory_ptr__to_t_array$_t_uint256_$dyn_memory_ptr__fromStack_reversed(headStart, value0) -> tail\n    {\n        mstore(headStart, 32)\n        tail := abi_encode_array_uint256_dyn(value0, add(headStart, 32))\n    }\n    function abi_decode_tuple_t_addresst_bytes_memory_ptr(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        let offset := calldataload(add(headStart, 32))\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value1 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function abi_decode_enum_AdminActionReason(offset) -> value\n    {\n        value := calldataload(offset)\n        if iszero(lt(value, 5)) { revert(0, 0) }\n    }\n    function abi_decode_tuple_t_uint256t_uint256t_enum$_AdminActionReason_$8753(headStart, dataEnd) -> value0, value1, value2\n    {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n        value0 := calldataload(headStart)\n        value1 := calldataload(add(headStart, 32))\n        value2 := abi_decode_enum_AdminActionReason(add(headStart, 64))\n    }\n    function abi_encode_tuple_t_uint8__to_t_uint8__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, 0xff))\n    }\n    function abi_encode_address(value, pos)\n    {\n        mstore(pos, and(value, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_address_t_uint256_t_uint256_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr__to_t_address_t_uint256_t_uint256_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr__fromStack_reversed(headStart, value5, value4, value3, value2, value1, value0) -> tail\n    {\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), 192)\n        let tail_1 := abi_encode_string(value3, add(headStart, 192))\n        mstore(add(headStart, 128), sub(tail_1, headStart))\n        let tail_2 := abi_encode_string(value4, tail_1)\n        mstore(add(headStart, 160), sub(tail_2, headStart))\n        tail := abi_encode_string(value5, tail_2)\n    }\n    function abi_encode_tuple_t_string_memory_ptr_t_uint256_t_uint256_t_uint256_t_uint256__to_t_string_memory_ptr_t_uint256_t_uint256_t_uint256_t_uint256__fromStack_reversed(headStart, value4, value3, value2, value1, value0) -> tail\n    {\n        mstore(headStart, 160)\n        tail := abi_encode_string(value0, add(headStart, 160))\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), value3)\n        mstore(add(headStart, 128), value4)\n    }\n    function abi_decode_tuple_t_array$_t_struct$_VintageData_$8734_memory_ptr_$dyn_memory_ptr(headStart, dataEnd) -> value0\n    {\n        let _1 := 32\n        if slt(sub(dataEnd, headStart), _1) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _2 := sub(shl(64, 1), 1)\n        if gt(offset, _2) { revert(0, 0) }\n        let _3 := add(headStart, offset)\n        if iszero(slt(add(_3, 0x1f), dataEnd)) { revert(0, 0) }\n        let _4 := calldataload(_3)\n        let _5 := array_allocation_size_array_address_dyn(_4)\n        let _6 := 64\n        let memPtr := mload(_6)\n        finalize_allocation(memPtr, _5)\n        let dst := memPtr\n        mstore(memPtr, _4)\n        dst := add(memPtr, _1)\n        let srcEnd := add(add(_3, shl(5, _4)), _1)\n        if gt(srcEnd, dataEnd) { revert(0, 0) }\n        let src := add(_3, _1)\n        for { } lt(src, srcEnd) { src := add(src, _1) }\n        {\n            let innerOffset := calldataload(src)\n            if gt(innerOffset, _2)\n            {\n                let _7 := 0\n                revert(_7, _7)\n            }\n            let _8 := add(_3, innerOffset)\n            let _9 := 0xa0\n            if slt(add(sub(dataEnd, _8), not(31)), _9)\n            {\n                let _10 := 0\n                revert(_10, _10)\n            }\n            let memPtr_1 := mload(_6)\n            finalize_allocation_6658(memPtr_1)\n            let offset_1 := calldataload(add(_8, _1))\n            if gt(offset_1, _2)\n            {\n                let _11 := 0\n                revert(_11, _11)\n            }\n            mstore(memPtr_1, abi_decode_string(add(add(_8, offset_1), _1), dataEnd))\n            mstore(add(memPtr_1, _1), calldataload(add(_8, _6)))\n            let _12 := 96\n            mstore(add(memPtr_1, _6), calldataload(add(_8, _12)))\n            let _13 := 128\n            mstore(add(memPtr_1, _12), calldataload(add(_8, _13)))\n            mstore(add(memPtr_1, _13), calldataload(add(_8, _9)))\n            mstore(dst, memPtr_1)\n            dst := add(dst, _1)\n        }\n        value0 := memPtr\n    }\n    function abi_decode_uint8(offset) -> value\n    {\n        value := calldataload(offset)\n        if iszero(eq(value, and(value, 0xff))) { revert(0, 0) }\n    }\n    function abi_decode_tuple_t_uint8(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := abi_decode_uint8(headStart)\n    }\n    function abi_decode_tuple_t_uint256t_uint256t_uint256t_string_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3\n    {\n        if slt(sub(dataEnd, headStart), 128) { revert(0, 0) }\n        value0 := calldataload(headStart)\n        value1 := calldataload(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        let offset := calldataload(add(headStart, 96))\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function abi_decode_tuple_t_addresst_bool(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        let value := calldataload(add(headStart, 32))\n        if iszero(eq(value, iszero(iszero(value)))) { revert(0, 0) }\n        value1 := value\n    }\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8771_calldata_ptrt_string_memory_ptrt_string_memory_ptrt_string_memory_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4, value5, value6\n    {\n        if slt(sub(dataEnd, headStart), 192) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        let value0_1, value1_1 := abi_decode_bytes_calldata(add(headStart, offset), dataEnd)\n        value0 := value0_1\n        value1 := value1_1\n        let offset_1 := calldataload(add(headStart, 32))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value2 := abi_decode_struct_signatureTransferPayload_calldata(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 64))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset_2), dataEnd)\n        let offset_3 := calldataload(add(headStart, 96))\n        if gt(offset_3, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_3), dataEnd)\n        let offset_4 := calldataload(add(headStart, 128))\n        if gt(offset_4, _1) { revert(0, 0) }\n        value5 := abi_decode_string(add(headStart, offset_4), dataEnd)\n        let offset_5 := calldataload(add(headStart, 160))\n        if gt(offset_5, _1) { revert(0, 0) }\n        value6 := abi_decode_string(add(headStart, offset_5), dataEnd)\n    }\n    function abi_decode_tuple_t_addresst_uint8t_uint256t_string_memory_ptrt_string_memory_ptrt_string_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4, value5\n    {\n        if slt(sub(dataEnd, headStart), 192) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_uint8(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        let offset := calldataload(add(headStart, 96))\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset), dataEnd)\n        let offset_1 := calldataload(add(headStart, 128))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 160))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value5 := abi_decode_string(add(headStart, offset_2), dataEnd)\n    }\n    function abi_encode_tuple_t_bytes4__to_t_bytes4__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, shl(224, 0xffffffff)))\n    }\n    function abi_encode_tuple_t_uint32__to_t_uint32__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, 0xffffffff))\n    }\n    function abi_decode_tuple_t_addresst_addresst_uint256t_uint256t_enum$_AdminActionReason_$8753(headStart, dataEnd) -> value0, value1, value2, value3, value4\n    {\n        if slt(sub(dataEnd, headStart), 160) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        value3 := calldataload(add(headStart, 96))\n        value4 := abi_decode_enum_AdminActionReason(add(headStart, 128))\n    }\n    function abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8771_calldata_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3\n    {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        let value0_1, value1_1 := abi_decode_bytes_calldata(add(headStart, offset), dataEnd)\n        value0 := value0_1\n        value1 := value1_1\n        let offset_1 := calldataload(add(headStart, 32))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value2 := abi_decode_struct_signatureTransferPayload_calldata(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 64))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset_2), dataEnd)\n    }\n    function abi_decode_tuple_t_addresst_address(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n    }\n    function abi_decode_tuple_t_addresst_addresst_uint256t_uint256t_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4\n    {\n        if slt(sub(dataEnd, headStart), 160) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        value3 := calldataload(add(headStart, 96))\n        let offset := calldataload(add(headStart, 128))\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function abi_encode_tuple_t_stringliteral_415a1b99e1fd4a18cf87c08995f5a9130182e8d76e9c17c497bfebaaef9265ad__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 42)\n        mstore(add(headStart, 64), \"ERC1155: address zero is not a v\")\n        mstore(add(headStart, 96), \"alid owner\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_7a2a4e26842155ea933fe6eb6e3137eb5a296dcdf55721c552be7b4c3cc23759__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 46)\n        mstore(add(headStart, 64), \"Initializable: contract is alrea\")\n        mstore(add(headStart, 96), \"dy initialized\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_rational_1_by_1__to_t_uint8__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, 0xff))\n    }\n    function abi_encode_tuple_t_stringliteral_c89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"1\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_d2f8f61201b2b11a78d6e866abc9c3db2ae8631fa656bfe5cb53668255367afb__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"9\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_1a192fabce13988b84994d4296e6cdc418d55e2f1d7f942188d4040b94fc57ac__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 2)\n        mstore(add(headStart, 64), \"10\")\n        tail := add(headStart, 96)\n    }\n    function panic_error_0x32()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n    function panic_error_0x11()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n    function checked_mul_t_uint256(x, y) -> product\n    {\n        if and(iszero(iszero(x)), gt(y, div(not(0), x))) { panic_error_0x11() }\n        product := mul(x, y)\n    }\n    function checked_div_t_uint256(x, y) -> r\n    {\n        if iszero(y)\n        {\n            mstore(0, shl(224, 0x4e487b71))\n            mstore(4, 0x12)\n            revert(0, 0x24)\n        }\n        r := div(x, y)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256__to_t_uint256_t_uint256__fromStack_reversed(headStart, value1, value0) -> tail\n    {\n        tail := add(headStart, 64)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n    }\n    function increment_t_uint256(value) -> ret\n    {\n        if eq(value, not(0)) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n    function extract_byte_array_length(data) -> length\n    {\n        length := shr(1, data)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) { length := and(length, 0x7f) }\n        if eq(outOfPlaceEncoding, lt(length, 32))\n        {\n            mstore(0, shl(224, 0x4e487b71))\n            mstore(4, 0x22)\n            revert(0, 0x24)\n        }\n    }\n    function checked_sub_t_uint256(x, y) -> diff\n    {\n        if lt(x, y) { panic_error_0x11() }\n        diff := sub(x, y)\n    }\n    function checked_add_t_uint256(x, y) -> sum\n    {\n        if gt(x, not(y)) { panic_error_0x11() }\n        sum := add(x, y)\n    }\n    function abi_encode_tuple_t_stringliteral_ceebf77a833b30520287ddd9478ff51abbdffa30aa90a8d655dba0e8a79ce0c1__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"5\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_bytes_calldata(start, length, pos) -> end\n    {\n        mstore(pos, length)\n        calldatacopy(add(pos, 0x20), start, length)\n        mstore(add(add(pos, length), 0x20), 0)\n        end := add(add(pos, and(add(length, 31), not(31))), 0x20)\n    }\n    function abi_encode_tuple_t_bytes_calldata_ptr_t_struct$_signatureTransferPayload_$8771_calldata_ptr__to_t_bytes_memory_ptr_t_struct$_signatureTransferPayload_$8771_memory_ptr__fromStack_reversed(headStart, value2, value1, value0) -> tail\n    {\n        mstore(headStart, 64)\n        let tail_1 := abi_encode_bytes_calldata(value0, value1, add(headStart, 64))\n        mstore(add(headStart, 32), sub(tail_1, headStart))\n        mstore(tail_1, calldataload(value2))\n        let rel_offset_of_tail := calldataload(add(value2, 32))\n        if iszero(slt(rel_offset_of_tail, add(sub(calldatasize(), value2), not(30)))) { revert(0, 0) }\n        let value := add(rel_offset_of_tail, value2)\n        let length := calldataload(value)\n        if gt(length, sub(shl(64, 1), 1)) { revert(0, 0) }\n        if sgt(value2, sub(calldatasize(), length)) { revert(0, 0) }\n        mstore(add(tail_1, 32), 0xe0)\n        let tail_2 := abi_encode_bytes_calldata(add(value, 32), length, add(tail_1, 0xe0))\n        let memberValue0 := abi_decode_address(add(value2, 64))\n        abi_encode_address(memberValue0, add(tail_1, 64))\n        let memberValue0_1 := abi_decode_address(add(value2, 0x60))\n        abi_encode_address(memberValue0_1, add(tail_1, 0x60))\n        mstore(add(tail_1, 0x80), calldataload(add(value2, 0x80)))\n        mstore(add(tail_1, 0xa0), calldataload(add(value2, 0xa0)))\n        mstore(add(tail_1, 0xc0), calldataload(add(value2, 0xc0)))\n        tail := tail_2\n    }\n    function access_calldata_tail_t_string_calldata_ptr(base_ref, ptr_to_tail) -> addr, length\n    {\n        let rel_offset_of_tail := calldataload(ptr_to_tail)\n        if iszero(slt(rel_offset_of_tail, add(sub(calldatasize(), base_ref), not(30)))) { revert(0, 0) }\n        let addr_1 := add(base_ref, rel_offset_of_tail)\n        length := calldataload(addr_1)\n        if gt(length, sub(shl(64, 1), 1)) { revert(0, 0) }\n        addr := add(addr_1, 0x20)\n        if sgt(addr, sub(calldatasize(), length)) { revert(0, 0) }\n    }\n    function abi_encode_tuple_packed_t_string_calldata_ptr__to_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed(pos, value1, value0) -> end\n    {\n        calldatacopy(pos, value0, value1)\n        let _1 := add(pos, value1)\n        mstore(_1, 0)\n        end := _1\n    }\n    function abi_encode_tuple_t_bytes32_t_uint256_t_bytes32_t_address_t_address_t_uint256_t_uint256_t_uint32__to_t_bytes32_t_uint256_t_bytes32_t_address_t_address_t_uint256_t_uint256_t_uint32__fromStack_reversed(headStart, value7, value6, value5, value4, value3, value2, value1, value0) -> tail\n    {\n        tail := add(headStart, 256)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        let _1 := sub(shl(160, 1), 1)\n        mstore(add(headStart, 96), and(value3, _1))\n        mstore(add(headStart, 128), and(value4, _1))\n        mstore(add(headStart, 160), value5)\n        mstore(add(headStart, 192), value6)\n        mstore(add(headStart, 224), and(value7, 0xffffffff))\n    }\n    function increment_t_uint32(value) -> ret\n    {\n        let _1 := 0xffffffff\n        let value_1 := and(value, _1)\n        if eq(value_1, _1) { panic_error_0x11() }\n        ret := add(value_1, 1)\n    }\n    function abi_encode_tuple_t_uint256_t_string_memory_ptr_t_bytes_memory_ptr__to_t_uint256_t_string_memory_ptr_t_bytes_memory_ptr__fromStack_reversed(headStart, value2, value1, value0) -> tail\n    {\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), 96)\n        let tail_1 := abi_encode_string(value1, add(headStart, 96))\n        mstore(add(headStart, 64), sub(tail_1, headStart))\n        tail := abi_encode_string(value2, tail_1)\n    }\n    function abi_encode_tuple_t_stringliteral_47c72b42072ed6c647dec3a0a5c88bec44d3e901c64659bff94ecce0a0323156__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 46)\n        mstore(add(headStart, 64), \"ERC1155: caller is not token own\")\n        mstore(add(headStart, 96), \"er or approved\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_fb06fa8ff2141e8ed74502f6792273793f25f0e9d3cf15344f3f5a0d4948fd4b__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 47)\n        mstore(add(headStart, 64), \"AccessControl: can only renounce\")\n        mstore(add(headStart, 96), \" roles for self\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_36e108fa7a809b52ab1951dd91c117a7bc9ac5250bdf1aa162d4e104f7edf9eb__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 44)\n        mstore(add(headStart, 64), \"Function must be called through \")\n        mstore(add(headStart, 96), \"delegatecall\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_52f1ead4d9653e13afbd2e90ef2587c30187cd50b2e97d784e3f7a7541247434__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 44)\n        mstore(add(headStart, 64), \"Function must be called through \")\n        mstore(add(headStart, 96), \"active proxy\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_e455bf8ea6e7463a1046a0b52804526e119b4bf5136279614e0b1e8e296a4e2d__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"6\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_52f1a9b320cab38e5da8a8f97989383aab0a49165fc91c737310e4f7e9821021__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"7\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_e4b1702d9298fee62dfeccc57d322a463ad55ca201256d01f62b45b2e1c21c10__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"8\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256_t_uint256_t_uint256_t_string_memory_ptr__to_t_uint256_t_uint256_t_uint256_t_uint256_t_string_memory_ptr__fromStack_reversed(headStart, value4, value3, value2, value1, value0) -> tail\n    {\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), value3)\n        mstore(add(headStart, 128), 160)\n        tail := abi_encode_string(value4, add(headStart, 160))\n    }\n    function abi_encode_tuple_t_stringliteral_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 41)\n        mstore(add(headStart, 64), \"ERC1155: accounts and ids length\")\n        mstore(add(headStart, 96), \" mismatch\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_67f0151b4ad1dcfa0e3302a0cd6019f51582ef1807b37dceb00bd852a514f7f4__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 56)\n        mstore(add(headStart, 64), \"UUPSUpgradeable: must not be cal\")\n        mstore(add(headStart, 96), \"led through delegatecall\")\n        tail := add(headStart, 128)\n    }\n    function panic_error_0x21()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x21)\n        revert(0, 0x24)\n    }\n    function abi_encode_tuple_t_stringliteral_13600b294191fc92924bb3ce4b969c1e7e2bab8f4c93c3fc6d0a51733df3c060__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"4\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_packed_t_string_memory_ptr__to_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed(pos, value0) -> end\n    {\n        let length := mload(value0)\n        copy_memory_to_memory(add(value0, 0x20), pos, length)\n        end := add(pos, length)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256_t_uint256_t_string_memory_ptr__to_t_uint256_t_uint256_t_uint256_t_string_memory_ptr__fromStack_reversed(headStart, value3, value2, value1, value0) -> tail\n    {\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), 128)\n        tail := abi_encode_string(value3, add(headStart, 128))\n    }\n    function abi_encode_tuple_t_address_t_uint256__to_t_address_t_uint256__fromStack_reversed(headStart, value1, value0) -> tail\n    {\n        tail := add(headStart, 64)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n        mstore(add(headStart, 32), value1)\n    }\n    function abi_encode_tuple_t_stringliteral_d688db918bb9dd50354922faa108595679886fe9ff08046ad1ffe30aaea55f8b__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 43)\n        mstore(add(headStart, 64), \"Initializable: contract is not i\")\n        mstore(add(headStart, 96), \"nitializing\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_87fd4aee52f5758d127cd9704d5ffef70f36ed1e87eb99b6f40e37a25c79a76a__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 35)\n        mstore(add(headStart, 64), \"ERC1155: burn from the zero addr\")\n        mstore(add(headStart, 96), \"ess\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_294a5de01910e2350ff231c633ae2d453ed6b1b72c75506234b7aace63eae685__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 36)\n        mstore(add(headStart, 64), \"ERC1155: burn amount exceeds bal\")\n        mstore(add(headStart, 96), \"ance\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 37)\n        mstore(add(headStart, 64), \"ERC1155: transfer to the zero ad\")\n        mstore(add(headStart, 96), \"dress\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 42)\n        mstore(add(headStart, 64), \"ERC1155: insufficient balance fo\")\n        mstore(add(headStart, 96), \"r transfer\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 33)\n        mstore(add(headStart, 64), \"ERC1155: mint to the zero addres\")\n        mstore(add(headStart, 96), \"s\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_4f2d7dfcb27c0aafa13ae8c400de482c7832204d194018b6e45bd2bf244c74e7__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 17)\n        mstore(add(headStart, 64), \"Invalid signature\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_99132f8bb903a5d9600420e3899938d8bfd8aa30795f8fee460656e87dd9c517__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 17)\n        mstore(add(headStart, 64), \"Signature expired\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256_t_bytes_memory_ptr__to_t_uint256_t_uint256_t_bytes_memory_ptr__fromStack_reversed(headStart, value2, value1, value0) -> tail\n    {\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), 96)\n        tail := abi_encode_string(value2, add(headStart, 96))\n    }\n    function abi_encode_tuple_t_stringliteral_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 40)\n        mstore(add(headStart, 64), \"ERC1155: ids and amounts length \")\n        mstore(add(headStart, 96), \"mismatch\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr__to_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr__fromStack_reversed(headStart, value1, value0) -> tail\n    {\n        mstore(headStart, 64)\n        let tail_1 := abi_encode_array_uint256_dyn(value0, add(headStart, 64))\n        mstore(add(headStart, 32), sub(tail_1, headStart))\n        tail := abi_encode_array_uint256_dyn(value1, tail_1)\n    }\n    function abi_decode_tuple_t_bytes32_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := mload(headStart)\n    }\n    function abi_encode_tuple_t_stringliteral_8e8e2fbcb586f700b5b14e2c4a650c8d83b9773c31c5fe8962070ea544e11f24__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 46)\n        mstore(add(headStart, 64), \"ERC1967Upgrade: new implementati\")\n        mstore(add(headStart, 96), \"on is not UUPS\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_76b6b6debfc5febf101145a79ecf0b0d2e89e397dfdab2bca99888370411152c__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 41)\n        mstore(add(headStart, 64), \"ERC1967Upgrade: unsupported prox\")\n        mstore(add(headStart, 96), \"iableUUID\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 41)\n        mstore(add(headStart, 64), \"ERC1155: setting approval status\")\n        mstore(add(headStart, 96), \" for self\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_packed_t_stringliteral_da0d07ce4a2849fbfc4cb9d6f939e9bd93016c372ca4a5ff14fe06caf3d67874_t_string_memory_ptr_t_stringliteral_f986ce851518a691bccd44ea42a5a185d1b866ef6cb07984a09b81694d20ab69_t_string_memory_ptr__to_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed(pos, value1, value0) -> end\n    {\n        mstore(pos, \"AccessControl: account \")\n        let length := mload(value0)\n        copy_memory_to_memory(add(value0, 0x20), add(pos, 23), length)\n        let _1 := add(pos, length)\n        mstore(add(_1, 23), \" is missing role \")\n        let length_1 := mload(value1)\n        copy_memory_to_memory(add(value1, 0x20), add(_1, 40), length_1)\n        end := add(add(_1, length_1), 40)\n    }\n    function abi_encode_tuple_t_stringliteral_044852b2a670ade5407e78fb2863c51de9fcb96542a07186fe3aeda6bb8a116d__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"0\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_7880aec93413f117ef14bd4e6d130875ab2c7d7d55a064fac3c2f7bd51516380__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 2)\n        mstore(add(headStart, 64), \"11\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__to_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__fromStack_reversed(headStart, value4, value3, value2, value1, value0) -> tail\n    {\n        let _1 := sub(shl(160, 1), 1)\n        mstore(headStart, and(value0, _1))\n        mstore(add(headStart, 32), and(value1, _1))\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), value3)\n        mstore(add(headStart, 128), 160)\n        tail := abi_encode_string(value4, add(headStart, 160))\n    }\n    function abi_decode_tuple_t_bytes4_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := mload(headStart)\n        validator_revert_bytes4(value)\n        value0 := value\n    }\n    function return_data_selector() -> sig\n    {\n        if gt(returndatasize(), 3)\n        {\n            returndatacopy(0, 0, 4)\n            sig := shr(224, mload(0))\n        }\n    }\n    function try_decode_error_message() -> ret\n    {\n        if lt(returndatasize(), 0x44) { leave }\n        let data := mload(64)\n        let _1 := not(3)\n        returndatacopy(data, 4, add(returndatasize(), _1))\n        let offset := mload(data)\n        let _2 := returndatasize()\n        let _3 := sub(shl(64, 1), 1)\n        if or(gt(offset, _3), gt(add(offset, 0x24), _2)) { leave }\n        let msg := add(data, offset)\n        let length := mload(msg)\n        if gt(length, _3) { leave }\n        if gt(add(add(msg, length), 0x20), add(add(data, returndatasize()), _1)) { leave }\n        finalize_allocation(data, add(add(offset, length), 0x20))\n        ret := msg\n    }\n    function abi_encode_tuple_t_stringliteral_f591f7b75ffc499e05f8b34c3364b2eceff651378d9549db1d5d67c0d8255c5d__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 52)\n        mstore(add(headStart, 64), \"ERC1155: transfer to non-ERC1155\")\n        mstore(add(headStart, 96), \"Receiver implementer\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 40)\n        mstore(add(headStart, 64), \"ERC1155: ERC1155Receiver rejecte\")\n        mstore(add(headStart, 96), \"d tokens\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_packed_t_stringliteral_301a50b291d33ce1e8e9064e3f6a6c51d902ec22892b50d58abf6357c6a45541_t_bytes32_t_bytes32__to_t_string_memory_ptr_t_bytes32_t_bytes32__nonPadded_inplace_fromStack_reversed(pos, value1, value0) -> end\n    {\n        mstore(pos, shl(240, 6401))\n        mstore(add(pos, 2), value0)\n        mstore(add(pos, 34), value1)\n        end := add(pos, 66)\n    }\n    function abi_encode_tuple_t_address_t_address_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr_t_bytes_memory_ptr__to_t_address_t_address_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr_t_bytes_memory_ptr__fromStack_reversed(headStart, value4, value3, value2, value1, value0) -> tail\n    {\n        let _1 := sub(shl(160, 1), 1)\n        mstore(headStart, and(value0, _1))\n        mstore(add(headStart, 32), and(value1, _1))\n        mstore(add(headStart, 64), 160)\n        let tail_1 := abi_encode_array_uint256_dyn(value2, add(headStart, 160))\n        mstore(add(headStart, 96), sub(tail_1, headStart))\n        let tail_2 := abi_encode_array_uint256_dyn(value3, tail_1)\n        mstore(add(headStart, 128), sub(tail_2, headStart))\n        tail := abi_encode_string(value4, tail_2)\n    }\n    function abi_encode_tuple_t_stringliteral_972b7028e8de0bff0d553b3264eba2312ec98a552add05e58853b313f9f4ac65__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 45)\n        mstore(add(headStart, 64), \"ERC1967: new implementation is n\")\n        mstore(add(headStart, 96), \"ot a contract\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_0d1d997348c4b502650619e51f7d09f80514d98b6993be5051d07f703984619a__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 20)\n        mstore(add(headStart, 64), \"Pausable: not paused\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_68571e1369f7a6dcdcd736cb0343b35a58ed0f64d245c2ed839c98d412744f8a__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 16)\n        mstore(add(headStart, 64), \"Pausable: paused\")\n        tail := add(headStart, 96)\n    }\n    function decrement_t_uint256(value) -> ret\n    {\n        if iszero(value) { panic_error_0x11() }\n        ret := add(value, not(0))\n    }\n    function abi_encode_tuple_t_stringliteral_04fc88320d7c9f639317c75102c103ff0044d3075a5c627e24e76e5bbb2733c2__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 32)\n        mstore(add(headStart, 64), \"Strings: hex length insufficient\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_9eb0869d69143813ac9f244871191d8f2e530e71a4599ba9db4501f0f6110ee4__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 40)\n        mstore(add(headStart, 64), \"ERC1155: burn amount exceeds tot\")\n        mstore(add(headStart, 96), \"alSupply\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_bytes32_t_bytes32_t_bytes32_t_uint256_t_address__to_t_bytes32_t_bytes32_t_bytes32_t_uint256_t_address__fromStack_reversed(headStart, value4, value3, value2, value1, value0) -> tail\n    {\n        tail := add(headStart, 160)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), value3)\n        mstore(add(headStart, 128), and(value4, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_stringliteral_00043f6bf76368aa97c21698e9b9d4779e31902453daccf3525ddfb36e53e2be__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 24)\n        mstore(add(headStart, 64), \"ECDSA: invalid signature\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_1669ff3ba3cdf64474e1193492d05b8434e29b0b495e60095eb5f5c8ec14ce77__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 31)\n        mstore(add(headStart, 64), \"ECDSA: invalid signature length\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_520d1f787dbcafbbfc007fd2c4ecf3d2711ec587f3ee9a1215c0b646c3e530bd__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 34)\n        mstore(add(headStart, 64), \"ECDSA: invalid signature 's' val\")\n        mstore(add(headStart, 96), \"ue\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_b94ded0918034cf8f896e19fa3cfdef1188cd569c577264a3622e49152f88520__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 38)\n        mstore(add(headStart, 64), \"Address: delegate call to non-co\")\n        mstore(add(headStart, 96), \"ntract\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_packed_t_bytes_memory_ptr__to_t_bytes_memory_ptr__nonPadded_inplace_fromStack_reversed(pos, value0) -> end\n    {\n        let length := mload(value0)\n        copy_memory_to_memory(add(value0, 0x20), pos, length)\n        end := add(pos, length)\n    }\n    function abi_encode_tuple_t_bytes32_t_uint8_t_bytes32_t_bytes32__to_t_bytes32_t_uint8_t_bytes32_t_bytes32__fromStack_reversed(headStart, value3, value2, value1, value0) -> tail\n    {\n        tail := add(headStart, 128)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), and(value1, 0xff))\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), value3)\n    }\n}",
+      "contents": "{\n    { }\n    function abi_decode_address(offset) -> value\n    {\n        value := calldataload(offset)\n        if iszero(eq(value, and(value, sub(shl(160, 1), 1)))) { revert(0, 0) }\n    }\n    function abi_decode_tuple_t_addresst_uint256(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := calldataload(add(headStart, 32))\n    }\n    function abi_encode_tuple_t_uint256__to_t_uint256__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n    function panic_error_0x41()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x41)\n        revert(0, 0x24)\n    }\n    function finalize_allocation_6658(memPtr)\n    {\n        let newFreePtr := add(memPtr, 0xa0)\n        if or(gt(newFreePtr, sub(shl(64, 1), 1)), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n    function finalize_allocation(memPtr, size)\n    {\n        let newFreePtr := add(memPtr, and(add(size, 31), not(31)))\n        if or(gt(newFreePtr, sub(shl(64, 1), 1)), lt(newFreePtr, memPtr)) { panic_error_0x41() }\n        mstore(64, newFreePtr)\n    }\n    function abi_decode_string(offset, end) -> array\n    {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let _1 := calldataload(offset)\n        if gt(_1, sub(shl(64, 1), 1)) { panic_error_0x41() }\n        let memPtr := mload(64)\n        finalize_allocation(memPtr, add(and(add(_1, 0x1f), not(31)), 0x20))\n        mstore(memPtr, _1)\n        if gt(add(add(offset, _1), 0x20), end) { revert(0, 0) }\n        calldatacopy(add(memPtr, 0x20), add(offset, 0x20), _1)\n        mstore(add(add(memPtr, _1), 0x20), 0)\n        array := memPtr\n    }\n    function abi_decode_tuple_t_addresst_addresst_uint256t_string_memory_ptrt_string_memory_ptrt_string_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4, value5\n    {\n        if slt(sub(dataEnd, headStart), 192) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        let offset := calldataload(add(headStart, 96))\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset), dataEnd)\n        let offset_1 := calldataload(add(headStart, 128))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 160))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value5 := abi_decode_string(add(headStart, offset_2), dataEnd)\n    }\n    function validator_revert_bytes4(value)\n    {\n        if iszero(eq(value, and(value, shl(224, 0xffffffff)))) { revert(0, 0) }\n    }\n    function abi_decode_tuple_t_bytes4(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := calldataload(headStart)\n        validator_revert_bytes4(value)\n        value0 := value\n    }\n    function abi_encode_tuple_t_bool__to_t_bool__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, iszero(iszero(value0)))\n    }\n    function abi_decode_tuple_t_string_memory_ptr(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value0 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function array_allocation_size_array_address_dyn(length) -> size\n    {\n        if gt(length, sub(shl(64, 1), 1)) { panic_error_0x41() }\n        size := add(shl(5, length), 0x20)\n    }\n    function abi_decode_array_address_dyn(offset, end) -> array\n    {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let _1 := calldataload(offset)\n        let _2 := 0x20\n        let _3 := array_allocation_size_array_address_dyn(_1)\n        let memPtr := mload(64)\n        finalize_allocation(memPtr, _3)\n        let dst := memPtr\n        mstore(memPtr, _1)\n        dst := add(memPtr, _2)\n        let srcEnd := add(add(offset, shl(5, _1)), _2)\n        if gt(srcEnd, end) { revert(0, 0) }\n        let src := add(offset, _2)\n        for { } lt(src, srcEnd) { src := add(src, _2) }\n        {\n            mstore(dst, abi_decode_address(src))\n            dst := add(dst, _2)\n        }\n        array := memPtr\n    }\n    function abi_decode_tuple_t_array$_t_address_$dyn_memory_ptrt_uint256t_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2\n    {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value0 := abi_decode_array_address_dyn(add(headStart, offset), dataEnd)\n        value1 := calldataload(add(headStart, 32))\n        let offset_1 := calldataload(add(headStart, 64))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value2 := abi_decode_string(add(headStart, offset_1), dataEnd)\n    }\n    function abi_decode_tuple_t_uint256(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := calldataload(headStart)\n    }\n    function copy_memory_to_memory(src, dst, length)\n    {\n        let i := 0\n        for { } lt(i, length) { i := add(i, 32) }\n        {\n            mstore(add(dst, i), mload(add(src, i)))\n        }\n        if gt(i, length) { mstore(add(dst, length), 0) }\n    }\n    function abi_encode_string(value, pos) -> end\n    {\n        let length := mload(value)\n        mstore(pos, length)\n        copy_memory_to_memory(add(value, 0x20), add(pos, 0x20), length)\n        end := add(add(pos, and(add(length, 31), not(31))), 0x20)\n    }\n    function abi_encode_tuple_t_string_memory_ptr__to_t_string_memory_ptr__fromStack_reversed(headStart, value0) -> tail\n    {\n        mstore(headStart, 32)\n        tail := abi_encode_string(value0, add(headStart, 32))\n    }\n    function abi_decode_tuple_t_addresst_uint256t_uint256t_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3\n    {\n        if slt(sub(dataEnd, headStart), 128) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := calldataload(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        let offset := calldataload(add(headStart, 96))\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function abi_encode_tuple_t_string_memory_ptr_t_uint256_t_string_memory_ptr_t_string_memory_ptr__to_t_string_memory_ptr_t_uint256_t_string_memory_ptr_t_string_memory_ptr__fromStack_reversed(headStart, value3, value2, value1, value0) -> tail\n    {\n        mstore(headStart, 128)\n        let tail_1 := abi_encode_string(value0, add(headStart, 128))\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), sub(tail_1, headStart))\n        let tail_2 := abi_encode_string(value2, tail_1)\n        mstore(add(headStart, 96), sub(tail_2, headStart))\n        tail := abi_encode_string(value3, tail_2)\n    }\n    function abi_decode_bytes_calldata(offset, end) -> arrayPos, length\n    {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        length := calldataload(offset)\n        if gt(length, sub(shl(64, 1), 1)) { revert(0, 0) }\n        arrayPos := add(offset, 0x20)\n        if gt(add(add(offset, length), 0x20), end) { revert(0, 0) }\n    }\n    function abi_decode_struct_signatureTransferPayload_calldata(offset, end) -> value\n    {\n        if slt(sub(end, offset), 224) { revert(0, 0) }\n        value := offset\n    }\n    function abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8955_calldata_ptrt_string_memory_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4\n    {\n        if slt(sub(dataEnd, headStart), 128) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        let value0_1, value1_1 := abi_decode_bytes_calldata(add(headStart, offset), dataEnd)\n        value0 := value0_1\n        value1 := value1_1\n        let offset_1 := calldataload(add(headStart, 32))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value2 := abi_decode_struct_signatureTransferPayload_calldata(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 64))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset_2), dataEnd)\n        let offset_3 := calldataload(add(headStart, 96))\n        if gt(offset_3, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_3), dataEnd)\n    }\n    function abi_decode_tuple_t_bytes32(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := calldataload(headStart)\n    }\n    function abi_encode_tuple_t_bytes32__to_t_bytes32__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, value0)\n    }\n    function abi_decode_tuple_t_uint256t_uint256t_addresst_string_memory_ptrt_string_memory_ptrt_string_memory_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4, value5, value6\n    {\n        if slt(sub(dataEnd, headStart), 224) { revert(0, 0) }\n        value0 := calldataload(headStart)\n        value1 := calldataload(add(headStart, 32))\n        value2 := abi_decode_address(add(headStart, 64))\n        let offset := calldataload(add(headStart, 96))\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset), dataEnd)\n        let offset_1 := calldataload(add(headStart, 128))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 160))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value5 := abi_decode_string(add(headStart, offset_2), dataEnd)\n        let offset_3 := calldataload(add(headStart, 192))\n        if gt(offset_3, _1) { revert(0, 0) }\n        value6 := abi_decode_string(add(headStart, offset_3), dataEnd)\n    }\n    function abi_decode_array_uint256_dyn(offset, end) -> array\n    {\n        if iszero(slt(add(offset, 0x1f), end)) { revert(0, 0) }\n        let _1 := calldataload(offset)\n        let _2 := 0x20\n        let _3 := array_allocation_size_array_address_dyn(_1)\n        let memPtr := mload(64)\n        finalize_allocation(memPtr, _3)\n        let dst := memPtr\n        mstore(memPtr, _1)\n        dst := add(memPtr, _2)\n        let srcEnd := add(add(offset, shl(5, _1)), _2)\n        if gt(srcEnd, end) { revert(0, 0) }\n        let src := add(offset, _2)\n        for { } lt(src, srcEnd) { src := add(src, _2) }\n        {\n            mstore(dst, calldataload(src))\n            dst := add(dst, _2)\n        }\n        array := memPtr\n    }\n    function abi_decode_tuple_t_addresst_addresst_array$_t_uint256_$dyn_memory_ptrt_array$_t_uint256_$dyn_memory_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4\n    {\n        if slt(sub(dataEnd, headStart), 160) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n        let offset := calldataload(add(headStart, 64))\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value2 := abi_decode_array_uint256_dyn(add(headStart, offset), dataEnd)\n        let offset_1 := calldataload(add(headStart, 96))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value3 := abi_decode_array_uint256_dyn(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 128))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_2), dataEnd)\n    }\n    function abi_decode_tuple_t_bytes32t_address(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := calldataload(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n    }\n    function abi_decode_tuple_t_address(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n    }\n    function abi_decode_tuple_t_addresst_uint256t_uint256t_uint256t_uint256t_uint256t_string_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4, value5, value6\n    {\n        if slt(sub(dataEnd, headStart), 224) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := calldataload(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        value3 := calldataload(add(headStart, 96))\n        value4 := calldataload(add(headStart, 128))\n        value5 := calldataload(add(headStart, 160))\n        let offset := calldataload(add(headStart, 192))\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value6 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function abi_decode_tuple_t_array$_t_address_$dyn_memory_ptrt_array$_t_uint256_$dyn_memory_ptr(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value0 := abi_decode_array_address_dyn(add(headStart, offset), dataEnd)\n        let offset_1 := calldataload(add(headStart, 32))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value1 := abi_decode_array_uint256_dyn(add(headStart, offset_1), dataEnd)\n    }\n    function abi_encode_array_uint256_dyn(value, pos) -> end\n    {\n        let length := mload(value)\n        mstore(pos, length)\n        let _1 := 0x20\n        pos := add(pos, _1)\n        let srcPtr := add(value, _1)\n        let i := 0\n        for { } lt(i, length) { i := add(i, 1) }\n        {\n            mstore(pos, mload(srcPtr))\n            pos := add(pos, _1)\n            srcPtr := add(srcPtr, _1)\n        }\n        end := pos\n    }\n    function abi_encode_tuple_t_array$_t_uint256_$dyn_memory_ptr__to_t_array$_t_uint256_$dyn_memory_ptr__fromStack_reversed(headStart, value0) -> tail\n    {\n        mstore(headStart, 32)\n        tail := abi_encode_array_uint256_dyn(value0, add(headStart, 32))\n    }\n    function abi_decode_tuple_t_addresst_bytes_memory_ptr(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        let offset := calldataload(add(headStart, 32))\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value1 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function abi_decode_enum_AdminActionReason(offset) -> value\n    {\n        value := calldataload(offset)\n        if iszero(lt(value, 5)) { revert(0, 0) }\n    }\n    function abi_decode_tuple_t_uint256t_uint256t_enum$_AdminActionReason_$8937(headStart, dataEnd) -> value0, value1, value2\n    {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n        value0 := calldataload(headStart)\n        value1 := calldataload(add(headStart, 32))\n        value2 := abi_decode_enum_AdminActionReason(add(headStart, 64))\n    }\n    function abi_encode_tuple_t_uint8__to_t_uint8__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, 0xff))\n    }\n    function abi_encode_address(value, pos)\n    {\n        mstore(pos, and(value, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_address_t_uint256_t_uint256_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr__to_t_address_t_uint256_t_uint256_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr__fromStack_reversed(headStart, value5, value4, value3, value2, value1, value0) -> tail\n    {\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), 192)\n        let tail_1 := abi_encode_string(value3, add(headStart, 192))\n        mstore(add(headStart, 128), sub(tail_1, headStart))\n        let tail_2 := abi_encode_string(value4, tail_1)\n        mstore(add(headStart, 160), sub(tail_2, headStart))\n        tail := abi_encode_string(value5, tail_2)\n    }\n    function abi_encode_tuple_t_string_memory_ptr_t_uint256_t_uint256_t_uint256_t_uint256__to_t_string_memory_ptr_t_uint256_t_uint256_t_uint256_t_uint256__fromStack_reversed(headStart, value4, value3, value2, value1, value0) -> tail\n    {\n        mstore(headStart, 160)\n        tail := abi_encode_string(value0, add(headStart, 160))\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), value3)\n        mstore(add(headStart, 128), value4)\n    }\n    function abi_decode_tuple_t_array$_t_struct$_VintageData_$8918_memory_ptr_$dyn_memory_ptr(headStart, dataEnd) -> value0\n    {\n        let _1 := 32\n        if slt(sub(dataEnd, headStart), _1) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _2 := sub(shl(64, 1), 1)\n        if gt(offset, _2) { revert(0, 0) }\n        let _3 := add(headStart, offset)\n        if iszero(slt(add(_3, 0x1f), dataEnd)) { revert(0, 0) }\n        let _4 := calldataload(_3)\n        let _5 := array_allocation_size_array_address_dyn(_4)\n        let _6 := 64\n        let memPtr := mload(_6)\n        finalize_allocation(memPtr, _5)\n        let dst := memPtr\n        mstore(memPtr, _4)\n        dst := add(memPtr, _1)\n        let srcEnd := add(add(_3, shl(5, _4)), _1)\n        if gt(srcEnd, dataEnd) { revert(0, 0) }\n        let src := add(_3, _1)\n        for { } lt(src, srcEnd) { src := add(src, _1) }\n        {\n            let innerOffset := calldataload(src)\n            if gt(innerOffset, _2)\n            {\n                let _7 := 0\n                revert(_7, _7)\n            }\n            let _8 := add(_3, innerOffset)\n            let _9 := 0xa0\n            if slt(add(sub(dataEnd, _8), not(31)), _9)\n            {\n                let _10 := 0\n                revert(_10, _10)\n            }\n            let memPtr_1 := mload(_6)\n            finalize_allocation_6658(memPtr_1)\n            let offset_1 := calldataload(add(_8, _1))\n            if gt(offset_1, _2)\n            {\n                let _11 := 0\n                revert(_11, _11)\n            }\n            mstore(memPtr_1, abi_decode_string(add(add(_8, offset_1), _1), dataEnd))\n            mstore(add(memPtr_1, _1), calldataload(add(_8, _6)))\n            let _12 := 96\n            mstore(add(memPtr_1, _6), calldataload(add(_8, _12)))\n            let _13 := 128\n            mstore(add(memPtr_1, _12), calldataload(add(_8, _13)))\n            mstore(add(memPtr_1, _13), calldataload(add(_8, _9)))\n            mstore(dst, memPtr_1)\n            dst := add(dst, _1)\n        }\n        value0 := memPtr\n    }\n    function abi_decode_uint8(offset) -> value\n    {\n        value := calldataload(offset)\n        if iszero(eq(value, and(value, 0xff))) { revert(0, 0) }\n    }\n    function abi_decode_tuple_t_uint8(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := abi_decode_uint8(headStart)\n    }\n    function abi_decode_tuple_t_uint256t_uint256t_uint256t_string_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3\n    {\n        if slt(sub(dataEnd, headStart), 128) { revert(0, 0) }\n        value0 := calldataload(headStart)\n        value1 := calldataload(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        let offset := calldataload(add(headStart, 96))\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function abi_decode_tuple_t_addresst_bool(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        let value := calldataload(add(headStart, 32))\n        if iszero(eq(value, iszero(iszero(value)))) { revert(0, 0) }\n        value1 := value\n    }\n    function abi_encode_tuple_t_address__to_t_address__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n    }\n    function abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8955_calldata_ptrt_string_memory_ptrt_string_memory_ptrt_string_memory_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4, value5, value6\n    {\n        if slt(sub(dataEnd, headStart), 192) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        let value0_1, value1_1 := abi_decode_bytes_calldata(add(headStart, offset), dataEnd)\n        value0 := value0_1\n        value1 := value1_1\n        let offset_1 := calldataload(add(headStart, 32))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value2 := abi_decode_struct_signatureTransferPayload_calldata(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 64))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset_2), dataEnd)\n        let offset_3 := calldataload(add(headStart, 96))\n        if gt(offset_3, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_3), dataEnd)\n        let offset_4 := calldataload(add(headStart, 128))\n        if gt(offset_4, _1) { revert(0, 0) }\n        value5 := abi_decode_string(add(headStart, offset_4), dataEnd)\n        let offset_5 := calldataload(add(headStart, 160))\n        if gt(offset_5, _1) { revert(0, 0) }\n        value6 := abi_decode_string(add(headStart, offset_5), dataEnd)\n    }\n    function abi_decode_tuple_t_addresst_uint8t_uint256t_string_memory_ptrt_string_memory_ptrt_string_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4, value5\n    {\n        if slt(sub(dataEnd, headStart), 192) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_uint8(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        let offset := calldataload(add(headStart, 96))\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset), dataEnd)\n        let offset_1 := calldataload(add(headStart, 128))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 160))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value5 := abi_decode_string(add(headStart, offset_2), dataEnd)\n    }\n    function abi_encode_tuple_t_bytes4__to_t_bytes4__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, shl(224, 0xffffffff)))\n    }\n    function abi_encode_tuple_t_uint32__to_t_uint32__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, 0xffffffff))\n    }\n    function abi_decode_tuple_t_addresst_addresst_uint256t_uint256t_enum$_AdminActionReason_$8937(headStart, dataEnd) -> value0, value1, value2, value3, value4\n    {\n        if slt(sub(dataEnd, headStart), 160) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        value3 := calldataload(add(headStart, 96))\n        value4 := abi_decode_enum_AdminActionReason(add(headStart, 128))\n    }\n    function abi_decode_tuple_t_bytes_calldata_ptrt_struct$_signatureTransferPayload_$8955_calldata_ptrt_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3\n    {\n        if slt(sub(dataEnd, headStart), 96) { revert(0, 0) }\n        let offset := calldataload(headStart)\n        let _1 := sub(shl(64, 1), 1)\n        if gt(offset, _1) { revert(0, 0) }\n        let value0_1, value1_1 := abi_decode_bytes_calldata(add(headStart, offset), dataEnd)\n        value0 := value0_1\n        value1 := value1_1\n        let offset_1 := calldataload(add(headStart, 32))\n        if gt(offset_1, _1) { revert(0, 0) }\n        value2 := abi_decode_struct_signatureTransferPayload_calldata(add(headStart, offset_1), dataEnd)\n        let offset_2 := calldataload(add(headStart, 64))\n        if gt(offset_2, _1) { revert(0, 0) }\n        value3 := abi_decode_string(add(headStart, offset_2), dataEnd)\n    }\n    function abi_decode_tuple_t_addresst_address(headStart, dataEnd) -> value0, value1\n    {\n        if slt(sub(dataEnd, headStart), 64) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n    }\n    function abi_decode_tuple_t_addresst_addresst_uint256t_uint256t_bytes_memory_ptr(headStart, dataEnd) -> value0, value1, value2, value3, value4\n    {\n        if slt(sub(dataEnd, headStart), 160) { revert(0, 0) }\n        value0 := abi_decode_address(headStart)\n        value1 := abi_decode_address(add(headStart, 32))\n        value2 := calldataload(add(headStart, 64))\n        value3 := calldataload(add(headStart, 96))\n        let offset := calldataload(add(headStart, 128))\n        if gt(offset, sub(shl(64, 1), 1)) { revert(0, 0) }\n        value4 := abi_decode_string(add(headStart, offset), dataEnd)\n    }\n    function abi_encode_tuple_t_stringliteral_415a1b99e1fd4a18cf87c08995f5a9130182e8d76e9c17c497bfebaaef9265ad__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 42)\n        mstore(add(headStart, 64), \"ERC1155: address zero is not a v\")\n        mstore(add(headStart, 96), \"alid owner\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_7a2a4e26842155ea933fe6eb6e3137eb5a296dcdf55721c552be7b4c3cc23759__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 46)\n        mstore(add(headStart, 64), \"Initializable: contract is alrea\")\n        mstore(add(headStart, 96), \"dy initialized\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_rational_1_by_1__to_t_uint8__fromStack_reversed(headStart, value0) -> tail\n    {\n        tail := add(headStart, 32)\n        mstore(headStart, and(value0, 0xff))\n    }\n    function abi_encode_tuple_t_stringliteral_c89efdaa54c0f20c7adf612882df0950f5a951637e0307cdcb4c672f298b8bc6__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"1\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_d2f8f61201b2b11a78d6e866abc9c3db2ae8631fa656bfe5cb53668255367afb__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"9\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_1a192fabce13988b84994d4296e6cdc418d55e2f1d7f942188d4040b94fc57ac__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 2)\n        mstore(add(headStart, 64), \"10\")\n        tail := add(headStart, 96)\n    }\n    function panic_error_0x32()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x32)\n        revert(0, 0x24)\n    }\n    function panic_error_0x11()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x11)\n        revert(0, 0x24)\n    }\n    function checked_mul_t_uint256(x, y) -> product\n    {\n        if and(iszero(iszero(x)), gt(y, div(not(0), x))) { panic_error_0x11() }\n        product := mul(x, y)\n    }\n    function checked_div_t_uint256(x, y) -> r\n    {\n        if iszero(y)\n        {\n            mstore(0, shl(224, 0x4e487b71))\n            mstore(4, 0x12)\n            revert(0, 0x24)\n        }\n        r := div(x, y)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256__to_t_uint256_t_uint256__fromStack_reversed(headStart, value1, value0) -> tail\n    {\n        tail := add(headStart, 64)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n    }\n    function increment_t_uint256(value) -> ret\n    {\n        if eq(value, not(0)) { panic_error_0x11() }\n        ret := add(value, 1)\n    }\n    function extract_byte_array_length(data) -> length\n    {\n        length := shr(1, data)\n        let outOfPlaceEncoding := and(data, 1)\n        if iszero(outOfPlaceEncoding) { length := and(length, 0x7f) }\n        if eq(outOfPlaceEncoding, lt(length, 32))\n        {\n            mstore(0, shl(224, 0x4e487b71))\n            mstore(4, 0x22)\n            revert(0, 0x24)\n        }\n    }\n    function checked_sub_t_uint256(x, y) -> diff\n    {\n        if lt(x, y) { panic_error_0x11() }\n        diff := sub(x, y)\n    }\n    function checked_add_t_uint256(x, y) -> sum\n    {\n        if gt(x, not(y)) { panic_error_0x11() }\n        sum := add(x, y)\n    }\n    function abi_encode_tuple_t_stringliteral_ceebf77a833b30520287ddd9478ff51abbdffa30aa90a8d655dba0e8a79ce0c1__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"5\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_bytes_calldata(start, length, pos) -> end\n    {\n        mstore(pos, length)\n        calldatacopy(add(pos, 0x20), start, length)\n        mstore(add(add(pos, length), 0x20), 0)\n        end := add(add(pos, and(add(length, 31), not(31))), 0x20)\n    }\n    function abi_encode_tuple_t_bytes_calldata_ptr_t_struct$_signatureTransferPayload_$8955_calldata_ptr__to_t_bytes_memory_ptr_t_struct$_signatureTransferPayload_$8955_memory_ptr__fromStack_reversed(headStart, value2, value1, value0) -> tail\n    {\n        mstore(headStart, 64)\n        let tail_1 := abi_encode_bytes_calldata(value0, value1, add(headStart, 64))\n        mstore(add(headStart, 32), sub(tail_1, headStart))\n        mstore(tail_1, calldataload(value2))\n        let rel_offset_of_tail := calldataload(add(value2, 32))\n        if iszero(slt(rel_offset_of_tail, add(sub(calldatasize(), value2), not(30)))) { revert(0, 0) }\n        let value := add(rel_offset_of_tail, value2)\n        let length := calldataload(value)\n        if gt(length, sub(shl(64, 1), 1)) { revert(0, 0) }\n        if sgt(value2, sub(calldatasize(), length)) { revert(0, 0) }\n        mstore(add(tail_1, 32), 0xe0)\n        let tail_2 := abi_encode_bytes_calldata(add(value, 32), length, add(tail_1, 0xe0))\n        let memberValue0 := abi_decode_address(add(value2, 64))\n        abi_encode_address(memberValue0, add(tail_1, 64))\n        let memberValue0_1 := abi_decode_address(add(value2, 0x60))\n        abi_encode_address(memberValue0_1, add(tail_1, 0x60))\n        mstore(add(tail_1, 0x80), calldataload(add(value2, 0x80)))\n        mstore(add(tail_1, 0xa0), calldataload(add(value2, 0xa0)))\n        mstore(add(tail_1, 0xc0), calldataload(add(value2, 0xc0)))\n        tail := tail_2\n    }\n    function access_calldata_tail_t_string_calldata_ptr(base_ref, ptr_to_tail) -> addr, length\n    {\n        let rel_offset_of_tail := calldataload(ptr_to_tail)\n        if iszero(slt(rel_offset_of_tail, add(sub(calldatasize(), base_ref), not(30)))) { revert(0, 0) }\n        let addr_1 := add(base_ref, rel_offset_of_tail)\n        length := calldataload(addr_1)\n        if gt(length, sub(shl(64, 1), 1)) { revert(0, 0) }\n        addr := add(addr_1, 0x20)\n        if sgt(addr, sub(calldatasize(), length)) { revert(0, 0) }\n    }\n    function abi_encode_tuple_packed_t_string_calldata_ptr__to_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed(pos, value1, value0) -> end\n    {\n        calldatacopy(pos, value0, value1)\n        let _1 := add(pos, value1)\n        mstore(_1, 0)\n        end := _1\n    }\n    function abi_encode_tuple_t_bytes32_t_uint256_t_bytes32_t_address_t_address_t_uint256_t_uint256_t_uint32__to_t_bytes32_t_uint256_t_bytes32_t_address_t_address_t_uint256_t_uint256_t_uint32__fromStack_reversed(headStart, value7, value6, value5, value4, value3, value2, value1, value0) -> tail\n    {\n        tail := add(headStart, 256)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        let _1 := sub(shl(160, 1), 1)\n        mstore(add(headStart, 96), and(value3, _1))\n        mstore(add(headStart, 128), and(value4, _1))\n        mstore(add(headStart, 160), value5)\n        mstore(add(headStart, 192), value6)\n        mstore(add(headStart, 224), and(value7, 0xffffffff))\n    }\n    function increment_t_uint32(value) -> ret\n    {\n        let _1 := 0xffffffff\n        let value_1 := and(value, _1)\n        if eq(value_1, _1) { panic_error_0x11() }\n        ret := add(value_1, 1)\n    }\n    function abi_encode_tuple_t_uint256_t_string_memory_ptr_t_bytes_memory_ptr__to_t_uint256_t_string_memory_ptr_t_bytes_memory_ptr__fromStack_reversed(headStart, value2, value1, value0) -> tail\n    {\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), 96)\n        let tail_1 := abi_encode_string(value1, add(headStart, 96))\n        mstore(add(headStart, 64), sub(tail_1, headStart))\n        tail := abi_encode_string(value2, tail_1)\n    }\n    function abi_encode_tuple_t_stringliteral_47c72b42072ed6c647dec3a0a5c88bec44d3e901c64659bff94ecce0a0323156__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 46)\n        mstore(add(headStart, 64), \"ERC1155: caller is not token own\")\n        mstore(add(headStart, 96), \"er or approved\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_fb06fa8ff2141e8ed74502f6792273793f25f0e9d3cf15344f3f5a0d4948fd4b__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 47)\n        mstore(add(headStart, 64), \"AccessControl: can only renounce\")\n        mstore(add(headStart, 96), \" roles for self\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_36e108fa7a809b52ab1951dd91c117a7bc9ac5250bdf1aa162d4e104f7edf9eb__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 44)\n        mstore(add(headStart, 64), \"Function must be called through \")\n        mstore(add(headStart, 96), \"delegatecall\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_52f1ead4d9653e13afbd2e90ef2587c30187cd50b2e97d784e3f7a7541247434__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 44)\n        mstore(add(headStart, 64), \"Function must be called through \")\n        mstore(add(headStart, 96), \"active proxy\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_e455bf8ea6e7463a1046a0b52804526e119b4bf5136279614e0b1e8e296a4e2d__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"6\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_52f1a9b320cab38e5da8a8f97989383aab0a49165fc91c737310e4f7e9821021__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"7\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_e4b1702d9298fee62dfeccc57d322a463ad55ca201256d01f62b45b2e1c21c10__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"8\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256_t_uint256_t_uint256_t_string_memory_ptr__to_t_uint256_t_uint256_t_uint256_t_uint256_t_string_memory_ptr__fromStack_reversed(headStart, value4, value3, value2, value1, value0) -> tail\n    {\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), value3)\n        mstore(add(headStart, 128), 160)\n        tail := abi_encode_string(value4, add(headStart, 160))\n    }\n    function abi_encode_tuple_t_stringliteral_e155f5d69798c6205436a388a4f3a5fd42f54147b40f4d63a2c8071ff8a9fee5__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 41)\n        mstore(add(headStart, 64), \"ERC1155: accounts and ids length\")\n        mstore(add(headStart, 96), \" mismatch\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_67f0151b4ad1dcfa0e3302a0cd6019f51582ef1807b37dceb00bd852a514f7f4__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 56)\n        mstore(add(headStart, 64), \"UUPSUpgradeable: must not be cal\")\n        mstore(add(headStart, 96), \"led through delegatecall\")\n        tail := add(headStart, 128)\n    }\n    function panic_error_0x21()\n    {\n        mstore(0, shl(224, 0x4e487b71))\n        mstore(4, 0x21)\n        revert(0, 0x24)\n    }\n    function abi_encode_tuple_t_stringliteral_13600b294191fc92924bb3ce4b969c1e7e2bab8f4c93c3fc6d0a51733df3c060__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"4\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_packed_t_string_memory_ptr__to_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed(pos, value0) -> end\n    {\n        let length := mload(value0)\n        copy_memory_to_memory(add(value0, 0x20), pos, length)\n        end := add(pos, length)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256_t_uint256_t_string_memory_ptr__to_t_uint256_t_uint256_t_uint256_t_string_memory_ptr__fromStack_reversed(headStart, value3, value2, value1, value0) -> tail\n    {\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), 128)\n        tail := abi_encode_string(value3, add(headStart, 128))\n    }\n    function abi_encode_tuple_t_address_t_uint256__to_t_address_t_uint256__fromStack_reversed(headStart, value1, value0) -> tail\n    {\n        tail := add(headStart, 64)\n        mstore(headStart, and(value0, sub(shl(160, 1), 1)))\n        mstore(add(headStart, 32), value1)\n    }\n    function abi_encode_tuple_t_stringliteral_d688db918bb9dd50354922faa108595679886fe9ff08046ad1ffe30aaea55f8b__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 43)\n        mstore(add(headStart, 64), \"Initializable: contract is not i\")\n        mstore(add(headStart, 96), \"nitializing\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_87fd4aee52f5758d127cd9704d5ffef70f36ed1e87eb99b6f40e37a25c79a76a__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 35)\n        mstore(add(headStart, 64), \"ERC1155: burn from the zero addr\")\n        mstore(add(headStart, 96), \"ess\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_294a5de01910e2350ff231c633ae2d453ed6b1b72c75506234b7aace63eae685__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 36)\n        mstore(add(headStart, 64), \"ERC1155: burn amount exceeds bal\")\n        mstore(add(headStart, 96), \"ance\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_6faf1c67f278b07c6771dcf4c315a89c21c0eaed11d9ab3d51774da1cfef545d__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 37)\n        mstore(add(headStart, 64), \"ERC1155: transfer to the zero ad\")\n        mstore(add(headStart, 96), \"dress\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_8ac7e9556b567c1c94bb4daaa3c3a65be5ac686579615210cb910fb8cb8d65bf__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 42)\n        mstore(add(headStart, 64), \"ERC1155: insufficient balance fo\")\n        mstore(add(headStart, 96), \"r transfer\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_ebf031a1b7ee1d0b3a7752b450a3268e8b6c334561b48c1c0ba0f5bac05749f2__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 33)\n        mstore(add(headStart, 64), \"ERC1155: mint to the zero addres\")\n        mstore(add(headStart, 96), \"s\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_4f2d7dfcb27c0aafa13ae8c400de482c7832204d194018b6e45bd2bf244c74e7__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 17)\n        mstore(add(headStart, 64), \"Invalid signature\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_99132f8bb903a5d9600420e3899938d8bfd8aa30795f8fee460656e87dd9c517__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 17)\n        mstore(add(headStart, 64), \"Signature expired\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_uint256_t_uint256_t_bytes_memory_ptr__to_t_uint256_t_uint256_t_bytes_memory_ptr__fromStack_reversed(headStart, value2, value1, value0) -> tail\n    {\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), 96)\n        tail := abi_encode_string(value2, add(headStart, 96))\n    }\n    function abi_encode_tuple_t_stringliteral_e909e0c9a8f96b4f9af03b716811ece20beb070be416893ed1d50619b5930807__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 40)\n        mstore(add(headStart, 64), \"ERC1155: ids and amounts length \")\n        mstore(add(headStart, 96), \"mismatch\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr__to_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr__fromStack_reversed(headStart, value1, value0) -> tail\n    {\n        mstore(headStart, 64)\n        let tail_1 := abi_encode_array_uint256_dyn(value0, add(headStart, 64))\n        mstore(add(headStart, 32), sub(tail_1, headStart))\n        tail := abi_encode_array_uint256_dyn(value1, tail_1)\n    }\n    function abi_decode_tuple_t_bytes32_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        value0 := mload(headStart)\n    }\n    function abi_encode_tuple_t_stringliteral_8e8e2fbcb586f700b5b14e2c4a650c8d83b9773c31c5fe8962070ea544e11f24__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 46)\n        mstore(add(headStart, 64), \"ERC1967Upgrade: new implementati\")\n        mstore(add(headStart, 96), \"on is not UUPS\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_76b6b6debfc5febf101145a79ecf0b0d2e89e397dfdab2bca99888370411152c__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 41)\n        mstore(add(headStart, 64), \"ERC1967Upgrade: unsupported prox\")\n        mstore(add(headStart, 96), \"iableUUID\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_df9806c6dc743de602e49918a67b580590d69ab768bdb59f977c0a884a91a7c2__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 41)\n        mstore(add(headStart, 64), \"ERC1155: setting approval status\")\n        mstore(add(headStart, 96), \" for self\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_packed_t_stringliteral_da0d07ce4a2849fbfc4cb9d6f939e9bd93016c372ca4a5ff14fe06caf3d67874_t_string_memory_ptr_t_stringliteral_f986ce851518a691bccd44ea42a5a185d1b866ef6cb07984a09b81694d20ab69_t_string_memory_ptr__to_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr_t_string_memory_ptr__nonPadded_inplace_fromStack_reversed(pos, value1, value0) -> end\n    {\n        mstore(pos, \"AccessControl: account \")\n        let length := mload(value0)\n        copy_memory_to_memory(add(value0, 0x20), add(pos, 23), length)\n        let _1 := add(pos, length)\n        mstore(add(_1, 23), \" is missing role \")\n        let length_1 := mload(value1)\n        copy_memory_to_memory(add(value1, 0x20), add(_1, 40), length_1)\n        end := add(add(_1, length_1), 40)\n    }\n    function abi_encode_tuple_t_stringliteral_044852b2a670ade5407e78fb2863c51de9fcb96542a07186fe3aeda6bb8a116d__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 1)\n        mstore(add(headStart, 64), \"0\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_7880aec93413f117ef14bd4e6d130875ab2c7d7d55a064fac3c2f7bd51516380__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 2)\n        mstore(add(headStart, 64), \"11\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__to_t_address_t_address_t_uint256_t_uint256_t_bytes_memory_ptr__fromStack_reversed(headStart, value4, value3, value2, value1, value0) -> tail\n    {\n        let _1 := sub(shl(160, 1), 1)\n        mstore(headStart, and(value0, _1))\n        mstore(add(headStart, 32), and(value1, _1))\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), value3)\n        mstore(add(headStart, 128), 160)\n        tail := abi_encode_string(value4, add(headStart, 160))\n    }\n    function abi_decode_tuple_t_bytes4_fromMemory(headStart, dataEnd) -> value0\n    {\n        if slt(sub(dataEnd, headStart), 32) { revert(0, 0) }\n        let value := mload(headStart)\n        validator_revert_bytes4(value)\n        value0 := value\n    }\n    function return_data_selector() -> sig\n    {\n        if gt(returndatasize(), 3)\n        {\n            returndatacopy(0, 0, 4)\n            sig := shr(224, mload(0))\n        }\n    }\n    function try_decode_error_message() -> ret\n    {\n        if lt(returndatasize(), 0x44) { leave }\n        let data := mload(64)\n        let _1 := not(3)\n        returndatacopy(data, 4, add(returndatasize(), _1))\n        let offset := mload(data)\n        let _2 := returndatasize()\n        let _3 := sub(shl(64, 1), 1)\n        if or(gt(offset, _3), gt(add(offset, 0x24), _2)) { leave }\n        let msg := add(data, offset)\n        let length := mload(msg)\n        if gt(length, _3) { leave }\n        if gt(add(add(msg, length), 0x20), add(add(data, returndatasize()), _1)) { leave }\n        finalize_allocation(data, add(add(offset, length), 0x20))\n        ret := msg\n    }\n    function abi_encode_tuple_t_stringliteral_f591f7b75ffc499e05f8b34c3364b2eceff651378d9549db1d5d67c0d8255c5d__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 52)\n        mstore(add(headStart, 64), \"ERC1155: transfer to non-ERC1155\")\n        mstore(add(headStart, 96), \"Receiver implementer\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_0587cccad73a80a7f013db13c596f4febc1968dc77e1d3589d5e7a509a3d6503__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 40)\n        mstore(add(headStart, 64), \"ERC1155: ERC1155Receiver rejecte\")\n        mstore(add(headStart, 96), \"d tokens\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_packed_t_stringliteral_301a50b291d33ce1e8e9064e3f6a6c51d902ec22892b50d58abf6357c6a45541_t_bytes32_t_bytes32__to_t_string_memory_ptr_t_bytes32_t_bytes32__nonPadded_inplace_fromStack_reversed(pos, value1, value0) -> end\n    {\n        mstore(pos, shl(240, 6401))\n        mstore(add(pos, 2), value0)\n        mstore(add(pos, 34), value1)\n        end := add(pos, 66)\n    }\n    function abi_encode_tuple_t_address_t_address_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr_t_bytes_memory_ptr__to_t_address_t_address_t_array$_t_uint256_$dyn_memory_ptr_t_array$_t_uint256_$dyn_memory_ptr_t_bytes_memory_ptr__fromStack_reversed(headStart, value4, value3, value2, value1, value0) -> tail\n    {\n        let _1 := sub(shl(160, 1), 1)\n        mstore(headStart, and(value0, _1))\n        mstore(add(headStart, 32), and(value1, _1))\n        mstore(add(headStart, 64), 160)\n        let tail_1 := abi_encode_array_uint256_dyn(value2, add(headStart, 160))\n        mstore(add(headStart, 96), sub(tail_1, headStart))\n        let tail_2 := abi_encode_array_uint256_dyn(value3, tail_1)\n        mstore(add(headStart, 128), sub(tail_2, headStart))\n        tail := abi_encode_string(value4, tail_2)\n    }\n    function abi_encode_tuple_t_stringliteral_972b7028e8de0bff0d553b3264eba2312ec98a552add05e58853b313f9f4ac65__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 45)\n        mstore(add(headStart, 64), \"ERC1967: new implementation is n\")\n        mstore(add(headStart, 96), \"ot a contract\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_0d1d997348c4b502650619e51f7d09f80514d98b6993be5051d07f703984619a__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 20)\n        mstore(add(headStart, 64), \"Pausable: not paused\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_68571e1369f7a6dcdcd736cb0343b35a58ed0f64d245c2ed839c98d412744f8a__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 16)\n        mstore(add(headStart, 64), \"Pausable: paused\")\n        tail := add(headStart, 96)\n    }\n    function decrement_t_uint256(value) -> ret\n    {\n        if iszero(value) { panic_error_0x11() }\n        ret := add(value, not(0))\n    }\n    function abi_encode_tuple_t_stringliteral_04fc88320d7c9f639317c75102c103ff0044d3075a5c627e24e76e5bbb2733c2__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 32)\n        mstore(add(headStart, 64), \"Strings: hex length insufficient\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_9eb0869d69143813ac9f244871191d8f2e530e71a4599ba9db4501f0f6110ee4__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 40)\n        mstore(add(headStart, 64), \"ERC1155: burn amount exceeds tot\")\n        mstore(add(headStart, 96), \"alSupply\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_bytes32_t_bytes32_t_bytes32_t_uint256_t_address__to_t_bytes32_t_bytes32_t_bytes32_t_uint256_t_address__fromStack_reversed(headStart, value4, value3, value2, value1, value0) -> tail\n    {\n        tail := add(headStart, 160)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), value1)\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), value3)\n        mstore(add(headStart, 128), and(value4, sub(shl(160, 1), 1)))\n    }\n    function abi_encode_tuple_t_stringliteral_00043f6bf76368aa97c21698e9b9d4779e31902453daccf3525ddfb36e53e2be__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 24)\n        mstore(add(headStart, 64), \"ECDSA: invalid signature\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_1669ff3ba3cdf64474e1193492d05b8434e29b0b495e60095eb5f5c8ec14ce77__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 31)\n        mstore(add(headStart, 64), \"ECDSA: invalid signature length\")\n        tail := add(headStart, 96)\n    }\n    function abi_encode_tuple_t_stringliteral_520d1f787dbcafbbfc007fd2c4ecf3d2711ec587f3ee9a1215c0b646c3e530bd__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 34)\n        mstore(add(headStart, 64), \"ECDSA: invalid signature 's' val\")\n        mstore(add(headStart, 96), \"ue\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_t_stringliteral_b94ded0918034cf8f896e19fa3cfdef1188cd569c577264a3622e49152f88520__to_t_string_memory_ptr__fromStack_reversed(headStart) -> tail\n    {\n        mstore(headStart, 32)\n        mstore(add(headStart, 32), 38)\n        mstore(add(headStart, 64), \"Address: delegate call to non-co\")\n        mstore(add(headStart, 96), \"ntract\")\n        tail := add(headStart, 128)\n    }\n    function abi_encode_tuple_packed_t_bytes_memory_ptr__to_t_bytes_memory_ptr__nonPadded_inplace_fromStack_reversed(pos, value0) -> end\n    {\n        let length := mload(value0)\n        copy_memory_to_memory(add(value0, 0x20), pos, length)\n        end := add(pos, length)\n    }\n    function abi_encode_tuple_t_bytes32_t_uint8_t_bytes32_t_bytes32__to_t_bytes32_t_uint8_t_bytes32_t_bytes32__fromStack_reversed(headStart, value3, value2, value1, value0) -> tail\n    {\n        tail := add(headStart, 128)\n        mstore(headStart, value0)\n        mstore(add(headStart, 32), and(value1, 0xff))\n        mstore(add(headStart, 64), value2)\n        mstore(add(headStart, 96), value3)\n    }\n}",
       "id": 50,
       "language": "Yul",
       "name": "#utility.yul"
@@ -40553,7 +40553,7 @@
         3238
       ],
       "AdminActionReason": [
-        8753
+        8937
       ],
       "ContextUpgradeable": [
         3280
@@ -40562,10 +40562,10 @@
         5929
       ],
       "CustomSignaturesTypes": [
-        8781
+        8965
       ],
       "CustomSignaturesUpgradeable": [
-        8926
+        9110
       ],
       "ECDSAUpgradeable": [
         3876
@@ -40631,7 +40631,7 @@
         7910
       ],
       "ProjectData": [
-        8723
+        8907
       ],
       "ProjectStorage": [
         7998
@@ -40643,10 +40643,10 @@
         7954
       ],
       "ProjectTypes": [
-        8754
+        8938
       ],
       "RetirementData": [
-        8747
+        8931
       ],
       "StorageSlotUpgradeable": [
         3340
@@ -40658,13 +40658,13 @@
         1102
       ],
       "VintageData": [
-        8734
+        8918
       ],
       "signatureGenericPayload": [
-        8780
+        8964
       ],
       "signatureTransferPayload": [
-        8771
+        8955
       ]
     },
     "id": 7911,
@@ -40797,7 +40797,7 @@
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
         "scope": 7911,
-        "sourceUnit": 8927,
+        "sourceUnit": 9111,
         "src": "735:49:37",
         "symbolAliases": [],
         "unitAlias": ""
@@ -40906,7 +40906,7 @@
               "id": 6628,
               "name": "CustomSignaturesUpgradeable",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 8926,
+              "referencedDeclaration": 9110,
               "src": "985:27:37"
             },
             "id": 6629,
@@ -40951,7 +40951,7 @@
           7998,
           7954,
           7950,
-          8926,
+          9110,
           4026,
           1102,
           787,
@@ -42181,7 +42181,7 @@
                       "name": "__CustomSignatures_init",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 8814,
+                      "referencedDeclaration": 8998,
                       "src": "2257:23:37",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_internal_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$returns$__$",
@@ -44016,7 +44016,7 @@
                                     "referencedDeclaration": 7932,
                                     "src": "3348:20:37",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8734_storage_$",
+                                      "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8918_storage_$",
                                       "typeString": "mapping(uint256 => struct VintageData storage ref)"
                                     }
                                   },
@@ -44040,7 +44040,7 @@
                                   "nodeType": "IndexAccess",
                                   "src": "3348:29:37",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_VintageData_$8734_storage",
+                                    "typeIdentifier": "t_struct$_VintageData_$8918_storage",
                                     "typeString": "struct VintageData storage ref"
                                   }
                                 },
@@ -44051,7 +44051,7 @@
                                 "lValueRequested": false,
                                 "memberName": "lastVerificationTimestamp",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 8733,
+                                "referencedDeclaration": 8917,
                                 "src": "3348:55:37",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
@@ -44070,7 +44070,7 @@
                                     "referencedDeclaration": 7932,
                                     "src": "3411:20:37",
                                     "typeDescriptions": {
-                                      "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8734_storage_$",
+                                      "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8918_storage_$",
                                       "typeString": "mapping(uint256 => struct VintageData storage ref)"
                                     }
                                   },
@@ -44094,7 +44094,7 @@
                                   "nodeType": "IndexAccess",
                                   "src": "3411:29:37",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_struct$_VintageData_$8734_storage",
+                                    "typeIdentifier": "t_struct$_VintageData_$8918_storage",
                                     "typeString": "struct VintageData storage ref"
                                   }
                                 },
@@ -44105,7 +44105,7 @@
                                 "lValueRequested": false,
                                 "memberName": "verificationPeriodEnd",
                                 "nodeType": "MemberAccess",
-                                "referencedDeclaration": 8731,
+                                "referencedDeclaration": 8915,
                                 "src": "3411:51:37",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_uint256",
@@ -44360,7 +44360,7 @@
                                 "referencedDeclaration": 7932,
                                 "src": "3616:20:37",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8734_storage_$",
+                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8918_storage_$",
                                   "typeString": "mapping(uint256 => struct VintageData storage ref)"
                                 }
                               },
@@ -44384,7 +44384,7 @@
                               "nodeType": "IndexAccess",
                               "src": "3616:29:37",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_VintageData_$8734_storage",
+                                "typeIdentifier": "t_struct$_VintageData_$8918_storage",
                                 "typeString": "struct VintageData storage ref"
                               }
                             },
@@ -44395,7 +44395,7 @@
                             "lValueRequested": false,
                             "memberName": "serialization",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 8725,
+                            "referencedDeclaration": 8909,
                             "src": "3616:43:37",
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_storage",
@@ -45021,7 +45021,7 @@
                         "referencedDeclaration": 7932,
                         "src": "4334:20:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8734_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8918_storage_$",
                           "typeString": "mapping(uint256 => struct VintageData storage ref)"
                         }
                       },
@@ -45045,7 +45045,7 @@
                       "nodeType": "IndexAccess",
                       "src": "4334:32:37",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_VintageData_$8734_storage",
+                        "typeIdentifier": "t_struct$_VintageData_$8918_storage",
                         "typeString": "struct VintageData storage ref"
                       }
                     },
@@ -45145,10 +45145,10 @@
                         "name": "VintageData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 8734,
+                        "referencedDeclaration": 8918,
                         "src": "4369:11:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_VintageData_$8734_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_VintageData_$8918_storage_ptr_$",
                           "typeString": "type(struct VintageData storage pointer)"
                         }
                       },
@@ -45163,13 +45163,13 @@
                       "src": "4369:107:37",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_VintageData_$8734_memory_ptr",
+                        "typeIdentifier": "t_struct$_VintageData_$8918_memory_ptr",
                         "typeString": "struct VintageData memory"
                       }
                     },
                     "src": "4334:142:37",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_VintageData_$8734_storage",
+                      "typeIdentifier": "t_struct$_VintageData_$8918_storage",
                       "typeString": "struct VintageData storage ref"
                     }
                   },
@@ -45484,7 +45484,7 @@
                                   "referencedDeclaration": 6970,
                                   "src": "4794:8:37",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_struct$_VintageData_$8734_memory_ptr_$dyn_memory_ptr",
+                                    "typeIdentifier": "t_array$_t_struct$_VintageData_$8918_memory_ptr_$dyn_memory_ptr",
                                     "typeString": "struct VintageData memory[] memory"
                                   }
                                 },
@@ -45508,7 +45508,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "4794:11:37",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_VintageData_$8734_memory_ptr",
+                                  "typeIdentifier": "t_struct$_VintageData_$8918_memory_ptr",
                                   "typeString": "struct VintageData memory"
                                 }
                               },
@@ -45519,7 +45519,7 @@
                               "lValueRequested": false,
                               "memberName": "estMitigations",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 8727,
+                              "referencedDeclaration": 8911,
                               "src": "4794:26:37",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -45536,7 +45536,7 @@
                                   "referencedDeclaration": 6970,
                                   "src": "4826:8:37",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_struct$_VintageData_$8734_memory_ptr_$dyn_memory_ptr",
+                                    "typeIdentifier": "t_array$_t_struct$_VintageData_$8918_memory_ptr_$dyn_memory_ptr",
                                     "typeString": "struct VintageData memory[] memory"
                                   }
                                 },
@@ -45560,7 +45560,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "4826:11:37",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_VintageData_$8734_memory_ptr",
+                                  "typeIdentifier": "t_struct$_VintageData_$8918_memory_ptr",
                                   "typeString": "struct VintageData memory"
                                 }
                               },
@@ -45571,7 +45571,7 @@
                               "lValueRequested": false,
                               "memberName": "verificationPeriodStart",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 8729,
+                              "referencedDeclaration": 8913,
                               "src": "4826:35:37",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -45588,7 +45588,7 @@
                                   "referencedDeclaration": 6970,
                                   "src": "4867:8:37",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_struct$_VintageData_$8734_memory_ptr_$dyn_memory_ptr",
+                                    "typeIdentifier": "t_array$_t_struct$_VintageData_$8918_memory_ptr_$dyn_memory_ptr",
                                     "typeString": "struct VintageData memory[] memory"
                                   }
                                 },
@@ -45612,7 +45612,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "4867:11:37",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_VintageData_$8734_memory_ptr",
+                                  "typeIdentifier": "t_struct$_VintageData_$8918_memory_ptr",
                                   "typeString": "struct VintageData memory"
                                 }
                               },
@@ -45623,7 +45623,7 @@
                               "lValueRequested": false,
                               "memberName": "verificationPeriodEnd",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 8731,
+                              "referencedDeclaration": 8915,
                               "src": "4867:33:37",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -45640,7 +45640,7 @@
                                   "referencedDeclaration": 6970,
                                   "src": "4906:8:37",
                                   "typeDescriptions": {
-                                    "typeIdentifier": "t_array$_t_struct$_VintageData_$8734_memory_ptr_$dyn_memory_ptr",
+                                    "typeIdentifier": "t_array$_t_struct$_VintageData_$8918_memory_ptr_$dyn_memory_ptr",
                                     "typeString": "struct VintageData memory[] memory"
                                   }
                                 },
@@ -45664,7 +45664,7 @@
                                 "nodeType": "IndexAccess",
                                 "src": "4906:11:37",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_VintageData_$8734_memory_ptr",
+                                  "typeIdentifier": "t_struct$_VintageData_$8918_memory_ptr",
                                   "typeString": "struct VintageData memory"
                                 }
                               },
@@ -45675,7 +45675,7 @@
                               "lValueRequested": false,
                               "memberName": "serialization",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 8725,
+                              "referencedDeclaration": 8909,
                               "src": "4906:25:37",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_string_memory_ptr",
@@ -45767,7 +45767,7 @@
                         "referencedDeclaration": 6970,
                         "src": "4742:8:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_array$_t_struct$_VintageData_$8734_memory_ptr_$dyn_memory_ptr",
+                          "typeIdentifier": "t_array$_t_struct$_VintageData_$8918_memory_ptr_$dyn_memory_ptr",
                           "typeString": "struct VintageData memory[] memory"
                         }
                       },
@@ -45933,7 +45933,7 @@
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_array$_t_struct$_VintageData_$8734_memory_ptr_$dyn_memory_ptr",
+                    "typeIdentifier": "t_array$_t_struct$_VintageData_$8918_memory_ptr_$dyn_memory_ptr",
                     "typeString": "struct VintageData[]"
                   },
                   "typeName": {
@@ -45944,13 +45944,13 @@
                         "id": 6967,
                         "name": "VintageData",
                         "nodeType": "IdentifierPath",
-                        "referencedDeclaration": 8734,
+                        "referencedDeclaration": 8918,
                         "src": "4647:11:37"
                       },
-                      "referencedDeclaration": 8734,
+                      "referencedDeclaration": 8918,
                       "src": "4647:11:37",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_VintageData_$8734_storage_ptr",
+                        "typeIdentifier": "t_struct$_VintageData_$8918_storage_ptr",
                         "typeString": "struct VintageData"
                       }
                     },
@@ -45958,7 +45958,7 @@
                     "nodeType": "ArrayTypeName",
                     "src": "4647:13:37",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_array$_t_struct$_VintageData_$8734_storage_$dyn_storage_ptr",
+                      "typeIdentifier": "t_array$_t_struct$_VintageData_$8918_storage_$dyn_storage_ptr",
                       "typeString": "struct VintageData[]"
                     }
                   },
@@ -46290,7 +46290,7 @@
                         "referencedDeclaration": 7932,
                         "src": "5393:20:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8734_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8918_storage_$",
                           "typeString": "mapping(uint256 => struct VintageData storage ref)"
                         }
                       },
@@ -46314,7 +46314,7 @@
                       "nodeType": "IndexAccess",
                       "src": "5393:35:37",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_VintageData_$8734_storage",
+                        "typeIdentifier": "t_struct$_VintageData_$8918_storage",
                         "typeString": "struct VintageData storage ref"
                       }
                     },
@@ -46325,7 +46325,7 @@
                     "lValueRequested": false,
                     "memberName": "estMitigations",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 8727,
+                    "referencedDeclaration": 8911,
                     "src": "5393:54:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -47430,7 +47430,7 @@
                             "referencedDeclaration": 7932,
                             "src": "6279:20:37",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8734_storage_$",
+                              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8918_storage_$",
                               "typeString": "mapping(uint256 => struct VintageData storage ref)"
                             }
                           },
@@ -47454,7 +47454,7 @@
                           "nodeType": "IndexAccess",
                           "src": "6279:29:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_VintageData_$8734_storage",
+                            "typeIdentifier": "t_struct$_VintageData_$8918_storage",
                             "typeString": "struct VintageData storage ref"
                           }
                         },
@@ -47465,7 +47465,7 @@
                         "lValueRequested": false,
                         "memberName": "estMitigations",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8727,
+                        "referencedDeclaration": 8911,
                         "src": "6279:44:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -47480,7 +47480,7 @@
                         "referencedDeclaration": 7125,
                         "src": "6328:6:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_AdminActionReason_$8753",
+                          "typeIdentifier": "t_enum$_AdminActionReason_$8937",
                           "typeString": "enum AdminActionReason"
                         }
                       }
@@ -47500,7 +47500,7 @@
                           "typeString": "uint256"
                         },
                         {
-                          "typeIdentifier": "t_enum$_AdminActionReason_$8753",
+                          "typeIdentifier": "t_enum$_AdminActionReason_$8937",
                           "typeString": "enum AdminActionReason"
                         }
                       ],
@@ -47511,7 +47511,7 @@
                       "referencedDeclaration": 8204,
                       "src": "6213:32:37",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_uint256_$_t_enum$_AdminActionReason_$8753_$returns$__$",
+                        "typeIdentifier": "t_function_event_nonpayable$_t_uint256_$_t_uint256_$_t_uint256_$_t_enum$_AdminActionReason_$8937_$returns$__$",
                         "typeString": "function (uint256,uint256,uint256,enum AdminActionReason)"
                       }
                     },
@@ -47551,7 +47551,7 @@
                           "referencedDeclaration": 7932,
                           "src": "6342:20:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8734_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8918_storage_$",
                             "typeString": "mapping(uint256 => struct VintageData storage ref)"
                           }
                         },
@@ -47575,7 +47575,7 @@
                         "nodeType": "IndexAccess",
                         "src": "6342:29:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_VintageData_$8734_storage",
+                          "typeIdentifier": "t_struct$_VintageData_$8918_storage",
                           "typeString": "struct VintageData storage ref"
                         }
                       },
@@ -47586,7 +47586,7 @@
                       "lValueRequested": true,
                       "memberName": "estMitigations",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 8727,
+                      "referencedDeclaration": 8911,
                       "src": "6342:44:37",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -47795,7 +47795,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_AdminActionReason_$8753",
+                    "typeIdentifier": "t_enum$_AdminActionReason_$8937",
                     "typeString": "enum AdminActionReason"
                   },
                   "typeName": {
@@ -47805,13 +47805,13 @@
                       "id": 7123,
                       "name": "AdminActionReason",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 8753,
+                      "referencedDeclaration": 8937,
                       "src": "6071:17:37"
                     },
-                    "referencedDeclaration": 8753,
+                    "referencedDeclaration": 8937,
                     "src": "6071:17:37",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_AdminActionReason_$8753",
+                      "typeIdentifier": "t_enum$_AdminActionReason_$8937",
                       "typeString": "enum AdminActionReason"
                     }
                   },
@@ -47981,7 +47981,7 @@
                               "referencedDeclaration": 7932,
                               "src": "6861:20:37",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8734_storage_$",
+                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8918_storage_$",
                                 "typeString": "mapping(uint256 => struct VintageData storage ref)"
                               }
                             },
@@ -48005,7 +48005,7 @@
                             "nodeType": "IndexAccess",
                             "src": "6861:29:37",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_VintageData_$8734_storage",
+                              "typeIdentifier": "t_struct$_VintageData_$8918_storage",
                               "typeString": "struct VintageData storage ref"
                             }
                           },
@@ -48016,7 +48016,7 @@
                           "lValueRequested": false,
                           "memberName": "verificationPeriodStart",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 8729,
+                          "referencedDeclaration": 8913,
                           "src": "6861:53:37",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -48127,7 +48127,7 @@
                               "referencedDeclaration": 7932,
                               "src": "6970:20:37",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8734_storage_$",
+                                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8918_storage_$",
                                 "typeString": "mapping(uint256 => struct VintageData storage ref)"
                               }
                             },
@@ -48151,7 +48151,7 @@
                             "nodeType": "IndexAccess",
                             "src": "6970:29:37",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_VintageData_$8734_storage",
+                              "typeIdentifier": "t_struct$_VintageData_$8918_storage",
                               "typeString": "struct VintageData storage ref"
                             }
                           },
@@ -48162,7 +48162,7 @@
                           "lValueRequested": false,
                           "memberName": "lastVerificationTimestamp",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 8733,
+                          "referencedDeclaration": 8917,
                           "src": "6970:55:37",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
@@ -48851,7 +48851,7 @@
                           "referencedDeclaration": 7932,
                           "src": "7594:20:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8734_storage_$",
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_VintageData_$8918_storage_$",
                             "typeString": "mapping(uint256 => struct VintageData storage ref)"
                           }
                         },
@@ -48875,7 +48875,7 @@
                         "nodeType": "IndexAccess",
                         "src": "7594:29:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_VintageData_$8734_storage",
+                          "typeIdentifier": "t_struct$_VintageData_$8918_storage",
                           "typeString": "struct VintageData storage ref"
                         }
                       },
@@ -48886,7 +48886,7 @@
                       "lValueRequested": true,
                       "memberName": "lastVerificationTimestamp",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 8733,
+                      "referencedDeclaration": 8917,
                       "src": "7594:59:37",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
@@ -49506,7 +49506,7 @@
                         "referencedDeclaration": 7287,
                         "src": "8043:6:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_enum$_AdminActionReason_$8753",
+                          "typeIdentifier": "t_enum$_AdminActionReason_$8937",
                           "typeString": "enum AdminActionReason"
                         }
                       }
@@ -49530,7 +49530,7 @@
                           "typeString": "uint256"
                         },
                         {
-                          "typeIdentifier": "t_enum$_AdminActionReason_$8753",
+                          "typeIdentifier": "t_enum$_AdminActionReason_$8937",
                           "typeString": "enum AdminActionReason"
                         }
                       ],
@@ -49541,7 +49541,7 @@
                       "referencedDeclaration": 8252,
                       "src": "8002:13:37",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_enum$_AdminActionReason_$8753_$returns$__$",
+                        "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_address_$_t_uint256_$_t_uint256_$_t_enum$_AdminActionReason_$8937_$returns$__$",
                         "typeString": "function (address,address,uint256,uint256,enum AdminActionReason)"
                       }
                     },
@@ -49849,7 +49849,7 @@
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_enum$_AdminActionReason_$8753",
+                    "typeIdentifier": "t_enum$_AdminActionReason_$8937",
                     "typeString": "enum AdminActionReason"
                   },
                   "typeName": {
@@ -49859,13 +49859,13 @@
                       "id": 7285,
                       "name": "AdminActionReason",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 8753,
+                      "referencedDeclaration": 8937,
                       "src": "7934:17:37"
                     },
-                    "referencedDeclaration": 8753,
+                    "referencedDeclaration": 8937,
                     "src": "7934:17:37",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_enum$_AdminActionReason_$8753",
+                      "typeIdentifier": "t_enum$_AdminActionReason_$8937",
                       "typeString": "enum AdminActionReason"
                     }
                   },
@@ -51554,7 +51554,7 @@
                           "referencedDeclaration": 7439,
                           "src": "9531:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -51565,7 +51565,7 @@
                         "lValueRequested": false,
                         "memberName": "signer",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8762,
+                        "referencedDeclaration": 8946,
                         "src": "9531:14:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -51581,7 +51581,7 @@
                           "referencedDeclaration": 7439,
                           "src": "9550:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -51592,7 +51592,7 @@
                         "lValueRequested": false,
                         "memberName": "to",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8764,
+                        "referencedDeclaration": 8948,
                         "src": "9550:10:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -51608,7 +51608,7 @@
                           "referencedDeclaration": 7439,
                           "src": "9565:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -51619,7 +51619,7 @@
                         "lValueRequested": false,
                         "memberName": "tokenId",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8766,
+                        "referencedDeclaration": 8950,
                         "src": "9565:15:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -51635,7 +51635,7 @@
                           "referencedDeclaration": 7439,
                           "src": "9585:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -51646,7 +51646,7 @@
                         "lValueRequested": false,
                         "memberName": "amount",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8768,
+                        "referencedDeclaration": 8952,
                         "src": "9585:14:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -51748,7 +51748,7 @@
                     "referencedDeclaration": 7439,
                     "src": "9496:7:37",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                       "typeString": "struct signatureTransferPayload calldata"
                     }
                   }
@@ -51759,7 +51759,7 @@
                   "id": 7443,
                   "name": "onlyValidSignatureTransfer",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 8877,
+                  "referencedDeclaration": 9061,
                   "src": "9458:26:37"
                 },
                 "nodeType": "ModifierInvocation",
@@ -51812,7 +51812,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                    "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                     "typeString": "struct signatureTransferPayload"
                   },
                   "typeName": {
@@ -51822,13 +51822,13 @@
                       "id": 7437,
                       "name": "signatureTransferPayload",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 8771,
+                      "referencedDeclaration": 8955,
                       "src": "9377:24:37"
                     },
-                    "referencedDeclaration": 8771,
+                    "referencedDeclaration": 8955,
                     "src": "9377:24:37",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_storage_ptr",
+                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_storage_ptr",
                       "typeString": "struct signatureTransferPayload"
                     }
                   },
@@ -52833,7 +52833,7 @@
                         "referencedDeclaration": 7534,
                         "src": "10584:7:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                          "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                           "typeString": "struct signatureTransferPayload calldata"
                         }
                       },
@@ -52844,7 +52844,7 @@
                       "lValueRequested": false,
                       "memberName": "signer",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 8762,
+                      "referencedDeclaration": 8946,
                       "src": "10584:14:37",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -52862,7 +52862,7 @@
                         "referencedDeclaration": 7534,
                         "src": "10602:7:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                          "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                           "typeString": "struct signatureTransferPayload calldata"
                         }
                       },
@@ -52873,7 +52873,7 @@
                       "lValueRequested": false,
                       "memberName": "to",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 8764,
+                      "referencedDeclaration": 8948,
                       "src": "10602:10:37",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
@@ -52906,7 +52906,7 @@
                                 "referencedDeclaration": 7534,
                                 "src": "10638:7:37",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                                  "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                                   "typeString": "struct signatureTransferPayload calldata"
                                 }
                               },
@@ -52917,7 +52917,7 @@
                               "lValueRequested": false,
                               "memberName": "signer",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 8762,
+                              "referencedDeclaration": 8946,
                               "src": "10638:14:37",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_address",
@@ -52933,7 +52933,7 @@
                                 "referencedDeclaration": 7534,
                                 "src": "10658:7:37",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                                  "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                                   "typeString": "struct signatureTransferPayload calldata"
                                 }
                               },
@@ -52944,7 +52944,7 @@
                               "lValueRequested": false,
                               "memberName": "tokenId",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 8766,
+                              "referencedDeclaration": 8950,
                               "src": "10658:15:37",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -52960,7 +52960,7 @@
                                 "referencedDeclaration": 7534,
                                 "src": "10679:7:37",
                                 "typeDescriptions": {
-                                  "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                                  "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                                   "typeString": "struct signatureTransferPayload calldata"
                                 }
                               },
@@ -52971,7 +52971,7 @@
                               "lValueRequested": false,
                               "memberName": "amount",
                               "nodeType": "MemberAccess",
-                              "referencedDeclaration": 8768,
+                              "referencedDeclaration": 8952,
                               "src": "10679:14:37",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
@@ -53114,7 +53114,7 @@
                             "referencedDeclaration": 7534,
                             "src": "10769:7:37",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                              "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                               "typeString": "struct signatureTransferPayload calldata"
                             }
                           },
@@ -53125,7 +53125,7 @@
                           "lValueRequested": false,
                           "memberName": "to",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 8764,
+                          "referencedDeclaration": 8948,
                           "src": "10769:10:37",
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
@@ -53253,7 +53253,7 @@
                           "referencedDeclaration": 7534,
                           "src": "10816:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -53264,7 +53264,7 @@
                         "lValueRequested": false,
                         "memberName": "signer",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8762,
+                        "referencedDeclaration": 8946,
                         "src": "10816:14:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -53280,7 +53280,7 @@
                           "referencedDeclaration": 7534,
                           "src": "10832:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -53291,7 +53291,7 @@
                         "lValueRequested": false,
                         "memberName": "to",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8764,
+                        "referencedDeclaration": 8948,
                         "src": "10832:10:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -53307,7 +53307,7 @@
                           "referencedDeclaration": 7534,
                           "src": "10844:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -53318,7 +53318,7 @@
                         "lValueRequested": false,
                         "memberName": "tokenId",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8766,
+                        "referencedDeclaration": 8950,
                         "src": "10844:15:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -53334,7 +53334,7 @@
                           "referencedDeclaration": 7534,
                           "src": "10861:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -53345,7 +53345,7 @@
                         "lValueRequested": false,
                         "memberName": "amount",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8768,
+                        "referencedDeclaration": 8952,
                         "src": "10861:14:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -53430,7 +53430,7 @@
                           "referencedDeclaration": 7534,
                           "src": "10905:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -53441,7 +53441,7 @@
                         "lValueRequested": false,
                         "memberName": "to",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8764,
+                        "referencedDeclaration": 8948,
                         "src": "10905:10:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -53457,7 +53457,7 @@
                           "referencedDeclaration": 7534,
                           "src": "10920:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -53468,7 +53468,7 @@
                         "lValueRequested": false,
                         "memberName": "tokenId",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8766,
+                        "referencedDeclaration": 8950,
                         "src": "10920:15:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -53484,7 +53484,7 @@
                           "referencedDeclaration": 7534,
                           "src": "10940:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -53495,7 +53495,7 @@
                         "lValueRequested": false,
                         "memberName": "amount",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8768,
+                        "referencedDeclaration": 8952,
                         "src": "10940:14:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -53631,7 +53631,7 @@
                       "referencedDeclaration": 7534,
                       "src": "10479:7:37",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                        "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                         "typeString": "struct signatureTransferPayload calldata"
                       }
                     },
@@ -53642,7 +53642,7 @@
                     "lValueRequested": false,
                     "memberName": "tokenId",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 8766,
+                    "referencedDeclaration": 8950,
                     "src": "10479:15:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -53684,7 +53684,7 @@
                     "referencedDeclaration": 7534,
                     "src": "10536:7:37",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                       "typeString": "struct signatureTransferPayload calldata"
                     }
                   }
@@ -53695,7 +53695,7 @@
                   "id": 7548,
                   "name": "onlyValidSignatureTransfer",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 8877,
+                  "referencedDeclaration": 9061,
                   "src": "10498:26:37"
                 },
                 "nodeType": "ModifierInvocation",
@@ -53748,7 +53748,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                    "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                     "typeString": "struct signatureTransferPayload"
                   },
                   "typeName": {
@@ -53758,13 +53758,13 @@
                       "id": 7532,
                       "name": "signatureTransferPayload",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 8771,
+                      "referencedDeclaration": 8955,
                       "src": "10305:24:37"
                     },
-                    "referencedDeclaration": 8771,
+                    "referencedDeclaration": 8955,
                     "src": "10305:24:37",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_storage_ptr",
+                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_storage_ptr",
                       "typeString": "struct signatureTransferPayload"
                     }
                   },
@@ -54623,7 +54623,7 @@
                         "referencedDeclaration": 7949,
                         "src": "11685:17:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RetirementData_$8747_storage_$",
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RetirementData_$8931_storage_$",
                           "typeString": "mapping(uint256 => struct RetirementData storage ref)"
                         }
                       },
@@ -54647,7 +54647,7 @@
                       "nodeType": "IndexAccess",
                       "src": "11685:29:37",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RetirementData_$8747_storage",
+                        "typeIdentifier": "t_struct$_RetirementData_$8931_storage",
                         "typeString": "struct RetirementData storage ref"
                       }
                     },
@@ -54759,10 +54759,10 @@
                         "name": "RetirementData",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 8747,
+                        "referencedDeclaration": 8931,
                         "src": "11717:14:37",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_RetirementData_$8747_storage_ptr_$",
+                          "typeIdentifier": "t_type$_t_struct$_RetirementData_$8931_storage_ptr_$",
                           "typeString": "type(struct RetirementData storage pointer)"
                         }
                       },
@@ -54777,13 +54777,13 @@
                       "src": "11717:95:37",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_RetirementData_$8747_memory_ptr",
+                        "typeIdentifier": "t_struct$_RetirementData_$8931_memory_ptr",
                         "typeString": "struct RetirementData memory"
                       }
                     },
                     "src": "11685:127:37",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_RetirementData_$8747_storage",
+                      "typeIdentifier": "t_struct$_RetirementData_$8931_storage",
                       "typeString": "struct RetirementData storage ref"
                     }
                   },
@@ -55155,7 +55155,7 @@
                           "referencedDeclaration": 7706,
                           "src": "12156:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -55166,7 +55166,7 @@
                         "lValueRequested": false,
                         "memberName": "signer",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8762,
+                        "referencedDeclaration": 8946,
                         "src": "12156:14:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -55182,7 +55182,7 @@
                           "referencedDeclaration": 7706,
                           "src": "12172:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -55193,7 +55193,7 @@
                         "lValueRequested": false,
                         "memberName": "tokenId",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8766,
+                        "referencedDeclaration": 8950,
                         "src": "12172:15:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -55209,7 +55209,7 @@
                           "referencedDeclaration": 7706,
                           "src": "12189:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -55220,7 +55220,7 @@
                         "lValueRequested": false,
                         "memberName": "amount",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8768,
+                        "referencedDeclaration": 8952,
                         "src": "12189:14:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -55317,7 +55317,7 @@
                           "referencedDeclaration": 7706,
                           "src": "12228:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -55328,7 +55328,7 @@
                         "lValueRequested": false,
                         "memberName": "signer",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8762,
+                        "referencedDeclaration": 8946,
                         "src": "12228:14:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
@@ -55344,7 +55344,7 @@
                           "referencedDeclaration": 7706,
                           "src": "12244:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -55355,7 +55355,7 @@
                         "lValueRequested": false,
                         "memberName": "tokenId",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8766,
+                        "referencedDeclaration": 8950,
                         "src": "12244:15:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -55371,7 +55371,7 @@
                           "referencedDeclaration": 7706,
                           "src": "12261:7:37",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                            "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                             "typeString": "struct signatureTransferPayload calldata"
                           }
                         },
@@ -55382,7 +55382,7 @@
                         "lValueRequested": false,
                         "memberName": "amount",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 8768,
+                        "referencedDeclaration": 8952,
                         "src": "12261:14:37",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
@@ -55453,7 +55453,7 @@
                       "referencedDeclaration": 7706,
                       "src": "12063:7:37",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                        "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                         "typeString": "struct signatureTransferPayload calldata"
                       }
                     },
@@ -55464,7 +55464,7 @@
                     "lValueRequested": false,
                     "memberName": "tokenId",
                     "nodeType": "MemberAccess",
-                    "referencedDeclaration": 8766,
+                    "referencedDeclaration": 8950,
                     "src": "12063:15:37",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
@@ -55506,7 +55506,7 @@
                     "referencedDeclaration": 7706,
                     "src": "12120:7:37",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                       "typeString": "struct signatureTransferPayload calldata"
                     }
                   }
@@ -55517,7 +55517,7 @@
                   "id": 7716,
                   "name": "onlyValidSignatureTransfer",
                   "nodeType": "IdentifierPath",
-                  "referencedDeclaration": 8877,
+                  "referencedDeclaration": 9061,
                   "src": "12082:26:37"
                 },
                 "nodeType": "ModifierInvocation",
@@ -55570,7 +55570,7 @@
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_calldata_ptr",
+                    "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_calldata_ptr",
                     "typeString": "struct signatureTransferPayload"
                   },
                   "typeName": {
@@ -55580,13 +55580,13 @@
                       "id": 7704,
                       "name": "signatureTransferPayload",
                       "nodeType": "IdentifierPath",
-                      "referencedDeclaration": 8771,
+                      "referencedDeclaration": 8955,
                       "src": "11945:24:37"
                     },
-                    "referencedDeclaration": 8771,
+                    "referencedDeclaration": 8955,
                     "src": "11945:24:37",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8771_storage_ptr",
+                      "typeIdentifier": "t_struct$_signatureTransferPayload_$8955_storage_ptr",
                       "typeString": "struct signatureTransferPayload"
                     }
                   },
@@ -55712,7 +55712,7 @@
                                           "referencedDeclaration": 7949,
                                           "src": "12728:17:37",
                                           "typeDescriptions": {
-                                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RetirementData_$8747_storage_$",
+                                            "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_RetirementData_$8931_storage_$",
                                             "typeString": "mapping(uint256 => struct RetirementData storage ref)"
                                           }
                                         },
@@ -55761,7 +55761,7 @@
                                         "nodeType": "IndexAccess",
                                         "src": "12728:25:37",
                                         "typeDescriptions": {
-                                          "typeIdentifier": "t_struct$_RetirementData_$8747_storage",
+                                          "typeIdentifier": "t_struct$_RetirementData_$8931_storage",
                                           "typeString": "struct RetirementData storage ref"
                                         }
                                       },
@@ -55772,7 +55772,7 @@
                                       "lValueRequested": false,
                                       "memberName": "amount",
                                       "nodeType": "MemberAccess",
-                                      "referencedDeclaration": 8738,
+                                      "referencedDeclaration": 8922,
                                       "src": "12728:32:37",
                                       "typeDescriptions": {
                                         "typeIdentifier": "t_uint256",
@@ -59568,7 +59568,7 @@
     }
   },
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-06-27T17:17:32.100Z",
+  "updatedAt": "2023-06-28T15:37:00.142Z",
   "devdoc": {
     "kind": "dev",
     "methods": {
