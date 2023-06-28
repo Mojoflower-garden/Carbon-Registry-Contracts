@@ -43,7 +43,7 @@ contract MarketplaceVault is Initializable, AccessControlUpgradeable, ERC1155Hol
     }
 
     modifier balanceCheck(address owner, address token, uint256 tokenId, uint256 amount) {
-        require(balances[token][tokenId][owner] <= amount, "Insufficient balance");
+        require(balances[token][tokenId][owner] >= amount, "Insufficient balance");
         _;
     }
 
