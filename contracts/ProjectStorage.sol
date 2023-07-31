@@ -19,8 +19,8 @@ abstract contract ProjectStorageV1 is Initializable {
 }
 
 abstract contract ProjectStorageV2 {
-    string projectUri;
-    string methodology; // The id of the methodology
+    string public projectUri;
+    string public methodology; // The id of the methodology
 }
 
 abstract contract ProjectStorage is ProjectStorageV1, ProjectStorageV2 {

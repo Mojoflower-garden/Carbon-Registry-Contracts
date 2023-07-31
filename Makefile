@@ -12,13 +12,17 @@ verify-marketplace-factory-mumbai:
 	truffle run verify MarketplaceFactory@0x89e7A478dc7E3654A528061bfccFE16C86f44dDC --network mumbai
 
 verify-project-poly:
-	truffle run verify Project@0xb9998d26b61d8cDFfD3fe6d96efB7CA11FCD8065 --network polygon
+	truffle run verify Project@0x186ff692f923a267b0d4792f6c3fbb3206d706d0 --network polygon
 verify-registry-poly:
 	truffle run verify CarbonContractRegistry@0x8ecD52AD9E466ab399666237f6b88362Db1bBE20 --network polygon
 verify-migrations-poly:
 	truffle run verify Migrations@0xfd5769788e152B30B12f48614dE5EbeFa814e849 --network polygon
 verify-vault-poly:
 	truffle run verify TokenVault@0x50B77A5CadFeF29A549FCE71eaC3C794BC6FE5a2 --network polygon
+verify-marketplace-poly:
+	truffle run verify MarketplaceVault@0x8467ef1dc9565f5638fade17fdecfb27f4515c3d  --network polygon
+verify-marketplace-factory-poly:
+	truffle run verify MarketplaceFactory@0xb58Ca4BB94C027D49E7305C9C60977019420819F --network polygon
 
 verify-project-arbitrum:
 	truffle run verify Project@0xbA4C023aD00dCB4258562A6F8FCae11f5bf508BC --network arbitrum

@@ -15,21 +15,21 @@
     "absolutePath": "project:/contracts/utils/CustomSignaturesTypes.sol",
     "exportedSymbols": {
       "CustomSignaturesTypes": [
-        8965
-      ],
-      "signatureGenericPayload": [
         8964
       ],
+      "signatureGenericPayload": [
+        8963
+      ],
       "signatureTransferPayload": [
-        8955
+        8954
       ]
     },
-    "id": 8966,
+    "id": 8965,
     "license": "UNLICENSED",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 8940,
+        "id": 8939,
         "literals": [
           "solidity",
           "^",
@@ -41,16 +41,16 @@
       },
       {
         "canonicalName": "signatureTransferPayload",
-        "id": 8955,
+        "id": 8954,
         "members": [
           {
             "constant": false,
-            "id": 8942,
+            "id": 8941,
             "mutability": "mutable",
             "name": "deadline",
             "nameLocation": "157:8:48",
             "nodeType": "VariableDeclaration",
-            "scope": 8955,
+            "scope": 8954,
             "src": "149:16:48",
             "stateVariable": false,
             "storageLocation": "default",
@@ -59,7 +59,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8941,
+              "id": 8940,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "149:7:48",
@@ -72,12 +72,12 @@
           },
           {
             "constant": false,
-            "id": 8944,
+            "id": 8943,
             "mutability": "mutable",
             "name": "description",
             "nameLocation": "178:11:48",
             "nodeType": "VariableDeclaration",
-            "scope": 8955,
+            "scope": 8954,
             "src": "171:18:48",
             "stateVariable": false,
             "storageLocation": "default",
@@ -86,7 +86,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 8943,
+              "id": 8942,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "171:6:48",
@@ -99,12 +99,12 @@
           },
           {
             "constant": false,
-            "id": 8946,
+            "id": 8945,
             "mutability": "mutable",
             "name": "signer",
             "nameLocation": "203:6:48",
             "nodeType": "VariableDeclaration",
-            "scope": 8955,
+            "scope": 8954,
             "src": "195:14:48",
             "stateVariable": false,
             "storageLocation": "default",
@@ -113,7 +113,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 8945,
+              "id": 8944,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "195:7:48",
@@ -127,12 +127,12 @@
           },
           {
             "constant": false,
-            "id": 8948,
+            "id": 8947,
             "mutability": "mutable",
             "name": "to",
             "nameLocation": "223:2:48",
             "nodeType": "VariableDeclaration",
-            "scope": 8955,
+            "scope": 8954,
             "src": "215:10:48",
             "stateVariable": false,
             "storageLocation": "default",
@@ -141,7 +141,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 8947,
+              "id": 8946,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "215:7:48",
@@ -155,12 +155,12 @@
           },
           {
             "constant": false,
-            "id": 8950,
+            "id": 8949,
             "mutability": "mutable",
             "name": "tokenId",
             "nameLocation": "239:7:48",
             "nodeType": "VariableDeclaration",
-            "scope": 8955,
+            "scope": 8954,
             "src": "231:15:48",
             "stateVariable": false,
             "storageLocation": "default",
@@ -169,7 +169,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8949,
+              "id": 8948,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "231:7:48",
@@ -182,12 +182,12 @@
           },
           {
             "constant": false,
-            "id": 8952,
+            "id": 8951,
             "mutability": "mutable",
             "name": "amount",
             "nameLocation": "260:6:48",
             "nodeType": "VariableDeclaration",
-            "scope": 8955,
+            "scope": 8954,
             "src": "252:14:48",
             "stateVariable": false,
             "storageLocation": "default",
@@ -196,7 +196,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8951,
+              "id": 8950,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "252:7:48",
@@ -209,12 +209,12 @@
           },
           {
             "constant": false,
-            "id": 8954,
+            "id": 8953,
             "mutability": "mutable",
             "name": "nonce",
             "nameLocation": "280:5:48",
             "nodeType": "VariableDeclaration",
-            "scope": 8955,
+            "scope": 8954,
             "src": "272:13:48",
             "stateVariable": false,
             "storageLocation": "default",
@@ -223,7 +223,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8953,
+              "id": 8952,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "272:7:48",
@@ -238,22 +238,22 @@
         "name": "signatureTransferPayload",
         "nameLocation": "118:24:48",
         "nodeType": "StructDefinition",
-        "scope": 8966,
+        "scope": 8965,
         "src": "111:177:48",
         "visibility": "public"
       },
       {
         "canonicalName": "signatureGenericPayload",
-        "id": 8964,
+        "id": 8963,
         "members": [
           {
             "constant": false,
-            "id": 8957,
+            "id": 8956,
             "mutability": "mutable",
             "name": "deadline",
             "nameLocation": "335:8:48",
             "nodeType": "VariableDeclaration",
-            "scope": 8964,
+            "scope": 8963,
             "src": "327:16:48",
             "stateVariable": false,
             "storageLocation": "default",
@@ -262,7 +262,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8956,
+              "id": 8955,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "327:7:48",
@@ -275,12 +275,12 @@
           },
           {
             "constant": false,
-            "id": 8959,
+            "id": 8958,
             "mutability": "mutable",
             "name": "description",
             "nameLocation": "356:11:48",
             "nodeType": "VariableDeclaration",
-            "scope": 8964,
+            "scope": 8963,
             "src": "349:18:48",
             "stateVariable": false,
             "storageLocation": "default",
@@ -289,7 +289,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 8958,
+              "id": 8957,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "349:6:48",
@@ -302,12 +302,12 @@
           },
           {
             "constant": false,
-            "id": 8961,
+            "id": 8960,
             "mutability": "mutable",
             "name": "signer",
             "nameLocation": "381:6:48",
             "nodeType": "VariableDeclaration",
-            "scope": 8964,
+            "scope": 8963,
             "src": "373:14:48",
             "stateVariable": false,
             "storageLocation": "default",
@@ -316,7 +316,7 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 8960,
+              "id": 8959,
               "name": "address",
               "nodeType": "ElementaryTypeName",
               "src": "373:7:48",
@@ -330,12 +330,12 @@
           },
           {
             "constant": false,
-            "id": 8963,
+            "id": 8962,
             "mutability": "mutable",
             "name": "nonce",
             "nameLocation": "401:5:48",
             "nodeType": "VariableDeclaration",
-            "scope": 8964,
+            "scope": 8963,
             "src": "393:13:48",
             "stateVariable": false,
             "storageLocation": "default",
@@ -344,7 +344,7 @@
               "typeString": "uint256"
             },
             "typeName": {
-              "id": 8962,
+              "id": 8961,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
               "src": "393:7:48",
@@ -359,7 +359,7 @@
         "name": "signatureGenericPayload",
         "nameLocation": "297:23:48",
         "nodeType": "StructDefinition",
-        "scope": 8966,
+        "scope": 8965,
         "src": "290:119:48",
         "visibility": "public"
       },
@@ -370,15 +370,15 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 8965,
+        "id": 8964,
         "linearizedBaseContracts": [
-          8965
+          8964
         ],
         "name": "CustomSignaturesTypes",
         "nameLocation": "429:21:48",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 8966,
+        "scope": 8965,
         "src": "411:42:48",
         "usedErrors": []
       }
@@ -391,7 +391,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-06-28T16:07:08.011Z",
+  "updatedAt": "2023-07-31T14:21:10.913Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

@@ -29,21 +29,21 @@
     "absolutePath": "project:/contracts/marketplaces/MarketplaceVaultStorage.sol",
     "exportedSymbols": {
       "MarketplaceVaultStorage": [
-        8896
+        8904
       ],
       "MarketplaceVaultStorageV1": [
-        8878
+        8886
       ],
       "MarketplaceVaultStorageV2": [
-        8887
+        8895
       ]
     },
-    "id": 8897,
+    "id": 8905,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 8875,
+        "id": 8883,
         "literals": [
           "solidity",
           "^",
@@ -60,9 +60,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 8878,
+        "id": 8886,
         "linearizedBaseContracts": [
-          8878
+          8886
         ],
         "name": "MarketplaceVaultStorageV1",
         "nameLocation": "77:25:46",
@@ -71,12 +71,12 @@
           {
             "constant": false,
             "functionSelector": "06fdde03",
-            "id": 8877,
+            "id": 8885,
             "mutability": "mutable",
             "name": "name",
             "nameLocation": "124:4:46",
             "nodeType": "VariableDeclaration",
-            "scope": 8878,
+            "scope": 8886,
             "src": "110:18:46",
             "stateVariable": true,
             "storageLocation": "default",
@@ -85,7 +85,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 8876,
+              "id": 8884,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "110:6:46",
@@ -97,7 +97,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 8897,
+        "scope": 8905,
         "src": "59:72:46",
         "usedErrors": []
       },
@@ -108,9 +108,9 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 8887,
+        "id": 8895,
         "linearizedBaseContracts": [
-          8887
+          8895
         ],
         "name": "MarketplaceVaultStorageV2",
         "nameLocation": "152:25:46",
@@ -119,12 +119,12 @@
           {
             "constant": false,
             "functionSelector": "d52dddf4",
-            "id": 8886,
+            "id": 8894,
             "mutability": "mutable",
             "name": "balances",
             "nameLocation": "313:8:46",
             "nodeType": "VariableDeclaration",
-            "scope": 8887,
+            "scope": 8895,
             "src": "238:83:46",
             "stateVariable": true,
             "storageLocation": "default",
@@ -133,9 +133,9 @@
               "typeString": "mapping(address => mapping(uint256 => mapping(address => uint256)))"
             },
             "typeName": {
-              "id": 8885,
+              "id": 8893,
               "keyType": {
-                "id": 8879,
+                "id": 8887,
                 "name": "address",
                 "nodeType": "ElementaryTypeName",
                 "src": "246:7:46",
@@ -151,9 +151,9 @@
                 "typeString": "mapping(address => mapping(uint256 => mapping(address => uint256)))"
               },
               "valueType": {
-                "id": 8884,
+                "id": 8892,
                 "keyType": {
-                  "id": 8880,
+                  "id": 8888,
                   "name": "uint256",
                   "nodeType": "ElementaryTypeName",
                   "src": "265:7:46",
@@ -169,9 +169,9 @@
                   "typeString": "mapping(uint256 => mapping(address => uint256))"
                 },
                 "valueType": {
-                  "id": 8883,
+                  "id": 8891,
                   "keyType": {
-                    "id": 8881,
+                    "id": 8889,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
                     "src": "284:7:46",
@@ -187,7 +187,7 @@
                     "typeString": "mapping(address => uint256)"
                   },
                   "valueType": {
-                    "id": 8882,
+                    "id": 8890,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
                     "src": "295:7:46",
@@ -202,7 +202,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 8897,
+        "scope": 8905,
         "src": "134:195:46",
         "usedErrors": []
       },
@@ -211,25 +211,25 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 8888,
+              "id": 8896,
               "name": "MarketplaceVaultStorageV1",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 8878,
+              "referencedDeclaration": 8886,
               "src": "376:25:46"
             },
-            "id": 8889,
+            "id": 8897,
             "nodeType": "InheritanceSpecifier",
             "src": "376:25:46"
           },
           {
             "baseName": {
-              "id": 8890,
+              "id": 8898,
               "name": "MarketplaceVaultStorageV2",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 8887,
+              "referencedDeclaration": 8895,
               "src": "402:25:46"
             },
-            "id": 8891,
+            "id": 8899,
             "nodeType": "InheritanceSpecifier",
             "src": "402:25:46"
           }
@@ -238,11 +238,11 @@
         "contractDependencies": [],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 8896,
+        "id": 8904,
         "linearizedBaseContracts": [
-          8896,
-          8887,
-          8878
+          8904,
+          8895,
+          8886
         ],
         "name": "MarketplaceVaultStorage",
         "nameLocation": "349:23:46",
@@ -250,12 +250,12 @@
         "nodes": [
           {
             "constant": false,
-            "id": 8895,
+            "id": 8903,
             "mutability": "mutable",
             "name": "__gap",
             "nameLocation": "732:5:46",
             "nodeType": "VariableDeclaration",
-            "scope": 8896,
+            "scope": 8904,
             "src": "712:25:46",
             "stateVariable": true,
             "storageLocation": "default",
@@ -265,7 +265,7 @@
             },
             "typeName": {
               "baseType": {
-                "id": 8892,
+                "id": 8900,
                 "name": "uint256",
                 "nodeType": "ElementaryTypeName",
                 "src": "712:7:46",
@@ -274,10 +274,10 @@
                   "typeString": "uint256"
                 }
               },
-              "id": 8894,
+              "id": 8902,
               "length": {
                 "hexValue": "3438",
-                "id": 8893,
+                "id": 8901,
                 "isConstant": false,
                 "isLValue": false,
                 "isPure": true,
@@ -301,7 +301,7 @@
             "visibility": "private"
           }
         ],
-        "scope": 8897,
+        "scope": 8905,
         "src": "331:409:46",
         "usedErrors": []
       }
@@ -314,7 +314,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-06-28T16:07:08.010Z",
+  "updatedAt": "2023-07-31T14:21:10.911Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

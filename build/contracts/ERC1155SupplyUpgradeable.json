@@ -2490,7 +2490,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-06-28T16:07:07.912Z",
+  "updatedAt": "2023-07-31T14:21:10.829Z",
   "devdoc": {
     "details": "Extension of ERC1155 that adds tracking of total supply per id. Useful for scenarios where Fungible and Non-fungible tokens have to be clearly identified. Note: While a totalSupply of 1 might mean the corresponding is an NFT, there is no guarantees that no other token with the same id are not going to be minted.",
     "kind": "dev",
