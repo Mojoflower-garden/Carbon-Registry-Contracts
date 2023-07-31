@@ -7,9 +7,9 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 
 abstract contract ProjectStorageV1 is Initializable {
     uint256 public topTokenId; 
-    uint256 public projectId; // has been removed, but must stay here because of storage layout
+    uint256 public projectId;
     uint8 public maxAntePercentage;
-    string public projectName; // has been removed, but must stay here because of storage layout
+    string public projectName; 
     address public contractRegistry;
     mapping(uint256 => VintageData) public exPostVintageMapping;
     mapping(uint256 => uint256) public exAnteToExPostTokenId;
@@ -19,7 +19,8 @@ abstract contract ProjectStorageV1 is Initializable {
 }
 
 abstract contract ProjectStorageV2 {
-    ProjectData public projectInfo;
+    string projectUri;
+    string methodology; // The id of the methodology
 }
 
 abstract contract ProjectStorage is ProjectStorageV1, ProjectStorageV2 {
@@ -29,23 +30,20 @@ abstract contract ProjectStorage is ProjectStorageV1, ProjectStorageV2 {
         uint8 _maxAntePerc,
         uint256 _projectId,
         string memory _projectName,
-        string memory projectUri,
-        string memory methodology
+        string memory _projectUri,
+        string memory _methodology
     ) public initializer {
         maxAntePercentage = _maxAntePerc;
         contractRegistry = _contractRegistry;
-
-        projectInfo = ProjectData(
-            _projectName,
-            _projectId,
-            projectUri,
-            methodology
-        );
+        projectName = _projectName;
+        projectId = _projectId;
+        projectUri = _projectUri;
+        methodology = _methodology;
     }
         // /**
     //  * @dev This empty reserved space is put in place to allow future versions to add new
     //  * variables without shifting down storage in the inheritance chain.
     //  * See https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps
     //  */
-    uint256[39] private __gap;
+    uint256[38] private __gap;
 }
