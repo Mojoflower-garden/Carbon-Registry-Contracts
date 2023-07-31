@@ -1,5 +1,5 @@
 {
-  "contractName": "MarketplaceVaultStorage",
+  "contractName": "MarketplaceVaultStorageV2",
   "abi": [
     {
       "inputs": [
@@ -29,22 +29,9 @@
       ],
       "stateMutability": "view",
       "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "name",
-      "outputs": [
-        {
-          "internalType": "string",
-          "name": "",
-          "type": "string"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/marketplaces/MarketplaceVaultStorage.sol\":\"MarketplaceVaultStorage\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/marketplaces/MarketplaceVaultStorage.sol\":{\"keccak256\":\"0xbecd656706e8a8a2a999a8b8300bc1e115f5366ea0fc51a678c82b1942c80b88\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://43aedfd917153c57dc1b3a8449b8165d8661a2d9bf82cc198b270ccd344a6b8b\",\"dweb:/ipfs/QmVNKmXAVFtqSPm2o1mfd11tRCt1kpQnvD4FF1RaGgByn7\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"balances\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/marketplaces/MarketplaceVaultStorage.sol\":\"MarketplaceVaultStorageV2\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1},\"remappings\":[]},\"sources\":{\"project:/contracts/marketplaces/MarketplaceVaultStorage.sol\":{\"keccak256\":\"0xbecd656706e8a8a2a999a8b8300bc1e115f5366ea0fc51a678c82b1942c80b88\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://43aedfd917153c57dc1b3a8449b8165d8661a2d9bf82cc198b270ccd344a6b8b\",\"dweb:/ipfs/QmVNKmXAVFtqSPm2o1mfd11tRCt1kpQnvD4FF1RaGgByn7\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "immutableReferences": {},
@@ -343,7 +330,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.13",
-  "updatedAt": "2023-07-31T14:21:10.911Z",
+  "updatedAt": "2023-07-31T14:21:10.912Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

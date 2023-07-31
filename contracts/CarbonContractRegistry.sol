@@ -77,7 +77,9 @@ contract CarbonContractRegistry is
 
 	function createProject(
 		uint256 _projectId,
-		string calldata _projectName
+		string calldata _projectName,
+		string calldata _projectMethodology,
+		string calldata _projectUri
 	) external whenNotPaused onlyRole(DEFAULT_ADMIN_ROLE) {
 		require(_projectId != 0, 'ProjectId cannot be 0');
 		require(
@@ -85,7 +87,7 @@ contract CarbonContractRegistry is
 			'ProjectId already exists'
 		);
 
-		address projectAddress = _createProject(_projectId, _projectName);
+		address projectAddress = _createProject(_projectId, _projectName,_projectMethodology,_projectUri);
 
 		require(
 			_addressToProjectIdMapping[projectAddress] == 0,
@@ -98,16 +100,20 @@ contract CarbonContractRegistry is
 
 	function _createProject(
 		uint256 _projectId,
-		string calldata _projectName
+		string calldata _projectName,
+		string calldata _projectMethodology,
+		string calldata _projectUri
 	) internal returns (address) {
 		/// @dev generate payload for initialize function
-		string memory signature = 'initialize(address,address,uint256,string)';
+		string memory signature = 'initialize(address,address,uint256,string,string,string)';
 		bytes memory payload = abi.encodeWithSignature(
 			signature,
 			address(this),
 			msg.sender,
 			_projectId,
-			_projectName
+			_projectName,
+			_projectMethodology,
+			_projectUri
 		);
 
 		address projectAddress = address(
@@ -217,4 +223,9 @@ function getTokenVaultBeaconAddress() external view override returns (address) {
 	function unpause() public onlyRole(PAUSER_ROLE) {
 		_unpause();
 	}
+
+	function testUpgrade() external pure returns(string memory) {
+		return "0.0.1";
+	}
+
 }

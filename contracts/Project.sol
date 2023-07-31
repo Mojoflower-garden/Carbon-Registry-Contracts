@@ -49,7 +49,9 @@ contract Project is
 		address _contractRegistry,
 		address _owner,
 		uint256 _projectId,
-		string memory _projectName
+		string memory _projectName,
+		string memory _projectMethodology,
+		string memory _projectUri
 	) public initializer {
 		__ERC1155_init('');
 		__AccessControl_init();
@@ -59,7 +61,7 @@ contract Project is
 		__CustomSignatures_init("Carbon Registry", '0.0.1');
 
 		// Our Inits
-		__ProjectStorage_init(_contractRegistry, 50, _projectId, _projectName);
+		__ProjectStorage_init(_contractRegistry, 50, _projectId, _projectName, _projectUri, _projectMethodology);
 
 		_grantRole(DEFAULT_ADMIN_ROLE, _owner);
 		_grantRole(URI_SETTER_ROLE, _owner);
@@ -111,7 +113,7 @@ contract Project is
 	}
 
 	function testUpgrade() external pure returns(string memory) {
-		return "0.0.3";
+		return "0.0.4";
 	}
 
 	// ----------------------------------
@@ -287,16 +289,6 @@ contract Project is
 
 	}
 
-	function adminBurn(
-		address from,
-		uint256 tokenId,
-		uint256 amount,
-		AdminActionReason reason
-	) public onlyRole(BURNER_ROLE) {
-		emit AdminBurn(from, tokenId, amount, reason);
-		_burn(from, tokenId, amount);
-	}
-
 	function adminClawback(
 		address from,
 		address to,
@@ -351,80 +343,10 @@ contract Project is
 		}
 	}
 
-	function getExPostVintageData(
-		uint256 exAnteTokenId
-	) public view returns (VintageData memory) {
-		uint256 exPostTokenId = exAnteToExPostTokenId[exAnteTokenId];
-		return exPostVintageMapping[exPostTokenId];
-	}
-
 	// ----------------------------------
 	//              Actions
 	// ----------------------------------
 
-	function transferAndRetireFromSignature(
-		bytes calldata signature,
-		signatureTransferPayload calldata payload,
-		string memory retireeName,
-		string memory customUri,
-		string memory comment,
-		bytes memory data
-	) public onlyExPostToken(payload.tokenId)
-		onlyValidSignatureTransfer(signature, payload) returns (uint256 nftTokenId) {
-		return _transferAndRetire(
-			payload.signer,
-			payload.to,
-			payload.tokenId,
-			payload.amount,
-			retireeName,
-			customUri,
-			comment,
-			data
-		);
-	}
-
-	// function transferAndRetire(
-	// 	address to,
-	// 	uint256 tokenId,
-	// 	uint256 amount,
-	// 	string memory retireeName,
-	// 	string memory customUri,
-	// 	string memory comment,
-	// 	bytes memory data
-	// ) public onlyExPostToken(tokenId) returns (uint256 nftTokenId) {
-	// 	return _transferAndRetire(
-	// 		msg.sender,
-	// 		to,
-	// 		tokenId,
-	// 		amount,
-	// 		retireeName,
-	// 		customUri,
-	// 		comment,
-	// 		data
-	// 	);
-	// }
-
-	function _transferAndRetire(
-		address from,
-		address to,
-		uint256 tokenId,
-		uint256 amount,
-		string memory retireeName,
-		string memory customUri,
-		string memory comment,
-		bytes memory data
-	) internal returns (uint256 nftTokenId) {
-		_safeTransferFrom(from, to, tokenId, amount, data);
-		return _retire(
-			to,
-			tokenId,
-			amount,
-			retireeName,
-			customUri,
-			comment,
-			data
-		);
-	}
 
 	function transferFromSignature(
 		bytes calldata signature,
@@ -443,14 +365,28 @@ contract Project is
 	function retire(
 		uint256 tokenId,
 		uint256 amount,
-		address retiree,
+		address beneficiary,
 		string memory retireeName,
 		string memory customUri,
 		string memory comment,
 		bytes memory data
 	) public onlyExPostToken(tokenId) returns (uint256 nftTokenId) {
+		if(msg.sender == beneficiary){
+			return _retire(
+				msg.sender,
+				tokenId,
+				amount,
+				retireeName,
+				customUri,
+				comment,
+				data
+			);
+		}
+
+		require(beneficiary != address(0));
+		_safeTransferFrom(msg.sender, beneficiary, tokenId, amount, data);
 		return _retire(
-			retiree,
+			beneficiary,
 			tokenId,
 			amount,
 			retireeName,
@@ -473,8 +409,21 @@ contract Project is
 		onlyValidSignatureTransfer(signature, payload)
 		returns (uint256 nftTokenId)
 	{
+		if(payload.signer == payload.to){
+			return _retire(
+				payload.signer,
+				payload.tokenId,
+				payload.amount,
+				retireeName,
+				customUri,
+				comment,
+				data
+			);
+		}
+		require(payload.to != address(0));
+		_safeTransferFrom(payload.signer, payload.to, payload.tokenId, payload.amount, data);
 		return _retire(
-			payload.signer,
+			payload.to,
 			payload.tokenId,
 			payload.amount,
 			retireeName,

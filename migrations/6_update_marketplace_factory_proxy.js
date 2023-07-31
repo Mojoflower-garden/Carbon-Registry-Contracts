@@ -14,6 +14,7 @@ module.exports = async function (deployer) {
   // await upgradeProxy(beaconAddress, MarketplaceFactory, { deployer, unsafeSkipStorageCheck: true });
   // console.log("Beacon upgraded", beaconAddress);
   const existing = await MarketplaceFactory.deployed();
+  console.log("EXISTING:", existing.address)
   const instance = await upgradeProxy(existing.address, MarketplaceFactory, { deployer, unsafeSkipStorageCheck: true });
   console.log("Upgraded proxy instance", instance.address)
 };
