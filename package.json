@@ -9,15 +9,29 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.2",
     "@openzeppelin/contracts": "^4.8.2",
     "@openzeppelin/contracts-upgradeable": "^4.8.2",
-    "@truffle/hdwallet-provider": "^2.1.9",
-    "dotenv": "^16.0.3"
+    "@types/chai": "^4.3.11",
+    "chai": "^4.3.10",
+    "ethers": "^6.9.0"
   },
   "devDependencies": {
-    "@nomiclabs/hardhat-truffle5": "^2.0.7",
-    "@openzeppelin/truffle-upgrades": "^1.17.1",
+    "@nomicfoundation/hardhat-ethers": "^3.0.5",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.2",
+    "@openzeppelin/hardhat-upgrades": "^2.5.0",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/mocha": "^10.0.6",
+    "dotenv": "^16.0.3",
     "hardhat": "^2.19.2",
-    "truffle-plugin-verify": "^0.6.2"
+    "hardhat-deploy": "^0.11.44",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.5",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^5.3.3"
   }
 }

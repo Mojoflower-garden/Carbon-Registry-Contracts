@@ -32,3 +32,8 @@ verify-migrations-arbitrum:
 	truffle run verify Migrations@0xfd5769788e152B30B12f48614dE5EbeFa814e849 --network arbitrum
 verify-vault-arbitrum:
 	truffle run verify TokenVault@0x6c12adBdc722f6eece125E008A77Dc0a3928d01A --network arbitrum
+
+
+
+deploy-base-mumbai:
+	npx hardhat deploy --network mumbai --tags BASE
