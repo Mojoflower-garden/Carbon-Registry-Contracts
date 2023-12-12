@@ -37,3 +37,9 @@ verify-vault-arbitrum:
 
 deploy-base-mumbai:
 	npx hardhat deploy --network mumbai --tags BASE
+verify-hardhat:
+	npx hardhat verify --network mainnet DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1"
+supported-networks:
+	npx hardhat verify --list-networks
+
+npx hardhat verify --network polygon 0xCFFC6d7f0Af6bf4f455C5Df8d51d5BBc32D1b1cD

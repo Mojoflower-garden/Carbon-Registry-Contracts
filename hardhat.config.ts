@@ -8,6 +8,7 @@ import 'hardhat-deploy';
 import '@typechain/hardhat';
 import '@nomicfoundation/hardhat-ethers';
 import 'hardhat-deploy';
+import '@nomicfoundation/hardhat-verify';
 
 const mnemonicPhrase = process.env.MOJO_MNEMONIC;
 
@@ -66,6 +67,12 @@ const config: HardhatUserConfig = {
       },
       url: `https://polygon-mumbai.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
       gasPrice: 'auto',
+    },
+  },
+  etherscan: {
+    apiKey: {
+      polygon: process.env.POLY_SCAN_API_KEY ?? '',
+      polygonMumbai: process.env.POLY_SCAN_API_KEY ?? '',
     },
   },
 };
