@@ -42,4 +42,3 @@ verify-hardhat:
 supported-networks:
 	npx hardhat verify --list-networks
 
-npx hardhat verify --network polygon 0xCFFC6d7f0Af6bf4f455C5Df8d51d5BBc32D1b1cD
