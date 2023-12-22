@@ -330,12 +330,12 @@ contract Project is
 		);
 	}
 
-	function burn(
+	function burnFromAccount(
+		address account,
 		uint256 tokenId,
 		uint256 amount
-	) public  {
-		require(exPostToExAnteTokenId[tokenId] == 0, "11"); // Can't burn exPost.
-		_burn(msg.sender, tokenId, amount);
+	) public onlyRole(CLAWBACK_ROLE) {
+		_burn(account, tokenId, amount);
 	}
 
 	function retire(
