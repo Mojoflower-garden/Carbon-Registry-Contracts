@@ -24,11 +24,6 @@
           "type": "address"
         },
         {
-          "internalType": "uint8",
-          "name": "_maxAntePerc",
-          "type": "uint8"
-        },
-        {
           "internalType": "uint256",
           "name": "_projectId",
           "type": "uint256"

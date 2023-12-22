@@ -1593,8 +1593,8 @@
       ]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/Project.sol": {
-      "lastModificationDate": 1702309465393,
-      "contentHash": "3bede8e1ea7170e442bdfa9545198237",
+      "lastModificationDate": 1703274126129,
+      "contentHash": "c7577beb733862312172b4798382be9d",
       "sourceName": "contracts/Project.sol",
       "solcConfig": {
         "version": "0.8.13",
@@ -1647,8 +1647,8 @@
       ]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/ProjectStorage.sol": {
-      "lastModificationDate": 1691409588929,
-      "contentHash": "f39ea16e3b4af1ce2a5c67e72188c06b",
+      "lastModificationDate": 1703273694191,
+      "contentHash": "7fda43f587c28b3d4ac9aefeaa018919",
       "sourceName": "contracts/ProjectStorage.sol",
       "solcConfig": {
         "version": "0.8.13",

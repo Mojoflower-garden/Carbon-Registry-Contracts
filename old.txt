@@ -1,0 +1,2 @@
+Project Beacon Address 0x7b7DbE664eE5ABF49745D1241FF2856FEbae879b
+Project Beacon implementation deployed to: 0xc21861fFeFDd68B5827fD26A512607d12A6092e7

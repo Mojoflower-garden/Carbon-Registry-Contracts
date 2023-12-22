@@ -61,7 +61,7 @@ contract Project is
 		__CustomSignatures_init("Carbon Registry", '0.0.1');
 
 		// Our Inits
-		__ProjectStorage_init(_contractRegistry, 50, _projectId, _projectName, _projectUri, _projectMethodology);
+		__ProjectStorage_init(_contractRegistry, _projectId, _projectName, _projectUri, _projectMethodology);
 
 		_grantRole(DEFAULT_ADMIN_ROLE, _owner);
 		_grantRole(URI_SETTER_ROLE, _owner);
@@ -113,7 +113,7 @@ contract Project is
 	}
 
 	function testUpgrade() external pure returns(string memory) {
-		return "0.0.4";
+		return "0.0.5";
 	}
 
 	// ----------------------------------
@@ -176,33 +176,14 @@ contract Project is
 		onlyExPostToken(exPostTokenId)
 		onlyVerifiedStatus(false, exPostTokenId)
 	{
-
 		uint256 exAnteTokenId = exPostToExAnteTokenId[exPostTokenId];
 		if (exAnteTokenId == 0) {
 			exAnteTokenId = nextTokenId();
 			exPostToExAnteTokenId[exPostTokenId] = exAnteTokenId;
+			exAnteToExPostTokenId[exAnteTokenId] = exPostTokenId;
 		}
-
-		uint256 exPostEstimatedSupply = exPostVintageMapping[exPostTokenId]
-			.estMitigations;
-		uint256 exPostVerifiedSupply = totalSupply(exPostTokenId);
-		uint256 anteDrawablePostSupply = exPostEstimatedSupply -
-			exPostVerifiedSupply;
-		uint256 maxExAnteSupply = (anteDrawablePostSupply *
-			(maxAntePercentage)) / (100);
-		uint256 exAnteSupply = totalSupply(exAnteTokenId);
-
-		require(
-			exAnteSupply + amount <= maxExAnteSupply,
-			"5"
-		);
-
-		exAnteToExPostTokenId[exAnteTokenId] = exPostTokenId;
-
 		emit ExAnteMinted(exAnteTokenId, exPostTokenId, account,  amount);
-
 		_mint(account, exAnteTokenId, amount, data);
-
 	}
 
 	function changeVintageMitigationEstimate(
@@ -238,20 +219,9 @@ contract Project is
 		onlyExPostToken(tokenId)
 		onlyVerifiedStatus(false, tokenId)
 	{
-			
 		require(
 			amountVerified >= amountToAnteHolders,
 			"6"
-		);
-		require(
-			verificationPeriodEnd >=
-				exPostVintageMapping[tokenId].verificationPeriodStart,
-			"7"
-		);
-		require(
-			verificationPeriodEnd >
-				exPostVintageMapping[tokenId].lastVerificationTimestamp,
-			"8"
 		);
 
 		uint256 exAnteTokenId = exPostToExAnteTokenId[tokenId];
@@ -260,7 +230,7 @@ contract Project is
 			require(amountToAnteHolders == 0, "9");
 		}
 
-			emit ExPostVerifiedAndMinted(
+		emit ExPostVerifiedAndMinted(
 			tokenId,
 			amountVerified,
 			amountToAnteHolders,
@@ -285,8 +255,6 @@ contract Project is
 			// Mint to this address, where ante holders will claim
 			_mint(address(this), tokenId, amountToAnteHolders, '');
 		}
-
-
 	}
 
 	function adminClawback(
@@ -360,6 +328,14 @@ contract Project is
 			payload.amount,
 			data
 		);
+	}
+
+	function burn(
+		uint256 tokenId,
+		uint256 amount
+	) public  {
+		require(exPostToExAnteTokenId[tokenId] == 0, "11"); // Can't burn exPost.
+		_burn(msg.sender, tokenId, amount);
 	}
 
 	function retire(
@@ -524,13 +500,6 @@ contract Project is
 			topTokenId += 1;
 		}
 		return topTokenId;
-	}
-
-	function updateMaxAntePercentage(uint8 newMaxAntePercentage)
-		public
-		onlyRole(DEFAULT_ADMIN_ROLE)
-	{
-		maxAntePercentage = newMaxAntePercentage;
 	}
 
 	function _authorizeUpgrade(
