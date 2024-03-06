@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/utils/Counters.sol";
 abstract contract ProjectStorageV1 is Initializable {
     uint256 public topTokenId; 
     uint256 public projectId;
-    uint8 public maxAntePercentage;
+    uint8 public maxAntePercentage; // Deprecated - but has to stay here because of immutability of storage space.
     string public projectName; 
     address public contractRegistry;
     mapping(uint256 => VintageData) public exPostVintageMapping;
@@ -27,13 +27,11 @@ abstract contract ProjectStorage is ProjectStorageV1, ProjectStorageV2 {
 
     function __ProjectStorage_init(
         address _contractRegistry,
-        uint8 _maxAntePerc,
         uint256 _projectId,
         string memory _projectName,
         string memory _projectUri,
         string memory _methodology
     ) public initializer {
-        maxAntePercentage = _maxAntePerc;
         contractRegistry = _contractRegistry;
         projectName = _projectName;
         projectId = _projectId;
