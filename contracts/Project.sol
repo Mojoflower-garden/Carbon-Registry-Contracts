@@ -113,7 +113,7 @@ contract Project is
 	}
 
 	function testUpgrade() external pure returns(string memory) {
-		return "0.0.5";
+		return "0.0.6";
 	}
 
 	// ----------------------------------
@@ -452,7 +452,6 @@ contract Project is
 		bytes memory data
 	)
 		public
-		onlyExPostToken(payload.tokenId)
 		onlyValidSignatureTransfer(signature, payload)
 	{
 		emit CancelledCredits(payload.signer, payload.tokenId, payload.amount,comment, data);

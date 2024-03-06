@@ -4,9 +4,6 @@ import { DeployFunction } from 'hardhat-deploy/dist/types';
 
 const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   const { save } = deployments;
-
-  console.log('UPDATE!');
-
   const Project = await ethers.getContractFactory('Project');
 
   const projectAddress =

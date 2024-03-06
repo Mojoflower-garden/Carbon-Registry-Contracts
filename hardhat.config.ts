@@ -8,7 +8,6 @@ import 'hardhat-deploy';
 import '@typechain/hardhat';
 import '@nomicfoundation/hardhat-ethers';
 import 'hardhat-deploy';
-import '@nomicfoundation/hardhat-verify';
 
 const mnemonicPhrase = process.env.MOJO_MNEMONIC;
 
