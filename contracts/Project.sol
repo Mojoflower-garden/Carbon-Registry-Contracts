@@ -15,6 +15,13 @@ import './interfaces/ICarbonContractRegistry.sol';
 import './utils/CustomSignaturesUpgradeable.sol';
 import './interfaces/IProject.sol';
 
+/**
+ * @title 
+ * @author 
+ * @notice 
+ * 
+ * Balances are counted in 10^-18 TCO2e
+ */
 contract Project is
 	IProject,
 	Initializable,
@@ -113,7 +120,7 @@ contract Project is
 	}
 
 	function testUpgrade() external pure returns(string memory) {
-		return "0.0.6";
+		return "0.0.7";
 	}
 
 	// ----------------------------------
@@ -165,6 +172,50 @@ contract Project is
 		}
 	}
 
+
+	// function revertBaseFail(
+	// 		address[] calldata accounts,
+	// 		uint256[] calldata tokenIds,
+	// 		uint256[] calldata burnAmounts,
+	// 		uint256 decimals,
+	// 		bytes memory data
+	// ) public onlyRole(DEFAULT_ADMIN_ROLE){
+	// 	require(decimals > 0,'Decimals must be greater than 0');
+	// 	require(accounts.length == tokenIds.length && tokenIds.length > 0, ' accounts and tokenIds must be of same length');
+	// 	for (uint256 i = 0; i < accounts.length; i++) {
+	// 		uint256 balance = balanceOf(accounts[i], tokenIds[i]);
+	// 		require(balance >= burnAmounts[i], 'Balance must be greater than or equal to burnAmount');
+	// 		//require(balance < balance*(10**decimals) && balance == 0, 'Balance must be greater than 0');
+	// 		_burn(accounts[i], tokenIds[i], burnAmounts[i]);
+	// 	}
+	// }
+	function debaseTCO2(
+		address[] calldata accounts,
+		uint256[] calldata tokenIds,
+		uint256 decimals,
+		bytes memory data
+	) public onlyRole(DEFAULT_ADMIN_ROLE){
+		require(decimals > 0,'Decimals must be greater than 0');
+		require(accounts.length == tokenIds.length && tokenIds.length > 0, ' accounts and tokenIds must be of same length');
+		for (uint256 i = 0; i < accounts.length; i++) {
+			uint256 balance = balanceOf(accounts[i], tokenIds[i]);
+			require(balance < (10**decimals) && balance > 0, 'Balance must be greater than 0');
+			_mint(accounts[i], tokenIds[i], (balance*(10**decimals))  - balance, data);
+		}
+	}
+
+	// function debaseTCO2(
+	// 	address[] calldata accounts,
+	// 	uint256[] calldata tokenIds,
+	// 	uint256[] calldata mintBalance,
+	// 	bytes memory data
+	// ) public onlyRole(MINTER_ROLE){
+	// 	require(accounts.length == tokenIds.length && tokenIds.length > 0);
+	// 	for (uint256 i = 0; i < accounts.length; i++) {
+	// 		_mint(accounts[i], tokenIds[i], mintBalance[i], data);
+	// 	}
+	// }
+
 	function mintExAnte(
 		address account,
 		uint256 exPostTokenId,
@@ -184,25 +235,6 @@ contract Project is
 		}
 		emit ExAnteMinted(exAnteTokenId, exPostTokenId, account,  amount);
 		_mint(account, exAnteTokenId, amount, data);
-	}
-
-	function changeVintageMitigationEstimate(
-		uint256 tokenId,
-		uint256 newEstAmount,
-		AdminActionReason reason
-	)
-		public
-		onlyRole(DEFAULT_ADMIN_ROLE)
-		onlyExPostToken(tokenId)
-		onlyVerifiedStatus(false, tokenId)
-	{
-		emit VintageMitigationEstimateChanged(
-			tokenId,
-			newEstAmount,
-			exPostVintageMapping[tokenId].estMitigations,
-			reason
-		);
-		exPostVintageMapping[tokenId].estMitigations = newEstAmount;
 	}
 
 	function verifyAndMintExPost(
@@ -268,48 +300,48 @@ contract Project is
 		_safeTransferFrom(from, to, tokenId, amount, '');
 	}
 
-	function exchangeAnteForPostEvenSteven(
-		address[] memory accounts,
-		uint256 exPostTokenId,
-		bytes memory data
-	)
-		external
-		onlyExPostToken(exPostTokenId)
-	{
-		uint256 exAnteTokenId = exPostToExAnteTokenId[exPostTokenId];
-		require(exAnteTokenId != 0, "9");
-		uint256 currentExAnteSupply = totalSupply(exAnteTokenId);
-		uint256 currentExPostSupplyInContract = balanceOf(
-			address(this),
-			exPostTokenId
-		);
-		require(currentExPostSupplyInContract > 0, "10");
+	// function exchangeAnteForPostEvenSteven(
+	// 	address[] memory accounts,
+	// 	uint256 exPostTokenId,
+	// 	bytes memory data
+	// )
+	// 	external
+	// 	onlyExPostToken(exPostTokenId)
+	// {
+	// 	uint256 exAnteTokenId = exPostToExAnteTokenId[exPostTokenId];
+	// 	require(exAnteTokenId != 0, "9");
+	// 	uint256 currentExAnteSupply = totalSupply(exAnteTokenId);
+	// 	uint256 currentExPostSupplyInContract = balanceOf(
+	// 		address(this),
+	// 		exPostTokenId
+	// 	);
+	// 	require(currentExPostSupplyInContract > 0, "10");
 
-		for (uint256 i = 0; i < accounts.length; i++) {
+	// 	for (uint256 i = 0; i < accounts.length; i++) {
 			
-			uint256 amountExAnte = balanceOf(accounts[i], exAnteTokenId);
-			uint256 amountExPost = (amountExAnte *
-				currentExPostSupplyInContract) / currentExAnteSupply;
-			uint256 exAnteBurnAmount = amountExAnte;
-			if (amountExAnte > amountExPost) {
-				exAnteBurnAmount = amountExPost;
-			}
-						emit ExchangeAnteForPost(
-				accounts[i],
-				exPostTokenId,
-				amountExPost,
-				exAnteBurnAmount
-			);
-			_burn(accounts[i], exAnteTokenId, exAnteBurnAmount);
-			_safeTransferFrom(
-				address(this),
-				accounts[i],
-				exPostTokenId,
-				amountExPost,
-				data
-			);
-		}
-	}
+	// 		uint256 amountExAnte = balanceOf(accounts[i], exAnteTokenId);
+	// 		uint256 amountExPost = (amountExAnte *
+	// 			currentExPostSupplyInContract) / currentExAnteSupply;
+	// 		uint256 exAnteBurnAmount = amountExAnte;
+	// 		if (amountExAnte > amountExPost) {
+	// 			exAnteBurnAmount = amountExPost;
+	// 		}
+	// 					emit ExchangeAnteForPost(
+	// 			accounts[i],
+	// 			exPostTokenId,
+	// 			amountExPost,
+	// 			exAnteBurnAmount
+	// 		);
+	// 		_burn(accounts[i], exAnteTokenId, exAnteBurnAmount);
+	// 		_safeTransferFrom(
+	// 			address(this),
+	// 			accounts[i],
+	// 			exPostTokenId,
+	// 			amountExPost,
+	// 			data
+	// 		);
+	// 	}
+	// }
 
 	// ----------------------------------
 	//              Actions
