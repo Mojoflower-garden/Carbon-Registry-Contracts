@@ -230,6 +230,50 @@
         "AccessControlUpgradeable"
       ]
     },
+    "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
+      "lastModificationDate": 1702304613647,
+      "contentHash": "b0970a564d121abf9adfff8d1a01eb16",
+      "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [
+        "../../utils/AddressUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.2"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
       "contentHash": "c50df4f62eb9ef48d89b3a48a57e3bf5",
@@ -274,50 +318,6 @@
       ],
       "artifacts": [
         "UUPSUpgradeable"
-      ]
-    },
-    "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
-      "lastModificationDate": 1702304613647,
-      "contentHash": "b0970a564d121abf9adfff8d1a01eb16",
-      "sourceName": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout",
-                "devdoc",
-                "userdoc",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [
-        "../../utils/AddressUpgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.2"
-      ],
-      "artifacts": [
-        "Initializable"
       ]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/proxy/beacon/BeaconProxy.sol": {
@@ -584,48 +584,6 @@
         "ERC165Upgradeable"
       ]
     },
-    "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/math/MathUpgradeable.sol": {
-      "lastModificationDate": 1702304613647,
-      "contentHash": "5a2a749b45b6a8eb035f4bf75addcb27",
-      "sourceName": "@openzeppelin/contracts-upgradeable/utils/math/MathUpgradeable.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout",
-                "devdoc",
-                "userdoc",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "MathUpgradeable"
-      ]
-    },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/math/SignedMathUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
       "contentHash": "2a6b819b2e241091ada6d645df3e3929",
@@ -666,6 +624,48 @@
       ],
       "artifacts": [
         "SignedMathUpgradeable"
+      ]
+    },
+    "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/math/MathUpgradeable.sol": {
+      "lastModificationDate": 1702304613647,
+      "contentHash": "5a2a749b45b6a8eb035f4bf75addcb27",
+      "sourceName": "@openzeppelin/contracts-upgradeable/utils/math/MathUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MathUpgradeable"
       ]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol": {
@@ -1101,48 +1101,6 @@
         "IERC1967"
       ]
     },
-    "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/interfaces/draft-IERC1822.sol": {
-      "lastModificationDate": 1702304613641,
-      "contentHash": "2858d98e74e67987ec81b39605230b74",
-      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC1822.sol",
-      "solcConfig": {
-        "version": "0.8.13",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 1
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "storageLayout",
-                "devdoc",
-                "userdoc",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          },
-          "metadata": {
-            "useLiteralContent": true
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1822Proxiable"
-      ]
-    },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/utils/Address.sol": {
       "lastModificationDate": 1702304613643,
       "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
@@ -1225,6 +1183,48 @@
       ],
       "artifacts": [
         "StorageSlot"
+      ]
+    },
+    "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/interfaces/draft-IERC1822.sol": {
+      "lastModificationDate": 1702304613641,
+      "contentHash": "2858d98e74e67987ec81b39605230b74",
+      "sourceName": "@openzeppelin/contracts/interfaces/draft-IERC1822.sol",
+      "solcConfig": {
+        "version": "0.8.13",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 1
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "storageLayout",
+                "devdoc",
+                "userdoc",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          },
+          "metadata": {
+            "useLiteralContent": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC1822Proxiable"
       ]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/marketplaces/MarketplaceFactory.sol": {
@@ -1593,8 +1593,8 @@
       ]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/Project.sol": {
-      "lastModificationDate": 1709726347675,
-      "contentHash": "02823d1122cc7504e4fab9b15608e5cc",
+      "lastModificationDate": 1710340142366,
+      "contentHash": "71451fa37623c9a5be18dbb3fdad1112",
       "sourceName": "contracts/Project.sol",
       "solcConfig": {
         "version": "0.8.13",
@@ -1647,7 +1647,7 @@
       ]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/ProjectStorage.sol": {
-      "lastModificationDate": 1703273694191,
+      "lastModificationDate": 1709725498700,
       "contentHash": "7fda43f587c28b3d4ac9aefeaa018919",
       "sourceName": "contracts/ProjectStorage.sol",
       "solcConfig": {
@@ -1830,8 +1830,8 @@
       ]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/types/ProjectTypes.sol": {
-      "lastModificationDate": 1691409588930,
-      "contentHash": "c54d8f8910c9e43f23600e5eecfddf5e",
+      "lastModificationDate": 1710334027702,
+      "contentHash": "dbf1430591534a22e23204a42be6bfd7",
       "sourceName": "contracts/types/ProjectTypes.sol",
       "solcConfig": {
         "version": "0.8.13",
