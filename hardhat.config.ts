@@ -66,6 +66,8 @@ const config: HardhatUserConfig = {
       },
       url: `https://polygon-mumbai.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
       gasPrice: 'auto',
+      // gas: 5000000,
+      // gasPrice: 50000000000,
     },
   },
   etherscan: {

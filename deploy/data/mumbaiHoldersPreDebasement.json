@@ -1,0 +1,4595 @@
+[
+  {
+    "projectAddress": "0x01795f54876089fd247c7703832784c6bf2314d8",
+    "holders": [
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "1000",
+        "decimalBalance": "0.000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "icr-ALB-355-78100-2-A-0-2024",
+          "projectAddress": "0x01795f54876089fd247c7703832784c6bf2314d8",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x031c92df5386b38fd96f4ea8fc17ce5410104201",
+    "holders": [
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "1000",
+        "decimalBalance": "0.000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77916-1-A-0-2023",
+          "projectAddress": "0x031c92df5386b38fd96f4ea8fc17ce5410104201",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+    "holders": [
+      {
+        "accountAddress": "0x7548fd4f2dde80ca245801fab11838834e74fbaf",
+        "balance": "10",
+        "decimalBalance": "0.00000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2007",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-17"
+        }
+      },
+      {
+        "accountAddress": "0xaa45903065057506d76d66dab01318ea5e2cdebd",
+        "balance": "2054",
+        "decimalBalance": "0.000000000000002054",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2007",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-17"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2007",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-17"
+        }
+      },
+      {
+        "accountAddress": "0xde202ea7b719bb2f2011cb9547d1c5fd0250334b",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2007",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-17"
+        }
+      },
+      {
+        "accountAddress": "0xe8a594c99bde13a2f8248ed0804797c74a1c6df0",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2007",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-17"
+        }
+      },
+      {
+        "accountAddress": "0xfcff1c13b9236d4ecd2fdc03dd294e199c2fa03d",
+        "balance": "2",
+        "decimalBalance": "0.000000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2007",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-17"
+        }
+      },
+      {
+        "accountAddress": "0x23a3878fd8e1dc324b7c628e5cb94bd4ecc1fff7",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0x2895b2634dc258a2ba66235324b2d70c09785d4c",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0x3a15eda03a14729c7478ef0211cf87ab932ed99e",
+        "balance": "34",
+        "decimalBalance": "0.000000000000000034",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0x512b826b2ed5f536b73bd6e4ccbf517921c818e1",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0x71c8da0de3dfd122592ca03216bb3ab9632d0ea7",
+        "balance": "200",
+        "decimalBalance": "0.0000000000000002",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0x785d61960439f7cdea2311e419223e15ea67a013",
+        "balance": "20",
+        "decimalBalance": "0.00000000000000002",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0x7d3ba4d7b7bffcc6f1875e8d330371f8020cc7d1",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0x9a1e1cd746c51e28a3c206229f448f2412064a8d",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0xaa45903065057506d76d66dab01318ea5e2cdebd",
+        "balance": "9828",
+        "decimalBalance": "0.000000000000009828",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0xb584052b6767a016fd75ac236af0c2050b129c55",
+        "balance": "23",
+        "decimalBalance": "0.000000000000000023",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0xb8ef9200bac4eafc345fbf83daf9d59d9c05cd95",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0xd58d4e362f9fabf5ebaf0787690736f2a25e7f59",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0xdd012717477a4db3bebf56cc305ed05ef90af25c",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0xdf2226ef8b1fe5b4f75cfd092597248d2823cd33",
+        "balance": "30",
+        "decimalBalance": "0.00000000000000003",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0xea4224ca5105dd1f9d51a304f123e3136c9ab12b",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0xf2821314b7c7561908d8acbf2ea2db81d4b3407b",
+        "balance": "65",
+        "decimalBalance": "0.000000000000000065",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2008",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-310"
+        }
+      },
+      {
+        "accountAddress": "0x031d6d22ece4fa615e5dacd9f5d632783558bc8d",
+        "balance": "515",
+        "decimalBalance": "0.000000000000000515",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "4",
+        "decimalBalance": "0.000000000000000004",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0x3a15eda03a14729c7478ef0211cf87ab932ed99e",
+        "balance": "50",
+        "decimalBalance": "0.00000000000000005",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0x480c25f06166ae277f8b1257e9756c33a43055b7",
+        "balance": "9480",
+        "decimalBalance": "0.00000000000000948",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0x5b023e603b1734e116394492a3f61939f2600a2c",
+        "balance": "10",
+        "decimalBalance": "0.00000000000000001",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0x6c91d1b62b1c8a379207d18be6c0c0cfef2c2676",
+        "balance": "40",
+        "decimalBalance": "0.00000000000000004",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0x7548fd4f2dde80ca245801fab11838834e74fbaf",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0x75871335b537fbfa18298e14478d232f1e1a52a8",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0x793e87b86f8e739e8520ca003729fc0dce95e7a6",
+        "balance": "20",
+        "decimalBalance": "0.00000000000000002",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0xaa45903065057506d76d66dab01318ea5e2cdebd",
+        "balance": "5425",
+        "decimalBalance": "0.000000000000005425",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0xd58d4e362f9fabf5ebaf0787690736f2a25e7f59",
+        "balance": "65",
+        "decimalBalance": "0.000000000000000065",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0xf14cbd2c08aa6f46a7f6019f79bdcd25a92cffb7",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0xf2821314b7c7561908d8acbf2ea2db81d4b3407b",
+        "balance": "7",
+        "decimalBalance": "0.000000000000000007",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2009",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-60"
+        }
+      },
+      {
+        "accountAddress": "0x3a15eda03a14729c7478ef0211cf87ab932ed99e",
+        "balance": "1000",
+        "decimalBalance": "0.000000000000001",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2010",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-453"
+        }
+      },
+      {
+        "accountAddress": "0x48a045a1f8d42de92a871bd1156a937cf64efcf3",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2010",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-453"
+        }
+      },
+      {
+        "accountAddress": "0x56010d1ca621a0b2aad558449b374e9d37884f70",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2010",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-453"
+        }
+      },
+      {
+        "accountAddress": "0x7c867a64260c20162279e43dace91d6e918ef73f",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2010",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-453"
+        }
+      },
+      {
+        "accountAddress": "0x9c7b45285a44f386eecc0131051495d5ecbdf741",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2010",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-453"
+        }
+      },
+      {
+        "accountAddress": "0xaa45903065057506d76d66dab01318ea5e2cdebd",
+        "balance": "17317",
+        "decimalBalance": "0.000000000000017317",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2010",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-453"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2010",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-453"
+        }
+      },
+      {
+        "accountAddress": "0xe0aa34685b9628eb0ee5158aca3e66a984c8593e",
+        "balance": "5",
+        "decimalBalance": "0.000000000000000005",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2010",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-453"
+        }
+      },
+      {
+        "accountAddress": "0xf2821314b7c7561908d8acbf2ea2db81d4b3407b",
+        "balance": "2",
+        "decimalBalance": "0.000000000000000002",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2010",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-453"
+        }
+      },
+      {
+        "accountAddress": "0x1dcaa6fbbabe8b337446723cb45907f4306cef8c",
+        "balance": "100",
+        "decimalBalance": "0.0000000000000001",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2011",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-2"
+        }
+      },
+      {
+        "accountAddress": "0x7d621d1c44af16882ce71d0a83cb6fa147aaddfb",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2011",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-2"
+        }
+      },
+      {
+        "accountAddress": "0xaa45903065057506d76d66dab01318ea5e2cdebd",
+        "balance": "14898",
+        "decimalBalance": "0.000000000000014898",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2011",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-2"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "5860",
+        "decimalBalance": "0.00000000000000586",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2011",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "-2"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "22548",
+        "decimalBalance": "0.000000000000022548",
+        "asset": {
+          "tokenId": "8",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2014",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "26833",
+        "decimalBalance": "0.000000000000026833",
+        "asset": {
+          "tokenId": "9",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2015",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "27563",
+        "decimalBalance": "0.000000000000027563",
+        "asset": {
+          "tokenId": "10",
+          "decimals": 18,
+          "serialization": "ICR-USA-1-448-13-A-0-2016",
+          "projectAddress": "0x05d59e736cdf4a2ede0b927a9d67dd8775b42a6b",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+    "holders": [
+      {
+        "accountAddress": "0x020560a75a59edf2400401314cd11064fd18831e",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x0853111f0880da9b93ca610b363a9c681012e79a",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x104c5278e341ecebb09c4833f563228923922289",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x183f2575c093a3c015dd483532819fe228c7fed2",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x2895b2634dc258a2ba66235324b2d70c09785d4c",
+        "balance": "1",
+        "decimalBalance": "0.000000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x34040e2fddf604bc5bd16becfdf357966272975a",
+        "balance": "11",
+        "decimalBalance": "0.000000000000000011",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x42a18856db335c7a318690c71e1ee4b207234794",
+        "balance": "10",
+        "decimalBalance": "0.00000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x436cffb2d7adb0e1e857ce491cb158010e01ea3c",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x4696870b28c7345fe2c4c5e87f2ad2bbc20fb553",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x4b9627edf687a7af9ad129dd9e4ed76dbcd240d8",
+        "balance": "31",
+        "decimalBalance": "0.000000000000000031",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x5f4daf8a4c6c0d7d153f59370cba7e6dc71b9dfd",
+        "balance": "10047382",
+        "decimalBalance": "0.000000000010047382",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x5fde52e3e6f95db11f34c2c6c5462cd081c6253d",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x6ea9d66b9e82b54fed42219631c40ff1fe09bc6b",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x76740146c309672aa3bfba3e39c15728d6e4a1a9",
+        "balance": "1",
+        "decimalBalance": "0.000000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x76e4005740a53e97223bdeef3912516d8fd962d6",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x8f46e08500b590eaf383ef7290ceb67b2267038e",
+        "balance": "126",
+        "decimalBalance": "0.000000000000000126",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x98edd33d49a10a4da42c79a440b75a7f2106eb70",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x9a7c172b9a4e06d92b41f81052f8e49d76891212",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0xa5421a6177a5a678f810240061958bf7c9427b53",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0xaa686f719b541d2de464e143999d361d57cba3a9",
+        "balance": "11",
+        "decimalBalance": "0.000000000000000011",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0xb4e07265a76b1ddd36f63036ae15e04388ce3d5d",
+        "balance": "1001",
+        "decimalBalance": "0.000000000000001001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0xc5080503050d93678ad46459412f5afe0bafeea8",
+        "balance": "1362",
+        "decimalBalance": "0.000000000000001362",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0xe9e1f8f90a832eecaff78999574cdc6053ba0082",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2020",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-64"
+        }
+      },
+      {
+        "accountAddress": "0x482ea32a6a9552ec8ed74c710194d483169297d6",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2021",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-1"
+        }
+      },
+      {
+        "accountAddress": "0x5f4daf8a4c6c0d7d153f59370cba7e6dc71b9dfd",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2021",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-1"
+        }
+      },
+      {
+        "accountAddress": "0xc5080503050d93678ad46459412f5afe0bafeea8",
+        "balance": "9999999",
+        "decimalBalance": "0.000000000009999999",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2021",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-1"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2021",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "-1"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "1111",
+        "decimalBalance": "0.000000000000001111",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2022",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x000488429af0fe9b62f61e3f33638d3970a3cec9",
+        "balance": "5",
+        "decimalBalance": "0.000000000000000005",
+        "asset": {
+          "tokenId": "19",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2024",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExAnte",
+          "supply": "50000"
+        }
+      },
+      {
+        "accountAddress": "0x2895b2634dc258a2ba66235324b2d70c09785d4c",
+        "balance": "1",
+        "decimalBalance": "0.000000000000000001",
+        "asset": {
+          "tokenId": "19",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2024",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExAnte",
+          "supply": "50000"
+        }
+      },
+      {
+        "accountAddress": "0x2f8c6b11ac0759c3498fbf8aeae430ad21fde2e1",
+        "balance": "1",
+        "decimalBalance": "0.000000000000000001",
+        "asset": {
+          "tokenId": "19",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2024",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExAnte",
+          "supply": "50000"
+        }
+      },
+      {
+        "accountAddress": "0x4b9627edf687a7af9ad129dd9e4ed76dbcd240d8",
+        "balance": "2",
+        "decimalBalance": "0.000000000000000002",
+        "asset": {
+          "tokenId": "19",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2024",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExAnte",
+          "supply": "50000"
+        }
+      },
+      {
+        "accountAddress": "0x5f4daf8a4c6c0d7d153f59370cba7e6dc71b9dfd",
+        "balance": "49894",
+        "decimalBalance": "0.000000000000049894",
+        "asset": {
+          "tokenId": "19",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2024",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExAnte",
+          "supply": "50000"
+        }
+      },
+      {
+        "accountAddress": "0x76e4005740a53e97223bdeef3912516d8fd962d6",
+        "balance": "7",
+        "decimalBalance": "0.000000000000000007",
+        "asset": {
+          "tokenId": "19",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2024",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExAnte",
+          "supply": "50000"
+        }
+      },
+      {
+        "accountAddress": "0xb4e07265a76b1ddd36f63036ae15e04388ce3d5d",
+        "balance": "90",
+        "decimalBalance": "0.00000000000000009",
+        "asset": {
+          "tokenId": "19",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78049-2-A-0-2024",
+          "projectAddress": "0x06957023e74c162943b4213ad03c17b728effdf2",
+          "type": "ExAnte",
+          "supply": "50000"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x0f9f0dbf3c0b579281f407a32f575e4fe2d8066a",
+    "holders": [
+      {
+        "accountAddress": "0x9cbf7e7ca05123fc120f54ae5604a3c3561ec529",
+        "balance": "45",
+        "decimalBalance": "0.000000000000000045",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77993-2-A-0-2023",
+          "projectAddress": "0x0f9f0dbf3c0b579281f407a32f575e4fe2d8066a",
+          "type": "ExPost",
+          "supply": "-10"
+        }
+      },
+      {
+        "accountAddress": "0xa44b98a4fcd4176510e6ade80814a141a202c56b",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77993-2-A-0-2023",
+          "projectAddress": "0x0f9f0dbf3c0b579281f407a32f575e4fe2d8066a",
+          "type": "ExPost",
+          "supply": "-10"
+        }
+      },
+      {
+        "accountAddress": "0xc5080503050d93678ad46459412f5afe0bafeea8",
+        "balance": "45",
+        "decimalBalance": "0.000000000000000045",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77993-2-A-0-2023",
+          "projectAddress": "0x0f9f0dbf3c0b579281f407a32f575e4fe2d8066a",
+          "type": "ExPost",
+          "supply": "-10"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77993-2-A-0-2023",
+          "projectAddress": "0x0f9f0dbf3c0b579281f407a32f575e4fe2d8066a",
+          "type": "ExPost",
+          "supply": "-10"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x1603853a785f3cd5308a1487bff16affe4a16beb",
+    "holders": [
+      {
+        "accountAddress": "0x8f46e08500b590eaf383ef7290ceb67b2267038e",
+        "balance": "9992",
+        "decimalBalance": "0.000000000000009992",
+        "asset": {
+          "tokenId": "6",
+          "decimals": 18,
+          "serialization": "icr-ALB-355-78092-2-A-0-2026",
+          "projectAddress": "0x1603853a785f3cd5308a1487bff16affe4a16beb",
+          "type": "ExAnte",
+          "supply": "9992"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+    "holders": [
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "99",
+        "decimalBalance": "0.000000000000000099",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0x1b9112bc234c401250288da15124d6afbecc045c",
+        "balance": "77",
+        "decimalBalance": "0.000000000000000077",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0x480c25f06166ae277f8b1257e9756c33a43055b7",
+        "balance": "32",
+        "decimalBalance": "0.000000000000000032",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0x4fa0d5fc0c4d84a3c38e6a40be368484dbe89ee7",
+        "balance": "1324",
+        "decimalBalance": "0.000000000000001324",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0x5ddd0acaba9cc57f023180e4c803e6faa175e281",
+        "balance": "7",
+        "decimalBalance": "0.000000000000000007",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0x655a1f39ed347df82126162176821e25553c1679",
+        "balance": "835",
+        "decimalBalance": "0.000000000000000835",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0x76740146c309672aa3bfba3e39c15728d6e4a1a9",
+        "balance": "1",
+        "decimalBalance": "0.000000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0x80ba13715f9b88464950c75c51cc2927029e67ac",
+        "balance": "16",
+        "decimalBalance": "0.000000000000000016",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0xafb5ee60797381be154d43018aba2c21bbd5644e",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0xcec81c525ce1e847bd3709f4362525092213f673",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0xd58d4e362f9fabf5ebaf0787690736f2a25e7f59",
+        "balance": "100",
+        "decimalBalance": "0.0000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "-3509"
+        }
+      },
+      {
+        "accountAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2024",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x4fa0d5fc0c4d84a3c38e6a40be368484dbe89ee7",
+        "balance": "2000",
+        "decimalBalance": "0.000000000000002",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2024",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "2000",
+        "decimalBalance": "0.000000000000002",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2024",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "11000",
+        "decimalBalance": "0.000000000000011",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2025",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x480c25f06166ae277f8b1257e9756c33a43055b7",
+        "balance": "311",
+        "decimalBalance": "0.000000000000000311",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExAnte",
+          "supply": "2500"
+        }
+      },
+      {
+        "accountAddress": "0x4bb70833f08ab72f738c27ee9b92bc00eaf64ccf",
+        "balance": "11",
+        "decimalBalance": "0.000000000000000011",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExAnte",
+          "supply": "2500"
+        }
+      },
+      {
+        "accountAddress": "0x4fa0d5fc0c4d84a3c38e6a40be368484dbe89ee7",
+        "balance": "2178",
+        "decimalBalance": "0.000000000000002178",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2023",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExAnte",
+          "supply": "2500"
+        }
+      },
+      {
+        "accountAddress": "0x4fa0d5fc0c4d84a3c38e6a40be368484dbe89ee7",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "18",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2024",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExAnte",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x4fa0d5fc0c4d84a3c38e6a40be368484dbe89ee7",
+        "balance": "5000",
+        "decimalBalance": "0.000000000000005",
+        "asset": {
+          "tokenId": "19",
+          "decimals": 18,
+          "serialization": "ICR-AFG-93-46-2-H-0-2026",
+          "projectAddress": "0x1912b30f7a10a07e18bc9ce831a56b8a07d0d6ac",
+          "type": "ExAnte",
+          "supply": "5000"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x1c91a8894b2bdb5cfd55e0572e0f067ed5897b20",
+    "holders": [
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-77990-2-A-0-2023",
+          "projectAddress": "0x1c91a8894b2bdb5cfd55e0572e0f067ed5897b20",
+          "type": "ExPost",
+          "supply": "-179"
+        }
+      },
+      {
+        "accountAddress": "0x480c25f06166ae277f8b1257e9756c33a43055b7",
+        "balance": "50",
+        "decimalBalance": "0.00000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-77990-2-A-0-2023",
+          "projectAddress": "0x1c91a8894b2bdb5cfd55e0572e0f067ed5897b20",
+          "type": "ExPost",
+          "supply": "-179"
+        }
+      },
+      {
+        "accountAddress": "0x9cbf7e7ca05123fc120f54ae5604a3c3561ec529",
+        "balance": "248",
+        "decimalBalance": "0.000000000000000248",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-77990-2-A-0-2023",
+          "projectAddress": "0x1c91a8894b2bdb5cfd55e0572e0f067ed5897b20",
+          "type": "ExPost",
+          "supply": "-179"
+        }
+      },
+      {
+        "accountAddress": "0xc5080503050d93678ad46459412f5afe0bafeea8",
+        "balance": "23",
+        "decimalBalance": "0.000000000000000023",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-77990-2-A-0-2023",
+          "projectAddress": "0x1c91a8894b2bdb5cfd55e0572e0f067ed5897b20",
+          "type": "ExPost",
+          "supply": "-179"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-77990-2-A-0-2023",
+          "projectAddress": "0x1c91a8894b2bdb5cfd55e0572e0f067ed5897b20",
+          "type": "ExPost",
+          "supply": "-179"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x23da7c2a0671354f8a1b80aad7ad749fd85e6cd5",
+    "holders": [
+      {
+        "accountAddress": "0x4f72e164a9cef8f96ed689ea543068d7d035d9bb",
+        "balance": "3000",
+        "decimalBalance": "0.000000000000003",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-MNE-382-48-1-A-1-2023",
+          "projectAddress": "0x23da7c2a0671354f8a1b80aad7ad749fd85e6cd5",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-MNE-382-48-1-A-1-2023",
+          "projectAddress": "0x23da7c2a0671354f8a1b80aad7ad749fd85e6cd5",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x32a59271abdb2342325559ebaf965c409dc44dea",
+    "holders": [
+      {
+        "accountAddress": "0x480c25f06166ae277f8b1257e9756c33a43055b7",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-56-2-A-0-2023",
+          "projectAddress": "0x32a59271abdb2342325559ebaf965c409dc44dea",
+          "type": "ExPost",
+          "supply": "-100"
+        }
+      },
+      {
+        "accountAddress": "0xbee26823a67c041640491b6c32f3d5f88154052c",
+        "balance": "400",
+        "decimalBalance": "0.0000000000000004",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-56-2-A-0-2023",
+          "projectAddress": "0x32a59271abdb2342325559ebaf965c409dc44dea",
+          "type": "ExPost",
+          "supply": "-100"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-56-2-A-0-2023",
+          "projectAddress": "0x32a59271abdb2342325559ebaf965c409dc44dea",
+          "type": "ExPost",
+          "supply": "-100"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x4137f87aa5a67131b418b07e784a96e7af495fc0",
+    "holders": [
+      {
+        "accountAddress": "0x70ea2848564b41c30aa27acaa135c0beba122203",
+        "balance": "10000000",
+        "decimalBalance": "0.00000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78052-3-A-0-2019",
+          "projectAddress": "0x4137f87aa5a67131b418b07e784a96e7af495fc0",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78052-3-A-0-2019",
+          "projectAddress": "0x4137f87aa5a67131b418b07e784a96e7af495fc0",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+    "holders": [
+      {
+        "accountAddress": "0x24c5fe9cca0926cd8504507e2cc5acd239844572",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0x26d3f2ed1db09155c136a3770c7852337f7fe303",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0x64ab4acea6ee1257c82c2c602fb5f754377c16ed",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0x797ab0cebb6b4dea468eea7d16943e240d8a225e",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0x7ef7707bf9d495e09f4fd23223f5b35dca6153e9",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0x8a8114d63c87e44cc3445555eb6df419b0f37e23",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0x92a8ab0f79fd363e3ad357b8636d60b213d51ac6",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0x9cbf7e7ca05123fc120f54ae5604a3c3561ec529",
+        "balance": "491",
+        "decimalBalance": "0.000000000000000491",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0xb92390e18c40edf5098876285fc2eb9da77c84bb",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0xc5080503050d93678ad46459412f5afe0bafeea8",
+        "balance": "498",
+        "decimalBalance": "0.000000000000000498",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0xce7e5ca1194c7ada0f9680d1c03257325ea13eb4",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      },
+      {
+        "accountAddress": "0xf4be90d689c5b3a981dda28c70a4ac146db533dc",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78025-2-A-0-2023",
+          "projectAddress": "0x46e894656571870f099b62c39146c0d08043c4c8",
+          "type": "ExPost",
+          "supply": "-11"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x471e356fc141da298c4a67f407fafde14be608e7",
+    "holders": [
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "3100",
+        "decimalBalance": "0.0000000000000031",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-DEU-49-77890-13-A-0-2023",
+          "projectAddress": "0x471e356fc141da298c4a67f407fafde14be608e7",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-DEU-49-77890-13-A-0-2023",
+          "projectAddress": "0x471e356fc141da298c4a67f407fafde14be608e7",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "200",
+        "decimalBalance": "0.0000000000000002",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "FCC-DEU-49-77890-13-A-0-2024",
+          "projectAddress": "0x471e356fc141da298c4a67f407fafde14be608e7",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "900",
+        "decimalBalance": "0.0000000000000009",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "FCC-DEU-49-77890-13-A-0-2025",
+          "projectAddress": "0x471e356fc141da298c4a67f407fafde14be608e7",
+          "type": "ExAnte",
+          "supply": "1000"
+        }
+      },
+      {
+        "accountAddress": "0x7d621d1c44af16882ce71d0a83cb6fa147aaddfb",
+        "balance": "90",
+        "decimalBalance": "0.00000000000000009",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "FCC-DEU-49-77890-13-A-0-2025",
+          "projectAddress": "0x471e356fc141da298c4a67f407fafde14be608e7",
+          "type": "ExAnte",
+          "supply": "1000"
+        }
+      },
+      {
+        "accountAddress": "0x889a08e5f8952b13e779f6934eb88d831c4c1ee0",
+        "balance": "10",
+        "decimalBalance": "0.00000000000000001",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "FCC-DEU-49-77890-13-A-0-2025",
+          "projectAddress": "0x471e356fc141da298c4a67f407fafde14be608e7",
+          "type": "ExAnte",
+          "supply": "1000"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+    "holders": [
+      {
+        "accountAddress": "0x23bbdaf6cd16fb93d02441002a3730a792d8bf99",
+        "balance": "2",
+        "decimalBalance": "0.000000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2023",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExPost",
+          "supply": "-1000"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "8378",
+        "decimalBalance": "0.000000000000008378",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2023",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExPost",
+          "supply": "-1000"
+        }
+      },
+      {
+        "accountAddress": "0x4f72e164a9cef8f96ed689ea543068d7d035d9bb",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2023",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExPost",
+          "supply": "-1000"
+        }
+      },
+      {
+        "accountAddress": "0x7548fd4f2dde80ca245801fab11838834e74fbaf",
+        "balance": "20",
+        "decimalBalance": "0.00000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2023",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExPost",
+          "supply": "-1000"
+        }
+      },
+      {
+        "accountAddress": "0x83f148ac698b84c864c25f3bd556c86ccb2935c9",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2023",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExPost",
+          "supply": "-1000"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "10000",
+        "decimalBalance": "0.00000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2023",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExPost",
+          "supply": "-1000"
+        }
+      },
+      {
+        "accountAddress": "0xd69c9c7d92489d2c7017bebc5eaea76d9e47fbec",
+        "balance": "100",
+        "decimalBalance": "0.0000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2023",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExPost",
+          "supply": "-1000"
+        }
+      },
+      {
+        "accountAddress": "0x0071c12e06d0e95c31b65cf307836a83d3f85f35",
+        "balance": "10",
+        "decimalBalance": "0.00000000000000001",
+        "asset": {
+          "tokenId": "10",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2023",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExAnte",
+          "supply": "50000"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "38990",
+        "decimalBalance": "0.00000000000003899",
+        "asset": {
+          "tokenId": "10",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2023",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExAnte",
+          "supply": "50000"
+        }
+      },
+      {
+        "accountAddress": "0x83f148ac698b84c864c25f3bd556c86ccb2935c9",
+        "balance": "10000",
+        "decimalBalance": "0.00000000000001",
+        "asset": {
+          "tokenId": "10",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2023",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExAnte",
+          "supply": "50000"
+        }
+      },
+      {
+        "accountAddress": "0x9b5da7b425ff39cd9da327d7d9359b5cc50a7b1e",
+        "balance": "1000",
+        "decimalBalance": "0.000000000000001",
+        "asset": {
+          "tokenId": "10",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2023",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExAnte",
+          "supply": "50000"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "40000",
+        "decimalBalance": "0.00000000000004",
+        "asset": {
+          "tokenId": "11",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2024",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExAnte",
+          "supply": "40000"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "20000",
+        "decimalBalance": "0.00000000000002",
+        "asset": {
+          "tokenId": "13",
+          "decimals": 18,
+          "serialization": "ICR-FRA-33-77933-14-A-0-2025",
+          "projectAddress": "0x49099ed5817e601ac7c7c55e4ea86ec4bbf481a7",
+          "type": "ExAnte",
+          "supply": "20000"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x4b0c44186af4a57f8ffda95caa5e33c26079d317",
+    "holders": [
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "5",
+        "decimalBalance": "0.000000000000000005",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-POL-48-77988-4-A-1-2023",
+          "projectAddress": "0x4b0c44186af4a57f8ffda95caa5e33c26079d317",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x4e9661b22a9953bcecde20a70a9a1886489d8edd",
+    "holders": [
+      {
+        "accountAddress": "0x6c91d1b62b1c8a379207d18be6c0c0cfef2c2676",
+        "balance": "1",
+        "decimalBalance": "0.000000000000000001",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-52-2-A-0-2023",
+          "projectAddress": "0x4e9661b22a9953bcecde20a70a9a1886489d8edd",
+          "type": "ExAnte",
+          "supply": "10"
+        }
+      },
+      {
+        "accountAddress": "0x9a1e1cd746c51e28a3c206229f448f2412064a8d",
+        "balance": "5",
+        "decimalBalance": "0.000000000000000005",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-52-2-A-0-2023",
+          "projectAddress": "0x4e9661b22a9953bcecde20a70a9a1886489d8edd",
+          "type": "ExAnte",
+          "supply": "10"
+        }
+      },
+      {
+        "accountAddress": "0xaa45903065057506d76d66dab01318ea5e2cdebd",
+        "balance": "4",
+        "decimalBalance": "0.000000000000000004",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-52-2-A-0-2023",
+          "projectAddress": "0x4e9661b22a9953bcecde20a70a9a1886489d8edd",
+          "type": "ExAnte",
+          "supply": "10"
+        }
+      },
+      {
+        "accountAddress": "0x1949936754e38b0cc35333126204d62a9a0abece",
+        "balance": "2",
+        "decimalBalance": "0.000000000000000002",
+        "asset": {
+          "tokenId": "6",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-52-2-A-0-2024",
+          "projectAddress": "0x4e9661b22a9953bcecde20a70a9a1886489d8edd",
+          "type": "ExAnte",
+          "supply": "50"
+        }
+      },
+      {
+        "accountAddress": "0x7548fd4f2dde80ca245801fab11838834e74fbaf",
+        "balance": "4",
+        "decimalBalance": "0.000000000000000004",
+        "asset": {
+          "tokenId": "6",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-52-2-A-0-2024",
+          "projectAddress": "0x4e9661b22a9953bcecde20a70a9a1886489d8edd",
+          "type": "ExAnte",
+          "supply": "50"
+        }
+      },
+      {
+        "accountAddress": "0x9a1e1cd746c51e28a3c206229f448f2412064a8d",
+        "balance": "44",
+        "decimalBalance": "0.000000000000000044",
+        "asset": {
+          "tokenId": "6",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-52-2-A-0-2024",
+          "projectAddress": "0x4e9661b22a9953bcecde20a70a9a1886489d8edd",
+          "type": "ExAnte",
+          "supply": "50"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+    "holders": [
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "200",
+        "decimalBalance": "0.0000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2020",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "9800",
+        "decimalBalance": "0.0000000000000098",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2020",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "197",
+        "decimalBalance": "0.000000000000000197",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x0cfc290a2426d12b3c12da9b683b0824dc191c9b",
+        "balance": "100",
+        "decimalBalance": "0.0000000000000001",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x2559ff0f61870134a1d75ce3f271878dcdb0eee1",
+        "balance": "49",
+        "decimalBalance": "0.000000000000000049",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x2895b2634dc258a2ba66235324b2d70c09785d4c",
+        "balance": "3",
+        "decimalBalance": "0.000000000000000003",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x2d2731d70445016fa8f8d40fd1470f63de0969fd",
+        "balance": "13",
+        "decimalBalance": "0.000000000000000013",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x2f8c6b11ac0759c3498fbf8aeae430ad21fde2e1",
+        "balance": "12",
+        "decimalBalance": "0.000000000000000012",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x4365a19e59557cbf6646bdf1d449b1769ba19a99",
+        "balance": "20",
+        "decimalBalance": "0.00000000000000002",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x5f4daf8a4c6c0d7d153f59370cba7e6dc71b9dfd",
+        "balance": "2",
+        "decimalBalance": "0.000000000000000002",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x60483ad71ee8fa743b031bd86edb565db1fb0613",
+        "balance": "10",
+        "decimalBalance": "0.00000000000000001",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x62d3897089c93a0fa2b0746a6975ec4693c13cb8",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x6476edf98bdc5ee62f9d4e4bf8932d69ed685483",
+        "balance": "91",
+        "decimalBalance": "0.000000000000000091",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x6ada131794388b83c2b3e5b8a24a4677b3ad2e39",
+        "balance": "1",
+        "decimalBalance": "0.000000000000000001",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x702e9b5af503cf37f3e2d1993744d02114c5ef34",
+        "balance": "100",
+        "decimalBalance": "0.0000000000000001",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x76740146c309672aa3bfba3e39c15728d6e4a1a9",
+        "balance": "3",
+        "decimalBalance": "0.000000000000000003",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x76e4005740a53e97223bdeef3912516d8fd962d6",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x7c867a64260c20162279e43dace91d6e918ef73f",
+        "balance": "80",
+        "decimalBalance": "0.00000000000000008",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x83e4964e53013a73fab7a4f34086417991013e26",
+        "balance": "50",
+        "decimalBalance": "0.00000000000000005",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0xab5b7b5849784279280188b556af3c179f31dc5b",
+        "balance": "1",
+        "decimalBalance": "0.000000000000000001",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0xb36f61910fbe28af3320a9244b1d317368d951bf",
+        "balance": "1279",
+        "decimalBalance": "0.000000000000001279",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0xb4e07265a76b1ddd36f63036ae15e04388ce3d5d",
+        "balance": "21",
+        "decimalBalance": "0.000000000000000021",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0xca2b532dd6fbff14430b4ff2cfb2823eeb1245c8",
+        "balance": "49",
+        "decimalBalance": "0.000000000000000049",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "97800",
+        "decimalBalance": "0.0000000000000978",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0xe993d684be2915f3b21d1ecb5d301a75b177e405",
+        "balance": "1",
+        "decimalBalance": "0.000000000000000001",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2021",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExPost",
+          "supply": "-118"
+        }
+      },
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "250",
+        "decimalBalance": "0.00000000000000025",
+        "asset": {
+          "tokenId": "69",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2025",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExAnte",
+          "supply": "250"
+        }
+      },
+      {
+        "accountAddress": "0x2895b2634dc258a2ba66235324b2d70c09785d4c",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "69",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78040-14-R-0-2025",
+          "projectAddress": "0x51298f2f1142ecb129a2db5e6afd24f34f2e53f1",
+          "type": "ExAnte",
+          "supply": "250"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x58894b79ae779a080cd5f7c39cd735acde2b2216",
+    "holders": [
+      {
+        "accountAddress": "0x2d2731d70445016fa8f8d40fd1470f63de0969fd",
+        "balance": "1595",
+        "decimalBalance": "0.000000000000001595",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78051-4-A-0-2023",
+          "projectAddress": "0x58894b79ae779a080cd5f7c39cd735acde2b2216",
+          "type": "ExPost",
+          "supply": "-22"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "70",
+        "decimalBalance": "0.00000000000000007",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78051-4-A-0-2023",
+          "projectAddress": "0x58894b79ae779a080cd5f7c39cd735acde2b2216",
+          "type": "ExPost",
+          "supply": "-22"
+        }
+      },
+      {
+        "accountAddress": "0x5ecab1b1c2863218257fac421ce54e8f2bbef2f9",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78051-4-A-0-2023",
+          "projectAddress": "0x58894b79ae779a080cd5f7c39cd735acde2b2216",
+          "type": "ExPost",
+          "supply": "-22"
+        }
+      },
+      {
+        "accountAddress": "0x5f37263413644e8e605d639033f7d96699325a84",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78051-4-A-0-2023",
+          "projectAddress": "0x58894b79ae779a080cd5f7c39cd735acde2b2216",
+          "type": "ExPost",
+          "supply": "-22"
+        }
+      },
+      {
+        "accountAddress": "0x6ff0abefffa4f65cf683fbdca3d124b24a650fab",
+        "balance": "2",
+        "decimalBalance": "0.000000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78051-4-A-0-2023",
+          "projectAddress": "0x58894b79ae779a080cd5f7c39cd735acde2b2216",
+          "type": "ExPost",
+          "supply": "-22"
+        }
+      },
+      {
+        "accountAddress": "0x70dd43be61559c992eee473b53eb1ff03ffde8c0",
+        "balance": "200",
+        "decimalBalance": "0.0000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78051-4-A-0-2023",
+          "projectAddress": "0x58894b79ae779a080cd5f7c39cd735acde2b2216",
+          "type": "ExPost",
+          "supply": "-22"
+        }
+      },
+      {
+        "accountAddress": "0x763a389641486872673f7238c4c4ae75a712024d",
+        "balance": "90",
+        "decimalBalance": "0.00000000000000009",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78051-4-A-0-2023",
+          "projectAddress": "0x58894b79ae779a080cd5f7c39cd735acde2b2216",
+          "type": "ExPost",
+          "supply": "-22"
+        }
+      },
+      {
+        "accountAddress": "0x785d61960439f7cdea2311e419223e15ea67a013",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78051-4-A-0-2023",
+          "projectAddress": "0x58894b79ae779a080cd5f7c39cd735acde2b2216",
+          "type": "ExPost",
+          "supply": "-22"
+        }
+      },
+      {
+        "accountAddress": "0x9b5da7b425ff39cd9da327d7d9359b5cc50a7b1e",
+        "balance": "21",
+        "decimalBalance": "0.000000000000000021",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78051-4-A-0-2023",
+          "projectAddress": "0x58894b79ae779a080cd5f7c39cd735acde2b2216",
+          "type": "ExPost",
+          "supply": "-22"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78051-4-A-0-2023",
+          "projectAddress": "0x58894b79ae779a080cd5f7c39cd735acde2b2216",
+          "type": "ExPost",
+          "supply": "-22"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x5a2236777abd25fa04c25191631e30643a67c1ad",
+    "holders": [
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "100",
+        "decimalBalance": "0.0000000000000001",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-GBR-44-72-3-A-0-2023",
+          "projectAddress": "0x5a2236777abd25fa04c25191631e30643a67c1ad",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+    "holders": [
+      {
+        "accountAddress": "0x07831006c49234dd19ab11c64754c9b2eda03d45",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "71",
+        "decimalBalance": "0.000000000000000071",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0x482f399deab4ed59b2e2fdb20a3d3195926d366d",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0x7548fd4f2dde80ca245801fab11838834e74fbaf",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0x79bc4ff276cd3c417b7cc6b2fce29298f8fbb47d",
+        "balance": "20",
+        "decimalBalance": "0.00000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0x83f148ac698b84c864c25f3bd556c86ccb2935c9",
+        "balance": "200",
+        "decimalBalance": "0.0000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0x9ae4a8b28792c7857099b44f9476935216243c18",
+        "balance": "200",
+        "decimalBalance": "0.0000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0xac79d89266933e500ab615a18223850595bea8ea",
+        "balance": "12",
+        "decimalBalance": "0.000000000000000012",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0xd58d4e362f9fabf5ebaf0787690736f2a25e7f59",
+        "balance": "50",
+        "decimalBalance": "0.00000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0xe61c904172d0659c77c8ce65f861973540bf899f",
+        "balance": "12",
+        "decimalBalance": "0.000000000000000012",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0xf14cbd2c08aa6f46a7f6019f79bdcd25a92cffb7",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0xf2b4c16531384a0d692b752c5521363f27f2c33f",
+        "balance": "10",
+        "decimalBalance": "0.00000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "-425"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "10",
+        "decimalBalance": "0.00000000000000001",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2025",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2023",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExAnte",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x18b0834cf14d569df2d8ec25d3b8886e495b7b66",
+        "balance": "50",
+        "decimalBalance": "0.00000000000000005",
+        "asset": {
+          "tokenId": "7",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2025",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExAnte",
+          "supply": "100"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "40",
+        "decimalBalance": "0.00000000000000004",
+        "asset": {
+          "tokenId": "7",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2025",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExAnte",
+          "supply": "100"
+        }
+      },
+      {
+        "accountAddress": "0x815e5cb0e9e66bef9bbaea3a991f093ad5a30f8e",
+        "balance": "10",
+        "decimalBalance": "0.00000000000000001",
+        "asset": {
+          "tokenId": "7",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2025",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExAnte",
+          "supply": "100"
+        }
+      },
+      {
+        "accountAddress": "0x17a941797314b1f76c6299b455c895e2badf4c4f",
+        "balance": "20",
+        "decimalBalance": "0.00000000000000002",
+        "asset": {
+          "tokenId": "8",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2026",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExAnte",
+          "supply": "300"
+        }
+      },
+      {
+        "accountAddress": "0x18b0834cf14d569df2d8ec25d3b8886e495b7b66",
+        "balance": "200",
+        "decimalBalance": "0.0000000000000002",
+        "asset": {
+          "tokenId": "8",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2026",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExAnte",
+          "supply": "300"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "80",
+        "decimalBalance": "0.00000000000000008",
+        "asset": {
+          "tokenId": "8",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77934-6-A-0-2026",
+          "projectAddress": "0x5c1ff02faa8cd07018e9f045959d2dbc5d6517d0",
+          "type": "ExAnte",
+          "supply": "300"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x5fcd6809b967c39f2b86b4d0e7cfebb0a4554d18",
+    "holders": [
+      {
+        "accountAddress": "0x3e1bb788be6579aeb8f1ef7ca3a408825e83cbae",
+        "balance": "994",
+        "decimalBalance": "0.000000000000000994",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-19-2-A-0-2023",
+          "projectAddress": "0x5fcd6809b967c39f2b86b4d0e7cfebb0a4554d18",
+          "type": "ExPost",
+          "supply": "-6"
+        }
+      },
+      {
+        "accountAddress": "0x71750795f26a9ba886e31bc604558551362970bf",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-19-2-A-0-2023",
+          "projectAddress": "0x5fcd6809b967c39f2b86b4d0e7cfebb0a4554d18",
+          "type": "ExPost",
+          "supply": "-6"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-19-2-A-0-2023",
+          "projectAddress": "0x5fcd6809b967c39f2b86b4d0e7cfebb0a4554d18",
+          "type": "ExPost",
+          "supply": "-6"
+        }
+      },
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "100",
+        "decimalBalance": "0.0000000000000001",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-19-2-A-0-2023",
+          "projectAddress": "0x5fcd6809b967c39f2b86b4d0e7cfebb0a4554d18",
+          "type": "ExAnte",
+          "supply": "333"
+        }
+      },
+      {
+        "accountAddress": "0x3e1bb788be6579aeb8f1ef7ca3a408825e83cbae",
+        "balance": "233",
+        "decimalBalance": "0.000000000000000233",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-19-2-A-0-2023",
+          "projectAddress": "0x5fcd6809b967c39f2b86b4d0e7cfebb0a4554d18",
+          "type": "ExAnte",
+          "supply": "333"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x6274c835b9db39d036414d9069639fda9b8b6d84",
+    "holders": [
+      {
+        "accountAddress": "0x4fa0d5fc0c4d84a3c38e6a40be368484dbe89ee7",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78050-4-A-0-2023",
+          "projectAddress": "0x6274c835b9db39d036414d9069639fda9b8b6d84",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78050-4-A-0-2023",
+          "projectAddress": "0x6274c835b9db39d036414d9069639fda9b8b6d84",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+    "holders": [
+      {
+        "accountAddress": "0x4aeab151a076bb76d4dcff0a2ee963845c376dd4",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2017",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-1"
+        }
+      },
+      {
+        "accountAddress": "0x9cbf7e7ca05123fc120f54ae5604a3c3561ec529",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2017",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-1"
+        }
+      },
+      {
+        "accountAddress": "0xc5080503050d93678ad46459412f5afe0bafeea8",
+        "balance": "74999",
+        "decimalBalance": "0.000000000000074999",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2017",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-1"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "25000",
+        "decimalBalance": "0.000000000000025",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2017",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-1"
+        }
+      },
+      {
+        "accountAddress": "0x07e324b6c74052d0ad1ae41625db1cd3d6d2d441",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0x131c24a749c2be2e0842479d5da22881ad476c12",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0x1bff908b52f2ed2e168a6fe95ac6ecc2845a01d7",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0x2f5023da8b33e26483f21046b69fa71ee6905e45",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0x5b4ce0b3914a5ddea5d5e70dfff837e8344b9388",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0x62c8591eaf9880f831170e9a2e27f7f533a354c4",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0x850cc6905f72cd6b769da737ed28b8e38e9fe717",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0x9cbf7e7ca05123fc120f54ae5604a3c3561ec529",
+        "balance": "50000",
+        "decimalBalance": "0.00000000000005",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0xa9a11d67ce177b74985e82e2f32c078d8bb2ce70",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0xc5080503050d93678ad46459412f5afe0bafeea8",
+        "balance": "49987",
+        "decimalBalance": "0.000000000000049987",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0xca266e5070345ac3a379cc8ece7cfd733dcd9dc0",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0xd1075003b7cbee87ada828d8236174b71db44c8a",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0xeed7940c5ce878f66dadb0375c90b5468542956e",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0xf0194f0d0674289167d64c40f3855996ee999b03",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0xfbb8f6a0976b033edf47cab2ba43602da6692516",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2018",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "-13"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "100000",
+        "decimalBalance": "0.0000000000001",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78038-2-A-0-2019",
+          "projectAddress": "0x6b492e44cf70c940104833b789a85cddda852570",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x6df8437b02df4ece7b54d5530488b6a1d15a40a9",
+    "holders": [
+      {
+        "accountAddress": "0x480c25f06166ae277f8b1257e9756c33a43055b7",
+        "balance": "2",
+        "decimalBalance": "0.000000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78043-3-A-0-2023",
+          "projectAddress": "0x6df8437b02df4ece7b54d5530488b6a1d15a40a9",
+          "type": "ExPost",
+          "supply": "-4"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "275",
+        "decimalBalance": "0.000000000000000275",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78043-3-A-0-2023",
+          "projectAddress": "0x6df8437b02df4ece7b54d5530488b6a1d15a40a9",
+          "type": "ExPost",
+          "supply": "-4"
+        }
+      },
+      {
+        "accountAddress": "0xfa2bc1924d09f58ba4075a95e3cc1fb1609a248b",
+        "balance": "19",
+        "decimalBalance": "0.000000000000000019",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78043-3-A-0-2023",
+          "projectAddress": "0x6df8437b02df4ece7b54d5530488b6a1d15a40a9",
+          "type": "ExPost",
+          "supply": "-4"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+    "holders": [
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "3500",
+        "decimalBalance": "0.0000000000000035",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2023",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExPost",
+          "supply": "-1000"
+        }
+      },
+      {
+        "accountAddress": "0x0df68e303675be076f2277dd2280110c1038df3d",
+        "balance": "5500",
+        "decimalBalance": "0.0000000000000055",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2023",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExPost",
+          "supply": "-1000"
+        }
+      },
+      {
+        "accountAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2023",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExPost",
+          "supply": "-1000"
+        }
+      },
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "2500",
+        "decimalBalance": "0.0000000000000025",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2024",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x0df68e303675be076f2277dd2280110c1038df3d",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2024",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2024",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "5000",
+        "decimalBalance": "0.000000000000005",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2025",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2025",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "5000",
+        "decimalBalance": "0.000000000000005",
+        "asset": {
+          "tokenId": "3",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2025",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2023",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExAnte",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "2499",
+        "decimalBalance": "0.000000000000002499",
+        "asset": {
+          "tokenId": "6",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2024",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExAnte",
+          "supply": "2499"
+        }
+      },
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "8",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-45--1-A-0-2025",
+          "projectAddress": "0x71d5f289db899106e5a2a40c6b1aa9ba034a5268",
+          "type": "ExAnte",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x8325b3e24892aa23a352d5b79307ebe7daea80d6",
+    "holders": [
+      {
+        "accountAddress": "0x9cbf7e7ca05123fc120f54ae5604a3c3561ec529",
+        "balance": "52",
+        "decimalBalance": "0.000000000000000052",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ASM-1-684-77992-2-H-0-2023",
+          "projectAddress": "0x8325b3e24892aa23a352d5b79307ebe7daea80d6",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xc5080503050d93678ad46459412f5afe0bafeea8",
+        "balance": "1058",
+        "decimalBalance": "0.000000000000001058",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ASM-1-684-77992-2-H-0-2023",
+          "projectAddress": "0x8325b3e24892aa23a352d5b79307ebe7daea80d6",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "1",
+        "decimalBalance": "0.000000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ASM-1-684-77992-2-H-0-2023",
+          "projectAddress": "0x8325b3e24892aa23a352d5b79307ebe7daea80d6",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x901b9539f3eb1f7f57b76f30c70d93e33104747c",
+    "holders": [
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "2500",
+        "decimalBalance": "0.0000000000000025",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "icr-ISL-354-77960-2-A-1-2024",
+          "projectAddress": "0x901b9539f3eb1f7f57b76f30c70d93e33104747c",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x91c0131358f2924fc474fdbbccc2caf38be44883",
+    "holders": [
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "50",
+        "decimalBalance": "0.00000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77923-4-A-1-2023",
+          "projectAddress": "0x91c0131358f2924fc474fdbbccc2caf38be44883",
+          "type": "ExPost",
+          "supply": "-45"
+        }
+      },
+      {
+        "accountAddress": "0x480c25f06166ae277f8b1257e9756c33a43055b7",
+        "balance": "5",
+        "decimalBalance": "0.000000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77923-4-A-1-2023",
+          "projectAddress": "0x91c0131358f2924fc474fdbbccc2caf38be44883",
+          "type": "ExPost",
+          "supply": "-45"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "23",
+        "decimalBalance": "0.000000000000000023",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77923-4-A-1-2023",
+          "projectAddress": "0x91c0131358f2924fc474fdbbccc2caf38be44883",
+          "type": "ExPost",
+          "supply": "-45"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x94ca72379f384f76cda0edb6005eb80c7b94aec9",
+    "holders": [
+      {
+        "accountAddress": "0xe06756f9d0608b8628bea2d5e018bbe1f0b9f47a",
+        "balance": "400",
+        "decimalBalance": "0.0000000000000004",
+        "asset": {
+          "tokenId": "16",
+          "decimals": 18,
+          "serialization": "icr-PRI-1-787-78080-14-R-0-2028",
+          "projectAddress": "0x94ca72379f384f76cda0edb6005eb80c7b94aec9",
+          "type": "ExAnte",
+          "supply": "400"
+        }
+      },
+      {
+        "accountAddress": "0xe06756f9d0608b8628bea2d5e018bbe1f0b9f47a",
+        "balance": "700",
+        "decimalBalance": "0.0000000000000007",
+        "asset": {
+          "tokenId": "17",
+          "decimals": 18,
+          "serialization": "icr-PRI-1-787-78080-14-R-0-2027",
+          "projectAddress": "0x94ca72379f384f76cda0edb6005eb80c7b94aec9",
+          "type": "ExAnte",
+          "supply": "700"
+        }
+      },
+      {
+        "accountAddress": "0xe06756f9d0608b8628bea2d5e018bbe1f0b9f47a",
+        "balance": "600",
+        "decimalBalance": "0.0000000000000006",
+        "asset": {
+          "tokenId": "18",
+          "decimals": 18,
+          "serialization": "icr-PRI-1-787-78080-14-R-0-2026",
+          "projectAddress": "0x94ca72379f384f76cda0edb6005eb80c7b94aec9",
+          "type": "ExAnte",
+          "supply": "600"
+        }
+      },
+      {
+        "accountAddress": "0xe06756f9d0608b8628bea2d5e018bbe1f0b9f47a",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "19",
+          "decimals": 18,
+          "serialization": "icr-PRI-1-787-78080-14-R-0-2025",
+          "projectAddress": "0x94ca72379f384f76cda0edb6005eb80c7b94aec9",
+          "type": "ExAnte",
+          "supply": "500"
+        }
+      },
+      {
+        "accountAddress": "0xe06756f9d0608b8628bea2d5e018bbe1f0b9f47a",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "20",
+          "decimals": 18,
+          "serialization": "icr-PRI-1-787-78080-14-R-0-2024",
+          "projectAddress": "0x94ca72379f384f76cda0edb6005eb80c7b94aec9",
+          "type": "ExAnte",
+          "supply": "500"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x97b43954dbf1b86a28ecfdcff5b770218ac58032",
+    "holders": [
+      {
+        "accountAddress": "0x03a90ebf616b827fa0c7ee8eb3e8598318ee608d",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-15-2-A-0-2023",
+          "projectAddress": "0x97b43954dbf1b86a28ecfdcff5b770218ac58032",
+          "type": "ExPost",
+          "supply": "-33"
+        }
+      },
+      {
+        "accountAddress": "0x30e56378b6a45667426f56fb2c316e781ab223c5",
+        "balance": "10",
+        "decimalBalance": "0.00000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-15-2-A-0-2023",
+          "projectAddress": "0x97b43954dbf1b86a28ecfdcff5b770218ac58032",
+          "type": "ExPost",
+          "supply": "-33"
+        }
+      },
+      {
+        "accountAddress": "0x63560fa6aed652febb458f816ed6179a29abb425",
+        "balance": "57",
+        "decimalBalance": "0.000000000000000057",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-15-2-A-0-2023",
+          "projectAddress": "0x97b43954dbf1b86a28ecfdcff5b770218ac58032",
+          "type": "ExPost",
+          "supply": "-33"
+        }
+      },
+      {
+        "accountAddress": "0x857f6976d15ffcc7539a83fcb294f93bd5a0f1eb",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-15-2-A-0-2023",
+          "projectAddress": "0x97b43954dbf1b86a28ecfdcff5b770218ac58032",
+          "type": "ExPost",
+          "supply": "-33"
+        }
+      },
+      {
+        "accountAddress": "0x9f559e17fd2f9fe66063d1c526136f2f2ce771ae",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-15-2-A-0-2023",
+          "projectAddress": "0x97b43954dbf1b86a28ecfdcff5b770218ac58032",
+          "type": "ExPost",
+          "supply": "-33"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "9900",
+        "decimalBalance": "0.0000000000000099",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-15-2-A-0-2023",
+          "projectAddress": "0x97b43954dbf1b86a28ecfdcff5b770218ac58032",
+          "type": "ExPost",
+          "supply": "-33"
+        }
+      },
+      {
+        "accountAddress": "0x63560fa6aed652febb458f816ed6179a29abb425",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-15-2-A-0-2023",
+          "projectAddress": "0x97b43954dbf1b86a28ecfdcff5b770218ac58032",
+          "type": "ExAnte",
+          "supply": "500"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x983a099b75bee66b265c23474917bb3e84a47708",
+    "holders": [
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "1000",
+        "decimalBalance": "0.000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78070-2-A-0-2023",
+          "projectAddress": "0x983a099b75bee66b265c23474917bb3e84a47708",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xe993d684be2915f3b21d1ecb5d301a75b177e405",
+        "balance": "5000",
+        "decimalBalance": "0.000000000000005",
+        "asset": {
+          "tokenId": "6",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78070-2-A-0-2024",
+          "projectAddress": "0x983a099b75bee66b265c23474917bb3e84a47708",
+          "type": "ExAnte",
+          "supply": "5000"
+        }
+      },
+      {
+        "accountAddress": "0xe993d684be2915f3b21d1ecb5d301a75b177e405",
+        "balance": "100100",
+        "decimalBalance": "0.0000000000001001",
+        "asset": {
+          "tokenId": "7",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78070-2-A-0-2027",
+          "projectAddress": "0x983a099b75bee66b265c23474917bb3e84a47708",
+          "type": "ExAnte",
+          "supply": "100100"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x9a41da9ff4a83b05763dc2586990beeb608afb51",
+    "holders": [
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "4000",
+        "decimalBalance": "0.000000000000004",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77935-4-A-0-2023",
+          "projectAddress": "0x9a41da9ff4a83b05763dc2586990beeb608afb51",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "4300",
+        "decimalBalance": "0.0000000000000043",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77935-4-A-0-2024",
+          "projectAddress": "0x9a41da9ff4a83b05763dc2586990beeb608afb51",
+          "type": "ExAnte",
+          "supply": "5000"
+        }
+      },
+      {
+        "accountAddress": "0x79ecc12c3bddec8d6c8212acdde323a34783a67d",
+        "balance": "200",
+        "decimalBalance": "0.0000000000000002",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77935-4-A-0-2024",
+          "projectAddress": "0x9a41da9ff4a83b05763dc2586990beeb608afb51",
+          "type": "ExAnte",
+          "supply": "5000"
+        }
+      },
+      {
+        "accountAddress": "0xf14cbd2c08aa6f46a7f6019f79bdcd25a92cffb7",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "4",
+          "decimals": 18,
+          "serialization": "FCC-ISL-354-77935-4-A-0-2024",
+          "projectAddress": "0x9a41da9ff4a83b05763dc2586990beeb608afb51",
+          "type": "ExAnte",
+          "supply": "5000"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0x9d25bb8b89c8615d9249600d867b2ff36dd8076a",
+    "holders": [
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "3",
+        "decimalBalance": "0.000000000000000003",
+        "asset": {
+          "tokenId": "12",
+          "decimals": 18,
+          "serialization": "ICR-TUR-90-77983-14-A-1-2027",
+          "projectAddress": "0x9d25bb8b89c8615d9249600d867b2ff36dd8076a",
+          "type": "ExAnte",
+          "supply": "5"
+        }
+      },
+      {
+        "accountAddress": "0xfb6003d3c8b11def7c0dba367ebe07671025115c",
+        "balance": "2",
+        "decimalBalance": "0.000000000000000002",
+        "asset": {
+          "tokenId": "12",
+          "decimals": 18,
+          "serialization": "ICR-TUR-90-77983-14-A-1-2027",
+          "projectAddress": "0x9d25bb8b89c8615d9249600d867b2ff36dd8076a",
+          "type": "ExAnte",
+          "supply": "5"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xac57f9fc75fa98a8611c2b9b84cadbf9209b00a2",
+    "holders": [
+      {
+        "accountAddress": "0x9cbf7e7ca05123fc120f54ae5604a3c3561ec529",
+        "balance": "700",
+        "decimalBalance": "0.0000000000000007",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78006-4-A-0-2023",
+          "projectAddress": "0xac57f9fc75fa98a8611c2b9b84cadbf9209b00a2",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xc5080503050d93678ad46459412f5afe0bafeea8",
+        "balance": "300",
+        "decimalBalance": "0.0000000000000003",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78006-4-A-0-2023",
+          "projectAddress": "0xac57f9fc75fa98a8611c2b9b84cadbf9209b00a2",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "111",
+        "decimalBalance": "0.000000000000000111",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78006-4-A-0-2023",
+          "projectAddress": "0xac57f9fc75fa98a8611c2b9b84cadbf9209b00a2",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xb3eba1a2472d431ad0a34b725118a6c898ce1052",
+    "holders": [
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "5000",
+        "decimalBalance": "0.000000000000005",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-GRC-30-5-3-A-0-2024",
+          "projectAddress": "0xb3eba1a2472d431ad0a34b725118a6c898ce1052",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xbf203d5d37046efd8fa4318cfae0455f72e0b18c",
+    "holders": [
+      {
+        "accountAddress": "0x480c25f06166ae277f8b1257e9756c33a43055b7",
+        "balance": "100",
+        "decimalBalance": "0.0000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-55-3-A-0-2023",
+          "projectAddress": "0xbf203d5d37046efd8fa4318cfae0455f72e0b18c",
+          "type": "ExPost",
+          "supply": "-400"
+        }
+      },
+      {
+        "accountAddress": "0xbee26823a67c041640491b6c32f3d5f88154052c",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-55-3-A-0-2023",
+          "projectAddress": "0xbf203d5d37046efd8fa4318cfae0455f72e0b18c",
+          "type": "ExPost",
+          "supply": "-400"
+        }
+      },
+      {
+        "accountAddress": "0xbf203d5d37046efd8fa4318cfae0455f72e0b18c",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-55-3-A-0-2023",
+          "projectAddress": "0xbf203d5d37046efd8fa4318cfae0455f72e0b18c",
+          "type": "ExPost",
+          "supply": "-400"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-55-3-A-0-2023",
+          "projectAddress": "0xbf203d5d37046efd8fa4318cfae0455f72e0b18c",
+          "type": "ExPost",
+          "supply": "-400"
+        }
+      },
+      {
+        "accountAddress": "0xfa6d3557ad00daf8b7db2d6052b88294675c2a64",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-55-3-A-0-2023",
+          "projectAddress": "0xbf203d5d37046efd8fa4318cfae0455f72e0b18c",
+          "type": "ExPost",
+          "supply": "-400"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "5000",
+        "decimalBalance": "0.000000000000005",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-55-3-A-0-2024",
+          "projectAddress": "0xbf203d5d37046efd8fa4318cfae0455f72e0b18c",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0x480c25f06166ae277f8b1257e9756c33a43055b7",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-55-3-A-0-2023",
+          "projectAddress": "0xbf203d5d37046efd8fa4318cfae0455f72e0b18c",
+          "type": "ExAnte",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xbee26823a67c041640491b6c32f3d5f88154052c",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "5",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-55-3-A-0-2023",
+          "projectAddress": "0xbf203d5d37046efd8fa4318cfae0455f72e0b18c",
+          "type": "ExAnte",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xc1841189f8ee3254768b84934423e0ed465af535",
+    "holders": [
+      {
+        "accountAddress": "0x480c25f06166ae277f8b1257e9756c33a43055b7",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77986-3-H-0-2023",
+          "projectAddress": "0xc1841189f8ee3254768b84934423e0ed465af535",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "499",
+        "decimalBalance": "0.000000000000000499",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77986-3-H-0-2023",
+          "projectAddress": "0xc1841189f8ee3254768b84934423e0ed465af535",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xc76d8eb7abc4f7ff28155d2ea7275f30467652d9",
+    "holders": [
+      {
+        "accountAddress": "0x1421ed340e48eb7a9f8bc709b13784b180e29168",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77972-4-A-0-2023",
+          "projectAddress": "0xc76d8eb7abc4f7ff28155d2ea7275f30467652d9",
+          "type": "ExPost",
+          "supply": "-2"
+        }
+      },
+      {
+        "accountAddress": "0x2ac43690c4ee58f25ba8959a7f8b737b8e915fd9",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77972-4-A-0-2023",
+          "projectAddress": "0xc76d8eb7abc4f7ff28155d2ea7275f30467652d9",
+          "type": "ExPost",
+          "supply": "-2"
+        }
+      },
+      {
+        "accountAddress": "0x442618ef63e202a1cc45b1a36e121076a8f92da2",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77972-4-A-0-2023",
+          "projectAddress": "0xc76d8eb7abc4f7ff28155d2ea7275f30467652d9",
+          "type": "ExPost",
+          "supply": "-2"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "2",
+        "decimalBalance": "0.000000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77972-4-A-0-2023",
+          "projectAddress": "0xc76d8eb7abc4f7ff28155d2ea7275f30467652d9",
+          "type": "ExPost",
+          "supply": "-2"
+        }
+      },
+      {
+        "accountAddress": "0xf14cbd2c08aa6f46a7f6019f79bdcd25a92cffb7",
+        "balance": "2",
+        "decimalBalance": "0.000000000000000002",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ALB-355-77972-4-A-0-2023",
+          "projectAddress": "0xc76d8eb7abc4f7ff28155d2ea7275f30467652d9",
+          "type": "ExPost",
+          "supply": "-2"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xcaeae37830aac5c583836471d518259b7c7e3670",
+    "holders": [
+      {
+        "accountAddress": "0x22b9edafbcc9523fb698f14be704f66e7b672e7f",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "icr-ISL-354-78078-3-A-0-2024",
+          "projectAddress": "0xcaeae37830aac5c583836471d518259b7c7e3670",
+          "type": "ExPost",
+          "supply": "-500"
+        }
+      },
+      {
+        "accountAddress": "0x7c867a64260c20162279e43dace91d6e918ef73f",
+        "balance": "1000",
+        "decimalBalance": "0.000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "icr-ISL-354-78078-3-A-0-2024",
+          "projectAddress": "0xcaeae37830aac5c583836471d518259b7c7e3670",
+          "type": "ExPost",
+          "supply": "-500"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "icr-ISL-354-78078-3-A-0-2024",
+          "projectAddress": "0xcaeae37830aac5c583836471d518259b7c7e3670",
+          "type": "ExPost",
+          "supply": "-500"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xccb3a67bad9d54ee3261635ec6c3b96bf247e017",
+    "holders": [
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "4750",
+        "decimalBalance": "0.00000000000000475",
+        "asset": {
+          "tokenId": "2",
+          "decimals": 18,
+          "serialization": "icr-GUY-592-77958-3-R-0-2024",
+          "projectAddress": "0xccb3a67bad9d54ee3261635ec6c3b96bf247e017",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xd5c1d0015db13cb6c597f941c913f392f0b1a3bc",
+    "holders": [
+      {
+        "accountAddress": "0x22b9edafbcc9523fb698f14be704f66e7b672e7f",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "icr-TLS-670-78079-1-A-0-2024",
+          "projectAddress": "0xd5c1d0015db13cb6c597f941c913f392f0b1a3bc",
+          "type": "ExPost",
+          "supply": "-200"
+        }
+      },
+      {
+        "accountAddress": "0x7c867a64260c20162279e43dace91d6e918ef73f",
+        "balance": "800",
+        "decimalBalance": "0.0000000000000008",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "icr-TLS-670-78079-1-A-0-2024",
+          "projectAddress": "0xd5c1d0015db13cb6c597f941c913f392f0b1a3bc",
+          "type": "ExPost",
+          "supply": "-200"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "0",
+        "decimalBalance": "0",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "icr-TLS-670-78079-1-A-0-2024",
+          "projectAddress": "0xd5c1d0015db13cb6c597f941c913f392f0b1a3bc",
+          "type": "ExPost",
+          "supply": "-200"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xdff74871f6f82b1356e35d20ade1cac540da8a37",
+    "holders": [
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "10000",
+        "decimalBalance": "0.00000000000001",
+        "asset": {
+          "tokenId": "13",
+          "decimals": 18,
+          "serialization": "ICR-COD-243-77977-14-A-0-2023",
+          "projectAddress": "0xdff74871f6f82b1356e35d20ade1cac540da8a37",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "15600",
+        "decimalBalance": "0.0000000000000156",
+        "asset": {
+          "tokenId": "14",
+          "decimals": 18,
+          "serialization": "ICR-COD-243-77977-14-A-0-2024",
+          "projectAddress": "0xdff74871f6f82b1356e35d20ade1cac540da8a37",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xe0db6b785cb1262dbe03a4a755337f1387032157",
+    "holders": [
+      {
+        "accountAddress": "0x1c5b2f7b2836f14579209418fc87ebcf3a517444",
+        "balance": "325",
+        "decimalBalance": "0.000000000000000325",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "icr-COG-242-78078-2-A-0-2024",
+          "projectAddress": "0xe0db6b785cb1262dbe03a4a755337f1387032157",
+          "type": "ExPost",
+          "supply": "-75"
+        }
+      },
+      {
+        "accountAddress": "0x2895b2634dc258a2ba66235324b2d70c09785d4c",
+        "balance": "100",
+        "decimalBalance": "0.0000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "icr-COG-242-78078-2-A-0-2024",
+          "projectAddress": "0xe0db6b785cb1262dbe03a4a755337f1387032157",
+          "type": "ExPost",
+          "supply": "-75"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "1350",
+        "decimalBalance": "0.00000000000000135",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "icr-COG-242-78078-2-A-0-2024",
+          "projectAddress": "0xe0db6b785cb1262dbe03a4a755337f1387032157",
+          "type": "ExPost",
+          "supply": "-75"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xe7515b7bbb9ad7f7a63d1b43c4bdf948ec0924b3",
+    "holders": [
+      {
+        "accountAddress": "0x037ca56f3252a6c7dfb7957a1a15bb830875f94b",
+        "balance": "308",
+        "decimalBalance": "0.000000000000000308",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-77893-2-A-0-2023",
+          "projectAddress": "0xe7515b7bbb9ad7f7a63d1b43c4bdf948ec0924b3",
+          "type": "ExPost",
+          "supply": "-37"
+        }
+      },
+      {
+        "accountAddress": "0x39a124e646a0a93003031636c08925dd21afc460",
+        "balance": "1",
+        "decimalBalance": "0.000000000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-77893-2-A-0-2023",
+          "projectAddress": "0xe7515b7bbb9ad7f7a63d1b43c4bdf948ec0924b3",
+          "type": "ExPost",
+          "supply": "-37"
+        }
+      },
+      {
+        "accountAddress": "0x7012e03e174a2857d8cd91e7afbf2d5062f2a546",
+        "balance": "150",
+        "decimalBalance": "0.00000000000000015",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-77893-2-A-0-2023",
+          "projectAddress": "0xe7515b7bbb9ad7f7a63d1b43c4bdf948ec0924b3",
+          "type": "ExPost",
+          "supply": "-37"
+        }
+      },
+      {
+        "accountAddress": "0xa44b98a4fcd4176510e6ade80814a141a202c56b",
+        "balance": "4",
+        "decimalBalance": "0.000000000000000004",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-77893-2-A-0-2023",
+          "projectAddress": "0xe7515b7bbb9ad7f7a63d1b43c4bdf948ec0924b3",
+          "type": "ExPost",
+          "supply": "-37"
+        }
+      },
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "500",
+        "decimalBalance": "0.0000000000000005",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "FCC-AFG-93-77893-2-A-0-2023",
+          "projectAddress": "0xe7515b7bbb9ad7f7a63d1b43c4bdf948ec0924b3",
+          "type": "ExPost",
+          "supply": "-37"
+        }
+      }
+    ]
+  },
+  {
+    "projectAddress": "0xfbb540d6f2914ad9c95eb79ec14276e7b3de4a49",
+    "holders": [
+      {
+        "accountAddress": "0xcbf5bc0e76e490c432477506f2033587a60b5fac",
+        "balance": "100000",
+        "decimalBalance": "0.0000000000001",
+        "asset": {
+          "tokenId": "1",
+          "decimals": 18,
+          "serialization": "ICR-ISL-354-78037-2-A-0-2023",
+          "projectAddress": "0xfbb540d6f2914ad9c95eb79ec14276e7b3de4a49",
+          "type": "ExPost",
+          "supply": "0"
+        }
+      }
+    ]
+  }
+]
