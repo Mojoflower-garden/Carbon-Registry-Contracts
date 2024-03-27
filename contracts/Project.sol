@@ -120,7 +120,7 @@ contract Project is
 	}
 
 	function testUpgrade() external pure returns(string memory) {
-		return "0.0.7";
+		return "0.0.8";
 	}
 
 	// ----------------------------------
@@ -197,11 +197,13 @@ contract Project is
 	) public onlyRole(DEFAULT_ADMIN_ROLE){
 		require(decimals > 0,'Decimals must be greater than 0');
 		require(accounts.length == tokenIds.length && tokenIds.length > 0, ' accounts and tokenIds must be of same length');
+		unpause();
 		for (uint256 i = 0; i < accounts.length; i++) {
 			uint256 balance = balanceOf(accounts[i], tokenIds[i]);
 			require(balance < (10**decimals) && balance > 0, 'Balance must be greater than 0');
 			_mint(accounts[i], tokenIds[i], (balance*(10**decimals))  - balance, data);
 		}
+		pause();
 	}
 
 	// function debaseTCO2(
