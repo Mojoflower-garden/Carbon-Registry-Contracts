@@ -68,11 +68,11 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
       'Project',
       projectHolders.projectAddress
     );
-    for (let i = 0; i < addresses.length; i++) {
-      const balance = await project.balanceOf(addresses[i], tokenIds[i]);
-      console.log('Balance:', balance.toString());
-    }
-    continue;
+    // for (let i = 0; i < addresses.length; i++) {
+    //   const balance = await project.balanceOf(addresses[i], tokenIds[i]);
+    //   console.log('Balance:', balance.toString());
+    // }
+    // continue;
 
     console.log(
       decimals > 0,

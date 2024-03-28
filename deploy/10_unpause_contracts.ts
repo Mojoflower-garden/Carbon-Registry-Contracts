@@ -21,10 +21,19 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   for (const projectAddress of projectsToPause) {
     try {
       const project = await ethers.getContractAt('Project', projectAddress);
-      const res = await project.unpause();
+      const isPaused = await project.paused();
+      if (isPaused) {
+        console.log('Project is paused');
+        const res = await project.unpause({
+          maxFeePerGas: ethers.parseUnits('200', 'gwei'),
+          maxPriorityFeePerGas: ethers.parseUnits('200', 'gwei'),
+        });
+        console.log('RES:', res);
+      } else {
+        console.log('Project is not paused');
+      }
       // const res = await project.unpause.estimateGas();
       // gasEstimation += res;
-      console.log('RES:', res);
     } catch (error) {
       console.log('ERROR:', error);
       continue;

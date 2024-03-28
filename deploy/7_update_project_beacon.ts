@@ -26,7 +26,12 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     projectBeaconImplementationAddress
   );
 
-  await upgrades.upgradeBeacon(projectBeaconAddress, Project);
+  await upgrades.upgradeBeacon(projectBeaconAddress, Project, {
+    txOverrides: {
+      maxFeePerGas: ethers.parseUnits('200', 'gwei'),
+      maxPriorityFeePerGas: ethers.parseUnits('200', 'gwei'),
+    },
+  });
   console.log('Beacon upgraded');
 };
 export default main;

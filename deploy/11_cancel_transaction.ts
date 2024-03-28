@@ -11,23 +11,25 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   console.log('11');
 
   const txHash =
-    '0xf71b672bb143aca30e6b999245b08f0d91e66017718f936bcc08895644b2b537';
+    '0x3520cdbfc04fa40c4c18fd547a129bf38e3112d7ffdd519de232f6f3ffb111ce';
   const network = await ethers.provider.getNetwork();
-  const pendingTx = await ethers.provider.getTransaction(txHash);
+  // const pendingTx = await ethers.provider.getTransaction(txHash);
 
-  if (!pendingTx) {
-    console.log('Transaction not found or already confirmed');
-    return;
-  }
+  // if (!pendingTx) {
+  //   console.log('Transaction not found or already confirmed');
+  //   return;
+  // }
 
-  const signer = await ethers.provider.getSigner(pendingTx.from);
-  const nonce = pendingTx.nonce;
-  const gasPrice = ethers.toBigInt(pendingTx.gasPrice) * ethers.toBigInt(2); // Increase the gas price
+  const signer = await ethers.provider.getSigner(
+    '0x333D9A49b6418e5dC188989614f07c89d8389CC8'
+  );
+  // const nonce = pendingTx.nonce;
+  // const gasPrice = ethers.toBigInt(pendingTx.gasPrice) * ethers.toBigInt(2); // Increase the gas price
 
   const tx = {
-    nonce: nonce,
-    gasPrice: gasPrice,
-    to: pendingTx.from, // Send the transaction to yourself
+    nonce: 501,
+    gasPrice: ethers.parseUnits('150', 'gwei'),
+    to: '0x333D9A49b6418e5dC188989614f07c89d8389CC8', // Send the transaction to yourself
     value: 0, // Don't send any value
     data: '0x', // No data
   };
