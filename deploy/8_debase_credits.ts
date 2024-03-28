@@ -10,7 +10,7 @@ import PolygonHolders from './data/polygonHoldersPreDebasement.json';
 
 /**
  *
- * Debasement of mainnet polygon was started on block 55147487 and ended on block 55151181
+ * Debasement of mainnet polygon was started on block 55147487 and ended on block 55156579
  */
 const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   console.log('8');
