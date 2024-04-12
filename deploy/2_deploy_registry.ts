@@ -3,7 +3,7 @@ import { CarbonContractRegistry } from '../typechain-types';
 import { HardhatRuntimeEnvironment } from 'hardhat/types';
 import { DeployFunction } from 'hardhat-deploy/dist/types';
 
-const ProjectBeaconAddress = '0xEC0F1768d2f3fa7C5898fd6462B9C4D75104E1c7';
+const ProjectBeaconAddress = '0x243974Dd68Ea5AF6fa924eAe5DB8f2775760F539';
 const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   const { save } = deployments;
   const CarbonContractRegistry = await ethers.getContractFactory(
