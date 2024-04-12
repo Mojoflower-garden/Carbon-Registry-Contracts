@@ -3,7 +3,7 @@ import { HardhatRuntimeEnvironment } from 'hardhat/types';
 import { DeployFunction } from 'hardhat-deploy/dist/types';
 
 const CarbonContractRegistryProxyAddress =
-  '0x9B4D10A15f7Ff60219DaF53df60982FdDdE3CD2b';
+  '0x826b76bA7B9e9e1f19407FBA3d3011E37536dB58';
 
 // This does sometimes not work immediately because the carbonregistry contract is not yet deployed
 const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {

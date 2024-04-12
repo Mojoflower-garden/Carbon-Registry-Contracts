@@ -56,18 +56,31 @@ const config: HardhatUserConfig = {
       url: `https://polygon-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
       gasPrice: 'auto',
     },
-    mumbai: {
-      chainId: 80001,
+    amoy: {
+      chainId: 80002,
       accounts: {
         mnemonic: mnemonicPhrase,
         path: "m/44'/60'/0'/0",
         initialIndex: 0,
         count: 1,
       },
-      url: `https://polygon-mumbai.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
+      url: `https://polygon-amoy.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
+      // gasPrice: 'auto',
+      gas: 500000,
+      gasPrice: 5000000000,
+    },
+    baseSepolia: {
+      chainId: 84532,
+      accounts: {
+        mnemonic: mnemonicPhrase,
+        path: "m/44'/60'/0'/0",
+        initialIndex: 0,
+        count: 1,
+      },
+      url: `https://base-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
       gasPrice: 'auto',
-      // gas: 5000000,
-      // gasPrice: 50000000000,
+      // gas: 500000,
+      // gasPrice: 5000000000,
     },
   },
   etherscan: {
