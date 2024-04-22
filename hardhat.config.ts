@@ -9,7 +9,7 @@ import '@typechain/hardhat';
 import '@nomicfoundation/hardhat-ethers';
 import 'hardhat-deploy';
 
-const mnemonicPhrase = process.env.MOJO_MNEMONIC;
+const mnemonicPhrase = process.env.ICR_ADMIN_MNEMONIC;
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -87,6 +87,7 @@ const config: HardhatUserConfig = {
     apiKey: {
       polygon: process.env.POLY_SCAN_API_KEY ?? '',
       polygonMumbai: process.env.POLY_SCAN_API_KEY ?? '',
+      baseSepolia: process.env.MOJO_BASESCAN_API_KEY ?? '',
     },
   },
 };

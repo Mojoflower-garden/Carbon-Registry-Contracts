@@ -1,0 +1,8 @@
+{
+  "baseSepolia": {
+    "AccessController": {
+      "proxy": "0x0D0c06bE10d8380e9047ae15BF5eD971913F76b1",
+      "implementation": "0x65FB68E1907AB74E82324e561b48Db12A3f9c7a3"
+    }
+  }
+}

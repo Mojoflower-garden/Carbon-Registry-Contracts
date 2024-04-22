@@ -66,6 +66,7 @@ contract CarbonContractRegistry is
 		_projectBeaconAddress = beaconAddress;
 	}
 
+
 	modifier onlyCarbonRegistryProjects() {
 		require(
 			_addressToProjectIdMapping[msg.sender] != 0 ||
