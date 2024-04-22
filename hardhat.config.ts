@@ -54,7 +54,7 @@ const config: HardhatUserConfig = {
         count: 1,
       },
       url: `https://polygon-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
-      gasPrice: 'auto',
+      gas: 'auto',
     },
     amoy: {
       chainId: 80002,
@@ -65,9 +65,9 @@ const config: HardhatUserConfig = {
         count: 1,
       },
       url: `https://polygon-amoy.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
-      // gasPrice: 'auto',
-      gas: 500000,
-      gasPrice: 5000000000,
+      gasPrice: 'auto',
+      // gas: 500000,
+      // gasPrice: 50000000000,
     },
     baseSepolia: {
       chainId: 84532,
@@ -79,8 +79,6 @@ const config: HardhatUserConfig = {
       },
       url: `https://base-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
       gasPrice: 'auto',
-      // gas: 500000,
-      // gasPrice: 5000000000,
     },
   },
   etherscan: {

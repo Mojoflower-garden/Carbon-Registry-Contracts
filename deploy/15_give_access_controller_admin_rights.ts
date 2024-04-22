@@ -7,7 +7,7 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   console.log('!!!!!15!!!!!');
   const { save } = deployments;
 
-  const prodProjects = [
+  const prodProjectContracts = [
     '0x0b036f17cb8074ce60658898b852e41953f8e629',
     '0x2f5e9ab6c687f40f9119e06630c68054b16a4270',
     '0x35f8f85d3d077d4aea57f89ed5f30ed97d136d8a',
@@ -25,6 +25,7 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     '0xd016b2acece65612b93cc9aee763bda0c2b0e4c0',
     '0xe47b7ce9a7f59519091ed7cbdea8516734d978c4',
     '0xe564fce6fbe7b11c54b410a03e93f14a74396024',
+    '0x9f87988FF45E9b58ae30fA1685088460125a7d8A', // The CarbonregistryContract
   ];
 
   const devProjectContracts = [
@@ -48,22 +49,18 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     hre.ethers.provider
   );
 
-  const CarbonRegistryContract = await ethers.getContractAt(
-    'AccessControlUpgradeable',
-    '0x826b76bA7B9e9e1f19407FBA3d3011E37536dB58',
-    signer
-  );
-
   const oldGaia = '0x333D9A49b6418e5dC188989614f07c89d8389CC8';
-  const icrAdmin = '0xd00749D7eb0D333D8997B0d5Aec0fa86cf026c76';
-  const icrMinter = '0xD104B5B4cda8AB7197Eb30C371c2Fd7fecAf5761';
+  const devICRAdmin = '0xd00749D7eb0D333D8997B0d5Aec0fa86cf026c76';
+  const prodICRAdmin = '0xA0022c05501007281acAE55B94AdE4Fc3dd59ec3';
+  const icrAdmin = prodICRAdmin;
   const devAccessController = '0x0D0c06bE10d8380e9047ae15BF5eD971913F76b1';
-  const accessController = devAccessController;
+  const prodAccessController = '0x7310e77c305FeDD3a2b1F9FA983B4652D8ce5829';
+  const accessController = prodAccessController;
+  const contractsToGrant = prodProjectContracts;
 
   // Grant for CarbonRegistryContract
 
   console.log('Granting roles for CarbonRegistryContract');
-  const contractsToGrant = devProjectContracts;
   for (let i = 0; i < contractsToGrant.length; i++) {
     const accessControllerContract = await ethers.getContractAt(
       'AccessControlUpgradeable',
@@ -78,8 +75,12 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     if (!hasRole) {
       const tx = await accessControllerContract.grantRole(
         await accessControllerContract.DEFAULT_ADMIN_ROLE(),
-        accessController
+        accessController,
+        {
+          gasPrice: ethers.parseUnits('500', 'gwei'), // Set the gas price to 50 gwei
+        }
       );
+      console.log('TX:', tx.hash);
       await tx.wait();
     }
   }

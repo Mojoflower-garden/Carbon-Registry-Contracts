@@ -4,5 +4,11 @@
       "proxy": "0x0D0c06bE10d8380e9047ae15BF5eD971913F76b1",
       "implementation": "0x65FB68E1907AB74E82324e561b48Db12A3f9c7a3"
     }
+  },
+  "polygon": {
+    "AccessController": {
+      "proxy": "0x7310e77c305FeDD3a2b1F9FA983B4652D8ce5829",
+      "implementation": "0xbE207184a0CbCc210A781D64cA98E17D55becD12"
+    }
   }
 }

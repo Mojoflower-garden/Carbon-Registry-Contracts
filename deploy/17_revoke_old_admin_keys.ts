@@ -7,7 +7,7 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   console.log('!!!!!17!!!!!');
   const { save } = deployments;
 
-  const prodProjects = [
+  const prodProjectContracts = [
     '0x0b036f17cb8074ce60658898b852e41953f8e629',
     '0x2f5e9ab6c687f40f9119e06630c68054b16a4270',
     '0x35f8f85d3d077d4aea57f89ed5f30ed97d136d8a',
@@ -48,24 +48,16 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     '0x9f87988FF45E9b58ae30fA1685088460125a7d8A';
 
   const oldGaia = '0x333D9A49b6418e5dC188989614f07c89d8389CC8';
+  const devICRAdmin = '0xd00749D7eb0D333D8997B0d5Aec0fa86cf026c76';
+  const devICRMinter = '0xD104B5B4cda8AB7197Eb30C371c2Fd7fecAf5761';
+  const prodICRAdmin = '0xA0022c05501007281acAE55B94AdE4Fc3dd59ec3';
+  const icrAdmin = prodICRAdmin;
   const devAccessController = '0x0D0c06bE10d8380e9047ae15BF5eD971913F76b1';
-  const prodAccessController = '';
+  const prodAccessController = '0x7310e77c305FeDD3a2b1F9FA983B4652D8ce5829';
 
-  const carbonRegContract = devCarbonRegistryContract;
-  const projectContracts = devProjectContracts;
-  const accessController = devAccessController;
-
-  for (const project of projectContracts) {
-    const accessControllerContract = await ethers.getContractAt(
-      'AccessControlUpgradeable',
-      project
-    );
-    const hasRole = await accessControllerContract.hasRole(
-      await accessControllerContract.DEFAULT_ADMIN_ROLE(),
-      oldGaia
-    );
-    console.log('HASROLE', hasRole);
-  }
+  const carbonRegContract = prodCarbonRegistryContract;
+  const projectContracts = prodProjectContracts;
+  const accessController = prodAccessController;
 
   try {
     const accessControllerContract = await ethers.getContractAt(
@@ -74,17 +66,23 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     );
 
     console.log('Revoke carbon registry roles');
-    const grantCarbonRegTx =
-      await accessControllerContract.revokeCarbonRegRoles(
-        carbonRegContract,
-        oldGaia
-      );
-    await grantCarbonRegTx.wait();
+    // const grantCarbonRegTx =
+    //   await accessControllerContract.revokeCarbonRegRoles(
+    //     carbonRegContract,
+    //     oldGaia,
+    //     {
+    //       gasPrice: ethers.parseUnits('420', 'gwei'), // Set the gas price to 50 gwei
+    //     }
+    //   );
+    // await grantCarbonRegTx.wait();
 
     console.log('Revoke project roles');
     const grantProjectTx = await accessControllerContract.revokeProjectRoles(
       projectContracts,
-      oldGaia
+      oldGaia,
+      {
+        gasPrice: ethers.parseUnits('420', 'gwei'), // Set the gas price to 50 gwei
+      }
     );
     await grantProjectTx.wait();
   } catch (error) {
