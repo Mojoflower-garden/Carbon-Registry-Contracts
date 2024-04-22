@@ -9,7 +9,7 @@ import '@typechain/hardhat';
 import '@nomicfoundation/hardhat-ethers';
 import 'hardhat-deploy';
 
-const mnemonicPhrase = process.env.MOJO_MNEMONIC;
+const mnemonicPhrase = process.env.ICR_ADMIN_MNEMONIC;
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -54,7 +54,7 @@ const config: HardhatUserConfig = {
         count: 1,
       },
       url: `https://polygon-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
-      gasPrice: 'auto',
+      gas: 'auto',
     },
     amoy: {
       chainId: 80002,
@@ -65,9 +65,9 @@ const config: HardhatUserConfig = {
         count: 1,
       },
       url: `https://polygon-amoy.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
-      // gasPrice: 'auto',
-      gas: 500000,
-      gasPrice: 5000000000,
+      gasPrice: 'auto',
+      // gas: 500000,
+      // gasPrice: 50000000000,
     },
     baseSepolia: {
       chainId: 84532,
@@ -79,14 +79,13 @@ const config: HardhatUserConfig = {
       },
       url: `https://base-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_KEY}`,
       gasPrice: 'auto',
-      // gas: 500000,
-      // gasPrice: 5000000000,
     },
   },
   etherscan: {
     apiKey: {
       polygon: process.env.POLY_SCAN_API_KEY ?? '',
       polygonMumbai: process.env.POLY_SCAN_API_KEY ?? '',
+      baseSepolia: process.env.MOJO_BASESCAN_API_KEY ?? '',
     },
   },
 };
