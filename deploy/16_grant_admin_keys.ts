@@ -61,12 +61,12 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
 
   for (const project of [...projectContracts, carbonRegContract]) {
     const accessControllerContract = await ethers.getContractAt(
-      'AccessControlUpgradeable',
+      'Project',
       project
     );
     const hasRole = await accessControllerContract.hasRole(
-      await accessControllerContract.DEFAULT_ADMIN_ROLE(),
-      oldGaia
+      await accessControllerContract.POST_MINTER_ROLE(),
+      icrAdmin
     );
     console.log('HASROLE', hasRole);
   }

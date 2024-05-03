@@ -28,7 +28,7 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
 
   const hasRole = await CarbonRegistryContract.hasRole(
     await CarbonRegistryContract.DEFAULT_ADMIN_ROLE(),
-    icrAdmin
+    oldGaia
   );
 
   console.log('HASROLE:', hasRole);
