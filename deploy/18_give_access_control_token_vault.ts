@@ -20,9 +20,10 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   const prodICRAdmin = '0xA0022c05501007281acAE55B94AdE4Fc3dd59ec3';
   const icrAdmin = prodICRAdmin;
 
+  const testTokenVaultProd = '0x0C2Dba6E1A68ad7effe1d53368D625Ee563C6b38';
   const tokenVaultDev = '0x1DfDA80820C475c076B3822491555fD414aE26D6';
   const tokenVaultProd = '0x219BaB4AC1FD5b83940ea52A1E1B5Ea6d5ACE23F';
-  const tokenVault = tokenVaultProd;
+  const tokenVault = testTokenVaultProd;
   const tokenVaultContract = await ethers.getContractAt(
     'TokenVault',
     tokenVault,
@@ -31,7 +32,7 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
 
   const hasRole = await tokenVaultContract.hasRole(
     await tokenVaultContract.DEFAULT_ADMIN_ROLE(),
-    icrAdmin
+    oldGaia
   );
 
   console.log('HAS DEFAULT ADMIN ROLE:', hasRole);
