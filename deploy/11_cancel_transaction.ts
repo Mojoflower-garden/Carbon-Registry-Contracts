@@ -11,7 +11,7 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   console.log('11');
 
   const txHash =
-    '0xd4e72b9527cd311c50953ef0b436905d0f9b5e92671dfa6c2921708d42abbf70';
+    '0x8cdaaa420cd70cfb577584b1a455f01cd59e71640f0eb5deca9ce709f4de5409';
   const network = await ethers.provider.getNetwork();
   const pendingTx = await ethers.provider.getTransaction(txHash);
 
@@ -21,7 +21,7 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   }
 
   const signer = new hre.ethers.Wallet(
-    '', // Gaia private key
+    '0x2ebdc9b9334ebf87f40d38bd32803cace12c5792c67fef44d9c162f45a4f99cc', // Gaia private key
     hre.ethers.provider
   );
   // const signer = await ethers.provider.getSigner(pendingTx.from);
