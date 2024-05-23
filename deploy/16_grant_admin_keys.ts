@@ -8,23 +8,24 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   const { save } = deployments;
 
   const prodProjectContracts = [
-    '0x0b036f17cb8074ce60658898b852e41953f8e629',
-    '0x2f5e9ab6c687f40f9119e06630c68054b16a4270',
-    '0x35f8f85d3d077d4aea57f89ed5f30ed97d136d8a',
-    '0x625dda3d3812ce640ca5c7c4729cbecacabdef0a',
-    '0x68341e98f9ebaa9cae9638808b751bf9568d0557',
-    '0x71da00d8288fdf542bb8d0f8dffc09f9c58aed4d',
-    '0x7405c58fcfd86c81bc09924a0a1f49350bd2f464',
-    '0x811893265f3689f7c23acc5f0af46adbd2b9d791',
-    '0x8af1cf390f8f90f4c9b9a2c9c2a9a55b026166e5',
-    '0x8cc608c9594d042fae6fa127512be0476fba9f68',
-    '0x9d58dc930887f06d85a44a4a57cde4db7cba7d9f',
-    '0xa2e71e7a0a2df394c21e983a947ad0913961fbb9',
-    '0xae63fbd056512fc4b1d15b58a98f9aaea44b18a9',
-    '0xb4a2e587b56d40e33395645c11c822bcc520e2ef',
-    '0xd016b2acece65612b93cc9aee763bda0c2b0e4c0',
-    '0xe47b7ce9a7f59519091ed7cbdea8516734d978c4',
-    '0xe564fce6fbe7b11c54b410a03e93f14a74396024',
+    // '0x0b036f17cb8074ce60658898b852e41953f8e629',
+    // '0x2f5e9ab6c687f40f9119e06630c68054b16a4270',
+    // '0x35f8f85d3d077d4aea57f89ed5f30ed97d136d8a',
+    // '0x625dda3d3812ce640ca5c7c4729cbecacabdef0a',
+    // '0x68341e98f9ebaa9cae9638808b751bf9568d0557',
+    // '0x71da00d8288fdf542bb8d0f8dffc09f9c58aed4d',
+    // '0x7405c58fcfd86c81bc09924a0a1f49350bd2f464',
+    // '0x811893265f3689f7c23acc5f0af46adbd2b9d791',
+    // '0x8af1cf390f8f90f4c9b9a2c9c2a9a55b026166e5',
+    // '0x8cc608c9594d042fae6fa127512be0476fba9f68',
+    // '0x9d58dc930887f06d85a44a4a57cde4db7cba7d9f',
+    // '0xa2e71e7a0a2df394c21e983a947ad0913961fbb9',
+    // '0xae63fbd056512fc4b1d15b58a98f9aaea44b18a9',
+    // '0xb4a2e587b56d40e33395645c11c822bcc520e2ef',
+    // '0xd016b2acece65612b93cc9aee763bda0c2b0e4c0',
+    // '0xe47b7ce9a7f59519091ed7cbdea8516734d978c4',
+    // '0xe564fce6fbe7b11c54b410a03e93f14a74396024',
+    '0x225346387256b303ad8aee735b509b4282534382', // Test Prod Project ICR Test Project
   ];
 
   const devProjectContracts = [
@@ -54,12 +55,14 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   const icrAdmin = prodICRAdmin;
   const devAccessController = '0x0D0c06bE10d8380e9047ae15BF5eD971913F76b1';
   const prodAccessController = '0x7310e77c305FeDD3a2b1F9FA983B4652D8ce5829';
+  const testProdCarbonRegistryContract =
+    '0x0B0fCaCD2336A5f000661fF5E69aA70c28fD526D'; // Test prod CarbonregistryContract
 
-  const carbonRegContract = prodCarbonRegistryContract;
+  const carbonRegContract = testProdCarbonRegistryContract;
   const projectContracts = prodProjectContracts;
   const accessController = prodAccessController;
 
-  for (const project of [...projectContracts, carbonRegContract]) {
+  for (const project of [...projectContracts]) {
     const accessControllerContract = await ethers.getContractAt(
       'Project',
       project
@@ -70,8 +73,6 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     );
     console.log('HASROLE', hasRole);
   }
-  return;
-
   try {
     const accessControllerContract = await ethers.getContractAt(
       'AccessController',

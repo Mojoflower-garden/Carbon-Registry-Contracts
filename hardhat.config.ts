@@ -85,7 +85,7 @@ const config: HardhatUserConfig = {
     apiKey: {
       polygon: process.env.POLY_SCAN_API_KEY ?? '',
       polygonMumbai: process.env.POLY_SCAN_API_KEY ?? '',
-      baseSepolia: process.env.MOJO_BASESCAN_API_KEY ?? '',
+      baseSepolia: process.env.SEPOLIA_API_KEY ?? '',
     },
   },
 };
