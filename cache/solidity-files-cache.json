@@ -1593,8 +1593,8 @@
       ]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/Project.sol": {
-      "lastModificationDate": 1711583744966,
-      "contentHash": "2d39600e6eeae6c33ff5e14259c2ace2",
+      "lastModificationDate": 1719352038596,
+      "contentHash": "d2cc143532a34d1598376a34390fad2e",
       "sourceName": "contracts/Project.sol",
       "solcConfig": {
         "version": "0.8.13",

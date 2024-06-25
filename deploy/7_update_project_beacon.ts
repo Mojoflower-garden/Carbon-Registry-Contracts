@@ -7,9 +7,10 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   const { save } = deployments;
   const Project = await ethers.getContractFactory('Project');
 
+  const isMainnet = hre.network.name === 'polygon';
   const projectAddress =
-    hre.network.name === 'mumbai'
-      ? '0x983a099b75bee66b265c23474917bb3e84a47708'
+    hre.network.name === 'baseSepolia'
+      ? '0xa4686bcfa897d1cc56ec09b306d0c5a8096cb5aa'
       : hre.network.name === 'polygon'
       ? '0xb4A2E587B56d40e33395645c11c822bCC520E2ef'
       : '';
@@ -28,8 +29,9 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
 
   await upgrades.upgradeBeacon(projectBeaconAddress, Project, {
     txOverrides: {
-      maxFeePerGas: ethers.parseUnits('200', 'gwei'),
-      maxPriorityFeePerGas: ethers.parseUnits('200', 'gwei'),
+      maxFeePerGas: ethers.parseUnits(isMainnet ? '200' : '2', 'gwei'),
+      maxPriorityFeePerGas: ethers.parseUnits(isMainnet ? '200' : '2', 'gwei'),
+      // gasLimit: 5000000n,
     },
   });
   console.log('Beacon upgraded');

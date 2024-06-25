@@ -103,24 +103,13 @@ contract Project is
 		_;
 	}
 
-	modifier onlyVerifiedStatus(bool isVerified, uint256 tokenId) {
-		require(
-			(exPostVintageMapping[tokenId].lastVerificationTimestamp >=
-				exPostVintageMapping[tokenId].verificationPeriodEnd) ==
-				isVerified,
-			isVerified
-				? "2"
-				: "3"
-		);
-		_;
-	}
 
 	function isExPostToken(uint256 tokenId) public view returns (bool) {
 		return bytes(exPostVintageMapping[tokenId].serialization).length > 0;
 	}
 
 	function testUpgrade() external pure returns(string memory) {
-		return "0.0.10";
+		return "0.0.14";
 	}
 
 	// ----------------------------------
@@ -134,10 +123,6 @@ contract Project is
 		string memory serialization
 	) public onlyRole(POST_MINTER_ROLE) {
 		
-		require(
-			verificationPeriodEnd > verificationPeriodStart,
-			"4"
-		);
 		uint256 newTokenId = nextTokenId();
 		ICarbonContractRegistry(contractRegistry).registerSerialization(
 			serialization
@@ -181,7 +166,6 @@ contract Project is
 		public
 		onlyRole(ANTE_MINTER_ROLE)
 		onlyExPostToken(exPostTokenId)
-		onlyVerifiedStatus(false, exPostTokenId)
 	{
 		uint256 exAnteTokenId = exPostToExAnteTokenId[exPostTokenId];
 		if (exAnteTokenId == 0) {
@@ -205,7 +189,6 @@ contract Project is
 		public
 		onlyRole(VERIFIER_ROLE)
 		onlyExPostToken(tokenId)
-		onlyVerifiedStatus(false, tokenId)
 	{
 		require(
 			amountVerified >= amountToAnteHolders,
