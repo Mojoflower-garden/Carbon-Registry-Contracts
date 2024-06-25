@@ -10,9 +10,11 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
 
   const devCarbonRegistryContract =
     '0x826b76bA7B9e9e1f19407FBA3d3011E37536dB58';
+  const testProdCarbonRegistryContract =
+    '0x0B0fCaCD2336A5f000661fF5E69aA70c28fD526D';
   const prodCarbonRegistryContract =
     '0x9f87988FF45E9b58ae30fA1685088460125a7d8A';
-  const carbonRegistryContract = prodCarbonRegistryContract;
+  const carbonRegistryContract = testProdCarbonRegistryContract;
   const CarbonRegistryContract = await ethers.getContractAt(
     'CarbonContractRegistry',
     carbonRegistryContract

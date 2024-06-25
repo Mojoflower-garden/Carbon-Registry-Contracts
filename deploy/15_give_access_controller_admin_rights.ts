@@ -26,6 +26,8 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     '0xe47b7ce9a7f59519091ed7cbdea8516734d978c4',
     '0xe564fce6fbe7b11c54b410a03e93f14a74396024',
     '0x9f87988FF45E9b58ae30fA1685088460125a7d8A', // The CarbonregistryContract
+    '0x0B0fCaCD2336A5f000661fF5E69aA70c28fD526D', // Test prod CarbonregistryContract
+    '0x225346387256b303ad8aee735b509b4282534382', // Test Prod Project ICR Test Project
   ];
 
   const devProjectContracts = [

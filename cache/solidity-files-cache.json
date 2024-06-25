@@ -25,9 +25,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -44,12 +42,8 @@
         "./CarbonContractRegistryStorage.sol",
         "./interfaces/ICarbonContractRegistry.sol"
       ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "CarbonContractRegistry"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["CarbonContractRegistry"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/CarbonContractRegistryStorage.sol": {
       "lastModificationDate": 1687865485852,
@@ -75,9 +69,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -86,9 +78,7 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
+      "versionPragmas": ["^0.8.13"],
       "artifacts": [
         "CarbonContractRegistryStorage",
         "CarbonContractRegistryStorageV1",
@@ -119,9 +109,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -130,12 +118,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ICarbonContractRegistry"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["ICarbonContractRegistry"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -161,9 +145,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -175,12 +157,8 @@
         "../utils/ContextUpgradeable.sol",
         "../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "PausableUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["PausableUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -206,9 +184,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -223,12 +199,8 @@
         "../utils/introspection/ERC165Upgradeable.sol",
         "../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "AccessControlUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["AccessControlUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
       "lastModificationDate": 1702304613647,
@@ -254,9 +226,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -264,15 +234,9 @@
           }
         }
       },
-      "imports": [
-        "../../utils/AddressUpgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.2"
-      ],
-      "artifacts": [
-        "Initializable"
-      ]
+      "imports": ["../../utils/AddressUpgradeable.sol"],
+      "versionPragmas": ["^0.8.2"],
+      "artifacts": ["Initializable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -298,9 +262,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -313,12 +275,8 @@
         "../ERC1967/ERC1967UpgradeUpgradeable.sol",
         "./Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "UUPSUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["UUPSUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/proxy/beacon/BeaconProxy.sol": {
       "lastModificationDate": 1702304613643,
@@ -344,9 +302,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -359,12 +315,8 @@
         "../Proxy.sol",
         "../ERC1967/ERC1967Upgrade.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "BeaconProxy"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["BeaconProxy"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
       "lastModificationDate": 1702304613646,
@@ -390,9 +342,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -400,15 +350,9 @@
           }
         }
       },
-      "imports": [
-        "../proxy/utils/Initializable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ContextUpgradeable"
-      ]
+      "imports": ["../proxy/utils/Initializable.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ContextUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -434,9 +378,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -445,12 +387,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "AddressUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.1"],
+      "artifacts": ["AddressUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/access/IAccessControlUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -476,9 +414,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -487,12 +423,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IAccessControlUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IAccessControlUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol": {
       "lastModificationDate": 1702304613646,
@@ -518,9 +450,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -532,12 +462,8 @@
         "./math/MathUpgradeable.sol",
         "./math/SignedMathUpgradeable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "StringsUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["StringsUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -563,9 +489,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -577,12 +501,8 @@
         "./IERC165Upgradeable.sol",
         "../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC165Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC165Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/math/SignedMathUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -608,9 +528,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -619,12 +537,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "SignedMathUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["SignedMathUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/math/MathUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -650,9 +564,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -661,12 +573,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "MathUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["MathUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -692,9 +600,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -703,12 +609,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC165Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC165Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/interfaces/draft-IERC1822Upgradeable.sol": {
       "lastModificationDate": 1702304613644,
@@ -734,9 +636,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -745,12 +645,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1822ProxiableUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1822ProxiableUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -776,9 +672,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -794,12 +688,8 @@
         "../../utils/StorageSlotUpgradeable.sol",
         "../utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.2"
-      ],
-      "artifacts": [
-        "ERC1967UpgradeUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.2"],
+      "artifacts": ["ERC1967UpgradeUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/interfaces/IERC1967Upgradeable.sol": {
       "lastModificationDate": 1702304613644,
@@ -825,9 +715,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -836,12 +724,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1967Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1967Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/StorageSlotUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -867,9 +751,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -878,12 +760,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "StorageSlotUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["StorageSlotUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/proxy/beacon/IBeaconUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -909,9 +787,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -920,12 +796,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IBeaconUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IBeaconUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/proxy/Proxy.sol": {
       "lastModificationDate": 1702304613643,
@@ -951,9 +823,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -962,12 +832,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Proxy"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["Proxy"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/proxy/ERC1967/ERC1967Upgrade.sol": {
       "lastModificationDate": 1702304613643,
@@ -993,9 +859,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1010,12 +874,8 @@
         "../../utils/Address.sol",
         "../../utils/StorageSlot.sol"
       ],
-      "versionPragmas": [
-        "^0.8.2"
-      ],
-      "artifacts": [
-        "ERC1967Upgrade"
-      ]
+      "versionPragmas": ["^0.8.2"],
+      "artifacts": ["ERC1967Upgrade"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/proxy/beacon/IBeacon.sol": {
       "lastModificationDate": 1702304613643,
@@ -1041,9 +901,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1052,12 +910,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IBeacon"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IBeacon"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/interfaces/IERC1967.sol": {
       "lastModificationDate": 1702304613641,
@@ -1083,9 +937,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1094,12 +946,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1967"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1967"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/utils/Address.sol": {
       "lastModificationDate": 1702304613643,
@@ -1125,9 +973,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1136,12 +982,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "Address"
-      ]
+      "versionPragmas": ["^0.8.1"],
+      "artifacts": ["Address"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
       "lastModificationDate": 1702304613643,
@@ -1167,9 +1009,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1178,12 +1018,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "StorageSlot"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["StorageSlot"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/interfaces/draft-IERC1822.sol": {
       "lastModificationDate": 1702304613641,
@@ -1209,9 +1045,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1220,12 +1054,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1822Proxiable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1822Proxiable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/marketplaces/MarketplaceFactory.sol": {
       "lastModificationDate": 1690816296693,
@@ -1251,9 +1081,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1269,12 +1097,8 @@
         "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol",
         "./MarketplaceFactoryStorage.sol"
       ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "MarketplaceFactory"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["MarketplaceFactory"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/marketplaces/MarketplaceFactoryStorage.sol": {
       "lastModificationDate": 1687865485853,
@@ -1300,9 +1124,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1311,13 +1133,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "MarketplaceFactoryStorage",
-        "MarketplaceFactoryStorageV1"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["MarketplaceFactoryStorage", "MarketplaceFactoryStorageV1"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/utils/ERC1155ReceiverUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -1343,9 +1160,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1358,12 +1173,8 @@
         "../../../utils/introspection/ERC165Upgradeable.sol",
         "../../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC1155ReceiverUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC1155ReceiverUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/IERC1155ReceiverUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -1389,9 +1200,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1399,15 +1208,9 @@
           }
         }
       },
-      "imports": [
-        "../../utils/introspection/IERC165Upgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1155ReceiverUpgradeable"
-      ]
+      "imports": ["../../utils/introspection/IERC165Upgradeable.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1155ReceiverUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155Upgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -1433,9 +1236,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1452,12 +1253,8 @@
         "../../utils/introspection/ERC165Upgradeable.sol",
         "../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC1155Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC1155Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/IERC1155Upgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -1483,9 +1280,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1493,15 +1288,9 @@
           }
         }
       },
-      "imports": [
-        "../../utils/introspection/IERC165Upgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1155Upgradeable"
-      ]
+      "imports": ["../../utils/introspection/IERC165Upgradeable.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1155Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/IERC1155MetadataURIUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -1527,9 +1316,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1537,15 +1324,9 @@
           }
         }
       },
-      "imports": [
-        "../IERC1155Upgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1155MetadataURIUpgradeable"
-      ]
+      "imports": ["../IERC1155Upgradeable.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1155MetadataURIUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155SupplyUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -1571,9 +1352,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1585,12 +1364,8 @@
         "../ERC1155Upgradeable.sol",
         "../../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC1155SupplyUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC1155SupplyUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/Project.sol": {
       "lastModificationDate": 1719352038596,
@@ -1616,9 +1391,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1639,12 +1412,8 @@
         "./utils/CustomSignaturesUpgradeable.sol",
         "./interfaces/IProject.sol"
       ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "Project"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["Project"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/ProjectStorage.sol": {
       "lastModificationDate": 1709725498700,
@@ -1670,9 +1439,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1685,14 +1452,8 @@
         "./types/ProjectTypes.sol",
         "@openzeppelin/contracts/utils/Counters.sol"
       ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ProjectStorage",
-        "ProjectStorageV1",
-        "ProjectStorageV2"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["ProjectStorage", "ProjectStorageV1", "ProjectStorageV2"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/utils/CustomSignaturesUpgradeable.sol": {
       "lastModificationDate": 1682272110209,
@@ -1718,9 +1479,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1733,12 +1492,8 @@
         "@openzeppelin/contracts-upgradeable/utils/cryptography/ECDSAUpgradeable.sol",
         "./CustomSignaturesTypes.sol"
       ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "CustomSignaturesUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["CustomSignaturesUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/interfaces/IProject.sol": {
       "lastModificationDate": 1690816296693,
@@ -1764,9 +1519,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1774,15 +1527,9 @@
           }
         }
       },
-      "imports": [
-        "../types/ProjectTypes.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "IProject"
-      ]
+      "imports": ["../types/ProjectTypes.sol"],
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["IProject"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/utils/ERC1155HolderUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -1808,9 +1555,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1822,12 +1567,8 @@
         "./ERC1155ReceiverUpgradeable.sol",
         "../../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC1155HolderUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC1155HolderUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/types/ProjectTypes.sol": {
       "lastModificationDate": 1711576763034,
@@ -1853,9 +1594,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1864,12 +1603,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "ProjectTypes"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["ProjectTypes"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
       "lastModificationDate": 1702304613643,
@@ -1895,9 +1630,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1906,12 +1639,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Counters"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["Counters"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/utils/CustomSignaturesTypes.sol": {
       "lastModificationDate": 1681375187845,
@@ -1937,9 +1666,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1948,12 +1675,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "CustomSignaturesTypes"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["CustomSignaturesTypes"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -1979,9 +1702,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -1994,12 +1715,8 @@
         "../../interfaces/IERC5267Upgradeable.sol",
         "../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.8"
-      ],
-      "artifacts": [
-        "EIP712Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.8"],
+      "artifacts": ["EIP712Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/utils/cryptography/ECDSAUpgradeable.sol": {
       "lastModificationDate": 1702304613647,
@@ -2025,9 +1742,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2035,15 +1750,9 @@
           }
         }
       },
-      "imports": [
-        "../StringsUpgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ECDSAUpgradeable"
-      ]
+      "imports": ["../StringsUpgradeable.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ECDSAUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts-upgradeable/interfaces/IERC5267Upgradeable.sol": {
       "lastModificationDate": 1702304613644,
@@ -2069,9 +1778,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2080,12 +1787,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC5267Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC5267Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/marketplaces/MarketplaceVault.sol": {
       "lastModificationDate": 1690816296693,
@@ -2111,9 +1814,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2130,12 +1831,8 @@
         "../interfaces/IProject.sol",
         "@openzeppelin/contracts-upgradeable/token/ERC1155/IERC1155Upgradeable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "MarketplaceVault"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["MarketplaceVault"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/marketplaces/MarketplaceVaultStorage.sol": {
       "lastModificationDate": 1690816296693,
@@ -2161,9 +1858,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2172,9 +1867,7 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
+      "versionPragmas": ["^0.8.13"],
       "artifacts": [
         "MarketplaceVaultStorage",
         "MarketplaceVaultStorageV1",
@@ -2205,9 +1898,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2223,12 +1914,8 @@
         "@openzeppelin/contracts/token/ERC1155/IERC1155.sol",
         "./TokenVaultStorage.sol"
       ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "TokenVault"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["TokenVault"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/TokenVaultStorage.sol": {
       "lastModificationDate": 1681746582926,
@@ -2254,9 +1941,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2265,13 +1950,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "TokenVaultStorage",
-        "TokenVaultStorageV1"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["TokenVaultStorage", "TokenVaultStorageV1"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155.sol": {
       "lastModificationDate": 1702304613644,
@@ -2297,9 +1977,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2307,15 +1985,9 @@
           }
         }
       },
-      "imports": [
-        "../../utils/introspection/IERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1155"
-      ]
+      "imports": ["../../utils/introspection/IERC165.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1155"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
       "lastModificationDate": 1702304613643,
@@ -2341,9 +2013,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2352,12 +2022,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC165"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC165"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/Migrations.sol": {
       "lastModificationDate": 1681374954796,
@@ -2383,9 +2049,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2394,12 +2058,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "Migrations"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["Migrations"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/AccessControl.sol": {
       "lastModificationDate": 1713788584227,
@@ -2425,9 +2085,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2441,12 +2099,8 @@
         "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
         "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.13"
-      ],
-      "artifacts": [
-        "AccessController"
-      ]
+      "versionPragmas": ["^0.8.13"],
+      "artifacts": ["AccessController"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/access/IAccessControlUpgradeable.sol": {
       "lastModificationDate": 1713782192896,
@@ -2472,9 +2126,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2483,12 +2135,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IAccessControlUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IAccessControlUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol": {
       "lastModificationDate": 1713782192942,
@@ -2514,9 +2162,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2528,12 +2174,8 @@
         "../utils/ContextUpgradeable.sol",
         "../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "OwnableUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["OwnableUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol": {
       "lastModificationDate": 1713782192952,
@@ -2559,9 +2201,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2574,12 +2214,8 @@
         "../ERC1967/ERC1967UpgradeUpgradeable.sol",
         "./Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "UUPSUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["UUPSUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol": {
       "lastModificationDate": 1713782192926,
@@ -2605,9 +2241,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2615,15 +2249,9 @@
           }
         }
       },
-      "imports": [
-        "../../utils/AddressUpgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.2"
-      ],
-      "artifacts": [
-        "Initializable"
-      ]
+      "imports": ["../../utils/AddressUpgradeable.sol"],
+      "versionPragmas": ["^0.8.2"],
+      "artifacts": ["Initializable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol": {
       "lastModificationDate": 1713782192827,
@@ -2649,9 +2277,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2659,15 +2285,9 @@
           }
         }
       },
-      "imports": [
-        "../proxy/utils/Initializable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ContextUpgradeable"
-      ]
+      "imports": ["../proxy/utils/Initializable.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ContextUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol": {
       "lastModificationDate": 1713782192826,
@@ -2693,9 +2313,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2704,12 +2322,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "AddressUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.1"],
+      "artifacts": ["AddressUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/interfaces/draft-IERC1822Upgradeable.sol": {
       "lastModificationDate": 1713782192830,
@@ -2735,9 +2349,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2746,12 +2358,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1822ProxiableUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1822ProxiableUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol": {
       "lastModificationDate": 1713782192841,
@@ -2777,9 +2385,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2795,12 +2401,8 @@
         "../../utils/StorageSlotUpgradeable.sol",
         "../utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.2"
-      ],
-      "artifacts": [
-        "ERC1967UpgradeUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.2"],
+      "artifacts": ["ERC1967UpgradeUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/interfaces/IERC1967Upgradeable.sol": {
       "lastModificationDate": 1713782192909,
@@ -2826,9 +2428,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2837,12 +2437,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1967Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1967Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/utils/StorageSlotUpgradeable.sol": {
       "lastModificationDate": 1713782192949,
@@ -2868,9 +2464,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2879,12 +2473,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "StorageSlotUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["StorageSlotUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/proxy/beacon/IBeaconUpgradeable.sol": {
       "lastModificationDate": 1713782192896,
@@ -2910,9 +2500,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2921,12 +2509,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IBeaconUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IBeaconUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/utils/ERC1155ReceiverUpgradeable.sol": {
       "lastModificationDate": 1713782192833,
@@ -2952,9 +2536,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -2967,12 +2549,8 @@
         "../../../utils/introspection/ERC165Upgradeable.sol",
         "../../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC1155ReceiverUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC1155ReceiverUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol": {
       "lastModificationDate": 1713782192840,
@@ -2998,9 +2576,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3012,12 +2588,8 @@
         "./IERC165Upgradeable.sol",
         "../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC165Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC165Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/IERC1155ReceiverUpgradeable.sol": {
       "lastModificationDate": 1713782192900,
@@ -3043,9 +2615,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3053,15 +2623,9 @@
           }
         }
       },
-      "imports": [
-        "../../utils/introspection/IERC165Upgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1155ReceiverUpgradeable"
-      ]
+      "imports": ["../../utils/introspection/IERC165Upgradeable.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1155ReceiverUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol": {
       "lastModificationDate": 1713782192907,
@@ -3087,9 +2651,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3098,12 +2660,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC165Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC165Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/ERC1155Upgradeable.sol": {
       "lastModificationDate": 1713782192835,
@@ -3129,9 +2687,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3148,12 +2704,8 @@
         "../../utils/introspection/ERC165Upgradeable.sol",
         "../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC1155Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC1155Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/IERC1155Upgradeable.sol": {
       "lastModificationDate": 1713782192900,
@@ -3179,9 +2731,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3189,15 +2739,9 @@
           }
         }
       },
-      "imports": [
-        "../../utils/introspection/IERC165Upgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1155Upgradeable"
-      ]
+      "imports": ["../../utils/introspection/IERC165Upgradeable.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1155Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/IERC1155MetadataURIUpgradeable.sol": {
       "lastModificationDate": 1713782192899,
@@ -3223,9 +2767,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3233,15 +2775,9 @@
           }
         }
       },
-      "imports": [
-        "../IERC1155Upgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1155MetadataURIUpgradeable"
-      ]
+      "imports": ["../IERC1155Upgradeable.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1155MetadataURIUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/ERC1155SupplyUpgradeable.sol": {
       "lastModificationDate": 1713782192833,
@@ -3267,9 +2803,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3281,12 +2815,8 @@
         "../ERC1155Upgradeable.sol",
         "../../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC1155SupplyUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC1155SupplyUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol": {
       "lastModificationDate": 1713782192826,
@@ -3312,9 +2842,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3329,12 +2857,8 @@
         "../utils/introspection/ERC165Upgradeable.sol",
         "../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "AccessControlUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["AccessControlUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol": {
       "lastModificationDate": 1713782192942,
@@ -3360,9 +2884,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3374,12 +2896,8 @@
         "../utils/ContextUpgradeable.sol",
         "../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "PausableUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["PausableUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/token/ERC1155/utils/ERC1155HolderUpgradeable.sol": {
       "lastModificationDate": 1713782192832,
@@ -3405,9 +2923,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3419,12 +2935,8 @@
         "./ERC1155ReceiverUpgradeable.sol",
         "../../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ERC1155HolderUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ERC1155HolderUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts@4.9.6/node_modules/@openzeppelin/contracts/utils/Counters.sol": {
       "lastModificationDate": 1713782192818,
@@ -3450,9 +2962,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3461,12 +2971,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Counters"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["Counters"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/utils/cryptography/EIP712Upgradeable.sol": {
       "lastModificationDate": 1713782192831,
@@ -3492,9 +2998,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3507,12 +3011,8 @@
         "../../interfaces/IERC5267Upgradeable.sol",
         "../../proxy/utils/Initializable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.8"
-      ],
-      "artifacts": [
-        "EIP712Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.8"],
+      "artifacts": ["EIP712Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/utils/cryptography/ECDSAUpgradeable.sol": {
       "lastModificationDate": 1713782192831,
@@ -3538,9 +3038,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3548,15 +3046,9 @@
           }
         }
       },
-      "imports": [
-        "../StringsUpgradeable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "ECDSAUpgradeable"
-      ]
+      "imports": ["../StringsUpgradeable.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["ECDSAUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/interfaces/IERC5267Upgradeable.sol": {
       "lastModificationDate": 1713782192918,
@@ -3582,9 +3074,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3593,12 +3083,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC5267Upgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC5267Upgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/utils/StringsUpgradeable.sol": {
       "lastModificationDate": 1713782192950,
@@ -3624,9 +3110,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3638,12 +3122,8 @@
         "./math/MathUpgradeable.sol",
         "./math/SignedMathUpgradeable.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "StringsUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["StringsUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/utils/math/MathUpgradeable.sol": {
       "lastModificationDate": 1713782192938,
@@ -3669,9 +3149,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3680,12 +3158,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "MathUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["MathUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts-upgradeable@4.9.6/node_modules/@openzeppelin/contracts-upgradeable/utils/math/SignedMathUpgradeable.sol": {
       "lastModificationDate": 1713782192949,
@@ -3711,9 +3185,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3722,12 +3194,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "SignedMathUpgradeable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["SignedMathUpgradeable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts@4.9.6/node_modules/@openzeppelin/contracts/proxy/beacon/BeaconProxy.sol": {
       "lastModificationDate": 1713782192817,
@@ -3753,9 +3221,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3768,12 +3234,8 @@
         "../Proxy.sol",
         "../ERC1967/ERC1967Upgrade.sol"
       ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "BeaconProxy"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["BeaconProxy"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts@4.9.6/node_modules/@openzeppelin/contracts/proxy/Proxy.sol": {
       "lastModificationDate": 1713782192893,
@@ -3799,9 +3261,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3810,12 +3270,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "Proxy"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["Proxy"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts@4.9.6/node_modules/@openzeppelin/contracts/proxy/ERC1967/ERC1967Upgrade.sol": {
       "lastModificationDate": 1713782192828,
@@ -3841,9 +3297,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3858,12 +3312,8 @@
         "../../utils/Address.sol",
         "../../utils/StorageSlot.sol"
       ],
-      "versionPragmas": [
-        "^0.8.2"
-      ],
-      "artifacts": [
-        "ERC1967Upgrade"
-      ]
+      "versionPragmas": ["^0.8.2"],
+      "artifacts": ["ERC1967Upgrade"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts@4.9.6/node_modules/@openzeppelin/contracts/proxy/beacon/IBeacon.sol": {
       "lastModificationDate": 1713782192852,
@@ -3889,9 +3339,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3900,12 +3348,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IBeacon"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IBeacon"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts@4.9.6/node_modules/@openzeppelin/contracts/interfaces/draft-IERC1822.sol": {
       "lastModificationDate": 1713782192823,
@@ -3931,9 +3375,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3942,12 +3384,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1822Proxiable"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1822Proxiable"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts@4.9.6/node_modules/@openzeppelin/contracts/interfaces/IERC1967.sol": {
       "lastModificationDate": 1713782192856,
@@ -3973,9 +3411,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -3984,12 +3420,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1967"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1967"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts@4.9.6/node_modules/@openzeppelin/contracts/utils/StorageSlot.sol": {
       "lastModificationDate": 1713782192899,
@@ -4015,9 +3447,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -4026,12 +3456,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "StorageSlot"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["StorageSlot"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts@4.9.6/node_modules/@openzeppelin/contracts/utils/Address.sol": {
       "lastModificationDate": 1713782192817,
@@ -4057,9 +3483,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -4068,12 +3492,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.1"
-      ],
-      "artifacts": [
-        "Address"
-      ]
+      "versionPragmas": ["^0.8.1"],
+      "artifacts": ["Address"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts@4.9.6/node_modules/@openzeppelin/contracts/token/ERC1155/IERC1155.sol": {
       "lastModificationDate": 1713782192853,
@@ -4099,9 +3519,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -4109,15 +3527,9 @@
           }
         }
       },
-      "imports": [
-        "../../utils/introspection/IERC165.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC1155"
-      ]
+      "imports": ["../../utils/introspection/IERC165.sol"],
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC1155"]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/node_modules/.pnpm/@openzeppelin+contracts@4.9.6/node_modules/@openzeppelin/contracts/utils/introspection/IERC165.sol": {
       "lastModificationDate": 1713782192854,
@@ -4143,9 +3555,7 @@
                 "userdoc",
                 "evm.gasEstimates"
               ],
-              "": [
-                "ast"
-              ]
+              "": ["ast"]
             }
           },
           "metadata": {
@@ -4154,12 +3564,8 @@
         }
       },
       "imports": [],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "IERC165"
-      ]
+      "versionPragmas": ["^0.8.0"],
+      "artifacts": ["IERC165"]
     }
   }
 }

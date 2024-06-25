@@ -17,7 +17,11 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   const projectBeaconAddress = await upgrades.erc1967.getBeaconAddress(
     projectAddress
   );
-  console.log('Project Beacon Address', projectBeaconAddress);
+  console.log(
+    'Project Beacon Address',
+    projectBeaconAddress,
+    await hre.ethers.getSigners()
+  );
 
   const projectBeaconImplementationAddress =
     await upgrades.beacon.getImplementationAddress(projectBeaconAddress);
