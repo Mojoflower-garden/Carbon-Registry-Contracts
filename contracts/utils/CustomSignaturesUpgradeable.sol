@@ -10,7 +10,7 @@ import "./CustomSignaturesTypes.sol";
 
 contract CustomSignaturesUpgradeable is EIP712Upgradeable {
     mapping(address => uint32) public signatureNonces;
-    event TransferSignatureValid(bytes signature, signatureTransferPayload payload);
+    event TransferSignatureValid(bytes signature, signatureBatchTransferPayload payload);
 
     function __CustomSignatures_init(
         string memory signatureName,
@@ -19,23 +19,23 @@ contract CustomSignaturesUpgradeable is EIP712Upgradeable {
         __EIP712_init(signatureName, version);
     }
 
-    modifier onlyValidSignatureTransfer(
+    modifier onlyValidSignatureBatchTransfer(
         bytes calldata signature,
-        signatureTransferPayload calldata payload
+        signatureBatchTransferPayload calldata payload
     ) {
         emit TransferSignatureValid(signature, payload);
         bytes32 digest = _hashTypedDataV4(
             keccak256(
                 abi.encode(
                     keccak256(
-                        "signatureTransferPayload(uint256 deadline,string description,address signer,address to,uint256 tokenId,uint256 amount,uint256 nonce)"
+                        "signatureBatchTransferPayload(uint256 deadline,string description,address signer,address to,uint256[] tokenIds,uint256[] amounts,uint256 nonce)"
                     ),
                     payload.deadline,
                     keccak256(abi.encodePacked(payload.description)), // https://ethereum.stackexchange.com/questions/131282/ethers-eip712-wont-work-with-strings
                     payload.signer,
                     payload.to,
-                    payload.tokenId,
-                    payload.amount,
+                    keccak256(abi.encodePacked(payload.tokenIds)),
+                    keccak256(abi.encodePacked(payload.amounts)),
                     signatureNonces[payload.signer]
                 )
             )

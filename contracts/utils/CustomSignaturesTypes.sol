@@ -3,20 +3,13 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-struct signatureTransferPayload {
+struct signatureBatchTransferPayload {
     uint256 deadline;
     string description;
     address signer;
     address to;
-    uint256 tokenId;
-    uint256 amount;
-    uint256 nonce;
-}
-
-struct signatureGenericPayload {
-    uint256 deadline;
-    string description;
-    address signer;
+    uint256[] tokenIds;
+    uint256[] amounts;
     uint256 nonce;
 }
 
