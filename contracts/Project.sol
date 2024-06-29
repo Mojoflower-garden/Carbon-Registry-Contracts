@@ -109,7 +109,7 @@ contract Project is
 	}
 
 	function testUpgrade() external pure returns(string memory) {
-		return "0.0.14";
+		return "0.0.16";
 	}
 
 	// ----------------------------------
@@ -239,67 +239,18 @@ contract Project is
 		_safeTransferFrom(from, to, tokenId, amount, '');
 	}
 
-	// function exchangeAnteForPostEvenSteven(
-	// 	address[] memory accounts,
-	// 	uint256 exPostTokenId,
-	// 	bytes memory data
-	// )
-	// 	external
-	// 	onlyExPostToken(exPostTokenId)
-	// {
-	// 	uint256 exAnteTokenId = exPostToExAnteTokenId[exPostTokenId];
-	// 	require(exAnteTokenId != 0, "9");
-	// 	uint256 currentExAnteSupply = totalSupply(exAnteTokenId);
-	// 	uint256 currentExPostSupplyInContract = balanceOf(
-	// 		address(this),
-	// 		exPostTokenId
-	// 	);
-	// 	require(currentExPostSupplyInContract > 0, "10");
-
-	// 	for (uint256 i = 0; i < accounts.length; i++) {
-			
-	// 		uint256 amountExAnte = balanceOf(accounts[i], exAnteTokenId);
-	// 		uint256 amountExPost = (amountExAnte *
-	// 			currentExPostSupplyInContract) / currentExAnteSupply;
-	// 		uint256 exAnteBurnAmount = amountExAnte;
-	// 		if (amountExAnte > amountExPost) {
-	// 			exAnteBurnAmount = amountExPost;
-	// 		}
-	// 					emit ExchangeAnteForPost(
-	// 			accounts[i],
-	// 			exPostTokenId,
-	// 			amountExPost,
-	// 			exAnteBurnAmount
-	// 		);
-	// 		_burn(accounts[i], exAnteTokenId, exAnteBurnAmount);
-	// 		_safeTransferFrom(
-	// 			address(this),
-	// 			accounts[i],
-	// 			exPostTokenId,
-	// 			amountExPost,
-	// 			data
-	// 		);
-	// 	}
-	// }
-
 	// ----------------------------------
 	//              Actions
 	// ----------------------------------
 
-
-	function transferFromSignature(
+	function batchTransferFromSignature(
 		bytes calldata signature,
-		signatureTransferPayload calldata payload,
+		signatureBatchTransferPayload calldata payload,
 		bytes memory data
-	) public payable onlyValidSignatureTransfer(signature, payload) {
-		_safeTransferFrom(
-			payload.signer,
-			payload.to,
-			payload.tokenId,
-			payload.amount,
-			data
-		);
+	) public payable onlyValidSignatureBatchTransfer(signature, payload) {
+		 _safeBatchTransferFrom(payload.signer, payload.to, payload.tokenIds, payload.amounts, data);
 	}
+
 
 	function burnFromAccount(
 		address account,
@@ -345,39 +296,37 @@ contract Project is
 
 	function retireFromSignature(
 		bytes calldata signature,
-		signatureTransferPayload calldata payload,
+		signatureBatchTransferPayload calldata payload,
 		string memory retireeName,
 		string memory customUri,
 		string memory comment,
 		bytes memory data
 	)
 		public
-		onlyExPostToken(payload.tokenId)
-		onlyValidSignatureTransfer(signature, payload)
-		returns (uint256 nftTokenId)
+		onlyExPostTokens(payload.tokenIds)
+		onlyValidSignatureBatchTransfer(signature, payload)
+		returns (uint256[] memory)
 	{
-		if(payload.signer == payload.to){
-			return _retire(
-				payload.signer,
-				payload.tokenId,
-				payload.amount,
+		require(payload.tokenIds.length == payload.amounts.length, "ids and amounts length mismatch");
+
+		if(payload.signer != payload.to){
+			require(payload.to != address(0));
+			_safeBatchTransferFrom(payload.signer, payload.to, payload.tokenIds, payload.amounts, data);
+		}
+
+		uint256[] memory nftTokenIds = new uint[](payload.tokenIds.length);
+		for (uint256 i = 0; i < payload.tokenIds.length; ++i) {
+			nftTokenIds[i] = _retire(
+				payload.to,
+				payload.tokenIds[i],
+				payload.amounts[i],
 				retireeName,
 				customUri,
 				comment,
 				data
 			);
 		}
-		require(payload.to != address(0));
-		_safeTransferFrom(payload.signer, payload.to, payload.tokenId, payload.amount, data);
-		return _retire(
-			payload.to,
-			payload.tokenId,
-			payload.amount,
-			retireeName,
-			customUri,
-			comment,
-			data
-		);
+		return nftTokenIds;
 	}
 
 	function _retire(
@@ -418,15 +367,19 @@ contract Project is
 
 	function cancelCreditsFromSignature(
 		bytes calldata signature,
-		signatureTransferPayload calldata payload,
+		signatureBatchTransferPayload calldata payload,
 		string memory comment,
 		bytes memory data
 	)
 		public
-		onlyValidSignatureTransfer(signature, payload)
+		onlyValidSignatureBatchTransfer(signature, payload)
 	{
-		emit CancelledCredits(payload.signer, payload.tokenId, payload.amount,comment, data);
-		_burn(payload.signer, payload.tokenId, payload.amount);
+		for (uint256 i = 0; i < payload.tokenIds.length; ++i) {
+			uint256 id = payload.tokenIds[i];
+			uint256 amount = payload.amounts[i];
+			emit CancelledCredits(payload.signer, id, amount, comment, data);
+			_burn(payload.signer, id, amount); // Possibly would be good to use _burnBatch - but then preferrably we'd also create a batch cancelled credits event
+		}
 	}
 
 	// ----------------------------------
