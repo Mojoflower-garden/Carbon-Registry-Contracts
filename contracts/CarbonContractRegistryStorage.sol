@@ -16,7 +16,7 @@ abstract contract CarbonContractRegistryStorageV1 {
 
 abstract contract CarbonContractRegistryStorageV2 {
     uint256 internal _verifiedVaultCounter;
-    address internal _tokenVaultBeaconAddress;
+    address internal _tokenVaultBeaconAddress; // Not used anymore - but needs to stay because of storage system in the evm
     mapping(uint256 => address) internal _verifiedVaultMapping;
 }
 
