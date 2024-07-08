@@ -12,13 +12,9 @@ interface ICarbonContractRegistry {
 
     function setBeaconAddress(address beaconAddress) external;
 
-    function setTokenVaultBeaconAddress(address tokenVaultBeaconAddress) external;
-
     // ----------------------------------
     //              GETTERS
     // ----------------------------------
-
-    function getTokenVaultBeaconAddress() external view returns (address);
 
     function getVerifiedVaultAddress(uint256 id) external view returns (address);
 

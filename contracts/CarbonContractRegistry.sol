@@ -38,10 +38,6 @@ contract CarbonContractRegistry is
 		address indexed beaconAddress,
 		address indexed oldBeaconAddress
 	);
-	event TokenVaultBeaconSet(
-		address indexed tokenVaultBeaconAddress,
-		address indexed oldTokenVaultBeaconAddress
-	);
 
 	event ProjectCreated(
 		uint256 indexed projectId,
@@ -127,30 +123,6 @@ contract CarbonContractRegistry is
 	//              SETTERS
 	// ----------------------------------
 
-	function createNewVerifiedVault() external override onlyRole(DEFAULT_ADMIN_ROLE) {
-		/// @dev generate payload for initialize function
-		string memory signature = 'initialize(address)';
-		bytes memory payload = abi.encodeWithSignature(
-			signature,
-			msg.sender
-		);
-
-		address verifiedVaultAddress = address(
-			new BeaconProxy(_tokenVaultBeaconAddress, payload)
-		);
-
-		unchecked {
-			_verifiedVaultCounter += 1;
-		}
-		_verifiedVaultMapping[_verifiedVaultCounter] = verifiedVaultAddress;
-				emit VerifiedVaultAddressSet(
-			verifiedVaultAddress,
-			_verifiedVaultMapping[_verifiedVaultCounter - 1],
-			_verifiedVaultCounter
-		);
-		_verifiedVaultAddress = verifiedVaultAddress;
-	}
-
 	function registerSerialization(
 		string calldata serialization
 	) external override whenNotPaused onlyCarbonRegistryProjects {
@@ -169,19 +141,11 @@ contract CarbonContractRegistry is
 		emit BeaconSet(beaconAddress, _projectBeaconAddress);
 	}
 
-	    function setTokenVaultBeaconAddress(address tokenVaultBeaconAddress) external override onlyRole(DEFAULT_ADMIN_ROLE) {
-		_tokenVaultBeaconAddress = tokenVaultBeaconAddress;
-		emit TokenVaultBeaconSet(tokenVaultBeaconAddress, _tokenVaultBeaconAddress);
-		}
-
 
 	// ----------------------------------
 	//              GETTERS
 	// ----------------------------------
 
-function getTokenVaultBeaconAddress() external view override returns (address) {
-		return _tokenVaultBeaconAddress;
-	}
 	function getVerifiedVaultAddress(uint256 id)
 		external
 		view
