@@ -11,7 +11,7 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
   console.log('11');
 
   const txHash =
-    '0x8cdaaa420cd70cfb577584b1a455f01cd59e71640f0eb5deca9ce709f4de5409';
+    '0x124d855a892b8aa2a622568a4c40f5b42a1bad63a7e1a6f68709367cba23593d';
   const network = await ethers.provider.getNetwork();
   const pendingTx = await ethers.provider.getTransaction(txHash);
 
@@ -20,11 +20,11 @@ const main: DeployFunction = async (hre: HardhatRuntimeEnvironment) => {
     return;
   }
 
-  const signer = new hre.ethers.Wallet(
-    '0x2ebdc9b9334ebf87f40d38bd32803cace12c5792c67fef44d9c162f45a4f99cc', // Gaia private key
-    hre.ethers.provider
-  );
-  // const signer = await ethers.provider.getSigner(pendingTx.from);
+  // const signer = new hre.ethers.Wallet(
+  //   '', // Gaia private key
+  //   hre.ethers.provider
+  // );
+  const signer = await ethers.provider.getSigner(pendingTx.from);
   const nonce = pendingTx.nonce;
   const gasPrice = ethers.toBigInt(pendingTx.gasPrice) * ethers.toBigInt(2); // Increase the gas price
 

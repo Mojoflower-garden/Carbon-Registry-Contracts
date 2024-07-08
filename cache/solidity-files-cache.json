@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/CarbonContractRegistry.sol": {
-      "lastModificationDate": 1713786133471,
-      "contentHash": "5622224ed564a17417e439ef2e34b204",
+      "lastModificationDate": 1720437595790,
+      "contentHash": "9101555fbdc3369f001bfd4de5026b96",
       "sourceName": "contracts/CarbonContractRegistry.sol",
       "solcConfig": {
         "version": "0.8.13",
@@ -1593,8 +1593,8 @@
       ]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/Project.sol": {
-      "lastModificationDate": 1719684779482,
-      "contentHash": "5718c4560f9a789da7b7079b4c0f1432",
+      "lastModificationDate": 1720437422469,
+      "contentHash": "b1ca70f16ce3e09ad2c88535a9605034",
       "sourceName": "contracts/Project.sol",
       "solcConfig": {
         "version": "0.8.13",
