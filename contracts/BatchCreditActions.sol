@@ -15,12 +15,6 @@ struct SignatureBatchTransferPayload {
     bytes signature;
 }
 
-struct SignatureBatchRetirementPayload {
-    address contractAddress;
-    signatureBatchTransferPayload payload;
-    bytes signature;
-}
-
 contract BatchCreditActions is
 	Initializable,
 	PausableUpgradeable,
@@ -58,7 +52,7 @@ function handleTransfers(
 }
 
 function handleRetirements(
-    SignatureBatchRetirementPayload[] calldata retirementItems,
+    SignatureBatchTransferPayload[] calldata retirementItems,
     string memory retireeName,
     string memory customUri,
     string memory comment,
@@ -79,7 +73,7 @@ function handleRetirements(
 
 function batchTransferOrRetire(
     SignatureBatchTransferPayload[] calldata transferItems,
-    SignatureBatchRetirementPayload[] calldata retirementItems,
+    SignatureBatchTransferPayload[] calldata retirementItems,
     string memory retireeName,
     string memory customUri,
     string memory comment,
