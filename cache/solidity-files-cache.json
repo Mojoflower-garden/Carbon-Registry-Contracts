@@ -2358,8 +2358,8 @@
       ]
     },
     "/Users/thorduragustsson/Programming/Projects/CarbonRegistryContracts/contracts/BatchCreditActions.sol": {
-      "lastModificationDate": 1731423180301,
-      "contentHash": "a2bae336275c7142ca2982180ba7c313",
+      "lastModificationDate": 1731425975316,
+      "contentHash": "83605a6a6cd0b74f1fc95d40f4a2cf0c",
       "sourceName": "contracts/BatchCreditActions.sol",
       "solcConfig": {
         "version": "0.8.13",
