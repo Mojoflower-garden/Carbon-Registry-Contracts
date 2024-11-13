@@ -2,6 +2,7 @@
 pragma solidity ^0.8.13;
 
 import '../types/ProjectTypes.sol';
+import '../utils/CustomSignaturesTypes.sol';
 
 interface IProject {
 	event ExPostCreated(
@@ -82,4 +83,21 @@ interface IProject {
 		string memory comment,
 		bytes memory data
 	) external returns (uint256 nftTokenId) ;
+
+	function batchTransferFromSignature(
+		bytes calldata signature,
+		signatureBatchTransferPayload calldata payload,
+		bytes memory data
+	) external payable;
+
+	function retireFromSignature(
+		bytes calldata signature,
+		signatureBatchTransferPayload calldata payload,
+		string memory retireeName,
+		string memory customUri,
+		string memory comment,
+		bytes memory data
+	)
+		external
+		returns (uint256[] memory);
 }

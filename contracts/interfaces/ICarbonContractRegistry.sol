@@ -6,7 +6,6 @@ interface ICarbonContractRegistry {
     //              SETTERS
     // ----------------------------------
 
-    function createNewVerifiedVault() external;
 
     function registerSerialization(string calldata serialization) external;
 
